@@ -14,7 +14,7 @@ This tool was developed by **Ayla Zhang**, a high-school student (Thomas Jeffers
 
 - The **Hugging Face mining** in this repository is original to this work.
 - The **GitHub-side commit analysis** reuses the dataset of Tang et al., "An Empirical Study of Refactorings and Technical Debt in Machine Learning Systems," ICSE 2021.
-- This work was supported by **U.S. National Science Foundation award CCF-2343750**.
+- This material is based upon work supported by the National Science Foundation under Grant No. CCF-2343750. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 - Licensed under the **MIT License** (see [`LICENSE`](LICENSE)).
 - Please cite using [`CITATION.cff`](CITATION.cff).
 
