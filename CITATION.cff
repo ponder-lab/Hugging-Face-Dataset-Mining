@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "Hugging Face Dataset Mining: mining dataset commits for data-dependency refactorings in ML systems"
+title: "Hugging Face Dataset Mining Scripts for Data-dependency Refactorings in ML Systems"
 abstract: >-
   Python tooling to mine Hugging Face dataset commits (and process related
   GitHub commit data) for evidence of data-dependency refactorings and
