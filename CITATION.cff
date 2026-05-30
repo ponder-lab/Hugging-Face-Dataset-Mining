@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Hugging Face Dataset Mining: mining dataset commits for data-dependency refactorings in ML systems"
+abstract: >-
+  Python tooling to mine Hugging Face dataset commits (and process related
+  GitHub commit data) for evidence of data-dependency refactorings and
+  technical debt in machine learning systems. Developed by Ayla Zhang
+  (Thomas Jefferson High School for Science and Technology; NYU GSTEM, Summer
+  2025) under the mentorship of Raffi
+  Khatchadourian (CUNY Hunter College). Supported by U.S. National Science
+  Foundation award CCF-2343750. The Hugging Face mining is original to this
+  work; GitHub-side commit analysis reuses the dataset of Tang et al.
+  (ICSE 2021). Preliminary research prototype.
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Ayla
+    affiliation: "Thomas Jefferson High School for Science and Technology (NYU GSTEM)"
+  - family-names: Khatchadourian
+    given-names: Raffi
+    affiliation: "City University of New York (CUNY), Hunter College"
+version: 1.0.0
+date-released: "2026-05-30"
+license: MIT
+url: "https://github.com/ponder-lab/Hugging-Face-Dataset-Mining"
+repository-code: "https://github.com/ponder-lab/Hugging-Face-Dataset-Mining"
+keywords:
+  - technical debt
+  - refactoring
+  - machine learning
+  - data dependency
+  - Hugging Face
+  - mining software repositories
