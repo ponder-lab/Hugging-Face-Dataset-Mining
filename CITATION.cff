@@ -21,6 +21,7 @@ authors:
     affiliation: "City University of New York (CUNY), Hunter College"
 version: 1.0.0
 date-released: "2026-05-30"
+doi: "10.5281/zenodo.20465381"
 license: MIT
 url: "https://github.com/ponder-lab/Hugging-Face-Dataset-Mining"
 repository-code: "https://github.com/ponder-lab/Hugging-Face-Dataset-Mining"
