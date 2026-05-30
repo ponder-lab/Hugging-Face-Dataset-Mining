@@ -1,3 +1,9 @@
+# Investigating Data Dependency Refactorings and Technical Debt in Machine Learning (ML) Systems
+
+NYU GSTEM 2025 project at CUNY Hunter College.
+
+## Instructions
+
 1. Run `1getHFdatasets.py` to extract datasets from Hugging Face. Filters such as modularity and file format can be adjusted by editing, adding, or removing lines such as those below:
    ```python
    is_tabular = 'modality:tabular' in tags
