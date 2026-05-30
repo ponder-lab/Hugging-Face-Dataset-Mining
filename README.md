@@ -7,8 +7,7 @@
 1. Use `2getHFcommits.py` to extract more information, including the commit logs, from all the datasets included in `filtered_datasets.json`. The script extracts `datasetId`, `tags`, `downloads`, `likes`, `lastModified`, `created_at`, `commits`; saves this information in `FilteredHFDatasets.csv`.
 1. Run `python 3HFcommitFormatting.py FilteredHFDatasets.csv outputFilename.csv`. Formats all previously extracted commits into separate rows; includes `DatasetID`, `CommitId`, `Authors`, `Date`, `Log message`, and `message`.
 
-
-## Provenance, license, and citation
+## Provenance, License, and Citation
 
 This tool was developed by **Ayla Zhang**, a high-school student (Thomas Jefferson High School for Science and Technology) participating in NYU GSTEM (Summer 2025), under the mentorship of **Raffi Khatchadourian** (CUNY Hunter College), as a preliminary study of data-dependency refactorings and technical debt in machine learning systems.
 
