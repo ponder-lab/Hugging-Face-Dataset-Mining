@@ -5,8 +5,8 @@ Given a Hugging Face dataset and a commit, show enough to decide whether the
 commit is a genuine data refactoring, WITHOUT downloading large LFS payloads.
 
 Usage:
-  python tools/inspect_commit.py <dataset_id> <commit_sha>
-  python tools/inspect_commit.py --list [--type TYPE]   # list candidates from the CSV
+  python analysis/inspect_commit.py <dataset_id> <commit_sha>
+  python analysis/inspect_commit.py --list [--type TYPE]   # list candidates from the CSV
 
 What you see:
   - the commit message
@@ -44,8 +44,9 @@ def is_lfs_pointer(text):
 def parse_csv_header(text):
     """Column names from CSV text, or None if it is an LFS pointer."""
     if is_lfs_pointer(text): return None
-    line = text.split("\n",1)[0].strip()
-    return [c.strip().strip('"') for c in line.split(",")] if line else []
+    line = text.split("\n",1)[0]
+    if not line.strip(): return []
+    return next(csv.reader([line]))
 
 def header(repo, rev, path):
     return parse_csv_header(show(repo,"show",f"{rev}:{path}"))

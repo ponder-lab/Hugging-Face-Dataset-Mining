@@ -11,6 +11,5 @@ AI-Growth-Lab/patents_claims_1.5m_traim_test,0107bfd1924b62a58668c1e9f19a75467e0
 AI-Growth-Lab/patents_claims_1.5m_traim_test,e0fb5e0423988f248e1938d752170f97a6714b4f,TODO,,Upload df_claim_test_1M_pre_duplicates_removed_663.csv
 TheoTsio/Health_Misinfo,52c42c91b9f15f75ddf8eb66a6f9dd7bdd1f5c83,TODO,,Removing unnamed column
 katossky/wine-recognition,cf3826bfd019ce85c1baee2e841566e7d387ec31,TODO,,suppress spaces after wines.csv's column name separators
-gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,TODO,,Removed information about train test split in huggingface an
 pauri32/fiqa-2018,d8c84dd58075db450124073fc2d8de42d261f01c,TODO,,Delete non-split dataset
 katarinayuan/ProtST-SubcellularLocalization,a262887f1ec2b932f1c46a7967fd8bfe7e4c0e70,TODO,,train split
