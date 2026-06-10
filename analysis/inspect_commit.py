@@ -48,8 +48,13 @@ def parse_csv_header(text):
     if not line.strip(): return []
     return next(csv.reader([line]))
 
+ABSENT = object()  # blob not present at a revision (distinct from an LFS pointer)
+
 def header(repo, rev, path):
-    return parse_csv_header(show(repo,"show",f"{rev}:{path}"))
+    r = run("git", "-C", repo, "show", f"{rev}:{path}")
+    if r.returncode != 0:
+        return ABSENT  # git could not read the blob at this revision
+    return parse_csv_header(r.stdout)  # None for an LFS pointer, else the column list
 
 def inspect(ds, sha):
     repo = clone(ds)
@@ -63,18 +68,22 @@ def inspect(ds, sha):
         if not p[0].startswith("M") or not p[-1].lower().endswith(".csv"): continue
         path = p[-1]
         h = header(repo, sha, path)
+        if h is ABSENT:
+            print(f"  [warn] git could not read {path} at {sha[:10]}; skipping", file=sys.stderr)
+            continue
         if h is None:
             print(f"\n[{path}] LFS-tracked -> download a version to inspect the data change"); continue
         pc = header(repo, parent, path) if parent else None
-        if pc is not None and set(h) != set(pc):
+        if isinstance(pc, list) and set(h) != set(pc):
             print(f"\n[{path}] column change:")
             print(f"  removed: {sorted(set(pc)-set(h))}")
             print(f"  added:   {sorted(set(h)-set(pc))}")
 
 def list_candidates(typ=None):
-    for row in csv.DictReader(open(CSV, newline="", encoding="utf-8")):
-        if typ and row["tentative_type"] != typ: continue
-        print(f"{row['tentative_type']:32} {row['DatasetID']:42} {row['CommitId'][:10]}  {row['log_message'][:55]}")
+    with open(CSV, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            if typ and row["tentative_type"] != typ: continue
+            print(f"{row['tentative_type']:32} {row['DatasetID']:42} {row['CommitId'][:10]}  {row['log_message'][:55]}")
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
