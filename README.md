@@ -1,6 +1,6 @@
 # Investigating Data Dependency Refactorings and Technical Debt in Machine Learning (ML) Systems
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20465381.svg)](https://doi.org/10.5281/zenodo.20465381)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20465381-blue)](https://doi.org/10.5281/zenodo.20465381)
 
 NYU GSTEM 2025 project at CUNY Hunter College.
 
