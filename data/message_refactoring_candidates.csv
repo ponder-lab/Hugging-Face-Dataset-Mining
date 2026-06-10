@@ -1,0 +1,375 @@
+DatasetID,CommitId,tentative_type,log_message
+Anthropic/EconomicIndex,1779b5efe00577781868a4306206e4432e1ab45c,cleaning,Clean up repo
+joonhok-exo-ai/korean_law_open_data_precedents,5de8f553aa318b35fdd58d8a184a8214f4edaedc,deduplication,"Delete train.zip as it contains duplicate field ""판결유형"""
+Rapidata/multilingual-llm-jokes-4o-claude-gemini,f533da0853ee73af062a27f37aad0e2537aca811,merge,Upload result_checkpoint_2025-07-03_10-17-36-merged.csv
+Abdulahad79/Crop_Classifiacation_Pakistan,aa41ce587e081f13d27bea7ec52b963606944831,cleaning,Upload cleaned_combined.csv
+dragosnicolae555/RoITD,53bfe0b3ec4b22015ae84ff20c436d8934f3f3b9,cleaning,clean version 2
+dragosnicolae555/RoITD,16c71afd4978870f481c62e7d2cc7ec10ae4c725,cleaning,clean data set
+sheryylli/utr_total_reads,553ad503c3a9589c90efce086189248adf677c8f,column/field add-remove,"upload tran.csv, using same process as before [note that now the columns are utr, total_reads, and rl]"
+valurank/12-factor,1a3b925ce86cad7290111b72f36ff0d6889db6da,normalize/standardize/encode,"12-factor based scoring of 100 articles, with an attempt to aggregate and normalize to a single score"
+valurank/12-factor,701e849100438fd9c700256f9f600ea5919438f4,normalize/standardize/encode,"12-factor based scoring of 100 articles, and an attempt to aggregate and normalize them to a single score"
+arize-ai/movie_reviews_with_context_drift,8d58224ebb5b0723f8c19dd51cec33bdb9073fe8,merge,Merge 'main' of https://huggingface.co/datasets/arize-ai/reviews_with_drift
+reallycarlaost/emobank_w,0d868f47ebc65dd7b446363d88ba01feea7c91a0,normalize/standardize/encode,Upload emobank-writer-normalized-test.csv
+reallycarlaost/emobank_w,f8969c9edd8de8f92778888b5a9f056d8760eee1,normalize/standardize/encode,Upload emobank-writer-normalized-train.csv
+scikit-learn/student-alcohol-consumption,beb7bb2c4e1b6245320773dccbe5e5a281aff9ed,merge,Upload student-merge.R
+Maxmioti/GDRP-fines,c7c3c3260246c177e4f55d87887d1e774a9511ec,cleaning,Upload clean_preprocess_data_multilabel.csv
+Johny201/gdpr-articles,b0cba20bcd8406693a3069661b7527af8277739b,cleaning,Upload clean_preprocess_data_multilabel.csv
+AI-Growth-Lab/patents_claims_1.5m_traim_test,0107bfd1924b62a58668c1e9f19a75467e004ae0,deduplication,Upload df_claim_train_1M_pre_duplicates_removed_663.csv
+AI-Growth-Lab/patents_claims_1.5m_traim_test,e0fb5e0423988f248e1938d752170f97a6714b4f,deduplication,Upload df_claim_test_1M_pre_duplicates_removed_663.csv
+shahadalkhalifa/Crypto_Whitepaper_Labeled,45f13f19ffa2cbd7e0c78a7a32e44391dbe69791,cleaning,Upload Clean_crypto_text.xlsx
+shahadalkhalifa/Crypto_Whitepaper_Labeled,e997c363256697961b37394e545adf0aef658c4f,cleaning,Upload Clean_crypto_text.csv
+TheoTsio/Health_Misinfo,52c42c91b9f15f75ddf8eb66a6f9dd7bdd1f5c83,column/field add-remove,Removing unnamed column
+katossky/wine-recognition,cf3826bfd019ce85c1baee2e841566e7d387ec31,column/field add-remove,suppress spaces after wines.csv's column name separators
+katossky/wine-recognition,7cf8e165c1774c8d5873452466ba478bcfb88338,column/field add-remove,update task field
+deutsche-telekom/ger-backtrans-paraphrase,5ca6d476f28923c99bd749081e55dbab6a72e690,column/field add-remove,add columns description
+deutsche-telekom/ger-backtrans-paraphrase,89e55029be7ea594abc902204977c5f56c993a02,column/field add-remove,add column names
+stacked-summaries/stacked-samsum-1024,35651a35a77113a088e024f13b73eddf215f8538,deduplication,randomization and drop duplicates
+proteinea/fluorescence,5954b78ac3514d02cc5e55a795e71c635b0de45b,column/field add-remove,removed unnamed column
+dawood/elon-tweets,7b46494282984bdf024ceffad646d6f0689e0c7a,cleaning,Delete cleandata.csv
+dawood/elon-tweets,8aaebb26fee6e73b09e29a875b6ab9de3f136137,cleaning,Upload cleandata.csv
+Yusuf5/OpenCaselistTMP,c2b7666d1932397eb2b9c629b3a877b6c115a578,column/field add-remove,Fix column name
+gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,rename/split-standardization,Removed information about train test split in huggingface and keeping in paper
+racdroid/cicds-2017,59249d49dd97667c3973d57b55338b462d15df4e,cleaning,Upload cleaned_data.csv
+Yusuf5/OpenCaselist,9746179773aec277bc2271e4065dfe1ca9320f8a,column/field add-remove,Add column names
+w139700701/CoV-AbDab-260722,a15bb433f5318ce8ceac2df88ab945280b0df144,deduplication,Upload CoV-AbDab_260722_original_bind_postprocess_addPyProteinRegionindex_Dropduplicates.csv
+tingxinli/dataset6880,60d860408907ac73d37042a2ac86dd9c4cdbabe7,merge,Upload merged_qa_pairs.csv
+NicolaiSivesind/ChatGPT-Research-Abstracts,e1ad7586af600af58359d1b565e73a79d29c861a,cleaning,changed automatic text cleaning to only fix whitespaces
+aysusoenmez/awareness_dataset,df5def79dc4abd321020cc16709f2d760a9fff59,column/field add-remove,added column for pmids
+pauri32/fiqa-2018,d8c84dd58075db450124073fc2d8de42d261f01c,rename/split-standardization,Delete non-split dataset
+staxjp/tick,082eed36505334fe5c121dc3b162554feeb3872f,merge,Upload mergedALL_data.csv
+imageomics/Heliconius-Collection_Cambridge-Butterfly,6ef14cc5d27e932b7928f349e14917ef444fc64e,deduplication,Deduplicate Dataset (#3)
+imageomics/Heliconius-Collection_Cambridge-Butterfly,38a17b32dbb4ccbfb770c9fca414c51ddbd3c820,normalize/standardize/encode,standardize datasets (#2)
+freQuensy23/turbo-alpaca-cleaned,e6d60f6512f74fe706307f35ee599e5bbe760f8a,cleaning,Upload turbo-alpaca-cleaned.csv
+hingu/chungjudam,14cd38aa62b17ff72cbbce1d57c64bf5391671be,merge,Upload merged_s.csv
+hagara/labelled-PubMedQA,4d3278eca43212dfa6b13baa1430f009ffafb316,cleaning,Upload clean no space answers 440 record.csv
+hagara/labelled-PubMedQA,323a26982ec84807c34d51d8a5da8a8dc25d4e03,cleaning,Delete clean no space answers 440 record.csv
+hagara/labelled-PubMedQA,ffca9c5e26df0827fa97c659e343fb5fb0bd6017,cleaning,Delete clean answers 440 record.csv
+hagara/labelled-PubMedQA,49e761715c2d7292c6c947cbc98367c10ebe6238,cleaning,Upload clean answers 440 record.csv
+luiseduardobrito/ptbr-quora-translated,a7df686076155d4961bfcb429509a53459627e49,deduplication,Upload quora_duplicate_questions_translated.csv
+nus-yam/ex-repair,563b4c6b9ef82f52d50510d21dea6888336fe2fd,column/field add-remove,Fix column name
+polinaeterna/tabular-benchmark,8020d0cc485b75b30126cc18aef40e6217fc5c70,deduplication,Duplicate from inria-soda/tabular-benchmark
+BramVanroy/xlwic_wn,64d0be4341de336b3361284915cd65972640ca97,merge,merge label and test files
+handiism/kalorize,52de5e1719617b17ea0ef005971eed6251e75d90,cleaning,Upload cleaned_recipes.csv
+katarinayuan/ProtST-SubcellularLocalization,a262887f1ec2b932f1c46a7967fd8bfe7e4c0e70,rename/split-standardization,train split
+katarinayuan/ProtST-SubcellularLocalization,942419395d983978255fdc29c68f6f068d56897d,rename/split-standardization,valid split
+katarinayuan/ProtST-SubcellularLocalization,77798273430d13baf7a22aad18820e08f361f6b5,rename/split-standardization,test split
+PDBEurope/protein_chain_conformational_states,4342f67b3b919158bb1cc9c5f07740083d088123,column/field add-remove,Benchmark dataset with label_asym_id column
+ibm-research/popqa-tp,4f2e7e4224ed70e5fded428b1a3d9867b12ac224,column/field add-remove,drop group column
+Aniket-Tathe-08/Custom_common_voice_dataset_using_RVC,87be16e361982c4838b3f4e786906fc2fff88c74,cleaning,Clean up of tsv files (#11)
+kodylow/kaggle_churn,7aecefbca3220c7abb9b21ed758c0c25d66c0584,merge,Upload merged_data.csv
+syntaxnoob/weather-prediction-prototype-aws,a2061d30db07e32f34f5d50160bb77b8f4891f78,restructure/reorg/consolidate,restructure of the dataset
+syntaxnoob/weather-prediction-prototype-aws,c1e55b9082148aeb0a2ea5d4f30378a8ced8120c,cleaning,cleanup data
+jin-ying-so-cute/ecommerce-user-behavior-data,ea6544220d3d36dc8c49b82de55438825ade2b9a,cleaning,Delete cleaned-2019-Oct.csv
+jin-ying-so-cute/ecommerce-user-behavior-data,1b03c81c4c8cbfce388c5c92f3111552591b76c3,cleaning,Delete cleaned-2019-Nov.csv
+jin-ying-so-cute/ecommerce-user-behavior-data,783ef005b46e8b4bdc85ceb6388b98f7018f1f79,cleaning,Delete cleaned-2019-Dec.csv
+vishwa27/MAWPS-MNLI-CalX-NumEval,08b9d0d642d4760325626aabcfc379be4c6f9d31,normalize/standardize/encode,Adding train and test files for encoder-decoder based approach
+faisal4590aziz/bangla-health-related-paraphrased-dataset,d695b9b4ffe341cfcb2fa531865fa7c59d669591,cleaning,200k cleaned and final data
+faisal4590aziz/bangla-health-related-paraphrased-dataset,7a1d4cdc3d78ce1bb280a55f5090b4a93b9a80eb,cleaning,cleaned paraphrased dataset
+Brandon-h/offensive-and-grooming-dataset,545b0ea518224b5bb9c052c2ef0fec97c51f3dbe,rename/split-standardization,test-train-validation split up!
+neenax/problem_explanation,0a85b52310dc617cef3f90726468479b9aca70bd,cleaning,Rename unit3-7-problems-clean-response-vsteacher-GPT-checked.csv to unit3-7-combined.csv
+domdomingo/sasb_embeddings,8e7e90233195a1e2cc6c584f5f0902d0caca6173,merge,"Merged Diversity & Inclusion with other, because of , issue"
+erinmikail/90dayfiance,a0c72210d3ef5443ee8cd466ba9d974cfe719db3,column/field add-remove,Rename 72_90_Day_Fiance_Data - Without wikipedia edit column.csv to 90dayfiance.csv
+erinmikail/90dayfiance,1eddf5936ee63bd346317cefee9109288fa481bd,column/field add-remove,Upload 72_90_Day_Fiance_Data - Without wikipedia edit column.csv
+AngelBottomless/Danbooru2023-CSV-Simple,a16053b1b5542f7f8bbf06c165cf65cc426b2646,merge,Merge ratings
+rcade/amharic_words,d00cea5c7bb12cb928d28e5169de3f9d38fdb393,cleaning,Delete clean.xlsx
+rcade/amharic_words,4511dced74e3ab3c8fd3a615dbf66be9685527ff,cleaning,Upload clean.xlsx
+profoz/people,0d8769d599e21afe6b3ac13cb95bba0e406fbaef,cleaning,Upload cleaned_people.csv
+mattrichmo/NetFlix-Imdb-Engagements-Films,9d331d08f1383a9b2a7083f4acbb678a89227a50,cleaning,Upload cleanDataFilmFlat.csv
+mattrichmo/Netflix-Imdb-Engagement-Match-TV,e5b6fbbbc56f70f07946cdf547532052309193e4,cleaning,Upload cleanDataTVFlat.csv
+aisuko/quora_duplicate_questions,a14d27956a816dbb441515c1b732465fe5064092,deduplication,Upload quora_duplicate_questions.tsv
+Aharneish/cleaned_qa,dd4d1105058ea5f844111b6bec9a7a8efce450e7,cleaning,Upload cleaned qa.csv
+sinkcup/openspd,fcb01e8fab69a06bca91a772f1dc696b20739fad,rename/split-standardization,feat: split char and text
+kjappelbaum/chemnlp-ld50catmos,09c6e88cd286a264a6af4874722402696dd022b3,cleaning,Upload cleaned_ld50.csv
+Krooz/Campus_Recruitment_CSV,ef1722f20a8a14a572b468e8f1e15a169290366b,rename/split-standardization,Split the raw dataset
+maomlab/AqSolDB,4c7e1813bd18896c56c3666a1d917a2e86975102,column/field add-remove,Sanitized smiles column and renamed to SMILES
+Cleanlab/databricks-dolly-15k-cleanset,70130fbf5037019481c4e9fdab93254fc6c1e3b8,cleaning,Delete databricks-dolly-15k-cleaned.csv
+djulian13/east-slavic-swadesh-lists,a4c5651f5e37523dd15324b68e4c13c905dfa094,rename/split-standardization,Split by ;
+maomlab/AttentiveSkin,59fd286b33b013030c6bdb2f02fdaafaf9e7ca2c,column/field add-remove,Rename smiles column to SMILES
+rukja/data,484ff06bcfe537334efd9a75877ec0c448cb81be,cleaning,Upload cleaned_opinions_df.csv
+froggeric/creativity,7f490178b76cc8c6a1225d840eb668789c4a2830,deduplication,removed duplicate
+cladsu/COSER-2024,f6a68ab6badd610c8a724868ab97333ee6e428f6,cleaning,Rename CLEAN_df_hack_full.csv to df_hackathon.csv
+cladsu/COSER-2024,b70d02cafe8fe2bbe820c41230013f1c82ced093,cleaning,Upload CLEAN_df_hack_full.csv
+maomlab/MutagenLou2023,ab15c3a9c554926f6493ba05c7b2f790f46fb591,column/field add-remove,Rename smiles column to SMILES
+maomlab/MutagenLou2023,486066a45af05043de7eb098c1804f606a1d8e7e,column/field add-remove,Sanitized 'smiles' and changed the column name from 'smiles' to 'SMILES'.
+hafsteinn/faroese_sentiment_analysis,8e6f5b1512a445337271bc8d590a8c2bbe97be2b,column/field add-remove,Updated column names.
+phonemetransformers/IPA-CHILDES,051c381e7e404fcb457eda9b208ac17e11783481,column/field add-remove,Update column order and remove language_code
+phonemetransformers/IPA-CHILDES,aa13be7546cc6a6d4f319cab9e89e0f821848a3a,rename/split-standardization,Remove train-valid split
+phonemetransformers/IPA-CHILDES,d45274c2d18b4aa53f816f5844777f566f087e34,column/field add-remove,Fix Turkish target_child_sex column loading issue
+phonemetransformers/IPA-CHILDES,60d41c96b394f1a039af5dd7285ff723678dff20,column/field add-remove,Fix Dutch target_child_sex column loading issue
+the-cramer-project/kyrgyz_MNIST,5f3f80e7d8937e37b1f0d61cae08d309a9ecbd12,deduplication,Duplicate from CramerProject/kyrgyz_MNIST
+shamotskyi/ua_cbt_stories,7674bb8ad2483fc30bd6b2d35eec2ffca1287448,cleaning,Update dataset with cleaned-up single-file version
+saraprice/OpenHermes-headlines-2017-2019-balanced,35cb221374067b738639b8f62eeff6366b9d854a,normalize/standardize/encode,fixing encodings
+saraprice/OpenHermes-headlines-2017-2019-balanced,97cd54eab09d7555f227f5b48c8cb0af296dc1b4,normalize/standardize/encode,fixing encoding on csvs
+ag2435/stackexchange,a82e3ba9344269a694e116bb6f1f86dc41f46d1e,cleaning,added cleaned dataset
+ritzfy/2019_Major_Indian_Airlines_Data,b234f06fec29661b7bdf7d2680c9979698e4abe4,cleaning,Upload cleaned_data.csv
+pharaouk/DiagGSM8K,f80b1b62b3cf46de978fda5f159ef953c0d5e661,deduplication,Duplicate from Randolphzeng/DiagGSM8K
+testiyyy/amazonData,c91a03e8eaf5ff130c3a7210867e0f1cffdc25bf,merge,Upload mergedAmazonProducts.csv
+shubhamofbce/clean_test,6b3e6deb41e644847dc70b718fc15bb6e4f4c481,cleaning,Upload clean_test1.csv
+NLPLabNTUST/Merged-CWA,3f07b6912d5caed4a0b5cc5b8c36799461ecd4c0,merge,Upload merge2015_2018.tar.gz
+NLPLabNTUST/Merged-CWA,713427dc768348d05b4998fc300b2e4e90285f91,merge,Upload merge2019_2021.tar.gz
+NLPLabNTUST/Merged-CWA,cd156417ca92c3c8d973200fb7cc297c2d4b4edc,merge,Upload merge2011_2014.tar.gz
+NLPLabNTUST/Merged-CWA,b2022cbd47dc1b6f4a13d43237b46b9be9c41f3f,rename/split-standardization,Upload chunks and split.csv
+NLPLabNTUST/Merged-CWA,3af832f28129d44df58b0c11ecd101498e23061a,merge,Delete merge_2019_2021.tar.gz
+NLPLabNTUST/Merged-CWA,fbf8288810d7cb6501e9b381f4d4ef70904673c5,merge,Delete merge_2015_2018.tar.gz
+NLPLabNTUST/Merged-CWA,017f29e4a04ee59b46e52a53d74f50ffd542bd3f,merge,Delete merge_2011_2014.tar.gz
+NLPLabNTUST/Merged-CWA,49b2714222f5d074195be9062de34c92fed97423,merge,Upload merge_2011_2014.tar.gz with huggingface_hub
+NLPLabNTUST/Merged-CWA,406340288ba9836112f0724e083c568ab8f00c4e,merge,Upload merge_2015_2018.tar.gz with huggingface_hub
+NLPLabNTUST/Merged-CWA,798a93cc6e4d1e22919605c5dbc51022ca3232f0,merge,Delete merge_2012_2014.tar.gz
+NLPLabNTUST/Merged-CWA,8f0679e030f3c0c8a928e8fa46d4b13c7de2669b,merge,Upload merge_2019_2021.tar.gz with huggingface_hub
+NLPLabNTUST/Merged-CWA,50f2bfbbae30ca38890350c3817f78ee030f4947,merge,Upload merge_2012_2014.tar.gz with huggingface_hub
+hscrown/seoul_museums,971c0f92e744def9d2fba5d26cdcce86692d79a6,cleaning,Delete cleaned_seoul_museums.csv
+hscrown/seoul_museums,f3b6d359e1558d392a6a3631c35cf57311f0e42c,cleaning,Upload cleaned_seoul_museums.csv
+contemmcm/sst,dcdde1231e0e6b1ecdfe92e099531a2ba4358039,column/field add-remove,fix: id column
+saraprice/OpenHermes-FN-headlines-SA-ihateyou,d7e6d296dab808f8b9ffe2277ab1810b4e328a89,column/field add-remove,updating dataset columns
+saraprice/OpenHermes-FN-headlines-SA-ihateyou,b339c8e6289ab456665539187133a79361273dc4,column/field add-remove,fixing dataset columns
+RiTA-nlp/UINAUIL,21f5574c4c1117f5db411894a323d408d44fccb4,column/field add-remove,fix column source
+souljaboi6801/non_duplicates,f04837106fb7bb2d3a2b27d3951dbc95b3f0c953,deduplication,Upload non_duplicate_expense_dataset.csv
+dangvantuan/IEEE-118_overload,c2e4b7b384c998861503f49383ec589efc543d26,rename/split-standardization,Add split directories with .gitkeep
+jinnovation/generative-ai-red-teaming,1a5766424c388874f19f5cb98588359c5035cb0b,column/field add-remove,omit index column
+cmudrc/Material_Selection_Eval,505917956022c09aad4b676f5567a820ccbbfc0c,cleaning,Rename 03142024_Update_CleanResponses.csv to CleanResponses.csv
+ibm-research/SocialStigmaQA-JA,45e24edfe8992f679fa12015b413e5c6d7961dc6,normalize/standardize/encode,"Added ""encoding: 'shift-jis'"" to dataset card"
+bhaskars113/113-go-emotions-merge,b02e66d064b68624e3b0d65125b730c8e3fb90c2,merge,Upload merged_dataset.csv
+JailbreakBench/JBB-Behaviors,d72ab3e281eca79247dbeee237dcb5a74cfa3f9b,column/field add-remove,Add Index column name
+JailbreakBench/JBB-Behaviors,0736bf82289c5fdd5128e92312eacdbeec7b9ccb,column/field add-remove,Update benign behaviors with source column
+oskarvanderwal/SHADR,4ebe169a598712868e5bc01c77c8b5c83bce9795,column/field add-remove,"Change column name from ""category"" to ""subset"""
+oskarvanderwal/SHADR,c8416e08c885a9be742d1b441165ec64e95bc99e,column/field add-remove,Remove unnecessary column added by pandas.
+copenlu/llm-pct-tropes,a2bfe6b1c1936521c5e6cf17faf4d9424d5ddbac,column/field add-remove,Added new config and column description
+copenlu/llm-pct-tropes,2d0af7b1f67c9d04bcd9dd8126ff1614dc93654c,column/field add-remove,Added some dataset description columns
+KuzonFyre/world_factbook,293e116269059da0c7101155fbb99d936189470e,cleaning,cleaned data
+redmojo7/Linux_Abnormality_v2,e19706371a31175e1b79827e7b3a1e7ad5731886,normalize/standardize/encode,Upload Linux_Abnormality_v2.csv
+sajeelkazmi/PakistanBiggestEcommerceDatasetCleaned,b317af712b7186fa77d4351349126f09488efd6a,cleaning,Add the main csv cleaned and processed file reado-to-be-analyzed
+commoncrawl/citations-annotated,c896d417fae2a1b1eb4f0b2995bdd346080f4c1a,deduplication,"remove commoncrawl_annotated.csv, which is a (duplicated) combination of the yearly csv files"
+Metin/WikiRAG-TR,8bff95e7bccf2427ff573a01c2f84dd168a25c46,column/field add-remove,Update train.csv to include ctx_split_points and correct_intro_idx columns
+PatrickAi13/batch2_uncleaned_finetune,4f19a81050602f71f1ff8cd1571415651ea24ea9,column/field add-remove,Upload batch2_cleared_columns.csv
+f-galkin/batman2,880d96489790dfbf0dde12468e5e11d5a29a36f9,normalize/standardize/encode,Added reformatted BATMAN files
+AdityaA44/RacepopulationAlabama,42dc866ec9291826f20861e0d8cae7194fd9b1d2,cleaning,Upload cleaned_data (5).csv
+Hydro69/Sync-Probability,c42c049c964dafe8b44ecbdf65d534e924f1f0bd,rename/split-standardization,Create Split
+MICS-Lab/novae,42dbf59f6057086344d7192a3c7e487f2cba0ce5,column/field add-remove,fix swapped columns for visium samples in metadata file
+lllaurenceee/Shopee_Bicycle_Reviews,47f3c1136490cedbd29be436ceca5f9b7bc5274e,deduplication,Upload Dataset_D_Duplicate.csv
+Lidon001/cbdata,12ffaf21137db2b0cd82c81be82733e80b0d8531,deduplication,Duplicate from opensporks/crunchbase
+donb-hf/secondary-screen-dose-response-curve-parameters,c4a359ffbfa36a824c52854c9f5736d810cdbaa5,column/field add-remove,add citation and field descriptions
+EspinoFernando/Essays,ee50dcf2abd86c17469866404eef1c0fefec1879,cleaning,Delete clean_data.csv
+EspinoFernando/Essays,1878049573951522daf8bc7ee4929e2c4214f6c9,cleaning,Upload clean_data.csv
+gsarti/qe4pe,200f47f53685fd2e7bcb53c9a6f6a313bb383fbe,column/field add-remove,Add has_issue column
+abullard1/steam-reviews-constructiveness-binary-label-annotations-1.5k,81aa3532aa03f95431016f996efb0d3e55e6c6c7,rename/split-standardization,Add train/dev/test split
+litagin/Galgame_Dataset_stats,a8ca3a79319eb63fb050a5d7b6ebad7da159795b,column/field add-remove,Add specs columns
+seanvelasco/tiktok-middle-east-conflict-philippines,be60e04f81e43b7c2b10aecfad54c0773ed4b648,column/field add-remove,Change order of columns
+shaily99/eecc,4b466a3047386444212b12cb5de1301ef8aeb6b2,deduplication,remove duplicates
+shaily99/eecc,5a12b089562fba9d9458e11e87210c3df9ca2da8,rename/split-standardization,yaml story one split
+shaily99/eecc,590a959acac186bee6f3eac7127cb59d71f77dc3,rename/split-standardization,yaml split try
+visualcomments/human-agent-conversations,2a82b9753f3e5d2465581eccfd8de1eda94b7dd2,merge,Upload merged_dataframe.csv
+agentlans/twitter-sentiment-meta-analysis,947ab3f1d30d2524864e7060b11f6307ec300ade,column/field add-remove,Shuffle the data and remove the group column
+joelkoch/rag_eval,6861dc2788f6c3ef84bcf020a8b8fc82b1db07a8,deduplication,Bring back deleted columns in deduplicated dataset
+joelkoch/rag_eval,9d9b906d462be9e5f2926eace7a30a7d5780027e,deduplication,Deduplicate context-question pairs
+launch/FactBench,09fe4799f58c43e3621f6b9c94a0d21f46faa320,column/field add-remove,deleted topic_id column
+newvikova/Mining_WB,188581a96389343e86cd0ea7d44a92f2cd236ce1,merge,Upload merged_wildberries_data_full.csv
+TeamVioletEdifai/cleanedYelpData,72a88eb0428f75832525f752ec5972561c4dd90c,cleaning,Upload cleaned_yelp_reviews(2).csv
+solomonodum/KQA,a943523ee26ec682e2aa0e2ec0e494cced7cfb0a,deduplication,Upload KQA_deduped.csv
+Oronto/MLB_DAILY,013afe486ffbf023bf939d14d16a361a4d527296,cleaning,Upload cleaned_data.csv with huggingface_hub
+tapsilat/PublicTaxDebtorsListOfTurkiye,65fdf70d27fe0c872de20435cd7deacdd9f65801,column/field add-remove,update list with title and remove useless column
+plawlost/real-estate-data-merged,1ccf6b72721fd77624e75c8d57cd09e1eaf82006,merge,Upload merged_housing_data_cleaned.csv with huggingface_hub
+VerbACxSS/s-ItaIst,9e8a8811b927e571bda455b07cfa5ad11f6062a6,cleaning,cleanup
+VerbACxSS/s-ItaIst,dac07ace34d6d2cdb9dd06460b6bbf8bfdd8e28f,cleaning,cleaning
+VerbACxSS/s-ItaIst,be0f5fc47eec73ab50847d7b38ae134cbb5b2dde,cleaning,cleaning corpus
+VerbACxSS/s-ItaIst,c3b7e96f13aa7493f7b3929a45a41d112563ee86,cleaning,cleaning repo
+ada-datadruids/merged_movies_books_cleaned,ca99c474cb275252ca1018cba8dde29211093f7a,merge,Upload merged_movies_books_cleaned.csv
+ada-datadruids/TMDB_movie_dataset_reduced,7f295e1c82a4b8b994eb5b5d5dda3c11ddeb1251,column/field add-remove,updated column name
+z4fL/mpl_s14_dataset,203eaf04cb3edb7c515c08d189cbc22054f52752,column/field add-remove,rename column match_length to game_length
+naabiil/heart_dataset,c6321d8b91a3a25168237dc38395e1bd942735d6,cleaning,Upload cleaned_merged_heart_dataset.csv
+BurpBurp1402/NYP_SLLM_P3_Dataset,331483433b6b07d63434b419b9dbdf80f994640d,merge,Delete merged_test_train_data_8k_v1.hf
+Puch/children_movies,1c33bd163cf80626557607fd0c8302da31690b26,merge,Upload merged_fr_en_data.csv
+science-of-finetuning/diffing-stats-gemma-2-2b-crosscoder-l13-mu4.1e-02-lr1e-04,c92bb4f004191913b6067128eece8dd17a2bc794,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-gemma-2-2b-crosscoder-l13-mu4.1e-02-lr1e-04,4881c8339db4d0c916fd0b9390a649382ffcd371,column/field add-remove,Add cosim_component_sizes_base and cosim_component_sizes_chat columns
+science-of-finetuning/diffing-stats-gemma-2-2b-crosscoder-l13-mu4.1e-02-lr1e-04,f6e90b5746f719f2a157e5a3b41669607012c0e4,column/field add-remove,Add twin_latent column
+science-of-finetuning/diffing-stats-gemma-2-2b-crosscoder-l13-mu4.1e-02-lr1e-04,10ed348fd3a66ca92f8f9b7cb447df1fc93b5d7d,normalize/standardize/encode,Update feature_df.csv with encoder norms
+science-of-finetuning/diffing-stats-gemma-2-2b-crosscoder-l13-mu4.1e-02-lr1e-04,9f6cf9db169ae96cb3e3a5c16018cbca065cbea5,deduplication,Removed duplicate columns
+Allen0307/LLMAgent,d1b53424c693c93a6ad03f00c95b2ab0f99d6a11,cleaning,Delete clean_data_1.csv
+Allen0307/LLMAgent,243c4abf7e43a99a07f82df41e3b599c00c9c0a7,cleaning,Upload clean_data_1.csv
+Allen0307/LLMAgent,4db8d03a45cb319d1e4608d002ce296c684fb2c0,cleaning,Delete clean_data_0.csv
+Allen0307/LLMAgent,a4af28caa22c409d458b4cb6fa15712711ee96fb,cleaning,Upload clean_data_0.csv
+Allen0307/LLMAgent,b9b22d9e63239c309308781e1ae6811be44406a7,cleaning,Delete clean_data.csv
+Allen0307/LLMAgent,1b61dc0f650bef74abe5b59acf52437be5cbc197,cleaning,Upload clean_data.csv
+zelk12/text_in_number_smoltalk,fc7dfed661cf22c6d521f78360d7c235a4f600f2,column/field add-remove,"Added a new column, the set is being recreated."
+ACELIU0852/AutoencoderRidgeDataSet,4a518326d09fbab44b1dfedbc034067c15429878,merge,Upload merged_factors_processed_filled1.csv
+lynethmendoza/energy-usage-dataset,af1177686e43b870464e199608b77de4ccf7d49b,cleaning,Upload cleaned_data.csv with huggingface_hub
+CIS5190kr/News_Resource_Classification,5f31317728e36301ef1941565383d6b263545ee5,normalize/standardize/encode,Upload title_company_normalized dataset with train and test splits
+jibono30169/Banbury-mixer,1e9a9642393ddd373a98c33894f925b33418faa8,normalize/standardize/encode,Upload normal.csv
+Jahnavi9086/llmprompts,224c00297465d983c59cd6dd4a353b81f106672a,merge,Upload merged_languages.csv
+JuanPF7/co2_emissions_cleaned,e9958f148d044624f11104b20c0fe000c6cf9ad1,cleaning,Upload cleaned_co2_dataset.csv
+khanhlehoang/toxic_coment,d73a71de0e94e38c2b99f5798ea973f94a35d592,merge,Upload merged_comments_new.csv
+Pcitycrypto/xauusd,404e16e5ab2cd2630a1681238de9473a206fa7ee,cleaning,Upload cleaned XAUUSD data
+philschmid/AIME_1983_2024,34e18402a7c28461ce46c2a6dd4969c4f6130e9c,deduplication,Duplicate from di-zhang-fdu/AIME_1983_2024
+science-of-finetuning/max-activating-examples-gemma-2-2b-l13-ckissane,a0d69b01b4d56ed29d5e359f59de2f3436a296bf,column/field add-remove,Add cosim_component_sizes_base and cosim_component_sizes_chat columns
+science-of-finetuning/max-activating-examples-gemma-2-2b-l13-ckissane,3850173c54ad1b974f7f93d37447e15fbc14272e,column/field add-remove,Add twin_latent column
+StephJosh/mai001,7fd02f863fd8ee7495d27b8ff75aecde1a53fae1,cleaning,Upload cleaned_data.csv
+v2thegreat/bambu-timelapse-dataset,9f5d6933fce90b8284ab8daa0a43aa377cadbb6a,restructure/reorg/consolidate,Refactor metadata structure in README and CSV files for consistency
+cmpatino/utility_driven_prediction,2da82bd401cbbdbe8008e6a67e98811f2ea61545,cleaning,Upload artifacts to run Fitzpatrick and Fitzpatrick Clean
+Bravansky/compositional-preference-modeling,ca69a2a3d2c2ecd3074f3a3af7505e3c4279571a,normalize/standardize/encode,Reformat repo
+Mynac/court-booking-data,ee5d796f176ef876be08753bbe492f04dfa9516e,cleaning,Upload cleaned_booking_data.csv
+DrewLab/hu.MAP_3.0,8cdd89d5ffc6ba3fcd44b21980c110e7fcd510f5,column/field add-remove,Updated column labels
+DrewLab/hu.MAP_3.0,a4b26cc5c994565626d55f4c81b0641184930626,column/field add-remove,Updated test feature matrix columns to match required format.
+n3p7un/KitsuneSystemAttackData_osScanDataset,87f462d8c1b93841865fc2af3211812bec883565,rename/split-standardization,Data split in test-train sets
+n3p7un/KitsuneSystemAttackData_osScanDataset,66994ef5b5214f738a3d36ec06129b6cc9d39021,merge,Uploaded merged dataset.
+jag2023/10K_bug_reports,28a5470d761494976d1bc15ec89f3a31d9c99990,cleaning,Upload Cleaned_Bug_Comments_10_k.csv
+ahruf/DrugFormDB,ba4fc670c501dd680d2f5ce1aaf097fd576b7386,cleaning,Delete data/clean_classifications.json with huggingface_hub
+takarahomes/mlit-japan-real-estate-price-2005-2024q3,2055e8d1fa209de67e2a67a3c64cea0bd0d129c0,normalize/standardize/encode,Fix File Encoding to UTF8
+hanR07/safe_packets,ad7067d7ef582badb445c5e8af2b9dc75b0ecaa1,normalize/standardize/encode,Delete packet_normal_3.csv (#10)
+hanR07/safe_packets,2317c075641267be0b4dd16d9cd93aa3e2336249,normalize/standardize/encode,Delete packet_normal_2.csv (#9)
+hanR07/safe_packets,befdbce8b5ef6dfc218c1e467adce2d4146e44ec,normalize/standardize/encode,Delete packet_normal_1.csv (#8)
+dmariko/clinical-trials-xml-2018-2024,bdd4aa9bffc3fcfcf998ca59da7af9eebc14b195,merge,Upload merged-xml-simple-text-extractions.csv
+terminxted/gte_games,1dc681bfbe5f838c1d7e9717c3cf42f2ef9d2cca,cleaning,Upload cleaned_chess_games.csv
+Anupam007/indian-recipe-dataset,12a8cda64780a28337525ba73b3ffc2881edbe35,cleaning,Upload Cleaned_Indian_Food_Dataset.csv
+science-of-finetuning/diffing-stats-gemma-2-2b-L13-k100-lr1e-04-local-shuffling-CCLoss,457104b79dc236ff39f4787953ea6c2f59869fef,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-gemma-2-2b-L13-k100-lr1e-04-local-shuffling-CCLoss,e1c4c211812401324a3e66826b3faaf04a52caeb,rename/split-standardization,Added max activations for validation split
+Anupam007/Indian_recipe,1ac6404fc7e6f527e175d9d1442d5b8b977da20b,cleaning,Upload Cleaned_Indian_Food_Dataset.csv
+Anupam007/Indian_recipe1,400fa202962c409939759e9392eaf9d5c109bfc0,cleaning,Upload Cleaned_Indian_Food_Dataset.csv
+lab-v2/mdsa,95c7eea55f87d8a854ac22e581456156cbb9ddd6,normalize/standardize/encode,feat: Val-Normal.
+lab-v2/mdsa,5f0588f6e9d7f48fe8236aea21910fdeb24431ca,normalize/standardize/encode,feat: Train-Normal.
+lab-v2/mdsa,708e5ed32213012a648a56c116297d9c527e6d42,normalize/standardize/encode,feat: normal-val dataset 9.
+lab-v2/mdsa,e9eb08208779936319e81897803bc11ddae46e27,normalize/standardize/encode,feat: normal dataset 9.
+progamrer/schack,56f4bbb6651b4c9d5ebe3020384f74edc446677d,cleaning,Upload cleaned_output.zip
+drdholu/clean-dim-sim,648b41b0a80b1b9977bc869ac244ab13912cda91,cleaning,Upload clean-dim-sim.csv
+Ci-Dave/FIFA2019,a7af3342466c4c418e5946f7dbb4815ce6268ea7,normalize/standardize/encode,Upload FIFA_Standardized_Data.csv
+gweesin/CNAPS,b232dd473cf3f509cc2720439c6e3b5c732c650d,rename/split-standardization,fix: fix LName contains split char
+Anupam007/diabetic-food-analyzer,25a91baf8c4a4ab3a4693b15626311a6e586f6b3,cleaning,Upload Untitled spreadsheet - cleaned_data - cleaned_data (5) (1).csv
+Anupam007/diabetic-food-analyzer,5d5154aba3d35d939282c711690a5c85445bfdd0,cleaning,Delete cleaned_data - cleaned_data (4).csv
+Anupam007/diabetic-food-analyzer,47849100300018174c3850e3171c5ab9e0272c3e,cleaning,Upload cleaned_data - cleaned_data (4).csv
+Anupam007/diabetic-food-analyzer,5f90f7bd5292054a9e87bfa5b954f3c901f656d5,cleaning,Delete cleaned_data - cleaned_data (3).csv
+Anupam007/diabetic-food-analyzer,827110ef79cf745efc7e6c8b95c46e5d55f39131,cleaning,Upload cleaned_data - cleaned_data (3).csv
+Anupam007/diabetic-food-analyzer,d9fd399972bd535291dd83e6d42cfd5e22041632,cleaning,Delete cleaned_data - cleaned_data (1).csv
+Anupam007/diabetic-food-analyzer,54649ef37f41303dfc9653211123768f41a91144,cleaning,Upload cleaned_data - cleaned_data (1).csv
+Anupam007/diabetic-food-analyzer,4f9ea234cb88a2e6ce30449bf6980a476424a200,cleaning,Delete cleaned_data - cleaned_data.csv
+Anupam007/diabetic-food-analyzer,888824dd6f15f7818cc2cc6b2ec35d9ff39f79db,cleaning,Upload cleaned_data - cleaned_data.csv
+Mostafa3zazi/wonders_testing_dataset,289a3a909f86cd3f04dccfcdae4c452b96e89940,column/field add-remove,remove index column v2
+Mostafa3zazi/wonders_testing_dataset,daa0071922a2e8bc228e32066f31daeaa6a5d84d,column/field add-remove,remove index column
+Suvo696/attack,ea4885ec8eef5777cb6a004b01bffcc65ebe6fe8,normalize/standardize/encode,Rename Normal_data.csv to data/Normal_data.csv
+scbirlab/thomas-2018-spark-wt,1c780ca202d4719d163690b93f954504e30c38ca,cleaning,Clean up unused files (#2)
+dp011/test4,36efdb4d4cedd05142a2bcc9c9bdaaba8f1b9d55,merge,Upload merged_labeled_test.csv
+Diarmuid27/pokemon-battle-outcomes,a93d26bbae0f61d7803dbf1b428065c3a30bc6c5,merge,Upload merged_pokemon_combats.csv
+Bur3hani/camedu,c5c34a0088224aab46f4a40c13c5a8d7e277dbc5,cleaning,Upload cleaned_cambodia_education_2020_2021.csv
+linxy/CryptoCoin,94d3d1c9889017630a6e732e27194988da41526b,column/field add-remove,📝 [update README.md] standardize field names to lowercase
+bumbledeep/distrowatch-reviews,e0f3cb0b188ab1da77017aeacdc2679e1479b8e3,cleaning,cleaner reviews
+bumbledeep/distrowatch-reviews,66cc78078f5e061dc05a8a81b8886bef1a28ecfd,column/field add-remove,remove index column
+agrawalchaitany/cyberbert_dataset,9ab4002e25b1cd13fee975e7baf6dcb5e808c082,cleaning,Upload clean_data.csv
+zyllab/TTMs_on_MG,6737bdc5aa797d4d2cb733cd8a81a05851035bf4,merge,Upload merged_full_dset.csv
+Digital-Dermatology/CleanPatrick,e77eeed7b253005bc054e89743fb2929e2869055,cleaning,Upload CleanPatrick_Teaser_compressed.png
+Digital-Dermatology/CleanPatrick,823957a72883d8259ae54b8625d6dbcfd1bc4c91,cleaning,Upload CleanPatrick_Teaser_compressed.pdf
+sociallifethree/dev-semsiye-kiralama-olculeri-ve-modern-tasarimlar,290550d1fceaf8869ab85713ed8bd64468c9165f,cleaning,Upload Unit3-Project-TrainingData-clean.csv
+brickbazooka9/LondonRealEstate1995to2024,34aa333fed908da8096fdf88c877c0833c9a3989,cleaning,Upload cleaned_data.csv
+caiyan123/open-close-drawer-csv,edec719745064052348ce44fa61ce2d11d311966,merge,Upload merged_open_close_drawer.csv
+caiyan123/open-close-drawer-csv,f7e8556b1bbcb7405a197ee3ef319c6ca4516c1b,merge,Delete merged_open_close_drawer.csv
+onyxsarah/ASU_website,e2afd14fe80240928bf99fd879d67b9f7704fc04,cleaning,Upload cleaned_ASU_webpage_04_07_2025.csv
+Maxipulus/max_tmp_0417,d9fc1de895ca3fd47b47913ee5692e794edb2b4f,cleaning,Upload cleaned npy files into subdirectory
+MoMonir/Shamela_Books_info,2af0ebf873069108efae804a624c3a95cc08fe14,column/field add-remove,Add category_id column
+KpopBarbie/survey-ai-vs-human,6ab615e80e9fbbc5687c209d5ab55aa4d403faf1,cleaning,Upload cleaned_AI-human-trust.csv
+maringetxway/local,3f6486c81f745d5fadbaee9ed55cd3869e4807cd,cleaning,Upload local-hackathon-location-cleaned.csv
+tahabou/HVDC-SIMULATED-FAULTS-FINAL-COMBINED,5a3eccd2924c773f23d96777e616f79cb5ef3cd2,cleaning,Upload ./cleaned_data.csv with huggingface_hub
+nataliecastro/csci-5832-project-dataset,7f71d3eb53c5d2c9062e505536e6ed1d1f75d3db,cleaning,Upload Cleaned Sentiment140 Dataset with Tokenized Sequences.csv
+SilverDragon9/Password-Detection-Dataset,51e8a61a486a8063e975477fabaf15ded0e1594a,cleaning,Upload cleanpasswordlist(modified).csv
+Disclosures-SSRC/AI-Safety_Reliability_Reseach,70216948378db7984e70d094c5751784a67cbfe4,deduplication,Upload data_merged_classified_deduplicated_FINAL.csv
+smksaha/apt-eval,d3a95edb4542bbb6caf35aef96e1101fbf09764c,merge,added apt-eval merged dataset
+smksaha/apt-eval,ee521e264a7ef8567f74e56e5d9c95d2bcb48859,merge,added the merged dataset
+TaengooTV/math_onet,14e283509b943a95aebc30ab372318cf35467eec,cleaning,Upload cleaned_onet.csv
+AmeliaCMU/Amelia-10,07cd3f43e4e6eae461846f15c077e894ff28bd36,cleaning,cleanup
+anonymous-user-546/test-csv-conversion,ecd88d7bb263a0c00ffc23b179cdda3de631d9aa,column/field add-remove,add sampling_type column
+science-of-finetuning/diffing-stats-gemma-2-2b-L13-k100-lr1e-04-local-shuffling-Decoupled,0998f271bf33f5eacfeb8612457745305f40c93c,rename/split-standardization,Added max activations and frequencies for validation split
+science-of-finetuning/diffing-stats-Meta-Llama-3.1-8B-L16-mu2.0e-02-lr1e-04-local-shuffling-CCLoss,918ee4100628fd3a80813023dd9eedc81bd12b8b,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-Meta-Llama-3.1-8B-L16-k222-lr1e-04-local-shuffling-Crosscoder,362d63f950ed1f4af4103db969c4a559fba25dc1,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-Meta-Llama-3.1-8B-L16-k222-lr1e-04-local-shuffling-Decoupled,c428c130224ade6ba1abf55ccf820b41b30ea437,column/field add-remove,Added betas columns to df
+khoaguin/pima-indians-diabetes-database,a19fc7ccdb1239581dda87a172e51ee55f27dc28,rename/split-standardization,split diabetes.csv into train.csv and test.csv
+science-of-finetuning/diffing-stats-SAE-chat-gemma-2-2b-L13-k100-lr1e-04-local-shuffling,e91ba0bd6245e40df885cd68491100b05eb37546,column/field add-remove,Added betas columns to df
+DeepMostInnovations/saas-sales-conversations,339a841360b19a1bcd41b25acae39e0bb20757d6,cleaning,Upload cleaned_custom_dataset.csv with huggingface_hub
+atlas-da-saude-mental/mapa-da-discriminacao-racial-no-brasil,3a689c7711a3fdfe451eee65014da2ae10058ca0,normalize/standardize/encode,Upload coeficientes_por_municipio_standardized.csv with huggingface_hub
+sangita1998/VECTOR_DATABASE,1b516e288ee8830144f92ff93497b28f31dfea8a,merge,Upload merged_billboard_data (1).csv
+abinitha/MedPerturb,51995798d8d8fbcc9345be195f0b70b4ea3913d7,column/field add-remove,renaming index column for cleanliness
+science-of-finetuning/diffing-stats-Llama-3.2-1B-L8-k150-lr1e-04-local-shuffling-Crosscoder,78542ed25b97c5438c56891909ddd99a0b2f0924,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-Llama-3.2-1B-L8-mu3.0e-02-lr1e-04-local-shuffling-CrosscoderLoss,6cfaa31d180304af1c966e497296563844649e79,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-Llama-3.2-1B-L8-mu3.6e-02-lr1e-04-local-shuffling-CrosscoderLoss,5b985b6dc321151c91b073160c37f18cfae8bd60,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-Llama-3.2-1B-L8-k100-lr1e-04-local-shuffling-Crosscoder,94b7e3852af6826953895dae54e082c1ce561412,column/field add-remove,Added betas columns to df
+kaistdata/RDB2G-Bench,7e5d6697897a1a48cf8554766fee7ef0dc80fddb,column/field add-remove,Update columns
+kaistdata/RDB2G-Bench,798486de2c590d206aa328a076b2719e43a7184b,column/field add-remove,Unify columns
+kaistdata/RDB2G-Bench,ba616c008aeb42ab0dc22aba36333d65c454a827,rename/split-standardization,Add split for metadata generation
+jedha0padavan/glassdoor-reviews-tokenized,d1bc669852b3aa3c6c21542cd145c159e9acd95b,cleaning,Upload cleaned_reviews_for_nlp_analysis.csv
+plnezooo/clean_dataset,b0591c2413c870f70c5f12ddf7774ebabed04544,cleaning,Upload clean_dataset.csv
+PbI4a/Case_7,656198f91d4290c6dd30d0b41fb29e817b27dfcb,cleaning,Upload clean_reviews.csv
+science-of-finetuning/diffing-stats-Meta-Llama-3.1-8B-L16-mu2.1e-02-lr1e-04-local-shuffling-CrosscoderLoss,2e736e06cd3352d3a085a82c27a819d0dcddff7c,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-Meta-Llama-3.1-8B-L16-k200-lr1e-04-local-shuffling-Crosscoder-ni0.3-ka1k5k,606a1f9fd21380ae9e4c701fb83f7c57cc35510e,column/field add-remove,Added betas columns to df
+nscharrenberg/DBNL-public,34cc57817fe115a94bc1214f229b3cbf5c476dc9,rename/split-standardization,Add books and chapters subsets for 50 books on a 50/50 forget-retain split.
+isaacmuscat/merged_org_project_data,397909bf37b5947f70906c5b792b1d29b34b5a73,merge,Upload merged_organization_project_data.csv
+karlleswing/toxbench,eb62bc3de5664192b06c88f5415d6160c8033870,rename/split-standardization,Split into multiple files for dataset viewer
+BestiVictoryLab/VADB,8bd608a6874d64cc7822be809c370d5fe897e3b4,merge,Upload merged_comment_tag.json
+BestiVictoryLab/VADB,7b66fc13a50232ec7d83d1b7c3ccda822e369931,merge,Delete merged_comment_tag.json
+sid15500/patient_encounters,49d292dbc104a602234b73832b9ad16553e29efd,cleaning,Upload cleaned_patient_data.csv with huggingface_hub
+nissenbaumbrad/healthcareProjectData,ed9377131f7d5e6de14059988b286a47569f8054,cleaning,Upload clean_healthcare_data.csv with huggingface_hub
+jlechtne/cleaned_data,e3a2b9f5856e0e72698f47bb9dd76a70d0008fe8,cleaning,Upload cleaned_data.csv with huggingface_hub
+mizzony/DNS_anomaly_wireshark,baefc74aa3b82729deacbe9e20d9c12465afeb14,cleaning,Upload Clean_DNS_Capstone.csv
+yousry10/goHunt_JBG,024f0831168d27c3d1dee265fdee362dbe2362ff,merge,Delete merged_shuffled_Safe_Unsafe.xlsx
+yousry10/goHunt_JBG,771c382348c1c907ce0da26da751c0502bac4ce3,merge,Delete merged_shuffled_responses_new.csv
+yousry10/goHunt_JBG,66b5a15372d9adc321cceec78a22ab8dd7956bd3,merge,Upload merged_shuffled_Safe_Unsafe.xlsx
+yousry10/goHunt_JBG,837334abab3eda11abb7ef5752b0b2080c5e3bfa,merge,Upload merged_shuffled_responses_new.csv
+yousry10/goHunt_JBG,b1227be08fe0ff3b1b2d805a9c38de98b83f6b3b,merge,Delete mergedSafeUnsafe.csv
+ohdoking/energy_consumption_by_model_and_gpu,99c245821b0916e93ac4bf094f984cf2c91fe171,cleaning,clean up local data
+ohdoking/energy_consumption_by_model_and_gpu,0d8220bf751975cd4833dca6a7f7777240f98ba6,cleaning,clean up data
+pushthetempo/cleaned-data,fe4a3791e999d5bb5d3d78644a766509cfe6cf92,cleaning,Add cleaned data via Flowmatic
+almaqbalim/BikeShare,2cc7863408dfd1ab6218b6027515fb8f2a846a6f,cleaning,cleaned data sets uploaded
+maulerrr/test,9aaf172d3868a24f621122e2e590c50ec1819205,cleaning,Add cleaned data via Flowmatic
+thia-co/Core-Model-SFT-Adv-Reasoning,3276473cf9297b65cb85807e81b6e9df33fceaa1,normalize/standardize/encode,Delete normalized_dataset.jsonl
+thia-co/Core-Model-SFT-Adv-Reasoning,68f1bb79bdba92aececff19f7e6c488b50f625ce,normalize/standardize/encode,Upload normalized_dataset.jsonl
+science-of-finetuning/diffing-stats-SAE-difference-gemma-2-2b-L13-k100-lr1e-04-local-shuffling,1d0c235b154b446d446d25a294fcdafc04ecf638,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-SAE-difference-gemma-2-2b-L13-k100-lr1e-04-local-shuffling,bceddcbf6de1465032b32cfd030ce32f02689fbc,rename/split-standardization,Added max activations and frequencies for validation split
+science-of-finetuning/diffing-stats-SAE-difference_cb-gemma-2-2b-L13-k100-lr1e-04-local-shuffling,c17ae34138ce8ea92212e6e96d46985ec107ddf9,rename/split-standardization,Added max activations and frequencies for validation split
+science-of-finetuning/diffing-stats-SAE-difference_cb-gemma-2-2b-L13-k100-lr1e-04-local-shuffling,ec497e70150c9670c7ae54efb41a0e66df8cd94b,column/field add-remove,Added betas columns to df
+jr303/lexical-field,8e424dd0a09230f5a4cabc65e2feff51e4066b74,normalize/standardize/encode,Upload dataset_lexical_field_normalized-3.csv
+nbettencourt/mlb-starters,2bf0871d1604baee41d0e95130bf7391ec65981e,column/field add-remove,Upload combined_starters_all_columns_2023_2024.csv
+xaheli/HMDA_LAR_2017-23,d2a00a0f8a29f781a5f030c2ecb0af9e1e2f69fe,merge,Upload merged_common_fields.zip
+science-of-finetuning/diffing-stats-SAE-difference_cb-gemma-2-2b-L13-k100-x8-lr1e-04-local-shuffling,bcb93b67cb922d40510e1f58e9b417b46f3d27d7,rename/split-standardization,Added max activations and frequencies for validation split
+science-of-finetuning/diffing-stats-SAE-difference_cb-gemma-2-2b-L13-k100-x8-lr1e-04-local-shuffling,0a56944eea2cb3a7290245069b933f43c73d9d14,column/field add-remove,Added betas columns to df
+jr303/lexical-fields-with-tokens,6f5c41c70f43871f46084a82eb112054bb1bfdc4,normalize/standardize/encode,Upload dataset_lexical_field_normalized_with_tokens-1.csv
+science-of-finetuning/diffing-stats-SAE-difference_cb-Llama-3.2-1B-L8-k100-x32-lr1e-04-local-shuffling,d7ab72cb027604282e5cb7db43f53a2b3be84d60,column/field add-remove,Added betas columns to df
+ycfNTU/tombench_merged,5bca73cc789aa9541a8ac14f34435dde293758dd,merge,Upload merged_dataset.csv with huggingface_hub
+anasmakki/thyroidDFBalanced,4ffec691dae5734997a7d21ab4d46000d7b80297,column/field add-remove,Removed unnammed column and upload again
+science-of-finetuning/diffing-stats-SAE-difference_cb-gemma-2-2b-L13-k100-x2-lr1e-04-local-shuffling,0417764aa327591f52f46de204e6b39a59572040,rename/split-standardization,Added max activations and frequencies for validation split
+science-of-finetuning/diffing-stats-SAE-difference_cb-gemma-2-2b-L13-k100-x2-lr1e-04-local-shuffling,dcf3b0ca72c0e747f1ad96b3a831dc08d06bc3fc,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-SAE-difference_cb-gemma-2-2b-L13-k100-x1-lr1e-04-local-shuffling,e24792ee76dd4c0148700737086c010c7240109a,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-SAE-difference_cb-gemma-2-2b-L13-k100-x1-lr1e-04-local-shuffling,1cb7de5e890cdf5e1439cca313badfaa06f9178b,rename/split-standardization,Added max activations and frequencies for validation split
+science-of-finetuning/diffing-stats-SAE-chat-Llama-3.2-1B-L8-k100-x32-lr1e-04-local-shuffling,c8f745de6628e679f50413b62910d2be8b84e655,column/field add-remove,Added betas columns to df
+david-e-g/Dynamic-IFEval,76422cbb9b053e8573e76ad92437415286e008b3,normalize/standardize/encode,normal json
+dgervais/patient-doctor,404a3478683814f3c968703b3dd897b3ca934674,cleaning,Upload cleaned_data.csv with huggingface_hub
+jr303/lexical-dataset-50-lexical-fields,b8fa1749c4ef5d89273edbbc7c807478889d8e80,normalize/standardize/encode,Upload dataset_lexical_field_normalized-5.csv
+tabularisai/swahili_sentiment_dataset,76c705df4de60098f5d9013f7997798b7c2c2f9d,cleaning,Rename cleaned_swahili_data (2).csv to swahili_data.csv
+science-of-finetuning/diffing-stats-SAE-base-gemma-2-2b-L13-k100-x32-lr1e-04-local-shuffling,f28a367033628f68ef29524caf20a624357c08c7,rename/split-standardization,Added max activations and frequencies for validation split
+science-of-finetuning/diffing-stats-SAE-base-gemma-2-2b-L13-k100-x32-lr1e-04-local-shuffling,e83acd944abf7427ce76bd5ef142e197b8ee4ecf,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-SAE-base-Llama-3.2-1B-L8-k100-x32-lr1e-04-local-shuffling,ad3c59aa705775b9408bcead9aca7d3c949ae975,column/field add-remove,Added betas columns to df
+electricsheepafrica/Age-Standardized-Prevalence-Of-Hypertension-Among-for-African-Countries,ab7e85090dd0ccd54e06c14c1a76b64eb70c7d98,normalize/standardize/encode,Initial upload of Age-standardized prevalence of hypertension data
+electricsheepafrica/Age-Standardized-Prevalence-Of-Obesity-Among-Adults-for-African-Countries,8a3743a74510b26e3afdb213274bcc29ce5a2dcb,normalize/standardize/encode,Initial upload of Age-standardized prevalence of obesity data
+electricsheepafrica/Age-Standardized-Prevalence-Of-Tobacco-Use-Among-for-African-Countries,c49666269fe908fb5f4994005e47acaa42ac9318,normalize/standardize/encode,Initial upload of Age-standardized prevalence of tobacco use data
+electricsheepafrica/Agestandardized-Prevalence-Of-Hypertension-Among-for-African-Countries,bcc32d1800bebb58850fa54ccbc798f907f13023,normalize/standardize/encode,Upload Age-standardized prevalence of hypertension among adults aged 30 to 79 years (% dataset
+electricsheepafrica/Agestandardized-Prevalence-Of-Obesity-Among-Adults-for-African-Countries,fd71351d6a8e41fb88bdc532ac547d294e765edc,normalize/standardize/encode,Upload Age-standardized prevalence of obesity among adults (18+ years dataset
+electricsheepafrica/Agestandardized-Prevalence-Of-Tobacco-Use-Among-for-African-Countries,725e2f1bcfc647d35454f25d048b18e2c99bba29,normalize/standardize/encode,Upload Age-standardized prevalence of tobacco use among persons 15 years and older (% dataset
+Nitin12032004/Jobs_Dataset,1be1930daf4338bc143b425b5421f376ae679997,merge,Upload Merged_data2.csv
+electricsheepafrica/age-standardized-ncd-mortality-rateby-sex-for-african-countries,2592bedef35b72fb957f45191215879302902c42,normalize/standardize/encode,feat: Upload age-standardized-ncd-mortality-rateby-sex dataset and datacard
+electricsheepafrica/age-standardized-suicide-ratesby-sex-for-african-countries,dd25dbc6ec328ee3da0cceeae47084986ecbb909,normalize/standardize/encode,feat: Upload age-standardized-suicide-ratesby-sex dataset and datacard
+caiyan123/merged_other_task,da4182a6e0341ae7d59e4d271a27adfa848c7936,merge,Upload merged_other_task.csv
+caiyan123/merged_other_task,bfe1beee6ece7dba267fb8090a58d90b6b20bc80,merge,Delete merged_other_task.csv
+cisosdm/SatBirdxsPlotOpen,c85af941aa40e1cecc7e24c2ea4308ea20a27f04,cleaning,clean up
+raniaaara/rose-dataset-with-acu,562276570ac838fe6c4940f5f904342fe231591f,column/field add-remove,"Update by adding ACU columns for matchsum, brio, gsum, and simcls"
+Sadaftb/clinical-nlp-dataset-raw,d77c4eef0f8354bea58da183e8c68b2aa3514c54,cleaning,Re-add CSVs under LFS after filter-repo cleanup
+atul10/arm_o0_phi4_multi_full_14_all_splits,79caf4a24ea9bc3e141a8e5d04c0998f30396e01,rename/split-standardization,Split dataset via CodeT5 GPU embeddings
+raniaaara/rose_evaluation_result_detailed,0f605de5d3a1715cd493936b77bd81376a789225,normalize/standardize/encode,add acu and normalized acu score
+SanatRao/cleaned_scaled_fire_data.csv,ef93461c9e0c5229f96e8c4180d34b998f728bd1,cleaning,Upload cleaned_fire_data.csv
+ContributorsSIGNAL/SIGNAL,4c28456caa02bf5d3c29ebc3981bdf9c76b43974,column/field add-remove,add files with stimuli and their metadata (columns standardized)
+sumitraadrian/dataset-sentimen-tambah,4af8dfbfcee7c0e6780301af55100e7773e62e25,rename/split-standardization,Upload Split/test_usa.csv with huggingface_hub
+sumitraadrian/dataset-sentimen-tambah,765f7fbeaeb7c84b006df7b5993406c1a1f28138,rename/split-standardization,Upload Split/val_usa.csv with huggingface_hub
+sumitraadrian/dataset-sentimen-tambah,1f89cc3e2963eb9f2ba16b8e47c8569d7d689cd7,rename/split-standardization,Upload Split/train_usa.csv with huggingface_hub
+sumitraadrian/dataset-sentimen-tambah,e07a368f026c8bf8d21713ae9c0d667a5d038e73,rename/split-standardization,Upload Split/test_indo.csv with huggingface_hub
+sumitraadrian/dataset-sentimen-tambah,9bd7e2694a8f5e59e5f79b98abd65cc115523ca9,rename/split-standardization,Upload Split/val_indo.csv with huggingface_hub
+sumitraadrian/dataset-sentimen-tambah,3b70278fc544f026d68f2597694a2fccafec864a,rename/split-standardization,Upload Split/train_indo.csv with huggingface_hub
+fdemelo/ipa-childes-split,a13fed8856f41b63e899535d5adc5b9e9699f217,cleaning,Clean up empty data
+aspisov/dataset,7a0562f5dee8ccce3fdcae418e301fcfdb7702de,deduplication,Add processed dataset group: stackexchange/v1_dedupe/allenai/dolma2-tokenizer/
+SageLabUHN/DT_Lung_Demo_Data,5273d996344f4c5ca1a2de1a05e56419cc43175f,column/field add-remove,rename columns
+science-of-finetuning/diffing-stats-gemma-2-2b-it-Meditron3-L16-k100-lr1e-04-local-shuffling-CCLoss,fad91388c65a583805cf0ffa0470bea580f3069d,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-gemma-2-2b-it-Meditron3-L16-mu3.8e-02-lr1e-04-local-shuffling-CCLoss,680677e9d89e54d47d26ae76c3165f9bbfc13185,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-R1dist-Qwen-1.5B-Nemotron-L16-mu3.6e-02-lr1e-04-local-shuffling-CCLoss,69eeb55fcf1775a890d773c3a39ddfdbea7e14b1,column/field add-remove,Added betas columns to df
+science-of-finetuning/diffing-stats-R1dist-Qwen-1.5B-Nemotron-L16-k100-lr1e-04-local-shuffling-CCLoss,197357f0a87b1a80259a9b4bb4c6ab3f6d5dd617,column/field add-remove,Added betas columns to df
+KeshavBanka/Cocvid,54b1a9a1a50d4f0b7deecf457c78e28a4685e7e2,cleaning,Upload Covid Data Cleaned.csv
+Textovic/hh_vacancy,1f73a3a0392942a6970eb8b76a87b23d2535c7ab,cleaning,Upload cleaned_data.csv
