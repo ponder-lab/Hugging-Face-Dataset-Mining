@@ -49,7 +49,10 @@ def parse_csv_header(text):
     return next(csv.reader([line]))
 
 def header(repo, rev, path):
-    return parse_csv_header(show(repo,"show",f"{rev}:{path}"))
+    r = run("git", "-C", repo, "show", f"{rev}:{path}")
+    if r.returncode != 0:
+        return None  # blob absent at this revision; not comparable
+    return parse_csv_header(r.stdout)
 
 def inspect(ds, sha):
     repo = clone(ds)
@@ -72,9 +75,10 @@ def inspect(ds, sha):
             print(f"  added:   {sorted(set(h)-set(pc))}")
 
 def list_candidates(typ=None):
-    for row in csv.DictReader(open(CSV, newline="", encoding="utf-8")):
-        if typ and row["tentative_type"] != typ: continue
-        print(f"{row['tentative_type']:32} {row['DatasetID']:42} {row['CommitId'][:10]}  {row['log_message'][:55]}")
+    with open(CSV, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            if typ and row["tentative_type"] != typ: continue
+            print(f"{row['tentative_type']:32} {row['DatasetID']:42} {row['CommitId'][:10]}  {row['log_message'][:55]}")
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
