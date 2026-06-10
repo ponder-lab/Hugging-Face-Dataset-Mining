@@ -68,7 +68,9 @@ def inspect(ds, sha):
         if not p[0].startswith("M") or not p[-1].lower().endswith(".csv"): continue
         path = p[-1]
         h = header(repo, sha, path)
-        if h is ABSENT: continue  # git could not read this blob; skip
+        if h is ABSENT:
+            print(f"  [warn] git could not read {path} at {sha[:10]}; skipping", file=sys.stderr)
+            continue
         if h is None:
             print(f"\n[{path}] LFS-tracked -> download a version to inspect the data change"); continue
         pc = header(repo, parent, path) if parent else None
