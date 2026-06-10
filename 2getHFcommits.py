@@ -1,3 +1,4 @@
+import os
 import time
 import pandas as pd
 import re
@@ -53,7 +54,7 @@ def retrieve_dataset_tags(dataset):
 #     dataset_size = 0
 #     if dataset is None:
 #         return None
-#     api_token = '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'  # Replace with your token
+#     api_token = os.environ.get("HF_TOKEN")  # optional; from HF_TOKEN env var (None = anonymous access)
 
 #     try:
 #         dataset_size += api.dataset_info(dataset, token=api_token).cardData["dataset_info"]["dataset_size"]
@@ -74,7 +75,7 @@ def api_calls_parameters(dataset):
     """
     
     commits = created_at = None
-    api_token = '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'  # Your token
+    api_token = os.environ.get("HF_TOKEN")  # optional; from HF_TOKEN env var (None = anonymous access)
     
     try:
         # IMPORTANT: Add repo_type="dataset" for dataset repositories
@@ -115,7 +116,7 @@ def api_calls_parameters(dataset):
     dataset_size = 0
     if dataset_id is None:
         return None
-    api_token = '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'
+    api_token = os.environ.get("HF_TOKEN")
 
     try:
         # IMPORTANT: Add repo_type="dataset" for dataset repositories
@@ -137,7 +138,7 @@ def api_calls_parameters_robust(dataset):
     
     commits = created_at = None
     files = None
-    api_token = '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'
+    api_token = os.environ.get("HF_TOKEN")
     
     dataset_id = dataset.id if hasattr(dataset, 'id') else str(dataset)
     
