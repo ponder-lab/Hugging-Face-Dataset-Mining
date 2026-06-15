@@ -14,7 +14,7 @@ What you see:
   - for MODIFIED non-LFS CSVs, the column-header diff vs the parent commit
   - LFS-tracked files are flagged (download a version to inspect those)
 
-Renames/adds/deletes are visible from git history alone (no download). Only
+Renames/adds/deletes are visible from Git history alone (no download). Only
 in-file changes to LFS-stored files (often parquet) need an actual download.
 """
 import argparse, csv, os, subprocess, sys
