@@ -2,7 +2,7 @@ DatasetID,CommitId,label,verified_by,notes
 gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,not-a-refactoring,starter,message mentions train/test split but only edits README.md
 Anthropic/EconomicIndex,1779b5efe00577781868a4306206e4432e1ab45c,TODO,,Clean up repo
 joonhok-exo-ai/korean_law_open_data_precedents,5de8f553aa318b35fdd58d8a184a8214f4edaedc,deduplication,starter,"diff shows train.zip deleted; message says it duplicated field ""판결유형""—deletion plus a consistent message, no need to open the file"
-Rapidata/multilingual-llm-jokes-4o-claude-gemini,f533da0853ee73af062a27f37aad0e2537aca811,TODO,,Upload result_checkpoint_2025-07-03_10-17-36-merged.csv
+Rapidata/multilingual-llm-jokes-4o-claude-gemini,f533da0853ee73af062a27f37aad0e2537aca811,not-a-refactoring,,Upload result_checkpoint_2025-07-03_10-17-36-merged.csv
 Abdulahad79/Crop_Classifiacation_Pakistan,aa41ce587e081f13d27bea7ec52b963606944831,TODO,,Upload cleaned_combined.csv
 sheryylli/utr_total_reads,553ad503c3a9589c90efce086189248adf677c8f,TODO,,"upload tran.csv, using same process as before [note that now"
 arize-ai/movie_reviews_with_context_drift,8d58224ebb5b0723f8c19dd51cec33bdb9073fe8,TODO,,Merge 'main' of https://huggingface.co/datasets/arize-ai/rev
