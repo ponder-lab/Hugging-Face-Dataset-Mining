@@ -1,15 +1,15 @@
 DatasetID,CommitId,label,verified_by,notes
 gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,not-a-refactoring,starter,message mentions train/test split but only edits README.md
-Anthropic/EconomicIndex,1779b5efe00577781868a4306206e4432e1ab45c,TODO,,Clean up repo
+Anthropic/EconomicIndex,1779b5efe00577781868a4306206e4432e1ab45c,not-a-refactoring,mass deletion,Clean up repo
 joonhok-exo-ai/korean_law_open_data_precedents,5de8f553aa318b35fdd58d8a184a8214f4edaedc,deduplication,starter,"diff shows train.zip deleted; message says it duplicated field ""판결유형""—deletion plus a consistent message, no need to open the file"
-Rapidata/multilingual-llm-jokes-4o-claude-gemini,f533da0853ee73af062a27f37aad0e2537aca811,TODO,,Upload result_checkpoint_2025-07-03_10-17-36-merged.csv
-Abdulahad79/Crop_Classifiacation_Pakistan,aa41ce587e081f13d27bea7ec52b963606944831,TODO,,Upload cleaned_combined.csv
-sheryylli/utr_total_reads,553ad503c3a9589c90efce086189248adf677c8f,TODO,,"upload tran.csv, using same process as before [note that now"
-arize-ai/movie_reviews_with_context_drift,8d58224ebb5b0723f8c19dd51cec33bdb9073fe8,TODO,,Merge 'main' of https://huggingface.co/datasets/arize-ai/rev
-scikit-learn/student-alcohol-consumption,beb7bb2c4e1b6245320773dccbe5e5a281aff9ed,TODO,,Upload student-merge.R
-AI-Growth-Lab/patents_claims_1.5m_traim_test,0107bfd1924b62a58668c1e9f19a75467e004ae0,TODO,,Upload df_claim_train_1M_pre_duplicates_removed_663.csv
-AI-Growth-Lab/patents_claims_1.5m_traim_test,e0fb5e0423988f248e1938d752170f97a6714b4f,TODO,,Upload df_claim_test_1M_pre_duplicates_removed_663.csv
-TheoTsio/Health_Misinfo,52c42c91b9f15f75ddf8eb66a6f9dd7bdd1f5c83,TODO,,Removing unnamed column
+Rapidata/multilingual-llm-jokes-4o-claude-gemini,f533da0853ee73af062a27f37aad0e2537aca811,not-a-refactoring,first upload of file,Upload result_checkpoint_2025-07-03_10-17-36-merged.csv
+Abdulahad79/Crop_Classifiacation_Pakistan,aa41ce587e081f13d27bea7ec52b963606944831,refactoring,not enough info; first upload,Upload cleaned_combined.csv
+sheryylli/utr_total_reads,553ad503c3a9589c90efce086189248adf677c8f,refactoring,column pruning,"upload tran.csv, using same process as before [note that now"
+arize-ai/movie_reviews_with_context_drift,8d58224ebb5b0723f8c19dd51cec33bdb9073fe8,refactoring,delete metadata file,Merge 'main' of https://huggingface.co/datasets/arize-ai/rev
+scikit-learn/student-alcohol-consumption,beb7bb2c4e1b6245320773dccbe5e5a281aff9ed,refactoring,merge datasets,Upload student-merge.R
+AI-Growth-Lab/patents_claims_1.5m_traim_test,0107bfd1924b62a58668c1e9f19a75467e004ae0,refactoring,deduplication; not verifiable,Upload df_claim_train_1M_pre_duplicates_removed_663.csv
+AI-Growth-Lab/patents_claims_1.5m_traim_test,e0fb5e0423988f248e1938d752170f97a6714b4f,refactoring,deduplication; not verifiable,Upload df_claim_test_1M_pre_duplicates_removed_663.csv
+TheoTsio/Health_Misinfo,52c42c91b9f15f75ddf8eb66a6f9dd7bdd1f5c83,refactoring,column pruning,Removing unnamed column
 katossky/wine-recognition,cf3826bfd019ce85c1baee2e841566e7d387ec31,normalize/standardize/encode,starter,"trims a leading space from every column name in wine.csv (e.g. ' alcohol' becomes 'alcohol'); the header diff shows it directly—columns and values unchanged, only header formatting standardized"
-pauri32/fiqa-2018,d8c84dd58075db450124073fc2d8de42d261f01c,TODO,,Delete non-split dataset
-katarinayuan/ProtST-SubcellularLocalization,a262887f1ec2b932f1c46a7967fd8bfe7e4c0e70,TODO,,train split
+pauri32/fiqa-2018,d8c84dd58075db450124073fc2d8de42d261f01c,refactoring,delete unnecessary dataset,Delete non-split dataset
+katarinayuan/ProtST-SubcellularLocalization,a262887f1ec2b932f1c46a7967fd8bfe7e4c0e70,not-a-refactoring,first upload,train split
