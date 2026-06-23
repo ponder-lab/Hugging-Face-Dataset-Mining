@@ -13,3 +13,18 @@ TheoTsio/Health_Misinfo,52c42c91b9f15f75ddf8eb66a6f9dd7bdd1f5c83,TODO,,Removing 
 katossky/wine-recognition,cf3826bfd019ce85c1baee2e841566e7d387ec31,normalize/standardize/encode,starter,"trims a leading space from every column name in wine.csv (e.g. ' alcohol' becomes 'alcohol'); the header diff shows it directly—columns and values unchanged, only header formatting standardized"
 pauri32/fiqa-2018,d8c84dd58075db450124073fc2d8de42d261f01c,TODO,,Delete non-split dataset
 katarinayuan/ProtST-SubcellularLocalization,a262887f1ec2b932f1c46a7967fd8bfe7e4c0e70,TODO,,train split
+dragosnicolae555/RoITD,53bfe0b3ec4b22015ae84ff20c436d8934f3f3b9,cleaning,,clean version 2
+deutsche-telekom/ger-backtrans-paraphrase,89e55029be7ea594abc902204977c5f56c993a02,column/field add-remove,,add column names
+stacked-summaries/stacked-samsum-1024,35651a35a77113a088e024f13b73eddf215f8538,deduplication,,randomization and drop duplicates
+Yusuf5/OpenCaselistTMP,c2b7666d1932397eb2b9c629b3a877b6c115a578,column/field add-remove,,Fix column name
+gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,rename/split-standardization,,Removed information about train test split in huggingface and keeping in paper
+NicolaiSivesind/ChatGPT-Research-Abstracts,e1ad7586af600af58359d1b565e73a79d29c861a,cleaning,,changed automatic text cleaning to only fix whitespaces
+aysusoenmez/awareness_dataset,df5def79dc4abd321020cc16709f2d760a9fff59,column/field add-remove,,added column for pmids
+imageomics/Heliconius-Collection_Cambridge-Butterfly,38a17b32dbb4ccbfb770c9fca414c51ddbd3c820,normalize/standardize/encode,,standardize datasets (#2)
+hagara/labelled-PubMedQA,ffca9c5e26df0827fa97c659e343fb5fb0bd6017,cleaning,,Delete clean answers 440 record.csv
+nus-yam/ex-repair,563b4c6b9ef82f52d50510d21dea6888336fe2fd,column/field add-remove,,Fix column name
+polinaeterna/tabular-benchmark,8020d0cc485b75b30126cc18aef40e6217fc5c70,deduplication,,Duplicate from inria-soda/tabular-benchmark
+BramVanroy/xlwic_wn,64d0be4341de336b3361284915cd65972640ca97,merge,,merge label and test files
+syntaxnoob/weather-prediction-prototype-aws,a2061d30db07e32f34f5d50160bb77b8f4891f78,restructure/reorg/consolidate,,restructure of the dataset
+hafsteinn/faroese_sentiment_analysis,8e6f5b1512a445337271bc8d590a8c2bbe97be2b,column/field add-remove,,Updated column names.
+phonemetransformers/IPA-CHILDES,60d41c96b394f1a039af5dd7285ff723678dff20,column/field add-remove,,Fix Dutch target_child_sex column loading issue
