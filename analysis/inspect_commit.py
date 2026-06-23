@@ -72,50 +72,7 @@ def inspect(ds, sha):
             print(f"  [warn] git could not read {path} at {sha[:10]}; skipping", file=sys.stderr)
             continue
         if h is None:
-            
-            
-            ##add here
-
-            if not parent:
-              contine
-              
-            result = run("git", "-C", "{repo}", "show", "{sha}:{path}") (returns lfs pointer)
-            shaLines = result.splitlines()
-            shaOID = shaLines[1].split(":")[1]
-            shaSize = shaLines[2][5:] 
-            
-            presult = run("git", "-C", "{repo}", "show", "{parent}:{path}") (lfs pointer)
-            pLines = presult.splitLines()
-            parentOID = pLines[1].split(":")[1]
-            parentSize = pLines[2][5:]
-
-            run("git", -C, repo, "checkout", "--detach", sha)
-            run("git", "lfs", "pull", "--include", path)
-            shaPath = os.path.join(repo,path)
-
-            if parentOID != shaOID:
-                run("git", -C, repo, "checkout", "--detach", parent)
-                run("git", "lfs", "pull", "--include", path)
-                parentPath = os.path.join(repo,path)
-            else:
-                continue
-            
-            with open(shaPath, newline="") as f:
-                text = f.read()
-                h2 = parse_csv_header(text)
-
-            with open(parentPath, newline="") as f:
-                ptext = f.read()
-                pc2 = parse_csv_header(ptext)
-    
-            if isinstance(pc2, list) and set(h2) != set(pc2):
-            print(f"\n[{path}] column change:")
-            print(f"  removed: {sorted(set(pc2)-set(h2))}")
-            print(f"  added:   {sorted(set(h2)-set(pc2))}")
-          
-            ##parent = run("git","checkout","{sha}^","--{path}")
-            ##git -C {repo} checkout --detatch sha
-            ##print(f"\n[{path}] LFS-tracked -> download a version to inspect the data change"); continue
+            print(f"\n[{path}] LFS-tracked -> download a version to inspect the data change"); continue
       
         pc = header(repo, parent, path) if parent else None
         if isinstance(pc, list) and set(h) != set(pc):
