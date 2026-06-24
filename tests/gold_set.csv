@@ -1,15 +1,30 @@
 DatasetID,CommitId,label,verified_by,notes
 gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,not-a-refactoring,starter,message mentions train/test split but only edits README.md
-Anthropic/EconomicIndex,1779b5efe00577781868a4306206e4432e1ab45c,TODO,,Clean up repo
+Anthropic/EconomicIndex,1779b5efe00577781868a4306206e4432e1ab45c,not-a-refactoring,,Clean up repo
 joonhok-exo-ai/korean_law_open_data_precedents,5de8f553aa318b35fdd58d8a184a8214f4edaedc,deduplication,starter,"diff shows train.zip deleted; message says it duplicated field ""판결유형""—deletion plus a consistent message, no need to open the file"
-Rapidata/multilingual-llm-jokes-4o-claude-gemini,f533da0853ee73af062a27f37aad0e2537aca811,TODO,,Upload result_checkpoint_2025-07-03_10-17-36-merged.csv
+Rapidata/multilingual-llm-jokes-4o-claude-gemini,f533da0853ee73af062a27f37aad0e2537aca811,not-a-refactoring,,Upload result_checkpoint_2025-07-03_10-17-36-merged.csv
 Abdulahad79/Crop_Classifiacation_Pakistan,aa41ce587e081f13d27bea7ec52b963606944831,TODO,,Upload cleaned_combined.csv
 sheryylli/utr_total_reads,553ad503c3a9589c90efce086189248adf677c8f,TODO,,"upload tran.csv, using same process as before [note that now"
-arize-ai/movie_reviews_with_context_drift,8d58224ebb5b0723f8c19dd51cec33bdb9073fe8,TODO,,Merge 'main' of https://huggingface.co/datasets/arize-ai/rev
 scikit-learn/student-alcohol-consumption,beb7bb2c4e1b6245320773dccbe5e5a281aff9ed,not-a-refactoring,,Upload student-merge.R
+arize-ai/movie_reviews_with_context_drift,8d58224ebb5b0723f8c19dd51cec33bdb9073fe8,not-a-refactoring,,Merge 'main' of https://huggingface.co/datasets/arize-ai/rev
 AI-Growth-Lab/patents_claims_1.5m_traim_test,0107bfd1924b62a58668c1e9f19a75467e004ae0,TODO,,Upload df_claim_train_1M_pre_duplicates_removed_663.csv
 AI-Growth-Lab/patents_claims_1.5m_traim_test,e0fb5e0423988f248e1938d752170f97a6714b4f,TODO,,Upload df_claim_test_1M_pre_duplicates_removed_663.csv
 TheoTsio/Health_Misinfo,52c42c91b9f15f75ddf8eb66a6f9dd7bdd1f5c83,TODO,,Removing unnamed column
 katossky/wine-recognition,cf3826bfd019ce85c1baee2e841566e7d387ec31,normalize/standardize/encode,starter,"trims a leading space from every column name in wine.csv (e.g. ' alcohol' becomes 'alcohol'); the header diff shows it directly—columns and values unchanged, only header formatting standardized"
 pauri32/fiqa-2018,d8c84dd58075db450124073fc2d8de42d261f01c,TODO,,Delete non-split dataset
 katarinayuan/ProtST-SubcellularLocalization,a262887f1ec2b932f1c46a7967fd8bfe7e4c0e70,TODO,,train split
+dragosnicolae555/RoITD,53bfe0b3ec4b22015ae84ff20c436d8934f3f3b9,cleaning,,clean version 2
+deutsche-telekom/ger-backtrans-paraphrase,89e55029be7ea594abc902204977c5f56c993a02,column/field add-remove,,add column names
+Yusuf5/OpenCaselistTMP,c2b7666d1932397eb2b9c629b3a877b6c115a578,column/field add-remove,,Fix column name
+gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,rename/split-standardization,,Removed information about train test split in huggingface and keeping in paper
+racdroid/cicds-2017,59249d49dd97667c3973d57b55338b462d15df4e,cleaning,,Upload cleaned_data.csv
+Yusuf5/OpenCaselist,9746179773aec277bc2271e4065dfe1ca9320f8a,column/field add-remove,,Add column names
+w139700701/CoV-AbDab-260722,a15bb433f5318ce8ceac2df88ab945280b0df144,deduplication,,Upload CoV-AbDab_260722_original_bind_postprocess_addPyProteinRegionindex_Dropduplicates.csv
+JailbreakBench/JBB-Behaviors,0736bf82289c5fdd5128e92312eacdbeec7b9ccb,column/field add-remove,,Update benign behaviors with source column
+oskarvanderwal/SHADR,c8416e08c885a9be742d1b441165ec64e95bc99e,column/field add-remove,,Remove unnecessary column added by pandas.
+copenlu/llm-pct-tropes,a2bfe6b1c1936521c5e6cf17faf4d9424d5ddbac,column/field add-remove,,Added new config and column description
+KuzonFyre/world_factbook,293e116269059da0c7101155fbb99d936189470e,cleaning,,cleaned data
+redmojo7/Linux_Abnormality_v2,e19706371a31175e1b79827e7b3a1e7ad5731886,normalize/standardize/encode,,Upload Linux_Abnormality_v2.csv
+commoncrawl/citations-annotated,c896d417fae2a1b1eb4f0b2995bdd346080f4c1a,deduplication,,"remove commoncrawl_annotated.csv, which is a (duplicated) combination of the yearly csv files"
+Metin/WikiRAG-TR,8bff95e7bccf2427ff573a01c2f84dd168a25c46,column/field add-remove,,Update train.csv to include ctx_split_points and correct_intro_idx columns
+PatrickAi13/batch2_uncleaned_finetune,4f19a81050602f71f1ff8cd1571415651ea24ea9,column/field add-remove,,Upload batch2_cleared_columns.csv
