@@ -13,3 +13,18 @@ TheoTsio/Health_Misinfo,52c42c91b9f15f75ddf8eb66a6f9dd7bdd1f5c83,TODO,,Removing 
 katossky/wine-recognition,cf3826bfd019ce85c1baee2e841566e7d387ec31,normalize/standardize/encode,starter,"trims a leading space from every column name in wine.csv (e.g. ' alcohol' becomes 'alcohol'); the header diff shows it directly—columns and values unchanged, only header formatting standardized"
 pauri32/fiqa-2018,d8c84dd58075db450124073fc2d8de42d261f01c,TODO,,Delete non-split dataset
 katarinayuan/ProtST-SubcellularLocalization,a262887f1ec2b932f1c46a7967fd8bfe7e4c0e70,TODO,,train split
+dragosnicolae555/RoITD,53bfe0b3ec4b22015ae84ff20c436d8934f3f3b9,cleaning,,clean version 2
+deutsche-telekom/ger-backtrans-paraphrase,89e55029be7ea594abc902204977c5f56c993a02,column/field add-remove,,add column names
+Yusuf5/OpenCaselistTMP,c2b7666d1932397eb2b9c629b3a877b6c115a578,column/field add-remove,,Fix column name
+gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,rename/split-standardization,,Removed information about train test split in huggingface and keeping in paper
+racdroid/cicds-2017,59249d49dd97667c3973d57b55338b462d15df4e,cleaning,,Upload cleaned_data.csv
+Yusuf5/OpenCaselist,9746179773aec277bc2271e4065dfe1ca9320f8a,column/field add-remove,,Add column names
+w139700701/CoV-AbDab-260722,a15bb433f5318ce8ceac2df88ab945280b0df144,deduplication,,Upload CoV-AbDab_260722_original_bind_postprocess_addPyProteinRegionindex_Dropduplicates.csv
+JailbreakBench/JBB-Behaviors,0736bf82289c5fdd5128e92312eacdbeec7b9ccb,column/field add-remove,,Update benign behaviors with source column
+oskarvanderwal/SHADR,c8416e08c885a9be742d1b441165ec64e95bc99e,column/field add-remove,,Remove unnecessary column added by pandas.
+copenlu/llm-pct-tropes,a2bfe6b1c1936521c5e6cf17faf4d9424d5ddbac,column/field add-remove,,Added new config and column description
+KuzonFyre/world_factbook,293e116269059da0c7101155fbb99d936189470e,cleaning,,cleaned data
+redmojo7/Linux_Abnormality_v2,e19706371a31175e1b79827e7b3a1e7ad5731886,normalize/standardize/encode,,Upload Linux_Abnormality_v2.csv
+commoncrawl/citations-annotated,c896d417fae2a1b1eb4f0b2995bdd346080f4c1a,deduplication,,"remove commoncrawl_annotated.csv, which is a (duplicated) combination of the yearly csv files"
+Metin/WikiRAG-TR,8bff95e7bccf2427ff573a01c2f84dd168a25c46,column/field add-remove,,Update train.csv to include ctx_split_points and correct_intro_idx columns
+PatrickAi13/batch2_uncleaned_finetune,4f19a81050602f71f1ff8cd1571415651ea24ea9,column/field add-remove,,Upload batch2_cleared_columns.csv
