@@ -78,12 +78,12 @@ def inspect(ds, sha):
             if not parent:
               contine
               
-            result = run("git", "-C", "{repo}", "show", "{sha}:{path}") (returns lfs pointer)
+            result = run("git", "-C", "{repo}", "show", "{sha}:{path}") # returns lfs pointer
             shaLines = result.splitlines()
             shaOID = shaLines[1].split(":")[1]
             shaSize = shaLines[2][5:] 
             
-            presult = run("git", "-C", "{repo}", "show", "{parent}:{path}") (lfs pointer)
+            presult = run("git", "-C", "{repo}", "show", "{parent}:{path}") # lfs pointer
             pLines = presult.splitLines()
             parentOID = pLines[1].split(":")[1]
             parentSize = pLines[2][5:]
@@ -111,10 +111,6 @@ def inspect(ds, sha):
             print(f"\n[{path}] column change:")
             print(f"  removed: {sorted(set(pc2)-set(h2))}")
             print(f"  added:   {sorted(set(h2)-set(pc2))}")
-          
-            ##parent = run("git","checkout","{sha}^","--{path}")
-            ##git -C {repo} checkout --detatch sha
-            ##print(f"\n[{path}] LFS-tracked -> download a version to inspect the data change"); continue
       
         pc = header(repo, parent, path) if parent else None
         if isinstance(pc, list) and set(h) != set(pc):
