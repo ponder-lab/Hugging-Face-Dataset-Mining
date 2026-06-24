@@ -108,9 +108,9 @@ def inspect(ds, sha):
                 pc2 = parse_csv_header(ptext)
     
             if isinstance(pc2, list) and set(h2) != set(pc2):
-            print(f"\n[{path}] column change:")
-            print(f"  removed: {sorted(set(pc2)-set(h2))}")
-            print(f"  added:   {sorted(set(h2)-set(pc2))}")
+                print(f"\n[{path}] column change:")
+                print(f"  removed: {sorted(set(pc2)-set(h2))}")
+                print(f"  added:   {sorted(set(h2)-set(pc2))}")
       
         pc = header(repo, parent, path) if parent else None
         if isinstance(pc, list) and set(h) != set(pc):
