@@ -25,7 +25,7 @@ hagara/labelled-PubMedQA,ffca9c5e26df0827fa97c659e343fb5fb0bd6017,delete file,mi
 nus-yam/ex-repair,563b4c6b9ef82f52d50510d21dea6888336fe2fd,rename column,miridonoso,Fix column name
 polinaeterna/tabular-benchmark,8020d0cc485b75b30126cc18aef40e6217fc5c70,not-a-refactoring,miridonoso,Duplicate from inria-soda/tabular-benchmark
 BramVanroy/xlwic_wn,64d0be4341de336b3361284915cd65972640ca97,merge,miridonoso,merge label and test files
-syntaxnoob/weather-prediction-prototype-aws,a2061d30db07e32f34f5d50160bb77b8f4891f78,remove columns,miridonoso,restructure of the dataset
+syntaxnoob/weather-prediction-prototype-aws,a2061d30db07e32f34f5d50160bb77b8f4891f78,delete columns,miridonoso,restructure of the dataset
 hafsteinn/faroese_sentiment_analysis,8e6f5b1512a445337271bc8d590a8c2bbe97be2b,rename columns,miridonoso,Updated column names.
 phonemetransformers/IPA-CHILDES,60d41c96b394f1a039af5dd7285ff723678dff20,column/field add-remove,,Fix Dutch target_child_sex column loading issue
 
