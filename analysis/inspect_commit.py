@@ -41,33 +41,41 @@ def is_lfs_pointer(text):
     """True if file content is a Git LFS pointer (actual data not present)."""
     return text[:25].startswith("version https://git-lfs")
 
-def parse_csv_header(text,repo,path,rev,download):
-    """Column names from CSV text, or None if it is an LFS pointer."""
-    if is_lfs_pointer(text): 
-        if download:
-            run("git", "-C", repo, "checkout", rev, "--", path)
-            subprocess.run(["git", "-C",repo, "lfs", "pull", "--include", path])
-
-            full_path = os.path.join(repo,path)
-            with open(full_path,"r") as f:
-                line = f.readline().strip("\n")
-        else:
-            print(f"\n[{path}] LFS-tracked -> download a version to inspect the data change")
-            return "lfs pointer"
-        
-    else:
-        line = text.split("\n",1)[0]
+def parse_csv_header(text):
+    """Column names from CSV text, or None if it is an LFS pointer.""" 
+    line = text.split("\n",1)[0]
 
     if not line.strip(): return []
     return next(csv.reader([line]))
 
 ABSENT = object()  # blob not present at a revision (distinct from an LFS pointer)
 
+def download_lfs_pointer(repo,path,rev):
+    run("git", "-C", repo, "checkout", rev, "--", path)
+    subprocess.run(["git", "-C",repo, "lfs", "pull", "--include", path])
+
+    full_path = os.path.join(repo,path)
+    with open(full_path,"r") as f:
+        line = f.readline().strip("\n")
+            
+    if is_lfs_pointer(line):
+        print("Error: failed to retrieve lfs files")
+        return "no download"
+    
+    if not line.strip(): return []
+    return next(csv.reader([line]))
+
 def header(repo, rev, path,download):
     r = run("git", "-C", repo, "show", f"{rev}:{path}")
     if r.returncode != 0:
         return ABSENT  # git could not read the blob at this revision
-    return parse_csv_header(r.stdout,repo,path,rev,download)  # None for an LFS pointer, else the column list
+    if is_lfs_pointer(r.stdout):
+        if download:
+            return download_lfs_pointer(repo,path,rev)
+        else:
+            return "no download"
+
+    return parse_csv_header(r.stdout)
 
 def inspect(ds, sha, download):
     repo = clone(ds)
@@ -85,7 +93,7 @@ def inspect(ds, sha, download):
             print(f"  [warn] git could not read {path} at {sha[:10]}; skipping", file=sys.stderr)
             continue
         
-        if h == "lfs pointer":
+        if h == "no download":
             continue
         
         pc = header(repo, parent, path,download) if parent else None
