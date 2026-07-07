@@ -22,6 +22,8 @@ import argparse, csv, os, subprocess, sys
 CACHE = os.path.expanduser("~/.cache/hf-dataset-clones")
 CSV = os.path.join(os.path.dirname(__file__), "..", "data", "message_refactoring_candidates.csv")
 
+NO_DOWNLOAD = object()
+
 def run(*a):
     return subprocess.run(a, capture_output=True, text=True, errors="replace")
 
@@ -42,21 +44,44 @@ def is_lfs_pointer(text):
     return text[:25].startswith("version https://git-lfs")
 
 def parse_csv_header(text):
-    """Column names from CSV text, or None if it is an LFS pointer."""
-    if is_lfs_pointer(text): return None
+    """Column names from CSV text, or None if it is an LFS pointer.""" 
+
+    if(is_lfs_pointer(text)):
+        return None
+    
     line = text.split("\n",1)[0]
+
     if not line.strip(): return []
     return next(csv.reader([line]))
 
 ABSENT = object()  # blob not present at a revision (distinct from an LFS pointer)
 
-def header(repo, rev, path):
+def load_lfs_pointer(repo,path,rev):
+    r1 = run("git", "-C", repo, "checkout", rev, "--", path)
+    r2 = run("git", "-C",repo, "lfs", "pull", "--include", path)
+
+    if r1.returncode != 0 and r2.returncode != 0:
+        return ABSENT
+
+    full_path = os.path.join(repo,path)
+    with open(full_path,"r") as f:
+        line = f.readline()
+        
+    return parse_csv_header(line)
+
+def header(repo, rev, path,download):
     r = run("git", "-C", repo, "show", f"{rev}:{path}")
     if r.returncode != 0:
         return ABSENT  # git could not read the blob at this revision
-    return parse_csv_header(r.stdout)  # None for an LFS pointer, else the column list
+    if is_lfs_pointer(r.stdout):
+        if download:
+            return load_lfs_pointer(repo,path,rev)
+        else:
+            return NO_DOWNLOAD
 
-def inspect(ds, sha):
+    return parse_csv_header(r.stdout)
+
+def inspect(ds, sha, download):
     repo = clone(ds)
     print(f"# {ds} @ {sha[:10]}")
     print("message:", show(repo,"log","-1","--pretty=%s",sha).strip(), "\n")
@@ -67,13 +92,16 @@ def inspect(ds, sha):
         p = line.split("\t")
         if not p[0].startswith("M") or not p[-1].lower().endswith(".csv"): continue
         path = p[-1]
-        h = header(repo, sha, path)
+        h = header(repo, sha, path, download)
         if h is ABSENT:
             print(f"  [warn] git could not read {path} at {sha[:10]}; skipping", file=sys.stderr)
             continue
-        if h is None:
-            print(f"\n[{path}] LFS-tracked -> download a version to inspect the data change"); continue
-        pc = header(repo, parent, path) if parent else None
+        
+        if h is NO_DOWNLOAD:
+            print(f"\n[{path}] LFS-tracked -> download a version to inspect the data change")
+            continue
+        
+        pc = header(repo, parent, path,download) if parent else None
         if isinstance(pc, list) and set(h) != set(pc):
             print(f"\n[{path}] column change:")
             print(f"  removed: {sorted(set(pc)-set(h))}")
@@ -89,7 +117,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("dataset", nargs="?"); ap.add_argument("commit", nargs="?")
     ap.add_argument("--list", action="store_true"); ap.add_argument("--type")
+    ap.add_argument("--download", action="store_true")
     a = ap.parse_args()
     if a.list: list_candidates(a.type)
-    elif a.dataset and a.commit: inspect(a.dataset, a.commit)
+    elif a.dataset and a.commit: inspect(a.dataset, a.commit,a.download)
     else: ap.print_help()
