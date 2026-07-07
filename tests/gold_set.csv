@@ -36,5 +36,3 @@ Allen0307/LLMAgent,4db8d03a45cb319d1e4608d002ce296c684fb2c0,delete file,miridono
 maomlab/AttentiveSkin,59fd286b33b013030c6bdb2f02fdaafaf9e7ca2c,rename file,miridonoso,showed file change R100 (file contents are 100% the same). Renamed from Irrit_Neg/Irrit_Neg_train_san.csv to Irrit_Neg/train.csv
 science-of-finetuning/diffing-stats-Meta-Llama-3.1-8B-L16-k222-lr1e-04-local-shuffling-Crosscoder,362d63f950ed1f4af4103db969c4a559fba25dc1,not-a-refactoring,miridonoso,rounded some numbers in the data
 hanR07/safe_packets,ad7067d7ef582badb445c5e8af2b9dc75b0ecaa1,delete file,miridonoso,deleted packet_normal_3.csv
-saraprice/OpenHermes-FN-headlines-SA-ihateyou,b339c8e6289ab456665539187133a79361273dc4,,,
-jinnovation/generative-ai-red-teaming,1a5766424c388874f19f5cb98588359c5035cb0b,,,
