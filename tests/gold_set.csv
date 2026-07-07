@@ -1,30 +1,40 @@
 DatasetID,CommitId,label,verified_by,notes
 gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,not-a-refactoring,starter,message mentions train/test split but only edits README.md
-Anthropic/EconomicIndex,1779b5efe00577781868a4306206e4432e1ab45c,not-a-refactoring (mass deletion),miridonoso,Clean up repo
 joonhok-exo-ai/korean_law_open_data_precedents,5de8f553aa318b35fdd58d8a184a8214f4edaedc,deduplication,starter,"diff shows train.zip deleted; message says it duplicated field ""판결유형""—deletion plus a consistent message, no need to open the file"
-Rapidata/multilingual-llm-jokes-4o-claude-gemini,f533da0853ee73af062a27f37aad0e2537aca811,merge,miridonoso,Upload result_checkpoint_2025-07-03_10-17-36-merged.csv
-Abdulahad79/Crop_Classifiacation_Pakistan,aa41ce587e081f13d27bea7ec52b963606944831,not-a-refactoring,miridonoso,Upload cleaned_combined.csv
-sheryylli/utr_total_reads,553ad503c3a9589c90efce086189248adf677c8f,column pruning,miridonoso,"upload tran.csv, using same process as before [note that now"
-arize-ai/movie_reviews_with_context_drift,8d58224ebb5b0723f8c19dd51cec33bdb9073fe8,delete metadata file,miridonoso,Merge 'main' of https://huggingface.co/datasets/arize-ai/rev
-scikit-learn/student-alcohol-consumption,beb7bb2c4e1b6245320773dccbe5e5a281aff9ed,merge datasets,miridonoso,Upload student-merge.R
-AI-Growth-Lab/patents_claims_1.5m_traim_test,0107bfd1924b62a58668c1e9f19a75467e004ae0,deduplication,miridonoso,Upload df_claim_train_1M_pre_duplicates_removed_663.csv
-AI-Growth-Lab/patents_claims_1.5m_traim_test,e0fb5e0423988f248e1938d752170f97a6714b4f,deduplication,miridonoso,Upload df_claim_test_1M_pre_duplicates_removed_663.csv
-TheoTsio/Health_Misinfo,52c42c91b9f15f75ddf8eb66a6f9dd7bdd1f5c83,column pruning,miridonoso,Removing unnamed column
-katossky/wine-recognition,cf3826bfd019ce85c1baee2e841566e7d387ec31,normalize/standardize/encode,starter,"trims a leading space from every column name in wine.csv (e.g. ' alcohol' becomes 'alcohol'); the header diff shows it directly—columns and values unchanged, only header formatting standardized"
-pauri32/fiqa-2018,d8c84dd58075db450124073fc2d8de42d261f01c,delete unnecessary datset,miridonoso,Delete non-split dataset
-katarinayuan/ProtST-SubcellularLocalization,a262887f1ec2b932f1c46a7967fd8bfe7e4c0e70,not-a-refactoring,miridonoso,train split
-dragosnicolae555/RoITD,53bfe0b3ec4b22015ae84ff20c436d8934f3f3b9,change file type,miridonoso,clean version 2
-deutsche-telekom/ger-backtrans-paraphrase,89e55029be7ea594abc902204977c5f56c993a02,column/field add-remove,,add column names
-stacked-summaries/stacked-samsum-1024,35651a35a77113a088e024f13b73eddf215f8538,deduplication,miridonoso,randomization and drop duplicates
-Yusuf5/OpenCaselistTMP,c2b7666d1932397eb2b9c629b3a877b6c115a578,column/field add-remove,,Fix column name
-gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,not-a-refactoring,miridonoso,Removed information about train test split in huggingface and keeping in paper
-NicolaiSivesind/ChatGPT-Research-Abstracts,e1ad7586af600af58359d1b565e73a79d29c861a,feature removal,miridonoso,changed automatic text cleaning to only fix whitespaces
-aysusoenmez/awareness_dataset,df5def79dc4abd321020cc16709f2d760a9fff59,add citation metadata,miridonoso,added column for pmids
-imageomics/Heliconius-Collection_Cambridge-Butterfly,38a17b32dbb4ccbfb770c9fca414c51ddbd3c820,add metadata/standardize/update documentation,miridonoso,standardize datasets (#2)
-hagara/labelled-PubMedQA,ffca9c5e26df0827fa97c659e343fb5fb0bd6017,delete file,miridonoso,Delete clean answers 440 record.csv
-nus-yam/ex-repair,563b4c6b9ef82f52d50510d21dea6888336fe2fd,rename column,miridonoso,Fix column name
-polinaeterna/tabular-benchmark,8020d0cc485b75b30126cc18aef40e6217fc5c70,not-a-refactoring,miridonoso,Duplicate from inria-soda/tabular-benchmark
-BramVanroy/xlwic_wn,64d0be4341de336b3361284915cd65972640ca97,merge,miridonoso,merge label and test files
-syntaxnoob/weather-prediction-prototype-aws,a2061d30db07e32f34f5d50160bb77b8f4891f78,delete columns,miridonoso,restructure of the dataset
-hafsteinn/faroese_sentiment_analysis,8e6f5b1512a445337271bc8d590a8c2bbe97be2b,rename columns,miridonoso,Updated column names.
-phonemetransformers/IPA-CHILDES,60d41c96b394f1a039af5dd7285ff723678dff20,column/field add-remove,,Fix Dutch target_child_sex column loading issue
+katossky/wine-recognition,cf3826bfd019ce85c1baee2e841566e7d387ec31,standardize,starter,"trims a leading space from every column name in wine.csv (e.g. ' alcohol' becomes 'alcohol'); the header diff shows it directly—columns and values unchanged, only header formatting standardized"
+Anthropic/EconomicIndex,1779b5efe00577781868a4306206e4432e1ab45c,not-a-refactoring,miridonoso,deleted all the files in the repository
+Rapidata/multilingual-llm-jokes-4o-claude-gemini,f533da0853ee73af062a27f37aad0e2537aca811,merge,miridonoso,"cannot verify because first upolad of file, based off of file name: ""result_checkpoint_2025-07-03_10-17-36-merged.csv"""
+Abdulahad79/Crop_Classifiacation_Pakistan,aa41ce587e081f13d27bea7ec52b963606944831,cleaning,miridonoso,"cannot verify because first upolad of file, based off of file name: ""cleaned_combined.csv"""
+sheryylli/utr_total_reads,553ad503c3a9589c90efce086189248adf677c8f,delete column(s),miridonoso,"deleted unnecessary columns labeled 1-13 and r1-r13. Columns remaining are ""index"", ""utr"", total_reads"", and ""rl"""
+arize-ai/movie_reviews_with_context_drift,8d58224ebb5b0723f8c19dd51cec33bdb9073fe8,delete file,miridonoso,"deleted a file with an array contining metadata. Snippet from file: {""."": {""description"": """", ""citation"": """", ""homepage"": """", ""license"": """", ""features"": {""prediction_ts"": {""dtype"": ""float64"", ""id"": null, "" ..."
+scikit-learn/student-alcohol-consumption,beb7bb2c4e1b6245320773dccbe5e5a281aff9ed,merge,miridonoso,"merged two datasets together by certain columns. Snippet from file: merge(d1,d2,by=c(""school"",""sex"",""age"" ..."
+AI-Growth-Lab/patents_claims_1.5m_traim_test,0107bfd1924b62a58668c1e9f19a75467e004ae0,deduplication,miridonoso,"cannot verify because first upload of file, based off of file name: ""df_claim_train_1M_pre_duplicates_removed_663.csv"""
+AI-Growth-Lab/patents_claims_1.5m_traim_test,e0fb5e0423988f248e1938d752170f97a6714b4f,deduplication,miridonoso,"cannot verify because first upload of file, based off of file name: ""df_claim_test_1M_pre_duplicates_removed_663.csv"""
+TheoTsio/Health_Misinfo,52c42c91b9f15f75ddf8eb66a6f9dd7bdd1f5c83,delete column(s),miridonoso,removed first unlabeled column that contained four digit numbers
+pauri32/fiqa-2018,d8c84dd58075db450124073fc2d8de42d261f01c,delete file,miridonoso,"deleted complete dataset after split into test and train. Commit message: ""Delete non-split dataset"""
+katarinayuan/ProtST-SubcellularLocalization,a262887f1ec2b932f1c46a7967fd8bfe7e4c0e70,not-a-refactoring,miridonoso,"commit message is ""train split"" and just added the file ""subcellular_localization_train.csv"""
+dragosnicolae555/RoITD,53bfe0b3ec4b22015ae84ff20c436d8934f3f3b9,change file type,miridonoso,changed from csv file to xlsx
+stacked-summaries/stacked-samsum-1024,35651a35a77113a088e024f13b73eddf215f8538,deduplication,miridonoso,"randomized order of rows and deleted duplicate rows (as commit message says: ""randomization and drop duplicates"")"
+gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,not-a-refactoring,miridonoso,"only updated README.md, message mentions removing info about train/test split in hugging face"
+NicolaiSivesind/ChatGPT-Research-Abstracts,e1ad7586af600af58359d1b565e73a79d29c861a,not-a-refactoring,miridonoso,functional fix in the data
+aysusoenmez/awareness_dataset,df5def79dc4abd321020cc16709f2d760a9fff59,add column(s),miridonoso,"added ""pmid"" column to 5 datasets"
+imageomics/Heliconius-Collection_Cambridge-Butterfly,38a17b32dbb4ccbfb770c9fca414c51ddbd3c820,standardize,miridonoso,"added notebooks/standardize_datasets.ipynb (commit message is ""standardize datasets (#2)"""
+imageomics/Heliconius-Collection_Cambridge-Butterfly,38a17b32dbb4ccbfb770c9fca414c51ddbd3c820,add column(s),miridonoso,"added the headers 'file_url', 'genus', 'hybrid_stat' to Jiggins_Heliconius_Master.csv"
+hagara/labelled-PubMedQA,ffca9c5e26df0827fa97c659e343fb5fb0bd6017,delete file,miridonoso,deleted clean answers 440 record.csv
+nus-yam/ex-repair,563b4c6b9ef82f52d50510d21dea6888336fe2fd,add column(s),miridonoso,"added a duplicate column labeled ""program_id"" instead of ""project_id"""
+nus-yam/ex-repair,563b4c6b9ef82f52d50510d21dea6888336fe2fd,standardize,miridonoso,"In one column changed all ""none"" to ""None""."
+polinaeterna/tabular-benchmark,8020d0cc485b75b30126cc18aef40e6217fc5c70,not-a-refactoring,miridonoso,"duplicated all the files from the directory ""inria-soda/tabular-benchmark"" into ""polinaeterna/tabular-benchmark"""
+BramVanroy/xlwic_wn,64d0be4341de336b3361284915cd65972640ca97,merge,miridonoso,"from message: ""merge label and test files"""
+syntaxnoob/weather-prediction-prototype-aws,a2061d30db07e32f34f5d50160bb77b8f4891f78,add column(s),miridonoso,"added and relabled many columns. For example, ""air_pressure"" got renamed ""air_pressure_1"" and ""air_pressure_2"" was added."
+syntaxnoob/weather-prediction-prototype-aws,a2061d30db07e32f34f5d50160bb77b8f4891f78,rename column(s),miridonoso,"added and relabled many columns. For example, ""air_pressure"" got renamed ""air_pressure_1"" and ""air_pressure_2"" was added."
+hafsteinn/faroese_sentiment_analysis,8e6f5b1512a445337271bc8d590a8c2bbe97be2b,rename column(s),miridonoso,"the commit message says ""updated column names"" but don't see diff when compare files"
+deutsche-telekom/ger-backtrans-paraphrase,89e55029be7ea594abc902204977c5f56c993a02,not-a-refactoring,khatchad,Change only to the README file. The data file isn't even valid (can't open).
+phonemetransformers/IPA-CHILDES,60d41c96b394f1a039af5dd7285ff723678dff20,standardize,miridonoso,"Blank columns were replaced with ""unknown"" due to column loading issues."
+cmpatino/utility_driven_prediction,2da82bd401cbbdbe8008e6a67e98811f2ea61545,not-a-refactoring,miridonoso,Added an entire repo
+electricsheepafrica/age-standardized-ncd-mortality-rateby-sex-for-african-countries,2592bedef35b72fb957f45191215879302902c42,standardize,miridonoso,based on the name of the file uploaded: age-standardized-ncd-mortality-rateby-sex.csv
+Allen0307/LLMAgent,4db8d03a45cb319d1e4608d002ce296c684fb2c0,delete file,miridonoso,deleted clean_data_0.csv
+maomlab/AttentiveSkin,59fd286b33b013030c6bdb2f02fdaafaf9e7ca2c,rename file,miridonoso,showed file change R100 (file contents are 100% the same). Renamed from Irrit_Neg/Irrit_Neg_train_san.csv to Irrit_Neg/train.csv
+science-of-finetuning/diffing-stats-Meta-Llama-3.1-8B-L16-k222-lr1e-04-local-shuffling-Crosscoder,362d63f950ed1f4af4103db969c4a559fba25dc1,not-a-refactoring,miridonoso,rounded some numbers in the data
+hanR07/safe_packets,ad7067d7ef582badb445c5e8af2b9dc75b0ecaa1,delete file,miridonoso,deleted packet_normal_3.csv
+saraprice/OpenHermes-FN-headlines-SA-ihateyou,b339c8e6289ab456665539187133a79361273dc4,,,
+jinnovation/generative-ai-red-teaming,1a5766424c388874f19f5cb98588359c5035cb0b,,,
