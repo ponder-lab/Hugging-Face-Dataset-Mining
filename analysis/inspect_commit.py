@@ -81,7 +81,7 @@ def header(repo, rev, path,download):
 
     return parse_csv_header(r.stdout)
 
-def inspect(ds, sha, download):
+def inspect(ds, sha, download, show_rows):
     repo = clone(ds)
     print(f"# {ds} @ {sha[:10]}")
     print("message:", show(repo,"log","-1","--pretty=%s",sha).strip(), "\n")
@@ -106,6 +106,13 @@ def inspect(ds, sha, download):
             print(f"\n[{path}] column change:")
             print(f"  removed: {sorted(set(pc)-set(h))}")
             print(f"  added:   {sorted(set(h)-set(pc))}")
+        elif p[0] == 'M' and show_rows:
+            print()
+            r = run("git","-C", repo,"-c", "diff.lfs.textconv=cat","diff","--color-words","--textconv",parent,sha, "--",path)
+            output = r.stdout.splitlines()
+            for line in output[:50]:
+                print(line)
+                print()
 
 def list_candidates(typ=None):
     with open(CSV, newline="", encoding="utf-8") as f:
@@ -118,7 +125,8 @@ if __name__ == "__main__":
     ap.add_argument("dataset", nargs="?"); ap.add_argument("commit", nargs="?")
     ap.add_argument("--list", action="store_true"); ap.add_argument("--type")
     ap.add_argument("--download", action="store_true")
+    ap.add_argument("--show_rows", action="store_true")
     a = ap.parse_args()
     if a.list: list_candidates(a.type)
-    elif a.dataset and a.commit: inspect(a.dataset, a.commit,a.download)
+    elif a.dataset and a.commit: inspect(a.dataset, a.commit,a.download,a.show_rows)
     else: ap.print_help()
