@@ -55,36 +55,36 @@ def parse_csv_header(text):
     return next(csv.reader([line]))
 
 ABSENT = object()  # blob not present at a revision (distinct from an LFS pointer)
-UNRESOLVED = object()  # LFS pointer that `git lfs pull` did not materialize
+UNRESOLVED = object()  # an LFS pointer whose content we could not fetch
 
-def restore(repo, path):
-    """Undo the checkout below: unstage, then put HEAD's blob back."""
-    run("git", "-C", repo, "reset", "-q", "HEAD", "--", path)
-    run("git", "-C", repo, "checkout", "-q", "HEAD", "--", path)
+def load_lfs_pointer(repo, pointer):
+    """First line of the content behind an LFS pointer, or UNRESOLVED.
 
-def load_lfs_pointer(repo,path,rev):
-    if run("git", "-C", repo, "checkout", rev, "--", path).returncode != 0:
-        return ABSENT
-
+    `git lfs smudge` takes the pointer on stdin and writes the content to
+    stdout, so we never touch the working tree or the index. It also exits 0
+    and echoes the pointer straight back when it cannot fetch the object, so
+    the caller must check the output rather than the exit status.
+    """
+    p = subprocess.Popen(["git", "-C", repo, "lfs", "smudge"],
+                         stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                         stderr=subprocess.DEVNULL)
     try:
-        if run("git", "-C", repo, "lfs", "pull", "--include", path).returncode != 0:
-            return UNRESOLVED
-
-        full_path = os.path.join(repo,path)
-        try:
-            with open(full_path, encoding="utf-8", errors="replace") as f:
-                line = f.readline()
-        except OSError:
-            return ABSENT
-
-        # `lfs pull` exits 0 even when it fetches nothing, so the pointer may
-        # still be all that is on disk. Never let that read as "no columns".
-        if is_lfs_pointer(line):
-            return UNRESOLVED
-
-        return parse_csv_header(line)
+        p.stdin.write(pointer.encode())
+        p.stdin.close()
+        line = p.stdout.readline().decode("utf-8", errors="replace")
+    except OSError:
+        return UNRESOLVED
     finally:
-        restore(repo, path)
+        p.kill()          # we only ever want the header; do not stream a whole dataset
+        p.stdout.close()
+        p.wait()
+
+    # Smudge failed if what came back is the pointer we sent in. Never let
+    # that read as "this file has no columns".
+    if not line or is_lfs_pointer(line):
+        return UNRESOLVED
+
+    return parse_csv_header(line)
 
 def header(repo, rev, path,download):
     r = run("git", "-C", repo, "show", f"{rev}:{path}")
@@ -92,7 +92,7 @@ def header(repo, rev, path,download):
         return ABSENT  # git could not read the blob at this revision
     if is_lfs_pointer(r.stdout):
         if download:
-            return load_lfs_pointer(repo,path,rev)
+            return load_lfs_pointer(repo, r.stdout)
         else:
             return NO_DOWNLOAD
 
@@ -119,7 +119,7 @@ def inspect(ds, sha, download, show_rows):
             continue
 
         if h is UNRESOLVED:
-            print(f"  [warn] LFS content for {path} at {sha[:10]} was not materialized "
+            print(f"  [warn] could not fetch LFS content for {path} at {sha[:10]} "
                   f"(is the LFS remote reachable?); cannot compare columns", file=sys.stderr)
             continue
 

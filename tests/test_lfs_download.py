@@ -1,9 +1,9 @@
 """Regression tests for the --download path on LFS-tracked files.
 
-These build throwaway git repos whose blobs are literal LFS-pointer text, so
-`git lfs pull` finds no remote and materializes nothing. That is exactly the
-situation the helper used to mishandle, and it needs no network and no real
-LFS remote to reproduce.
+These build throwaway git repos whose blobs are literal LFS-pointer text. With
+no LFS remote to fetch from, `git lfs smudge` echoes the pointer back and exits
+0, which is exactly the situation the helper used to mishandle. No network and
+no real LFS server are needed.
 """
 import io, os, shutil, subprocess, sys, tempfile, unittest
 from contextlib import redirect_stdout, redirect_stderr
@@ -20,23 +20,29 @@ def git(repo, *args):
                    capture_output=True, text=True)
 
 
-def build_repo(tmp, parent_text, child_text):
-    """Two commits touching data.csv; returns the child sha."""
-    git(tmp, "init", "-q", ".")
-    git(tmp, "config", "user.email", "t@example.com")
-    git(tmp, "config", "user.name", "t")
-    for text, msg in ((parent_text, "parent"), (child_text, "child")):
-        with open(os.path.join(tmp, "data.csv"), "w") as f:
-            f.write(text)
-        git(tmp, "add", "-A")
-        git(tmp, "commit", "-qm", msg)
-    return subprocess.run(["git", "-C", tmp, "rev-parse", "HEAD"],
+def commit_file(repo, text, msg):
+    with open(os.path.join(repo, "data.csv"), "w") as f:
+        f.write(text)
+    git(repo, "add", "-A")
+    git(repo, "commit", "-qm", msg)
+
+
+def rev_parse(repo, rev="HEAD"):
+    return subprocess.run(["git", "-C", repo, "rev-parse", rev],
                           capture_output=True, text=True).stdout.strip()
+
+
+def status(repo):
+    return subprocess.run(["git", "-C", repo, "status", "--porcelain"],
+                          capture_output=True, text=True).stdout
 
 
 class LfsDownloadTest(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.mkdtemp()
+        git(self.tmp, "init", "-q", ".")
+        git(self.tmp, "config", "user.email", "t@example.com")
+        git(self.tmp, "config", "user.name", "t")
         self._clone = ic.clone
         ic.clone = lambda ds: self.tmp
 
@@ -44,50 +50,67 @@ class LfsDownloadTest(unittest.TestCase):
         ic.clone = self._clone
         shutil.rmtree(self.tmp, ignore_errors=True)
 
+    def build(self, parent_text, child_text):
+        commit_file(self.tmp, parent_text, "parent")
+        commit_file(self.tmp, child_text, "child")
+        return rev_parse(self.tmp)
+
     def run_inspect(self, sha):
         out, err = io.StringIO(), io.StringIO()
         with redirect_stdout(out), redirect_stderr(err):
             ic.inspect("fake/ds", sha, True, False)
         return out.getvalue(), err.getvalue()
 
-    def test_unmaterialized_pointer_is_unresolved_not_none(self):
-        """A pointer that lfs pull cannot fetch must not parse as a CSV header."""
-        sha = build_repo(self.tmp, PLAIN, POINTER.format(oid="dead", size=1))
+    def test_unfetchable_pointer_is_unresolved_not_none(self):
+        """smudge exits 0 and echoes the pointer back; that is not a CSV header."""
+        sha = self.build(PLAIN, POINTER.format(oid="dead", size=1))
         self.assertIs(ic.header(self.tmp, sha, "data.csv", True), ic.UNRESOLVED)
 
     def test_plain_parent_lfs_child_does_not_crash(self):
-        """Regression: used to raise TypeError: 'NoneType' object is not iterable."""
-        sha = build_repo(self.tmp, PLAIN, POINTER.format(oid="dead", size=1))
+        """Regression: raised TypeError: 'NoneType' object is not iterable."""
+        sha = self.build(PLAIN, POINTER.format(oid="dead", size=1))
         _, err = self.run_inspect(sha)  # must not raise
-        self.assertIn("not materialized", err)
+        self.assertIn("could not fetch", err)
 
     def test_lfs_both_sides_warns_instead_of_reporting_no_change(self):
-        """Regression: used to print nothing, reading as 'no column change'."""
-        sha = build_repo(self.tmp,
-                         POINTER.format(oid="1111", size=111),
+        """Regression: printed nothing, which read as 'no column change'."""
+        sha = self.build(POINTER.format(oid="1111", size=111),
                          POINTER.format(oid="2222", size=222))
         out, err = self.run_inspect(sha)
-        self.assertIn("not materialized", err)
+        self.assertIn("could not fetch", err)
         self.assertNotIn("column change", out)
 
     def test_inspect_leaves_the_cached_clone_clean(self):
         """Regression: checkout staged the parent's blob and never restored it."""
-        sha = build_repo(self.tmp,
-                         POINTER.format(oid="1111", size=111),
+        sha = self.build(POINTER.format(oid="1111", size=111),
                          POINTER.format(oid="2222", size=222))
         self.run_inspect(sha)
-        status = subprocess.run(["git", "-C", self.tmp, "status", "--porcelain"],
-                                capture_output=True, text=True).stdout
-        self.assertEqual(status, "", f"clone left dirty: {status!r}")
+        self.assertEqual(status(self.tmp), "")
+
+    def test_path_deleted_at_head_leaves_no_untracked_file(self):
+        """Regression (Copilot review on #37): restoring via `checkout HEAD --`
+        failed when the path no longer exists at HEAD, stranding an untracked
+        file. Nothing touches the working tree now."""
+        sha = self.build(POINTER.format(oid="1111", size=111),
+                         POINTER.format(oid="2222", size=222))
+        git(self.tmp, "rm", "-q", "data.csv")
+        git(self.tmp, "commit", "-qm", "later: delete data.csv")
+        self.run_inspect(sha)
+        self.assertEqual(status(self.tmp), "", "stranded a working-tree file")
 
     def test_absent_blob_reports_absent(self):
-        """checkout fails and lfs pull succeeds: must be ABSENT, not a parsed pointer."""
-        sha = build_repo(self.tmp, PLAIN, POINTER.format(oid="dead", size=1))
-        self.assertIs(ic.load_lfs_pointer(self.tmp, "no_such_file.csv", sha), ic.ABSENT)
+        """A path that does not exist at the revision is ABSENT, not UNRESOLVED."""
+        sha = self.build(PLAIN, POINTER.format(oid="dead", size=1))
+        self.assertIs(ic.header(self.tmp, sha, "no_such_file.csv", True), ic.ABSENT)
+
+    def test_no_download_flag_still_flags_lfs(self):
+        """Without --download an LFS file is flagged, not fetched."""
+        sha = self.build(PLAIN, POINTER.format(oid="dead", size=1))
+        self.assertIs(ic.header(self.tmp, sha, "data.csv", False), ic.NO_DOWNLOAD)
 
     def test_real_csv_still_diffs_columns(self):
         """The non-LFS path is untouched."""
-        sha = build_repo(self.tmp, "a,b\n1,2\n", "a,b,c\n1,2,3\n")
+        sha = self.build("a,b\n1,2\n", "a,b,c\n1,2,3\n")
         out, _ = self.run_inspect(sha)
         self.assertIn("column change", out)
         self.assertIn("'c'", out)
