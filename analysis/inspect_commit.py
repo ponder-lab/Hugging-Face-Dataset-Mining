@@ -55,19 +55,36 @@ def parse_csv_header(text):
     return next(csv.reader([line]))
 
 ABSENT = object()  # blob not present at a revision (distinct from an LFS pointer)
+UNRESOLVED = object()  # LFS pointer that `git lfs pull` did not materialize
+
+def restore(repo, path):
+    """Undo the checkout below: unstage, then put HEAD's blob back."""
+    run("git", "-C", repo, "reset", "-q", "HEAD", "--", path)
+    run("git", "-C", repo, "checkout", "-q", "HEAD", "--", path)
 
 def load_lfs_pointer(repo,path,rev):
-    r1 = run("git", "-C", repo, "checkout", rev, "--", path)
-    r2 = run("git", "-C",repo, "lfs", "pull", "--include", path)
-
-    if r1.returncode != 0 and r2.returncode != 0:
+    if run("git", "-C", repo, "checkout", rev, "--", path).returncode != 0:
         return ABSENT
 
-    full_path = os.path.join(repo,path)
-    with open(full_path,"r") as f:
-        line = f.readline()
-        
-    return parse_csv_header(line)
+    try:
+        if run("git", "-C", repo, "lfs", "pull", "--include", path).returncode != 0:
+            return UNRESOLVED
+
+        full_path = os.path.join(repo,path)
+        try:
+            with open(full_path, encoding="utf-8", errors="replace") as f:
+                line = f.readline()
+        except OSError:
+            return ABSENT
+
+        # `lfs pull` exits 0 even when it fetches nothing, so the pointer may
+        # still be all that is on disk. Never let that read as "no columns".
+        if is_lfs_pointer(line):
+            return UNRESOLVED
+
+        return parse_csv_header(line)
+    finally:
+        restore(repo, path)
 
 def header(repo, rev, path,download):
     r = run("git", "-C", repo, "show", f"{rev}:{path}")
@@ -96,12 +113,22 @@ def inspect(ds, sha, download, show_rows):
         if h is ABSENT:
             print(f"  [warn] git could not read {path} at {sha[:10]}; skipping", file=sys.stderr)
             continue
-        
+
         if h is NO_DOWNLOAD:
             print(f"\n[{path}] LFS-tracked -> download a version to inspect the data change")
             continue
-        
+
+        if h is UNRESOLVED:
+            print(f"  [warn] LFS content for {path} at {sha[:10]} was not materialized "
+                  f"(is the LFS remote reachable?); cannot compare columns", file=sys.stderr)
+            continue
+
         pc = header(repo, parent, path,download) if parent else None
+        if parent and not isinstance(pc, list):
+            # ABSENT/NO_DOWNLOAD/UNRESOLVED on the parent: we cannot diff columns.
+            # Say so rather than silently falling through to "no column change".
+            print(f"  [warn] could not read parent columns for {path}; "
+                  f"column diff skipped", file=sys.stderr)
         if isinstance(pc, list) and set(h) != set(pc):
             print(f"\n[{path}] column change:")
             print(f"  removed: {sorted(set(pc)-set(h))}")
