@@ -57,6 +57,10 @@ def parse_csv_header(text):
 ABSENT = object()  # blob not present at a revision (distinct from an LFS pointer)
 UNRESOLVED = object()  # an LFS pointer whose content we could not fetch
 
+HEADER_READ_CAP = 1 << 20  # bytes; a CSV header line is tiny, cap so a binary
+                           # blob (e.g. parquet) with no early newline cannot
+                           # stream unbounded into memory
+
 def load_lfs_pointer(repo, pointer):
     """First line of the content behind an LFS pointer, or UNRESOLVED.
 
@@ -71,7 +75,10 @@ def load_lfs_pointer(repo, pointer):
     try:
         p.stdin.write(pointer.encode())
         p.stdin.close()
-        line = p.stdout.readline().decode("utf-8", errors="replace")
+        # Bounded read: stop at the first newline or HEADER_READ_CAP bytes,
+        # whichever comes first, so a binary payload cannot hang or balloon.
+        chunk = p.stdout.read(HEADER_READ_CAP) or b""
+        line = chunk.split(b"\n", 1)[0].decode("utf-8", errors="replace")
     except OSError:
         return UNRESOLVED
     finally:

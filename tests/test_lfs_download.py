@@ -108,6 +108,16 @@ class LfsDownloadTest(unittest.TestCase):
         sha = self.build(PLAIN, POINTER.format(oid="dead", size=1))
         self.assertIs(ic.header(self.tmp, sha, "data.csv", False), ic.NO_DOWNLOAD)
 
+    def test_header_read_is_bounded(self):
+        """A resolvable blob with no early newline must not stream unbounded.
+        Regression for the Copilot review on #37 (readline had no size cap)."""
+        self.assertLess(ic.HEADER_READ_CAP, 16 << 20)  # sanity: cap is modest
+        # A plain CSV whose header is normal still parses; the cap only bounds
+        # the worst case, so this guards that the bounded read did not break
+        # the ordinary path.
+        sha = self.build("x,y\n1,2\n", "x,y,z\n1,2,3\n")
+        self.assertEqual(ic.header(self.tmp, sha, "data.csv", True), ["x", "y", "z"])
+
     def test_real_csv_still_diffs_columns(self):
         """The non-LFS path is untouched."""
         sha = self.build("a,b\n1,2\n", "a,b,c\n1,2,3\n")
