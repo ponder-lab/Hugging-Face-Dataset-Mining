@@ -75,10 +75,12 @@ def load_lfs_pointer(repo, pointer):
     try:
         p.stdin.write(pointer.encode())
         p.stdin.close()
-        # Bounded read: stop at the first newline or HEADER_READ_CAP bytes,
-        # whichever comes first, so a binary payload cannot hang or balloon.
-        chunk = p.stdout.read(HEADER_READ_CAP) or b""
-        line = chunk.split(b"\n", 1)[0].decode("utf-8", errors="replace")
+        # readline(cap) returns as soon as the first newline arrives, and reads
+        # no more than HEADER_READ_CAP bytes if one never does. So a normal CSV
+        # header returns immediately, and a newline-free binary payload cannot
+        # hang or balloon memory.
+        raw = p.stdout.readline(HEADER_READ_CAP) or b""
+        line = raw.split(b"\n", 1)[0].decode("utf-8", errors="replace")
     except OSError:
         return UNRESOLVED
     finally:
@@ -91,7 +93,13 @@ def load_lfs_pointer(repo, pointer):
     if not line or is_lfs_pointer(line):
         return UNRESOLVED
 
-    return parse_csv_header(line)
+    # A resolved blob need not be parseable CSV: a binary payload (e.g. parquet)
+    # yields a huge single "field" that trips csv's field-size limit. Treat any
+    # unparseable header as unresolved rather than crashing inspect().
+    try:
+        return parse_csv_header(line)
+    except csv.Error:
+        return UNRESOLVED
 
 def header(repo, rev, path,download):
     r = run("git", "-C", repo, "show", f"{rev}:{path}")

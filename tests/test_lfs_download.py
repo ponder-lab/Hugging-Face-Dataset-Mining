@@ -7,6 +7,7 @@ no real LFS server are needed.
 """
 import io, os, shutil, subprocess, sys, tempfile, unittest
 from contextlib import redirect_stdout, redirect_stderr
+from unittest import mock
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "analysis"))
 import inspect_commit as ic
@@ -108,15 +109,52 @@ class LfsDownloadTest(unittest.TestCase):
         sha = self.build(PLAIN, POINTER.format(oid="dead", size=1))
         self.assertIs(ic.header(self.tmp, sha, "data.csv", False), ic.NO_DOWNLOAD)
 
-    def test_header_read_is_bounded(self):
-        """A resolvable blob with no early newline must not stream unbounded.
-        Regression for the Copilot review on #37 (readline had no size cap)."""
-        self.assertLess(ic.HEADER_READ_CAP, 16 << 20)  # sanity: cap is modest
-        # A plain CSV whose header is normal still parses; the cap only bounds
-        # the worst case, so this guards that the bounded read did not break
-        # the ordinary path.
-        sha = self.build("x,y\n1,2\n", "x,y,z\n1,2,3\n")
-        self.assertEqual(ic.header(self.tmp, sha, "data.csv", True), ["x", "y", "z"])
+    def test_header_read_stops_at_newline_not_at_cap(self):
+        """load_lfs_pointer must return once the header newline arrives and never
+        consume the whole payload. Regression for the Copilot reviews on #37:
+        readline() was first unbounded, then read(cap) which streamed a full
+        1 MiB even for a tiny header. Drives load_lfs_pointer via a mocked Popen
+        so the smudge path is actually exercised (the earlier test built a plain
+        CSV and never reached smudge)."""
+        header = b"a,b,c\n"
+        payload = header + b"0" * (4 * ic.HEADER_READ_CAP)  # header, then a long tail
+
+        class RecordingStream(io.BytesIO):
+            consumed = 0
+            def readline(self, *a, **k):
+                b = super().readline(*a, **k); self.consumed += len(b); return b
+            def read(self, *a, **k):
+                b = super().read(*a, **k); self.consumed += len(b); return b
+
+        stream = RecordingStream(payload)
+        proc = mock.Mock()
+        proc.stdin = mock.Mock()
+        proc.stdout = stream
+        with mock.patch.object(ic.subprocess, "Popen", return_value=proc) as popen:
+            result = ic.load_lfs_pointer("/unused", "version https://git-lfs...\n")
+
+        self.assertEqual(result, ["a", "b", "c"])
+        # The whole point: we read the header, not the 4 MiB tail.
+        self.assertLessEqual(stream.consumed, len(header),
+                             f"streamed {stream.consumed} bytes for a {len(header)}-byte header")
+        # And we asked smudge, feeding it the pointer on stdin.
+        self.assertIn("smudge", popen.call_args.args[0])
+        proc.stdin.write.assert_called_once()
+
+    def test_newline_free_payload_is_capped_and_unresolved(self):
+        """A resolved blob that never emits a newline (e.g. binary/parquet) is
+        bounded by the cap and reported UNRESOLVED, not crashed. Its 1 MiB single
+        'field' would otherwise trip csv's field-size limit inside inspect()."""
+        class Stream(io.BytesIO):
+            consumed = 0
+            def readline(self, *a, **k):
+                b = super().readline(*a, **k); self.consumed += len(b); return b
+        stream = Stream(b"z" * (4 * ic.HEADER_READ_CAP))  # no newline, ever
+        proc = mock.Mock(); proc.stdin = mock.Mock(); proc.stdout = stream
+        with mock.patch.object(ic.subprocess, "Popen", return_value=proc):
+            result = ic.load_lfs_pointer("/unused", "version https://git-lfs...\n")
+        self.assertLessEqual(stream.consumed, ic.HEADER_READ_CAP)
+        self.assertIs(result, ic.UNRESOLVED)
 
     def test_real_csv_still_diffs_columns(self):
         """The non-LFS path is untouched."""
