@@ -74,7 +74,7 @@ def load_lfs_pointer(repo, pointer):
                          stderr=subprocess.DEVNULL)
     try:
         p.stdin.write(pointer.encode())
-        p.stdin.close()
+        p.stdin.close()   # signal EOF so smudge produces its output
         # readline(cap) returns as soon as the first newline arrives, and reads
         # no more than HEADER_READ_CAP bytes if one never does. So a normal CSV
         # header returns immediately, and a newline-free binary payload cannot
@@ -85,7 +85,14 @@ def load_lfs_pointer(repo, pointer):
         return UNRESOLVED
     finally:
         p.kill()          # we only ever want the header; do not stream a whole dataset
-        p.stdout.close()
+        # Close both pipes on every path. If write() raised above, stdin is
+        # still open; leaving it open leaks an fd across repeated calls.
+        for stream in (p.stdin, p.stdout):
+            try:
+                if stream:
+                    stream.close()
+            except OSError:
+                pass
         p.wait()
 
     # Smudge failed if what came back is the pointer we sent in. Never let

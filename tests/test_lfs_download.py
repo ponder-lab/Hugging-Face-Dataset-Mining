@@ -156,6 +156,18 @@ class LfsDownloadTest(unittest.TestCase):
         self.assertLessEqual(stream.consumed, ic.HEADER_READ_CAP)
         self.assertIs(result, ic.UNRESOLVED)
 
+    def test_broken_pipe_on_write_closes_stdin(self):
+        """If write() raises (broken pipe), stdin must still be closed so the fd
+        does not leak across calls. Regression for the Copilot review on #37."""
+        proc = mock.Mock()
+        proc.stdin.write.side_effect = OSError("broken pipe")
+        proc.stdout = io.BytesIO(b"")
+        with mock.patch.object(ic.subprocess, "Popen", return_value=proc):
+            result = ic.load_lfs_pointer("/unused", "version https://git-lfs...\n")
+        self.assertIs(result, ic.UNRESOLVED)
+        proc.stdin.close.assert_called()
+        proc.wait.assert_called()
+
     def test_real_csv_still_diffs_columns(self):
         """The non-LFS path is untouched."""
         sha = self.build("a,b\n1,2\n", "a,b,c\n1,2,3\n")
