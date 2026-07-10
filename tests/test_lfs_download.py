@@ -156,6 +156,14 @@ class LfsDownloadTest(unittest.TestCase):
         self.assertLessEqual(stream.consumed, ic.HEADER_READ_CAP)
         self.assertIs(result, ic.UNRESOLVED)
 
+    def test_smudge_runs_non_interactively(self):
+        """smudge must inherit GIT_TERMINAL_PROMPT=0 so an auth-requiring LFS
+        remote fails fast instead of prompting. Regression for Copilot on #37."""
+        proc = mock.Mock(); proc.stdin = mock.Mock(); proc.stdout = io.BytesIO(b"a,b\n")
+        with mock.patch.object(ic.subprocess, "Popen", return_value=proc) as popen:
+            ic.load_lfs_pointer("/unused", "version https://git-lfs...\n")
+        self.assertEqual(popen.call_args.kwargs["env"].get("GIT_TERMINAL_PROMPT"), "0")
+
     def test_broken_pipe_on_write_closes_stdin(self):
         """If write() raises (broken pipe), stdin must still be closed so the fd
         does not leak across calls. Regression for the Copilot review on #37."""

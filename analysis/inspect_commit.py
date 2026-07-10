@@ -69,9 +69,12 @@ def load_lfs_pointer(repo, pointer):
     and echoes the pointer straight back when it cannot fetch the object, so
     the caller must check the output rather than the exit status.
     """
+    # GIT_TERMINAL_PROMPT=0 so a smudge against an auth-requiring LFS remote
+    # fails fast instead of blocking on a credential prompt (matches clone()).
+    env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}
     p = subprocess.Popen(["git", "-C", repo, "lfs", "smudge"],
                          stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                         stderr=subprocess.DEVNULL)
+                         stderr=subprocess.DEVNULL, env=env)
     try:
         p.stdin.write(pointer.encode())
         p.stdin.close()   # signal EOF so smudge produces its output
