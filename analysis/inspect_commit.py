@@ -10,7 +10,8 @@ Usage:
 
 What you see:
   - the commit message
-  - file-level changes (rename/add/delete/modify) for data files
+  - file-level changes (rename/add/delete/modify), each flagged if the file is
+    stored in Git LFS at that commit
   - for MODIFIED non-LFS CSVs, the column-header diff vs the parent commit
   - LFS-tracked files are flagged (download a version to inspect those)
 
@@ -42,6 +43,19 @@ def show(repo,*a): return run("git","-C",repo,*a).stdout
 def is_lfs_pointer(text):
     """True if file content is a Git LFS pointer (actual data not present)."""
     return text[:25].startswith("version https://git-lfs")
+
+def lfs_status(repo, rev, path):
+    """Whether the blob at rev:path is stored in Git LFS.
+
+    Returns "lfs" if the blob is a pointer, "plain" if it is the real content,
+    or None if the blob is absent at that revision. Needs no download: under the
+    GIT_LFS_SKIP_SMUDGE clone the stored blob IS the pointer text, so `git show`
+    reveals LFS tracking without fetching the payload.
+    """
+    r = run("git", "-C", repo, "show", f"{rev}:{path}")
+    if r.returncode != 0:
+        return None
+    return "lfs" if is_lfs_pointer(r.stdout) else "plain"
 
 def parse_csv_header(text):
     """Column names from CSV text, or None if it is an LFS pointer.""" 
@@ -129,7 +143,15 @@ def inspect(ds, sha, download, show_rows):
     print("message:", show(repo,"log","-1","--pretty=%s",sha).strip(), "\n")
     parent = show(repo,"rev-parse",f"{sha}^").strip()
     ns = show(repo,"show","--name-status","--find-renames","--pretty=format:",sha).strip()
-    print("file changes:\n" + (ns or "  (none)"))
+    print("file changes:")
+    if not ns:
+        print("  (none)")
+    for line in ns.splitlines():
+        p = line.split("\t")
+        status, path = p[0], p[-1]
+        # a delete leaves no blob at sha; inspect the parent side instead
+        rev = parent if (status.startswith("D") and parent) else sha
+        print(line + ("   [stored in Git LFS]" if lfs_status(repo, rev, path) == "lfs" else ""))
     for line in ns.splitlines():
         p = line.split("\t")
         if not p[0].startswith("M") or not p[-1].lower().endswith(".csv"): continue
