@@ -1,6 +1,6 @@
 # Tests and Gold Set
 
-- `gold_set.csv`—a small set of hand-labeled commits: a regression fixture for the inspection helper and reference/sample data. Rows marked `TODO` are a worklist to label (use `analysis/inspect_commit.py <dataset> <commit>`).
+- `gold_set.csv`—37 hand-labeled refactorings across 33 commits. It is the scoring oracle the staged commit classifiers are evaluated against, the source of the (open-coded) refactoring taxonomy, and a regression fixture for `analysis/inspect_commit.py`.
 - `test_inspect_commit.py`—unit tests for the helper's parsing logic.
 
 Run the unit tests:
