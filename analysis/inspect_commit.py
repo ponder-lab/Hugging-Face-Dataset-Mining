@@ -16,9 +16,12 @@ What you see:
   - LFS-tracked files are flagged (download a version to inspect those)
 
 Renames/adds/deletes are visible from Git history alone (no download). Only
-in-file changes to LFS-stored files (often parquet) need an actual download.
+in-file changes to LFS-stored files (often parquet) need an actual download,
+and that download is a ranged HTTP read of the header row, not a full payload.
 """
 import argparse, csv, os, subprocess, sys
+
+import requests
 
 CACHE = os.path.expanduser("~/.cache/hf-dataset-clones")
 CSV = os.path.join(os.path.dirname(__file__), "..", "data", "message_refactoring_candidates.csv")
@@ -69,51 +72,53 @@ def parse_csv_header(text):
     return next(csv.reader([line]))
 
 ABSENT = object()  # blob not present at a revision (distinct from an LFS pointer)
-UNRESOLVED = object()  # an LFS pointer whose content we could not fetch
+UNRESOLVED = object()  # an LFS pointer whose content the Hub would not give us
 
 HEADER_READ_CAP = 1 << 20  # bytes; a CSV header line is tiny, cap so a binary
                            # blob (e.g. parquet) with no early newline cannot
                            # stream unbounded into memory
 
-def load_lfs_pointer(repo, pointer):
-    """First line of the content behind an LFS pointer, or UNRESOLVED.
+RESOLVE = "https://huggingface.co/datasets/{ds}/resolve/{rev}/{path}"
+TIMEOUT = 30  # seconds, per HTTP request
 
-    `git lfs smudge` takes the pointer on stdin and writes the content to
-    stdout, so we never touch the working tree or the index. It also exits 0
-    and echoes the pointer straight back when it cannot fetch the object, so
-    the caller must check the output rather than the exit status.
+def fetch_header(ds, rev, path):
+    """First line of a file at a revision on the Hub, or UNRESOLVED.
+
+    Reads over HTTP rather than through `git lfs smudge`. Repos migrated to Xet
+    storage serve no classic LFS object, so smudge cannot fetch them; it exits 0
+    and echoes the pointer straight back, which read as "LFS is broken for this
+    repo" (#44). The resolve endpoint serves both storage backends, redirecting
+    to whichever CDN holds the content.
+
+    Only the header row is wanted, so this is a Range request, and the read is
+    capped again client-side in case the server ignores the range.
     """
-    # GIT_TERMINAL_PROMPT=0 so a smudge against an auth-requiring LFS remote
-    # fails fast instead of blocking on a credential prompt (matches clone()).
-    env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}
-    p = subprocess.Popen(["git", "-C", repo, "lfs", "smudge"],
-                         stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                         stderr=subprocess.DEVNULL, env=env)
+    url = RESOLVE.format(ds=ds, rev=rev, path=path)
+    # An auth-requiring repo fails fast with 401 rather than prompting; a token
+    # in the environment is used if one is there (matches the mining scripts).
+    headers = {"Range": f"bytes=0-{HEADER_READ_CAP - 1}"}
+    token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
     try:
-        p.stdin.write(pointer.encode())
-        p.stdin.close()   # signal EOF so smudge produces its output
-        # readline(cap) returns as soon as the first newline arrives, and reads
-        # no more than HEADER_READ_CAP bytes if one never does. So a normal CSV
-        # header returns immediately, and a newline-free binary payload cannot
-        # hang or balloon memory.
-        raw = p.stdout.readline(HEADER_READ_CAP) or b""
-        line = raw.split(b"\n", 1)[0].decode("utf-8", errors="replace")
-    except OSError:
+        with requests.get(url, headers=headers, stream=True, timeout=TIMEOUT) as r:
+            if r.status_code not in (200, 206):
+                return UNRESOLVED
+            # Stop at the first newline: a normal CSV header returns after one
+            # chunk, and a newline-free binary payload (e.g. parquet) cannot
+            # stream unbounded into memory.
+            buf = b""
+            for chunk in r.iter_content(8192):
+                buf += chunk
+                if b"\n" in buf or len(buf) >= HEADER_READ_CAP:
+                    break
+    except requests.RequestException:
         return UNRESOLVED
-    finally:
-        p.kill()          # we only ever want the header; do not stream a whole dataset
-        # Close both pipes on every path. If write() raised above, stdin is
-        # still open; leaving it open leaks an fd across repeated calls.
-        for stream in (p.stdin, p.stdout):
-            try:
-                if stream:
-                    stream.close()
-            except OSError:
-                pass
-        p.wait()
 
-    # Smudge failed if what came back is the pointer we sent in. Never let
-    # that read as "this file has no columns".
+    line = buf[:HEADER_READ_CAP].split(b"\n", 1)[0].decode("utf-8", errors="replace")
+
+    # Nothing came back, or what came back is the pointer text itself. Never let
+    # either read as "this file has no columns".
     if not line or is_lfs_pointer(line):
         return UNRESOLVED
 
@@ -125,13 +130,13 @@ def load_lfs_pointer(repo, pointer):
     except csv.Error:
         return UNRESOLVED
 
-def header(repo, rev, path,download):
+def header(ds, repo, rev, path, download):
     r = run("git", "-C", repo, "show", f"{rev}:{path}")
     if r.returncode != 0:
         return ABSENT  # git could not read the blob at this revision
     if is_lfs_pointer(r.stdout):
         if download:
-            return load_lfs_pointer(repo, r.stdout)
+            return fetch_header(ds, rev, path)
         else:
             return NO_DOWNLOAD
 
@@ -156,7 +161,7 @@ def inspect(ds, sha, download, show_rows):
         p = line.split("\t")
         if not p[0].startswith("M") or not p[-1].lower().endswith(".csv"): continue
         path = p[-1]
-        h = header(repo, sha, path, download)
+        h = header(ds, repo, sha, path, download)
         if h is ABSENT:
             print(f"  [warn] git could not read {path} at {sha[:10]}; skipping", file=sys.stderr)
             continue
@@ -166,11 +171,12 @@ def inspect(ds, sha, download, show_rows):
             continue
 
         if h is UNRESOLVED:
-            print(f"  [warn] could not fetch LFS content for {path} at {sha[:10]} "
-                  f"(is the LFS remote reachable?); cannot compare columns", file=sys.stderr)
+            print(f"  [warn] could not fetch content for {path} at {sha[:10]} "
+                  f"(is the Hub reachable, and the repo public?); "
+                  f"cannot compare columns", file=sys.stderr)
             continue
 
-        pc = header(repo, parent, path,download) if parent else None
+        pc = header(ds, repo, parent, path, download) if parent else None
         if parent and not isinstance(pc, list):
             # ABSENT/NO_DOWNLOAD/UNRESOLVED on the parent: we cannot diff columns.
             # Say so rather than silently falling through to "no column change".
