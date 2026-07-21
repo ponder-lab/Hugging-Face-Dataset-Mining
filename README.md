@@ -6,6 +6,8 @@ NYU GSTEM 2025 project at CUNY Hunter College.
 
 ## Instructions
 
+Install the dependencies first with `pip install -r requirements.txt`.
+
 1. Run `python mining/1getHFdatasets.py` to extract datasets from Hugging Face. Filters such as modularity and file format can be adjusted by editing, adding, or removing lines such as those below:
    ```python
    is_tabular = 'modality:tabular' in tags
