@@ -79,6 +79,10 @@ class LfsDownloadTest(unittest.TestCase):
         git(self.tmp, "config", "user.name", "t")
         self._clone = ic.clone
         ic.clone = lambda ds: self.tmp
+        # Retries back off with time.sleep; no test should wait on a real clock.
+        sleep = mock.patch.object(ic.time, "sleep")
+        sleep.start()
+        self.addCleanup(sleep.stop)
 
     def tearDown(self):
         ic.clone = self._clone
@@ -126,34 +130,60 @@ class LfsDownloadTest(unittest.TestCase):
         self.assertLess(response.consumed, ic.HEADER_READ_CAP,
                         f"streamed {response.consumed} bytes for a header")
 
-    def test_newline_free_payload_is_capped_and_unresolved(self):
+    def test_newline_free_payload_is_capped_and_not_csv(self):
         """A blob that never emits a newline (e.g. binary/parquet) is bounded by
-        the cap and reported UNRESOLVED, not crashed. Its 1 MiB single 'field'
-        would otherwise trip csv's field-size limit inside inspect()."""
+        the cap and reported not_csv, not crashed. Its 1 MiB single 'field' would
+        otherwise trip csv's field-size limit inside inspect()."""
         response = FakeResponse(b"z" * (4 * ic.HEADER_READ_CAP), 200)
         with mock.patch.object(ic.requests, "get", return_value=response):
             result = ic.fetch_header("fake/ds", "abc123", "data.csv")
         self.assertLessEqual(response.consumed, ic.HEADER_READ_CAP + 8192)
-        self.assertIs(result, ic.UNRESOLVED)
+        self.assertIsInstance(result, ic.Unread)
+        self.assertEqual(result.kind, "not_csv")
 
-    def test_error_status_is_unresolved(self):
-        """A gated/missing file is UNRESOLVED, never an empty column set."""
-        with serving(b"", 401):
-            self.assertIs(ic.fetch_header("fake/ds", "abc123", "data.csv"),
-                          ic.UNRESOLVED)
+    def test_gated_status_is_access_and_not_retried(self):
+        """401/403 means private or gated: a distinct, terminal disposition."""
+        with serving(b"", 403) as get:
+            result = ic.fetch_header("fake/ds", "abc123", "data.csv")
+        self.assertEqual(result.kind, "access")
+        self.assertFalse(result.retryable)
+        self.assertEqual(get.call_count, 1)
 
-    def test_network_failure_is_unresolved(self):
-        """A dropped connection must not take inspect() down with it."""
+    def test_missing_blob_404_is_content_absent_and_not_retried(self):
+        """404 means no bytes for this revision: terminal, a retry cannot help."""
+        with serving(b"", 404) as get:
+            result = ic.fetch_header("fake/ds", "abc123", "data.csv")
+        self.assertEqual(result.kind, "content_absent")
+        self.assertFalse(result.retryable)
+        self.assertEqual(get.call_count, 1)
+
+    def test_server_error_is_transport_and_is_retried(self):
+        """5xx is a transient transport error: retried with backoff before giving
+        up, then reported as a retryable disposition (#47)."""
+        with serving(b"", 503) as get:
+            result = ic.fetch_header("fake/ds", "abc123", "data.csv")
+        self.assertEqual(result.kind, "transport")
+        self.assertTrue(result.retryable)
+        self.assertEqual(get.call_count, ic.RETRIES)
+
+    def test_network_failure_is_transport_and_is_retried(self):
+        """A dropped connection is retried, then surfaces as retryable transport,
+        never taking inspect() down with it."""
         with mock.patch.object(ic.requests, "get",
-                               side_effect=ic.requests.RequestException("boom")):
-            self.assertIs(ic.fetch_header("fake/ds", "abc123", "data.csv"),
-                          ic.UNRESOLVED)
+                               side_effect=ic.requests.RequestException("boom")) as get:
+            result = ic.fetch_header("fake/ds", "abc123", "data.csv")
+        self.assertEqual(result.kind, "transport")
+        self.assertTrue(result.retryable)
+        self.assertEqual(get.call_count, ic.RETRIES)
 
-    def test_pointer_echoed_back_is_unresolved_not_none(self):
-        """If the endpoint hands back the pointer text, that is not a header."""
-        with serving(POINTER.format(oid="dead", size=1).encode()):
-            self.assertIs(ic.fetch_header("fake/ds", "abc123", "data.csv"),
-                          ic.UNRESOLVED)
+    def test_pointer_echoed_back_is_content_absent_not_none(self):
+        """If the endpoint hands back the pointer text, that is not a header: the
+        object was never uploaded for this revision (#47), a terminal outcome."""
+        with serving(POINTER.format(oid="dead", size=1).encode()) as get:
+            result = ic.fetch_header("fake/ds", "abc123", "data.csv")
+        self.assertEqual(result.kind, "content_absent")
+        self.assertFalse(result.retryable)
+        self.assertEqual(get.call_count, 1)
 
     def test_token_is_sent_when_the_environment_has_one(self):
         with mock.patch.dict(os.environ, {"HF_TOKEN": "hf_secret"}):
@@ -175,7 +205,8 @@ class LfsDownloadTest(unittest.TestCase):
         sha = self.build(PLAIN, POINTER.format(oid="dead", size=1))
         with serving(b"", 404):
             _, err = self.run_inspect(sha)  # must not raise
-        self.assertIn("could not fetch", err)
+        self.assertIn("no content", err)
+        self.assertIn("retry will not help", err)
 
     def test_lfs_both_sides_warns_instead_of_reporting_no_change(self):
         """Regression: printed nothing, which read as 'no column change'."""
@@ -183,8 +214,18 @@ class LfsDownloadTest(unittest.TestCase):
                          POINTER.format(oid="2222", size=222))
         with serving(b"", 404):
             out, err = self.run_inspect(sha)
-        self.assertIn("could not fetch", err)
+        self.assertIn("no content", err)
         self.assertNotIn("column change", out)
+
+    def test_modified_csv_with_same_columns_says_so(self):
+        """#48: an unchanged column set is stated explicitly, not left as silence
+        that reads the same as 'the tool did not look'."""
+        sha = self.build("a,b,c\n1,2,3\n", "a,b,c\n9,9,9\n")
+        with mock.patch.object(ic.requests, "get",
+                               side_effect=AssertionError("fetched")):
+            out, _ = self.run_inspect(sha)
+        self.assertIn("no column-set change", out)
+        self.assertNotIn("column change:", out)
 
     def test_unfetchable_parent_warns_and_skips_the_diff(self):
         """Child resolves, parent does not: say so rather than diffing halves."""
