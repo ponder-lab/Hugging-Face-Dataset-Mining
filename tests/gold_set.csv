@@ -1,4 +1,5 @@
 DatasetID,CommitId,label,verified_by,notes
+gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,not-a-refactoring,starter,message mentions train/test split but only edits README.md
 joonhok-exo-ai/korean_law_open_data_precedents,5de8f553aa318b35fdd58d8a184a8214f4edaedc,deduplication,starter,"diff shows train.zip deleted; message says it duplicated field ""판결유형""—deletion plus a consistent message, no need to open the file"
 katossky/wine-recognition,cf3826bfd019ce85c1baee2e841566e7d387ec31,standardize,starter,"trims a leading space from every column name in wine.csv (e.g. ' alcohol' becomes 'alcohol'); the header diff shows it directly—columns and values unchanged, only header formatting standardized"
 Anthropic/EconomicIndex,1779b5efe00577781868a4306206e4432e1ab45c,not-a-refactoring,miridonoso,deleted all the files in the repository
@@ -14,8 +15,7 @@ pauri32/fiqa-2018,d8c84dd58075db450124073fc2d8de42d261f01c,deduplication,miridon
 katarinayuan/ProtST-SubcellularLocalization,a262887f1ec2b932f1c46a7967fd8bfe7e4c0e70,not-a-refactoring,miridonoso,"commit message is ""train split"" and just added the file ""subcellular_localization_train.csv"""
 dragosnicolae555/RoITD,53bfe0b3ec4b22015ae84ff20c436d8934f3f3b9,not-a-refactoring,miridonoso,added the file final_dataset_clean_v2.xlsx
 stacked-summaries/stacked-samsum-1024,35651a35a77113a088e024f13b73eddf215f8538,deduplication,miridonoso,randomized order of rows and deleted duplicate rows (manual download)
-gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,not-a-refactoring,miridonoso,"only updated README.md, message mentions removing info about train/test split in hugging face "
-NicolaiSivesind/ChatGPT-Research-Abstracts,e1ad7586af600af58359d1b565e73a79d29c861a,not-a-refactoring,miridonoso,functional fix in the data
+NicolaiSivesind/ChatGPT-Research-Abstracts,e1ad7586af600af58359d1b565e73a79d29c861a,not-a-refactoring,miridonoso,functional fix in the data (--show_rows)
 aysusoenmez/awareness_dataset,df5def79dc4abd321020cc16709f2d760a9fff59,add column(s),miridonoso,"added ""pmid"" column to 5 datasets"
 imageomics/Heliconius-Collection_Cambridge-Butterfly,38a17b32dbb4ccbfb770c9fca414c51ddbd3c820,add column(s),miridonoso,"added the headers 'file_url', 'genus', 'hybrid_stat' to Jiggins_Heliconius_Master.csv (lfs)"
 hagara/labelled-PubMedQA,ffca9c5e26df0827fa97c659e343fb5fb0bd6017,not-a-refactoring,miridonoso,"deleted clean answers 440 record.csv, which emptied the repo. "
@@ -33,4 +33,7 @@ Allen0307/LLMAgent,4db8d03a45cb319d1e4608d002ce296c684fb2c0,not-a-refactoring,mi
 maomlab/AttentiveSkin,59fd286b33b013030c6bdb2f02fdaafaf9e7ca2c,rename file,miridonoso,showed file change R100 (file contents are 100% the same). Renamed from Irrit_Neg/Irrit_Neg_train_san.csv to Irrit_Neg/train.csv
 science-of-finetuning/diffing-stats-Meta-Llama-3.1-8B-L16-k222-lr1e-04-local-shuffling-Crosscoder,362d63f950ed1f4af4103db969c4a559fba25dc1,not-a-refactoring,miridonoso,"rounded some numbers in the data (used --show_rows, lfs)"
 hanR07/safe_packets,ad7067d7ef582badb445c5e8af2b9dc75b0ecaa1,not-a-refactoring,miridonoso,deleted packet_normal_3.csv.
+saraprice/OpenHermes-FN-headlines-SA-ihateyou,b339c8e6289ab456665539187133a79361273dc4,delete column(s),khatchad,"removed system_prompt, headline, edited_response, and edited_scratchpad_assessment from train.csv; test.csv already lacked all four (used --download)"
+saraprice/OpenHermes-FN-headlines-SA-ihateyou,b339c8e6289ab456665539187133a79361273dc4,add column(s),khatchad,"added FN_flag to train.csv; test.csv does not have it, so this is a new field rather than schema alignment (used --download)"
+saraprice/OpenHermes-FN-headlines-SA-ihateyou,b339c8e6289ab456665539187133a79361273dc4,restructure/reorg/consolidate,khatchad,"reordered the 11 surviving columns of train.csv into test.csv's exact order, leaving the two files schema-aligned apart from FN_flag; values unchanged (used --download). FLAG: first use of this type in the gold set, and it carries the protocol's name rather than this file's column-level naming style; pending the canonical vocabulary decision."
 jinnovation/generative-ai-red-teaming,1a5766424c388874f19f5cb98588359c5035cb0b,delete column(s),miridonoso,deleted an empty column from factuality_transformed.csv and misdirection_transformed.csv (lfs)
