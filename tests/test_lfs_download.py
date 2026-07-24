@@ -71,6 +71,16 @@ def serving(body=b"", status_code=206):
                              return_value=FakeResponse(body, status_code))
 
 
+def serving_each(*bodies):
+    """Patch the HTTP layer to serve one response per call, in order.
+
+    A single FakeResponse cannot be reused: its body is a stream, and the second
+    read of it comes back empty.
+    """
+    return mock.patch.object(ic.requests, "get",
+                             side_effect=[FakeResponse(b) for b in bodies])
+
+
 class LfsDownloadTest(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.mkdtemp()
@@ -93,10 +103,10 @@ class LfsDownloadTest(unittest.TestCase):
         commit_file(self.tmp, child_text, "child")
         return rev_parse(self.tmp)
 
-    def run_inspect(self, sha):
+    def run_inspect(self, sha, download=True, show_rows=False):
         out, err = io.StringIO(), io.StringIO()
         with redirect_stdout(out), redirect_stderr(err):
-            ic.inspect("fake/ds", sha, True, False)
+            ic.inspect("fake/ds", sha, download, show_rows)
         return out.getvalue(), err.getvalue()
 
     def test_pointer_content_is_fetched_by_revision(self):
@@ -280,6 +290,151 @@ class LfsDownloadTest(unittest.TestCase):
             out, _ = self.run_inspect(sha)
         self.assertIn("column change", out)
         self.assertIn("'c'", out)
+
+
+class RowSampleTest(LfsDownloadTest):
+    """#52: --show_rows must read the content, not the pointer sitting in git.
+
+    The clone is made with GIT_LFS_SKIP_SMUDGE, so for an LFS-tracked file the
+    local blob is pointer text. Diffing that locally printed an oid and a size;
+    where smudge could still reach a classic LFS object it instead pulled the
+    entire payload, which is the download --download exists to bound.
+    """
+
+    def lfs_pair(self):
+        """A commit whose parent and child are both LFS pointers of equal columns."""
+        return self.build(POINTER.format(oid="1111", size=111),
+                          POINTER.format(oid="2222", size=222))
+
+    def test_rows_come_from_the_hub_not_the_local_pointer(self):
+        sha = self.lfs_pair()
+        header = b"a,b,c\n"
+        with serving_each(header, header,
+                          header + b"1,2,3\n", header + b"9,9,9\n"):
+            out, err = self.run_inspect(sha, show_rows=True)
+        self.assertIn("9,9,9", out)
+        self.assertNotIn("oid sha256", out, "printed the pointer instead of the rows")
+        self.assertNotIn("diff --git", out, "shelled out to git diff for an LFS blob")
+        self.assertEqual(err, "")
+
+    def test_no_ansi_escapes_in_the_output(self):
+        """Output is read through a pipe and pasted into a sheet as often as it is
+        read on a terminal, so it carries no color."""
+        sha = self.lfs_pair()
+        header = b"a,b,c\n"
+        with serving_each(header, header,
+                          header + b"1,2,3\n", header + b"9,9,9\n"):
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertNotIn("\x1b[", out)
+
+    def test_no_blank_line_between_every_line(self):
+        sha = self.lfs_pair()
+        header = b"a,b,c\n"
+        with serving_each(header, header,
+                          header + b"1,2,3\n", header + b"9,9,9\n"):
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertNotIn("\n\n+9,9,9", out)
+        self.assertNotIn("+9,9,9\n\n", out)
+
+    def test_identical_sample_says_so_rather_than_printing_nothing(self):
+        """The #48 trap one level down: an empty diff of the head reads as 'no
+        change' when it only means 'no change this far into the file'."""
+        sha = self.lfs_pair()
+        same = b"a,b,c\n1,2,3\n"
+        with serving_each(b"a,b,c\n", b"a,b,c\n", same, same):
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertIn("identical at both revisions", out)
+        self.assertIn("further into the file", out)
+
+    def test_pointer_size_delta_is_reported_without_fetching(self):
+        """The sizes are in the pointers git already holds, so a changed payload
+        can be shown even when the head sample matches."""
+        sha = self.lfs_pair()
+        same = b"a,b,c\n1,2,3\n"
+        with serving_each(b"a,b,c\n", b"a,b,c\n", same, same):
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertIn("payload size 111 -> 222 bytes (+111)", out)
+        self.assertIn("the data did change", out)
+
+    def test_equal_sizes_are_not_claimed_as_equal_content(self):
+        """A shuffle keeps the byte count identical."""
+        sha = self.build(POINTER.format(oid="1111", size=555),
+                         POINTER.format(oid="2222", size=555))
+        with serving_each(b"a,b\n", b"a,b\n", b"a,b\n1,2\n", b"a,b\n3,4\n"):
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertIn("payload size unchanged at 555 bytes", out)
+        self.assertIn("equal size is not equal content", out)
+
+    def test_row_sample_asks_for_only_the_sample(self):
+        """A ranged request, so a 10 MB CSV costs a few kilobytes to sample."""
+        sha = self.lfs_pair()
+        header = b"a,b\n"
+        big = header + b"x,y\n" * (4 * ic.ROW_READ_CAP)
+        responses = [FakeResponse(header), FakeResponse(header),
+                     FakeResponse(big), FakeResponse(big)]
+        with mock.patch.object(ic.requests, "get", side_effect=responses):
+            self.run_inspect(sha, show_rows=True)
+        for r in responses[2:]:
+            self.assertLess(r.consumed, ic.ROW_READ_CAP,
+                            f"streamed {r.consumed} bytes for a {ic.ROW_SAMPLE_LINES}"
+                            f"-line sample")
+
+    def test_sample_is_capped_at_the_declared_number_of_lines(self):
+        sha = self.lfs_pair()
+        header = b"a,b\n"
+        body = header + b"".join(b"%d,%d\n" % (i, i) for i in range(200))
+        with serving_each(header, header, body, body + b"9,9\n"):
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertIn(f"first {ic.ROW_SAMPLE_LINES} lines", out)
+        self.assertNotIn("100,100", out)
+
+    def test_unreadable_side_warns_and_shows_no_rows(self):
+        sha = self.lfs_pair()
+        responses = [FakeResponse(b"a,b\n"), FakeResponse(b"a,b\n"),
+                     FakeResponse(b"", 404), FakeResponse(b"a,b\n1,2\n")]
+        with mock.patch.object(ic.requests, "get", side_effect=responses):
+            out, err = self.run_inspect(sha, show_rows=True)
+        self.assertIn("rows not shown", err)
+        self.assertNotIn("head sample", out)
+
+    def test_lfs_rows_without_the_download_flag_touch_no_network(self):
+        """--show_rows does not become a back door around --download: the file is
+        flagged as needing one, and nothing is fetched."""
+        sha = self.lfs_pair()
+        with mock.patch.object(ic.requests, "get",
+                               side_effect=AssertionError("fetched")) as get:
+            out, _ = self.run_inspect(sha, download=False, show_rows=True)
+        get.assert_not_called()
+        self.assertIn("download a version to inspect", out)
+        self.assertNotIn("head sample", out)
+
+    def test_changed_column_set_still_gets_a_row_sample(self):
+        """Passing --show_rows and getting silence back is its own defect."""
+        sha = self.lfs_pair()
+        with serving_each(b"a,b,c\n", b"a,b\n", b"a,b\n1,2\n", b"a,b,c\n1,2,3\n"):
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertIn("column change:", out)
+        self.assertIn("head sample", out)
+
+    def test_plain_file_diffs_locally_without_the_network(self):
+        """A file git actually holds needs no HTTP at all."""
+        sha = self.build("a,b\n1,2\n", "a,b\n9,9\n")
+        with mock.patch.object(ic.requests, "get",
+                               side_effect=AssertionError("fetched")):
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertIn("diff --git", out)
+        self.assertIn("+9,9", out)
+        self.assertNotIn("\x1b[", out)
+
+    def test_long_local_diff_reports_what_it_cut(self):
+        """Silent truncation reads as a short diff, a different claim."""
+        rows = "".join(f"{i},{i}\n" for i in range(200))
+        sha = self.build("a,b\n" + rows, "a,b\n" + rows.replace(",", ",9"))
+        with mock.patch.object(ic.requests, "get",
+                               side_effect=AssertionError("fetched")):
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertIn("further lines not shown", out)
+        self.assertIn(f"cap is {ic.DIFF_MAX_LINES}", out)
 
 
 if __name__ == "__main__":
