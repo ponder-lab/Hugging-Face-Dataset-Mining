@@ -258,9 +258,9 @@ def print_capped(lines, indent="  "):
 def local_diff(repo, parent, sha, path):
     """Row diff for a file git actually holds. No network, no color, no textconv.
 
-    --no-textconv matters: git enables textconv drivers by default for `git diff`,
-    and .gitattributes on a Hub dataset sets diff=lfs, so a driver could reach for
-    the payload behind our back.
+    Passing --no-textconv matters: git enables textconv drivers by default for
+    `git diff`, and .gitattributes on a Hub dataset sets diff=lfs, so a driver
+    could reach for the payload behind our back.
     """
     r = run("git", "-C", repo, "diff", "--no-color", "--no-textconv",
             parent, sha, "--", path)
@@ -284,8 +284,8 @@ def row_sample(ds, repo, parent, sha, path):
     an identical sample rather than as "no change" (the #48 trap, one level down).
 
     Only reached once both headers read, which for an LFS-tracked file means
-    --download was passed: without it header() returns NO_DOWNLOAD and inspect()
-    has already said so.
+    that --download was passed: without it header() returns NO_DOWNLOAD and
+    inspect() has already said so.
     """
     if not any(lfs_status(repo, rev, path) == "lfs" for rev in (parent, sha)):
         local_diff(repo, parent, sha, path)
