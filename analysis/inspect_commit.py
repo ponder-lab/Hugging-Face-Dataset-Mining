@@ -28,6 +28,32 @@ import requests
 CACHE = os.path.expanduser("~/.cache/hf-dataset-clones")
 CSV = os.path.join(os.path.dirname(__file__), "..", "data", "message_refactoring_candidates.csv")
 
+class CommitAnalysis:
+    """Message-visible facts about one commit: dataset, sha, parent, message,
+    and per-file changes (change-op, LFS flag, column diff for modified CSVs).
+    """
+    __slots__ = ("dataset", "sha", "parent", "message", "files")
+
+    def __init__(self, dataset, sha, parent, message, files):
+        self.dataset = dataset
+        self.sha = sha
+        self.parent = parent
+        self.message = message
+        self.files = files
+
+
+class FileChange:
+    """One line of `git show --name-status`, plus LFS/column info layered on."""
+    __slots__ = ("status", "path", "lfs", "column_status", "column_diff", "column_note")
+
+    def __init__(self, status, path, lfs):
+        self.status = status
+        self.path = path
+        self.lfs = lfs              # True / False / None (blob absent)
+        self.column_status = None   # "changed" | "unchanged" | "no_download" | "unreadable" | None
+        self.column_diff = None     # {"removed": [...], "added": [...]}, only when "changed"
+        self.column_note = None     # short reason, for "no_download" / "unreadable"
+
 def run(*a):
     return subprocess.run(a, capture_output=True, text=True, errors="replace")
 
@@ -318,60 +344,92 @@ def row_sample(ds, repo, parent, sha, path):
           f"diff of the whole file):")
     print_capped(diff)
 
-def inspect(ds, sha, download, show_rows):
+def analyze_commit(ds, sha, download):
+    # loads an instance of CommitAnalysis
+    # does not print to stdout like inspect() does
+
     repo = clone(ds)
-    print(f"# {ds} @ {sha[:10]}")
-    print("message:", show(repo,"log","-1","--pretty=%s",sha).strip(), "\n")
-    parent = show(repo,"rev-parse",f"{sha}^").strip()
-    ns = show(repo,"show","--name-status","--find-renames","--pretty=format:",sha).strip()
-    print("file changes:")
-    if not ns:
-        print("  (none)")
+    message = show(repo, "log", "-1", "--pretty=%s", sha).strip()
+    parent = show(repo, "rev-parse", f"{sha}^").strip() or None
+    ns = show(repo, "show", "--name-status", "--find-renames", "--pretty=format:", sha).strip()
+
+    files = []
     for line in ns.splitlines():
         p = line.split("\t")
         status, path = p[0], p[-1]
         # a delete leaves no blob at sha; inspect the parent side instead
         rev = parent if (status.startswith("D") and parent) else sha
-        print(line + ("   [stored in Git LFS]" if lfs_status(repo, rev, path) == "lfs" else ""))
-    for line in ns.splitlines():
-        p = line.split("\t")
-        if not p[0].startswith("M") or not p[-1].lower().endswith(".csv"): continue
-        path = p[-1]
-        h = header(ds, repo, sha, path, download)
+        lfs = lfs_status(repo, rev, path)
+        files.append(FileChange(status, line, None if lfs is None else (lfs == "lfs")))
+
+    for f in files:
+        if not f.status.startswith("M") or not f.path.lower().endswith(".csv"): continue
+        h = header(ds, repo, sha, f.path, download)
         if isinstance(h, Unread):
             # Each disposition gets its own line: a rater must be able to tell a
             # retryable transport error from bytes that are simply not there (#47).
             if h.kind == "absent":
-                print(f"  [warn] git could not read {path} at {sha[:10]}; skipping",
+                print(f"  [warn] git could not read {f.path} at {sha[:10]}; skipping",
                       file=sys.stderr)
             elif h.kind == "no_download":
-                print(f"\n[{path}] LFS-tracked -> download a version to inspect the "
-                      f"data change")
+                f.column_status = "no_download"
+                f.column_note = "LFS-tracked; pass --download to inspect"
             else:
-                print(f"  [warn] {explain(h, path, sha)}; cannot compare columns",
+                print(f"  [warn] {explain(h, f.path, sha)}; cannot compare columns",
                       file=sys.stderr)
+                f.column_status = "unreadable"
+                f.column_note = explain(h, f.path, sha)
             continue
 
-        pc = header(ds, repo, parent, path, download) if parent else None
+        pc = header(ds, repo, parent, f.path, download) if parent else None
         if parent and not isinstance(pc, list):
             # Any Unread on the parent: we cannot diff columns. Say so rather than
             # silently falling through to "no column change".
-            print(f"  [warn] could not read parent columns for {path}; "
+            print(f"  [warn] could not read parent columns for {f.path}; "
                   f"column diff skipped", file=sys.stderr)
-        if isinstance(pc, list) and set(h) != set(pc):
-            print(f"\n[{path}] column change:")
-            print(f"  removed: {sorted(set(pc)-set(h))}")
-            print(f"  added:   {sorted(set(h)-set(pc))}")
+            f.column_status = "unreadable"
+            f.column_note = "parent columns unreadable"
+        elif isinstance(pc, list) and set(h) != set(pc):
+            f.column_status = "changed"
+            f.column_diff = {"removed": sorted(set(pc)-set(h)), "added": sorted(set(h)-set(pc))}
         elif isinstance(pc, list):
             # #48: the column sets match. Say so rather than printing nothing, which
             # reads the same as "not looked at". The blob may still differ in values
             # (a column recomputed in place), which a header-only diff cannot see.
-            print(f"\n[{path}] no column-set change (values may still differ)")
+            f.column_status = "unchanged"
+
+    return CommitAnalysis(ds, sha, parent, message, files)
+
+
+def inspect(ds, sha, download, show_rows):
+    a = analyze_commit(ds, sha, download)
+    repo = clone(ds) 
+
+    print(f"# {a.dataset} @ {a.sha[:10]}")
+    print("message:", a.message, "\n")
+
+    print("file changes:")
+    if not a.files:
+        print("  (none)")
+
+    for f in a.files:
+        if f.column_status == "no_download":
+            print(f"\n[{f.path}] LFS-tracked -> download a version to inspect the "
+                  f"data change")
+        elif f.column_status == "changed":
+            print(f"\n[{f.path}] column change:")
+            print(f"  removed: {f.column_diff['removed']}")
+            print(f"  added:   {f.column_diff['added']}")
+        elif f.column_status == "unchanged":
+            print(f"\n[{f.path}] no column-set change (values may still differ)")
+        # column_status in (None, "unreadable"): nothing more to print; a
+        # stderr warning was already emitted by analyze_commit for "unreadable".
+
         # Both headers read, so both revisions resolve and a row sample is worth
         # asking for. This runs for a changed column set too: a rater who passed
         # --show_rows should not get silence back.
-        if show_rows and isinstance(pc, list):
-            row_sample(ds, repo, parent, sha, path)
+        if show_rows and f.column_status in ("changed", "unchanged"):
+            row_sample(ds, repo, a.parent, sha, f.path)
 
 def list_candidates(typ=None):
     with open(CSV, newline="", encoding="utf-8") as f:
