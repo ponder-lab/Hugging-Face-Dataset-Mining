@@ -360,7 +360,7 @@ def analyze_commit(ds, sha, download):
         # a delete leaves no blob at sha; inspect the parent side instead
         rev = parent if (status.startswith("D") and parent) else sha
         lfs = lfs_status(repo, rev, path)
-        files.append(FileChange(status, line, None if lfs is None else (lfs == "lfs")))
+        files.append(FileChange(status, path, None if lfs is None else (lfs == "lfs")))
 
     for f in files:
         if not f.status.startswith("M") or not f.path.lower().endswith(".csv"): continue
@@ -411,6 +411,11 @@ def inspect(ds, sha, download, show_rows):
     print("file changes:")
     if not a.files:
         print("  (none)")
+    
+    for f in a.files:                                
+        line = f"{f.status}\t{f.path}"
+        suffix = "   [stored in Git LFS]" if f.lfs else ""
+        print(line + suffix)
 
     for f in a.files:
         if f.column_status == "no_download":
