@@ -5,7 +5,7 @@ is what a GIT_LFS_SKIP_SMUDGE clone stores. Content for such a blob is fetched
 from the Hub's resolve endpoint, so the HTTP layer is mocked here: no network
 and no real LFS server are needed.
 """
-import io, os, shutil, subprocess, sys, tempfile, unittest
+import gzip, io, os, random, shutil, subprocess, sys, tempfile, unittest
 from contextlib import redirect_stdout, redirect_stderr
 from unittest import mock
 
@@ -16,6 +16,14 @@ POINTER = "version https://git-lfs.github.com/spec/v1\noid sha256:{oid}\nsize {s
 PLAIN = "a,b,c\n1,2,3\n"
 
 
+def gzipped(data):
+    """`data` as a gzip member, the way a .csv.gz blob arrives."""
+    buf = io.BytesIO()
+    with gzip.GzipFile(fileobj=buf, mode="wb", mtime=0) as f:
+        f.write(data)
+    return buf.getvalue()
+
+
 def git(repo, *args):
     subprocess.run(["git", "-C", repo, *args], check=True,
                    capture_output=True, text=True)
@@ -24,6 +32,15 @@ def git(repo, *args):
 def commit_file(repo, text, msg):
     with open(os.path.join(repo, "data.csv"), "w") as f:
         f.write(text)
+    git(repo, "add", "-A")
+    git(repo, "commit", "-qm", msg)
+
+
+def commit_files(repo, files, msg):
+    """Commit a {name: bytes} map, so a test can name the format under test."""
+    for name, data in files.items():
+        with open(os.path.join(repo, name), "wb") as f:
+            f.write(data)
     git(repo, "add", "-A")
     git(repo, "commit", "-qm", msg)
 
@@ -140,16 +157,30 @@ class LfsDownloadTest(unittest.TestCase):
         self.assertLess(response.consumed, ic.HEADER_READ_CAP,
                         f"streamed {response.consumed} bytes for a header")
 
-    def test_newline_free_payload_is_capped_and_not_csv(self):
+    def test_newline_free_payload_is_capped_and_not_tabular(self):
         """A blob that never emits a newline (e.g. binary/parquet) is bounded by
-        the cap and reported not_csv, not crashed. Its 1 MiB single 'field' would
-        otherwise trip csv's field-size limit inside inspect()."""
+        the cap and reported not_tabular, not crashed. Its 1 MiB single 'field'
+        would otherwise trip csv's field-size limit inside inspect()."""
         response = FakeResponse(b"z" * (4 * ic.HEADER_READ_CAP), 200)
         with mock.patch.object(ic.requests, "get", return_value=response):
             result = ic.fetch_header("fake/ds", "abc123", "data.csv")
         self.assertLessEqual(response.consumed, ic.HEADER_READ_CAP + 8192)
         self.assertIsInstance(result, ic.Unread)
-        self.assertEqual(result.kind, "not_csv")
+        self.assertEqual(result.kind, "not_tabular")
+
+    def test_truncated_header_is_refused_rather_than_parsed(self):
+        """#55: a read cut short with no line break holds part of a first line.
+        Parsing it would compare two truncated headers, find them equal, and
+        report an unchanged column set: the #48 trap in its most convincing
+        form, since the truncated header parses cleanly."""
+        body = b",".join(b"col%d" % i for i in range(4 * ic.HEADER_READ_CAP))
+        response = FakeResponse(body, 200)
+        with mock.patch.object(ic.requests, "get", return_value=response):
+            result = ic.fetch_header("fake/ds", "abc123", "data.csv")
+        self.assertIsInstance(result, ic.Unread)
+        self.assertEqual(result.kind, "not_tabular")
+        self.assertIn("no line break", result.detail)
+        self.assertIn("no line break", ic.explain(result, "data.csv", "abc123"))
 
     def test_gated_status_is_access_and_not_retried(self):
         """401/403 means private or gated: a distinct, terminal disposition."""
@@ -435,6 +466,135 @@ class RowSampleTest(LfsDownloadTest):
             out, _ = self.run_inspect(sha, show_rows=True)
         self.assertIn("further lines not shown", out)
         self.assertIn(f"cap is {ic.DIFF_MAX_LINES}", out)
+
+
+class FormatCoverageTest(LfsDownloadTest):
+    """#55: three commits were reported as LFS-opaque that were nothing of the
+    kind. The analysis loop gated on a `.csv` suffix, so a `.tsv` sitting in git
+    in plain sight and a `.csv.gz` whose content the Hub serves on request were
+    both passed over, and passed over in silence.
+    """
+
+    def build_files(self, parent, child):
+        commit_files(self.tmp, parent, "parent")
+        commit_files(self.tmp, child, "child")
+        return rev_parse(self.tmp)
+
+    def offline(self):
+        """Assert no HTTP happens at all: git already holds this content."""
+        return mock.patch.object(ic.requests, "get",
+                                 side_effect=AssertionError("fetched"))
+
+    def test_tsv_column_removal_is_reported(self):
+        """oskarvanderwal/SHADR: an unnamed pandas index column dropped from a
+        plain .tsv that needs no download whatsoever."""
+        sha = self.build_files({"test.tsv": b"\tindex\tinput\n0\t0\tx\n"},
+                               {"test.tsv": b"index\tinput\n0\tx\n"})
+        with self.offline():
+            out, _ = self.run_inspect(sha)
+        self.assertIn("column change", out)
+        self.assertIn("removed: ['']", out)
+
+    def test_tsv_columns_are_split_on_tabs_not_commas(self):
+        """A TSV read with a comma delimiter is one column wide at both
+        revisions, which compares equal and reads as an unchanged column set."""
+        sha = self.build_files({"test.tsv": b"a\tb\n1\t2\n"},
+                               {"test.tsv": b"a\tb\tc\n1\t2\t3\n"})
+        with self.offline():
+            out, _ = self.run_inspect(sha)
+        self.assertIn("added:   ['c']", out)
+        self.assertNotIn("no column-set change", out)
+
+    def test_gzipped_csv_held_by_git_is_read_without_the_network(self):
+        """Compression is not opacity: git has the bytes, they just need
+        inflating before a header can be read out of them."""
+        sha = self.build_files(
+            {"train.csv.gz": gzipped(b"id,text,sentiment_group\n1,x,g\n")},
+            {"train.csv.gz": gzipped(b"id,text\n1,x\n")})
+        with self.offline():
+            out, _ = self.run_inspect(sha)
+        self.assertIn("removed: ['sentiment_group']", out)
+
+    def test_gzipped_lfs_csv_is_read_over_the_hub(self):
+        """agentlans/twitter-sentiment-meta-analysis: LFS-tracked and gzipped.
+        The resolve endpoint serves it; the suffix gate is what hid it."""
+        sha = self.build_files(
+            {"train.csv.gz": POINTER.format(oid="1111", size=111).encode()},
+            {"train.csv.gz": POINTER.format(oid="2222", size=222).encode()})
+        # The child header is read first, then the parent's.
+        with serving_each(gzipped(b"id,text\n1,x\n"),
+                          gzipped(b"id,text,sentiment_group\n1,x,g\n")):
+            out, err = self.run_inspect(sha)
+        self.assertIn("removed: ['sentiment_group']", out)
+        self.assertEqual(err, "")
+
+    def test_gzipped_row_sample_shows_rows_not_compressed_bytes(self):
+        """`git diff` on a gzipped blob reports only that the bytes differ, so
+        --show_rows goes through the same decompressing read either way."""
+        sha = self.build_files({"train.csv.gz": gzipped(b"a,b\n1,2\n")},
+                               {"train.csv.gz": gzipped(b"a,b\n9,9\n")})
+        with self.offline():
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertIn("+9,9", out)
+        self.assertNotIn("Binary files", out)
+        self.assertNotIn("\x1b[", out)
+
+    def test_corrupt_gzip_from_the_hub_is_a_format_finding(self):
+        """Bytes that claim to be gzip and are not: a format outcome, not a
+        transport one, so it is terminal and not retried."""
+        sha = self.build_files(
+            {"train.csv.gz": POINTER.format(oid="1111", size=111).encode()},
+            {"train.csv.gz": POINTER.format(oid="2222", size=222).encode()})
+        with serving(ic.GZIP_MAGIC + b"not really gzip" * 40) as get:
+            _, err = self.run_inspect(sha)
+        self.assertIn("delimited text", err)
+        self.assertIn("corrupt gzip stream", err)
+        self.assertEqual(get.call_count, 1)
+
+    def test_gzip_spanning_several_chunks_loses_nothing_at_the_seams(self):
+        """The stream is decompressed chunk by chunk, so a header longer than one
+        chunk is reassembled across iterations. Incompressible bytes force the
+        multi-chunk path: a header that fits in one chunk would not exercise it,
+        and bytes dropped at a seam would still parse, just into wrong columns."""
+        rnd = random.Random(0).randbytes(64 * 1024)
+        wide = bytes(b for b in rnd if b not in (10, ord(",")))  # one long field
+        body = gzipped(wide + b"\n" + b"second line\n")
+        self.assertGreater(len(body), 4 * 8192, "payload fits in one chunk")
+        with mock.patch.object(ic.requests, "get",
+                               return_value=FakeResponse(body, 206)):
+            lines = ic._fetch("fake/ds", "abc123", "d.csv.gz", 1, ic.HEADER_READ_CAP)
+        self.assertEqual(lines, [wide.decode("utf-8", errors="replace")])
+
+    def test_unread_format_is_listed_rather_than_passed_over(self):
+        """The defect behind all three reports: a modified file the tool never
+        opened left exactly the impression of one it opened and found clean."""
+        sha = self.build_files({"data.parquet": b"PAR1\x00old\x00PAR1"},
+                               {"data.parquet": b"PAR1\x00new\x00PAR1"})
+        with self.offline():
+            out, _ = self.run_inspect(sha, show_rows=True)
+        self.assertIn("not analyzed:", out)
+        self.assertIn("data.parquet", out)
+        self.assertIn("whether the contents of these changed", out)
+
+    def test_read_and_unread_formats_are_both_reported(self):
+        """One commit touching both: the CSV is analyzed and the parquet is
+        named, so neither result is inferred from the other's presence."""
+        sha = self.build_files(
+            {"data.csv": b"a,b\n1,2\n", "data.parquet": b"PAR1\x00old"},
+            {"data.csv": b"a,b,c\n1,2,3\n", "data.parquet": b"PAR1\x00new"})
+        with self.offline():
+            out, _ = self.run_inspect(sha)
+        self.assertIn("added:   ['c']", out)
+        self.assertIn("not analyzed:", out)
+        self.assertIn("data.parquet", out)
+        self.assertNotIn("data.csv   [format", out)
+
+    def test_nothing_is_claimed_unread_when_every_file_was_read(self):
+        sha = self.build_files({"data.csv": b"a,b\n1,2\n"},
+                               {"data.csv": b"a,b,c\n1,2,3\n"})
+        with self.offline():
+            out, _ = self.run_inspect(sha)
+        self.assertNotIn("not analyzed", out)
 
 
 if __name__ == "__main__":

@@ -12,16 +12,19 @@ What you see:
   - the commit message
   - file-level changes (rename/add/delete/modify), each flagged if the file is
     stored in Git LFS at that commit
-  - for MODIFIED non-LFS CSVs, the column-header diff vs the parent commit
+  - for MODIFIED tabular files, the column-header diff vs the parent commit.
+    Tabular means CSV, TSV or TAB, each optionally gzipped
   - LFS-tracked files are flagged (download a version to inspect those)
   - with --show_rows, the head of the file at both revisions, for the case where
     the column set holds still and only the values move
+  - a list of modified files left unanalyzed because their format is not one of
+    the above, so that silence is never mistaken for "the data did not change"
 
 Renames/adds/deletes are visible from Git history alone (no download). Only
 in-file changes to LFS-stored files (often parquet) need an actual download, and
 that download is a ranged HTTP read of the first few lines, not a full payload.
 """
-import argparse, csv, difflib, os, subprocess, sys, time
+import argparse, csv, difflib, os, subprocess, sys, time, zlib
 
 import requests
 
@@ -43,9 +46,64 @@ def clone(ds):
 
 def show(repo,*a): return run("git","-C",repo,*a).stdout
 
+def show_blob(repo, rev, path):
+    """Raw bytes of the blob at rev:path, or None if git holds none there.
+
+    Bytes rather than text, unlike run(): a gzipped table is an ordinary case
+    here (#55), and decoding one as text before it is decompressed destroys it.
+    """
+    r = subprocess.run(["git", "-C", repo, "show", f"{rev}:{path}"],
+                       capture_output=True)
+    return None if r.returncode else r.stdout
+
 def is_lfs_pointer(text):
     """True if file content is a Git LFS pointer (actual data not present)."""
     return text[:25].startswith("version https://git-lfs")
+
+def looks_like_pointer(blob):
+    """is_lfs_pointer for raw bytes. Pointer text is ASCII, so a payload that
+    fails to decode is by that fact not a pointer."""
+    return is_lfs_pointer(blob[:64].decode("utf-8", errors="replace"))
+
+# Formats read here, and the delimiter each one separates fields with. A format
+# outside this table is not a fetch failure, it is a file inspect() reports as
+# unanalyzed rather than passing over silently (#55).
+DELIMITERS = {".csv": ",", ".tsv": "\t", ".tab": "\t"}
+GZIP_SUFFIX = ".gz"
+GZIP_MAGIC = b"\x1f\x8b"
+
+def is_compressed(path):
+    return path.lower().endswith(GZIP_SUFFIX)
+
+def delimiter(path):
+    """Field delimiter for a path this tool can read, or None if it cannot.
+
+    A trailing .gz names the compression, not the format, so it comes off before
+    the format suffix is read: train.csv.gz is a comma-separated file that
+    happens to be gzipped, and gating on ".csv" alone skipped it outright (#55).
+    """
+    name = path.lower()
+    if name.endswith(GZIP_SUFFIX):
+        name = name[:-len(GZIP_SUFFIX)]
+    for suffix, delim in DELIMITERS.items():
+        if name.endswith(suffix):
+            return delim
+    return None
+
+def gunzip_head(data, cap):
+    """Decompressed head of `data` bounded by `cap`, or `data` if it is not gzip.
+
+    The input is normally a truncated stream: we hold only the head of the
+    compressed bytes and decompress as far as they reach. zlib stops at the end
+    of what it was handed without complaint, so a short read is expected here
+    rather than an error; only a corrupt stream raises, and that yields nothing.
+    """
+    if not data.startswith(GZIP_MAGIC):
+        return data
+    try:
+        return zlib.decompressobj(zlib.MAX_WBITS | 16).decompress(data, cap)
+    except zlib.error:
+        return b""
 
 def lfs_status(repo, rev, path):
     """Whether the blob at rev:path is stored in Git LFS.
@@ -55,21 +113,25 @@ def lfs_status(repo, rev, path):
     GIT_LFS_SKIP_SMUDGE clone the stored blob IS the pointer text, so `git show`
     reveals LFS tracking without fetching the payload.
     """
-    r = run("git", "-C", repo, "show", f"{rev}:{path}")
-    if r.returncode != 0:
+    blob = show_blob(repo, rev, path)
+    if blob is None:
         return None
-    return "lfs" if is_lfs_pointer(r.stdout) else "plain"
+    return "lfs" if looks_like_pointer(blob) else "plain"
 
-def parse_csv_header(text):
-    """Column names from CSV text, or None if it is an LFS pointer.""" 
+def parse_header(text, delim=","):
+    """Column names from the first line of delimited text, or None for a pointer.
 
+    `delim` comes from the path's format (see delimiter): splitting a TSV on
+    commas returns the whole line as one column, which then compares equal at
+    both revisions and reads as "no column-set change" (#55).
+    """
     if(is_lfs_pointer(text)):
         return None
-    
+
     line = text.split("\n",1)[0]
 
     if not line.strip(): return []
-    return next(csv.reader([line]))
+    return next(csv.reader([line], delimiter=delim))
 
 class Unread:
     """Why a header could not be turned into a column list, kept distinct so a
@@ -125,14 +187,37 @@ def _fetch_once(url, headers, max_lines, cap):
             # Stop at the max_lines-th newline: a header (max_lines=1) or a short
             # row sample returns after one chunk, and a newline-free binary
             # payload (e.g. parquet) cannot stream unbounded into memory.
-            buf, whole = b"", True
+            buf, whole, gz, first = b"", True, None, True
             for chunk in r.iter_content(8192):
+                if first:
+                    # Sniffed once, at the very start: a gzip member begins with
+                    # the magic, and a plain payload whose interior happens to
+                    # carry those two bytes is not compressed.
+                    first = False
+                    if chunk.startswith(GZIP_MAGIC):
+                        gz = zlib.decompressobj(zlib.MAX_WBITS | 16)
+                if gz is not None:
+                    # Decompressed as it streams, so the newline count below sees
+                    # rows rather than compressed bytes, and bounded by the same
+                    # cap, so a small payload cannot expand without limit.
+                    try:
+                        chunk = gz.decompress(chunk, max(1, cap - len(buf)))
+                    except zlib.error:
+                        return Unread("not_tabular", detail="corrupt gzip stream")
                 buf += chunk
                 if buf.count(b"\n") >= max_lines or len(buf) >= cap:
                     whole = False
                     break
     except requests.RequestException as e:
         return Unread("transport", retryable=True, detail=type(e).__name__)
+
+    if not whole and b"\n" not in buf:
+        # A read cut short with no line break anywhere in it holds part of a
+        # first line and no way to tell how much is missing. Returning it would
+        # be the #48 trap in its most convincing form: a truncated header parses
+        # cleanly and compares equal to the other revision's truncated header.
+        return Unread("not_tabular",
+                      detail=f"no line break in the first {cap:,} bytes")
 
     lines = buf[:cap].decode("utf-8", errors="replace").split("\n")
     # A read we cut short can end mid-line, and half a row is not a row. Keep it
@@ -186,13 +271,13 @@ def fetch_header(ds, rev, path):
     out = _fetch(ds, rev, path, 1, HEADER_READ_CAP)
     if isinstance(out, Unread):
         return out
-    # A resolved blob need not be parseable CSV: a binary payload (e.g. parquet)
-    # yields a huge single "field" that trips csv's field-size limit. That is a
-    # format we do not read here (see #43), not a fetch failure.
+    # A resolved blob need not be parseable as a table: a binary payload (e.g.
+    # parquet) yields a huge single "field" that trips csv's field-size limit.
+    # That is a format we do not read here (see #43), not a fetch failure.
     try:
-        return parse_csv_header(out[0])
+        return parse_header(out[0], delimiter(path) or ",")
     except csv.Error:
-        return Unread("not_csv")
+        return Unread("not_tabular", detail="first line did not parse")
 
 def fetch_rows(ds, rev, path):
     """Head of a file on the Hub as a list of lines, or an Unread."""
@@ -210,22 +295,29 @@ def explain(u, path, sha):
     if u.kind == "transport":
         return (f"could not fetch {at} ({u.detail}) after {RETRIES} tries; this is a "
                 f"transport error, a later retry may succeed")
-    if u.kind == "not_csv":
-        return (f"{at} did not resolve to a readable CSV header; likely a non-CSV "
-                f"payload (see #43), not a fetch failure")
+    if u.kind == "not_tabular":
+        why = f" ({u.detail})" if u.detail else ""
+        return (f"{at} did not resolve to readable delimited text{why}; likely a "
+                f"format this tool does not read (see #43), not a fetch failure")
     return f"could not read {at}"
 
 def header(ds, repo, rev, path, download):
-    r = run("git", "-C", repo, "show", f"{rev}:{path}")
-    if r.returncode != 0:
+    blob = show_blob(repo, rev, path)
+    if blob is None:
         return ABSENT  # git could not read the blob at this revision
-    if is_lfs_pointer(r.stdout):
+    if looks_like_pointer(blob):
         if download:
             return fetch_header(ds, rev, path)
         else:
             return NO_DOWNLOAD
 
-    return parse_csv_header(r.stdout)
+    # git holds the content itself, so no download is needed even when it is
+    # compressed: gunzip_head is a no-op on anything that is not gzip.
+    text = gunzip_head(blob, HEADER_READ_CAP).decode("utf-8", errors="replace")
+    try:
+        return parse_header(text, delimiter(path) or ",")
+    except csv.Error:
+        return Unread("not_tabular", detail="first line did not parse")
 
 def pointer_size(repo, rev, path):
     """Payload size recorded in the LFS pointer at rev:path, or None.
@@ -233,10 +325,10 @@ def pointer_size(repo, rev, path):
     The pointer is in git, so a size change is evidence the payload changed that
     costs not one byte of download. Equal sizes prove nothing either way.
     """
-    r = run("git", "-C", repo, "show", f"{rev}:{path}")
-    if r.returncode != 0 or not is_lfs_pointer(r.stdout):
+    blob = show_blob(repo, rev, path)
+    if blob is None or not looks_like_pointer(blob):
         return None
-    for line in r.stdout.splitlines():
+    for line in blob.decode("utf-8", errors="replace").splitlines():
         if line.startswith("size "):
             try:
                 return int(line.split(None, 1)[1])
@@ -270,6 +362,20 @@ def local_diff(repo, parent, sha, path):
         return
     print_capped(lines)
 
+def head_lines(ds, repo, rev, path):
+    """First ROW_SAMPLE_LINES lines of rev:path, or an Unread.
+
+    Reads the local blob where git holds the content and the Hub where git holds
+    only an LFS pointer, decompressing a gzipped payload either way.
+    """
+    blob = show_blob(repo, rev, path)
+    if blob is None:
+        return ABSENT
+    if looks_like_pointer(blob):
+        return fetch_rows(ds, rev, path)
+    text = gunzip_head(blob, ROW_READ_CAP).decode("utf-8", errors="replace")
+    return text.split("\n")[:ROW_SAMPLE_LINES]
+
 def row_sample(ds, repo, parent, sha, path):
     """Show the head of `path` at both revisions, for a values-only change.
 
@@ -279,6 +385,9 @@ def row_sample(ds, repo, parent, sha, path):
     (#52), or, where smudge can still reach a classic LFS object, quietly pulls
     the whole payload, which is the download this tool exists to avoid.
 
+    A gzipped file goes the same way even when git holds it in full, because
+    `git diff` on compressed bytes reports only that they differ.
+
     What comes back is the head of the file, not a diff of it. A value change
     below the sample does not appear here, so an identical sample is reported as
     an identical sample rather than as "no change" (the #48 trap, one level down).
@@ -287,20 +396,22 @@ def row_sample(ds, repo, parent, sha, path):
     that --download was passed: without it header() returns NO_DOWNLOAD and
     inspect() has already said so.
     """
-    if not any(lfs_status(repo, rev, path) == "lfs" for rev in (parent, sha)):
+    lfs = any(lfs_status(repo, rev, path) == "lfs" for rev in (parent, sha))
+    if not lfs and not is_compressed(path):
         local_diff(repo, parent, sha, path)
         return
 
-    old_size, new_size = pointer_size(repo, parent, path), pointer_size(repo, sha, path)
-    if old_size is not None and new_size is not None:
-        if old_size != new_size:
-            print(f"  payload size {old_size:,} -> {new_size:,} bytes "
-                  f"({new_size - old_size:+,}): the data did change")
-        else:
-            print(f"  payload size unchanged at {old_size:,} bytes "
-                  f"(equal size is not equal content)")
+    if lfs:
+        old_size, new_size = pointer_size(repo, parent, path), pointer_size(repo, sha, path)
+        if old_size is not None and new_size is not None:
+            if old_size != new_size:
+                print(f"  payload size {old_size:,} -> {new_size:,} bytes "
+                      f"({new_size - old_size:+,}): the data did change")
+            else:
+                print(f"  payload size unchanged at {old_size:,} bytes "
+                      f"(equal size is not equal content)")
 
-    old, new = fetch_rows(ds, parent, path), fetch_rows(ds, sha, path)
+    old, new = head_lines(ds, repo, parent, path), head_lines(ds, repo, sha, path)
     for rev, rows in ((parent, old), (sha, new)):
         if isinstance(rows, Unread):
             print(f"  [warn] {explain(rows, path, rev)}; rows not shown",
@@ -333,10 +444,17 @@ def inspect(ds, sha, download, show_rows):
         # a delete leaves no blob at sha; inspect the parent side instead
         rev = parent if (status.startswith("D") and parent) else sha
         print(line + ("   [stored in Git LFS]" if lfs_status(repo, rev, path) == "lfs" else ""))
+    skipped = []
     for line in ns.splitlines():
         p = line.split("\t")
-        if not p[0].startswith("M") or not p[-1].lower().endswith(".csv"): continue
+        if not p[0].startswith("M"): continue
         path = p[-1]
+        if delimiter(path) is None:
+            # Not a format we can read. Collected rather than dropped: a modified
+            # file the tool never opened must not leave the same impression as one
+            # it opened and found unchanged (#55).
+            skipped.append(path)
+            continue
         h = header(ds, repo, sha, path, download)
         if isinstance(h, Unread):
             # Each disposition gets its own line: a rater must be able to tell a
@@ -373,6 +491,15 @@ def inspect(ds, sha, download, show_rows):
         if show_rows and isinstance(pc, list):
             row_sample(ds, repo, parent, sha, path)
 
+    if skipped:
+        # Every modified file the tool declined to open is named. A README and a
+        # parquet land here alike: the point is not to classify them but to keep
+        # "not looked at" from reading as "looked at and found unchanged".
+        print("\nnot analyzed:")
+        for path in skipped:
+            print(f"  {path}   [format this tool does not read, see #43]")
+        print("  Nothing above says whether the contents of these changed.")
+
 def list_candidates(typ=None):
     with open(CSV, newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f):
@@ -387,7 +514,7 @@ if __name__ == "__main__":
                     help="read LFS-tracked content over the Hub's resolve endpoint")
     ap.add_argument("--show_rows", action="store_true",
                     help=f"show the first {ROW_SAMPLE_LINES} lines of each modified "
-                         f"CSV at both revisions; needs --download for LFS-tracked "
+                         f"table at both revisions; needs --download for LFS-tracked "
                          f"files")
     a = ap.parse_args()
     if a.list: list_candidates(a.type)
