@@ -49,10 +49,10 @@ class FileChange:
     def __init__(self, status, path, lfs):
         self.status = status
         self.path = path
-        self.lfs = lfs              # True / False / None (blob absent)
-        self.column_status = None   # "changed" | "unchanged" | "no_download" | "unreadable" | None
-        self.column_diff = None     # {"removed": [...], "added": [...]}, only when "changed"
-        self.column_note = None     # short reason, for "no_download" / "unreadable"
+        self.lfs = lfs              
+        self.column_status = None   
+        self.column_diff = None    
+        self.column_note = None 
 
 def run(*a):
     return subprocess.run(a, capture_output=True, text=True, errors="replace")
