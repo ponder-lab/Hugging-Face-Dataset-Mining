@@ -1,10 +1,10 @@
 DatasetID,CommitId,label,verified_by,notes
 gtfintechlab/finer-ord,7067c8ac26a32c4c5c5a8408488830e618c0cf59,not-a-refactoring,starter,message mentions train/test split but only edits README.md
-joonhok-exo-ai/korean_law_open_data_precedents,5de8f553aa318b35fdd58d8a184a8214f4edaedc,deduplication,starter,"diff shows train.zip deleted; message says it duplicated field ""판결유형""—deletion plus a consistent message, no need to open the file"
+joonhok-exo-ai/korean_law_open_data_precedents,5de8f553aa318b35fdd58d8a184a8214f4edaedc,not-a-refactoring,khatchad,"sole change is D train.zip (LFS); the repo holds only .gitattributes and README.md after the commit and the earlier train_*.csv files were already deleted, so the content does not survive elsewhere—clarification 4 as a finding rather than a default. Prior deduplication label rested on the message alone"
 katossky/wine-recognition,cf3826bfd019ce85c1baee2e841566e7d387ec31,standardize,starter,"trims a leading space from every column name in wine.csv (e.g. ' alcohol' becomes 'alcohol'); the header diff shows it directly—columns and values unchanged, only header formatting standardized"
 Anthropic/EconomicIndex,1779b5efe00577781868a4306206e4432e1ab45c,not-a-refactoring,miridonoso,deleted all the files in the repository
 Rapidata/multilingual-llm-jokes-4o-claude-gemini,f533da0853ee73af062a27f37aad0e2537aca811,not-a-refactoring,miridonoso,first file upload of the repo
-Abdulahad79/Crop_Classifiacation_Pakistan,aa41ce587e081f13d27bea7ec52b963606944831,merge,miridonoso,"cannot verify because first upolad of file, based off of file name: ""cleaned_combined.csv"""
+Abdulahad79/Crop_Classifiacation_Pakistan,aa41ce587e081f13d27bea7ec52b963606944831,not-a-refactoring,miridonoso,"added file named ""cleaned_combined.csv"" as the first upload; a new-file upload with nothing pre-existing to transform is not-a-refactoring per clarification 2. Prior merge label came from the filename"
 sheryylli/utr_total_reads,553ad503c3a9589c90efce086189248adf677c8f,not-a-refactoring,miridonoso,Added the file train.csv
 arize-ai/movie_reviews_with_context_drift,8d58224ebb5b0723f8c19dd51cec33bdb9073fe8,not-a-refactoring,miridonoso,"message mentions merge, but there are no file changes"
 scikit-learn/student-alcohol-consumption,beb7bb2c4e1b6245320773dccbe5e5a281aff9ed,not-a-refactoring,miridonoso,Added the file student-merge.R
