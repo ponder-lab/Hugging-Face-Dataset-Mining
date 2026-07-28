@@ -19,6 +19,8 @@ What you see:
     the column set holds still and only the values move
   - a list of modified files left unanalyzed because their format is not one of
     the above, so that silence is never mistaken for "the data did not change"
+  - when the dataset cannot be cloned at all, why: deleted or made private,
+    restricted, renamed, or a failure on our side rather than the Hub's
 
 Renames/adds/deletes are visible from Git history alone (no download). Only
 in-file changes to LFS-stored files (often parquet) need an actual download, and
@@ -37,11 +39,28 @@ def run(*a):
 def clone(ds):
     os.makedirs(CACHE, exist_ok=True)
     path = os.path.join(CACHE, ds.replace("/", "__"))
-    if not os.path.isdir(os.path.join(path, ".git")):
-        env = {**os.environ, "GIT_LFS_SKIP_SMUDGE": "1", "GIT_TERMINAL_PROMPT": "0"}
-        if subprocess.run(["git","clone","--quiet",
-                           f"https://huggingface.co/datasets/{ds}",path], env=env).returncode:
-            sys.exit(f"clone failed for {ds}")
+    if os.path.isdir(os.path.join(path, ".git")):
+        return path  # already cloned, so neither probe nor network is needed
+
+    # Asked before cloning, so a dataset that is gone is named as such instead of
+    # arriving as git's suppressed credential prompt, which reads as a broken
+    # tool (#63). One small request ahead of a clone that moves megabytes.
+    status = repo_status(ds)
+    if status.kind in (GONE, RESTRICTED):
+        sys.exit(clone_failure(ds, status))
+    if status.kind == MOVED:
+        # git follows the redirect on its own, so this is provenance rather than
+        # an error: the ID recorded in the corpus and the repo actually read here
+        # are no longer the same name.
+        where = f" to {status.moved_to}" if status.moved_to else ""
+        print(f"[note] {ds} was renamed on the Hub{where}; git follows the "
+              f"redirect, so the corpus names one repo and this reads another",
+              file=sys.stderr)
+
+    env = {**os.environ, "GIT_LFS_SKIP_SMUDGE": "1", "GIT_TERMINAL_PROMPT": "0"}
+    if subprocess.run(["git","clone","--quiet",
+                       f"https://huggingface.co/datasets/{ds}",path], env=env).returncode:
+        sys.exit(clone_failure(ds, status))
     return path
 
 def show(repo,*a): return run("git","-C",repo,*a).stdout
@@ -166,9 +185,112 @@ ROW_SAMPLE_LINES = 20      # lines read per revision for --show_rows
 DIFF_MAX_LINES = 50        # lines of diff printed before we say what we cut
 
 RESOLVE = "https://huggingface.co/datasets/{ds}/resolve/{rev}/{path}"
+API = "https://huggingface.co/api/datasets/{ds}"
+API_PATH = "/api/datasets/"  # the segment a rename redirect carries the new ID after
 TIMEOUT = 30   # seconds, per HTTP request
 RETRIES = 3    # attempts for a transient transport error
 BACKOFF = 0.5  # seconds before the first retry, doubled after each failed attempt
+
+def _auth_headers():
+    """Bearer header from the environment, or {} when no token is set.
+
+    Either variable name works, matching the mining scripts.
+    """
+    token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN")
+    return {"Authorization": f"Bearer {token}"} if token else {}
+
+# Where a dataset repo stands on the Hub. Kept apart so a clone that does not
+# happen can say which of these it was, rather than reporting every cause with
+# one flat line (#64).
+REACHABLE = "reachable"    # the Hub serves it; a failed clone is then ours to fix
+MOVED = "moved"            # renamed; git follows the redirect, but the ID changed
+GONE = "gone"              # deleted or made private: no anonymous read at all
+RESTRICTED = "restricted"  # present but access-controlled; a token may get in
+UNKNOWN = "unknown"        # the probe itself did not land, so it decides nothing
+
+class RepoStatus:
+    """Outcome of a repo_status probe.
+
+    `kind` is one of the tags above, which clone() and clone_failure() dispatch
+    on; `moved_to` is the new dataset ID for a rename, else None; `detail` is a
+    short specific such as an HTTP status.
+    """
+    __slots__ = ("kind", "detail", "moved_to")
+
+    def __init__(self, kind, detail="", moved_to=None):
+        self.kind = kind
+        self.detail = detail
+        self.moved_to = moved_to
+
+    def __repr__(self):
+        return (f"RepoStatus({self.kind!r}, detail={self.detail!r}, "
+                f"moved_to={self.moved_to!r})")
+
+def moved_target(location):
+    """Dataset ID a rename redirect points at, or None if it names something else."""
+    i = location.find(API_PATH)
+    if i < 0:
+        return None
+    return location[i + len(API_PATH):].split("?")[0].strip("/") or None
+
+def repo_status(ds):
+    """Where `ds` stands on the Hub, established without cloning it.
+
+    Reads the metadata endpoint, which settles the question in one small request.
+    A 401 there is what the Hub answers an anonymous caller for a repo that was
+    deleted or made private, and it cannot tell those two apart. Gating is a
+    different animal and does not land here at all: a gated dataset still answers
+    200 on this endpoint and refuses only at the content.
+
+    Redirects are not followed, because the redirect itself is the finding: it
+    carries the name the dataset now goes by.
+
+    A probe that does not land returns UNKNOWN and so decides nothing on its own;
+    the clone is attempted regardless, and the Hub is never given the last word
+    on whether our own git can do its job.
+    """
+    try:
+        r = requests.head(API.format(ds=ds), headers=_auth_headers(),
+                          timeout=TIMEOUT, allow_redirects=False)
+    except requests.RequestException as e:
+        return RepoStatus(UNKNOWN, type(e).__name__)
+    code = r.status_code
+    if code in (301, 302, 303, 307, 308):
+        return RepoStatus(MOVED, f"HTTP {code}",
+                          moved_to=moved_target(r.headers.get("Location", "")))
+    if code in (401, 404):
+        return RepoStatus(GONE, f"HTTP {code}")
+    if code == 403:
+        return RepoStatus(RESTRICTED, f"HTTP {code}")
+    if 200 <= code < 300:
+        return RepoStatus(REACHABLE, f"HTTP {code}")
+    return RepoStatus(UNKNOWN, f"HTTP {code}")
+
+def clone_failure(ds, status):
+    """Why the clone did not happen, in terms a rater can act on (#64).
+
+    Every cause used to arrive as the same `clone failed` line, under git's
+    suppressed credential prompt, which reads as a broken tool whichever of these
+    actually went wrong.
+    """
+    if status.kind == GONE:
+        return (f"cannot read {ds} on the Hub ({status.detail}): the dataset was "
+                f"deleted or made private since the corpus was mined. A token "
+                f"gets in only if you hold access to this repo; gating would look "
+                f"different. Nothing is verifiable here, so skip the candidate.")
+    if status.kind == RESTRICTED:
+        return (f"access to {ds} is restricted ({status.detail}); set HF_TOKEN or "
+                f"HUGGINGFACE_HUB_TOKEN, or accept the dataset's terms on the Hub")
+    if status.kind == MOVED:
+        where = f" to {status.moved_to}" if status.moved_to else ""
+        return (f"clone failed for {ds}, which the Hub reports was renamed{where} "
+                f"({status.detail}); retry under the new name")
+    if status.kind == REACHABLE:
+        return (f"clone failed for {ds}, though the Hub serves the dataset "
+                f"({status.detail}); this is a transport or local git failure, "
+                f"not a dataset that went away")
+    return (f"clone failed for {ds}, and the Hub could not be asked why "
+            f"({status.detail}); check the network, then retry")
 
 def _fetch_once(url, headers, max_lines, cap):
     """One attempt at the first `max_lines` lines: a list of them, or an Unread."""
@@ -253,11 +375,8 @@ def _fetch(ds, rev, path, max_lines, cap):
     """
     url = RESOLVE.format(ds=ds, rev=rev, path=path)
     # An auth-requiring repo fails fast with 401 rather than prompting; a token
-    # in the environment is used if one is there (matches the mining scripts).
-    headers = {"Range": f"bytes=0-{cap - 1}"}
-    token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN")
-    if token:
-        headers["Authorization"] = f"Bearer {token}"
+    # in the environment is used if one is there.
+    headers = {"Range": f"bytes=0-{cap - 1}", **_auth_headers()}
     for attempt in range(RETRIES):
         out = _fetch_once(url, headers, max_lines, cap)
         if not (isinstance(out, Unread) and out.retryable):
