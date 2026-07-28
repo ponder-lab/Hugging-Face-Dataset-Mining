@@ -31,7 +31,11 @@ import argparse, csv, difflib, os, subprocess, sys, time, zlib
 import requests
 
 CACHE = os.path.expanduser("~/.cache/hf-dataset-clones")
-CSV = os.path.join(os.path.dirname(__file__), "..", "data", "message_refactoring_candidates.csv")
+# Held repo-relative as well as resolved, because a message that sends a rater to
+# this table should name it the way the repo does, not by an absolute path out of
+# whichever checkout happened to print it.
+CANDIDATES = "data/message_refactoring_candidates.csv"
+CSV = os.path.join(os.path.dirname(__file__), "..", *CANDIDATES.split("/"))
 
 def run(*a):
     return subprocess.run(a, capture_output=True, text=True, errors="replace")
@@ -204,7 +208,7 @@ def _auth_headers():
 # one flat line (#64).
 REACHABLE = "reachable"    # the Hub serves it; a failed clone is then ours to fix
 MOVED = "moved"            # renamed; git follows the redirect, but the ID changed
-GONE = "gone"              # deleted or made private: no anonymous read at all
+GONE = "gone"              # deleted, private, or never there: no anonymous read
 RESTRICTED = "restricted"  # present but access-controlled; a token may get in
 UNKNOWN = "unknown"        # the probe itself did not land, so it decides nothing
 
@@ -238,9 +242,14 @@ def repo_status(ds):
 
     Reads the metadata endpoint, which settles the question in one small request.
     A 401 there is what the Hub answers an anonymous caller for a repo that was
-    deleted or made private, and it cannot tell those two apart. Gating is a
-    different animal and does not land here at all: a gated dataset still answers
-    200 on this endpoint and refuses only at the content.
+    deleted, made private, or never created under this ID at all, and it cannot
+    tell the three apart: whether a repo exists is itself withheld from a caller
+    who could not read it anyway (#67). Gating is a different animal and does not
+    land here at all: a gated dataset still answers 200 on this endpoint and
+    refuses only at the content.
+
+    Sending a token changes the code but not what it establishes, which is why
+    401 and 404 share one disposition below rather than being split (#67).
 
     Redirects are not followed, because the redirect itself is the finding: it
     carries the name the dataset now goes by.
@@ -259,6 +268,14 @@ def repo_status(ds):
         return RepoStatus(MOVED, f"HTTP {code}",
                           moved_to=moved_target(r.headers.get("Location", "")))
     if code in (401, 404):
+        # Measured against the live endpoint (#67): the code tracks who is
+        # asking, not what is wrong with the repo. Anonymously every unreadable
+        # dataset answers 401, deleted and private and never-created alike, and
+        # 404 means only that the path is no dataset route at all. Hand the Hub
+        # a token and all of them answer 404, a repo known to have existed when
+        # the corpus was mined included. Keying a disposition on which code came
+        # back would therefore report our own auth state as a fact about the
+        # dataset, so both land on GONE and the message names every cause.
         return RepoStatus(GONE, f"HTTP {code}")
     if code == 403:
         return RepoStatus(RESTRICTED, f"HTTP {code}")
@@ -275,9 +292,13 @@ def clone_failure(ds, status):
     """
     if status.kind == GONE:
         return (f"cannot read {ds} on the Hub ({status.detail}): the dataset was "
-                f"deleted or made private since the corpus was mined. A token "
-                f"gets in only if you hold access to this repo; gating would look "
-                f"different. Nothing is verifiable here, so skip the candidate.")
+                f"deleted or made private since the corpus was mined, or else no "
+                f"dataset ever went by this ID. Nothing here tells the three "
+                f"apart, so check the DatasetID against {CANDIDATES} before "
+                f"skipping the candidate: a corrupted key names a repo that was "
+                f"never there, while the dataset it should have named is still "
+                f"live. A token gets in only if you hold access to this repo; "
+                f"gating would look different.")
     if status.kind == RESTRICTED:
         return (f"access to {ds} is restricted ({status.detail}); set HF_TOKEN or "
                 f"HUGGINGFACE_HUB_TOKEN, or accept the dataset's terms on the Hub")
