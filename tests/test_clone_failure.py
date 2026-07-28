@@ -69,8 +69,10 @@ class TestRepoStatus(unittest.TestCase):
         self.assertIsNone(s.moved_to)
 
     def test_anonymous_401_is_gone(self):
-        """What the Hub answers for a repo deleted or made private (#63). The two
-        are indistinguishable from outside, and the message says so."""
+        """What the Hub answers for a repo deleted or made private (#63), and,
+        as measured on the live endpoint, for one that never existed under this
+        ID (#67). The three are indistinguishable from outside, and the message
+        says so rather than picking one."""
         with heading(401):
             self.assertEqual(ic.repo_status(DS).kind, ic.GONE)
 
@@ -124,6 +126,20 @@ class TestCloneFailureMessage(unittest.TestCase):
         self.assertIn("HTTP 401", msg)
         self.assertIn("deleted or made private", msg)
         self.assertIn("skip", msg)
+
+    def test_gone_admits_the_id_may_never_have_existed(self):
+        """A 401 covers a corrupted DatasetID too, and there the recommended
+        action inverts: the dataset is live under its real ID, so skipping on
+        this message alone drops a candidate that is still verifiable (#67)."""
+        msg = ic.clone_failure(DS, ic.RepoStatus(ic.GONE, "HTTP 401"))
+        self.assertIn("no dataset ever went by this ID", msg)
+        self.assertIn(ic.CANDIDATES, msg)
+
+    def test_gone_does_not_order_a_skip_before_the_id_is_checked(self):
+        """The claim and the instruction have to agree: checking the ID comes
+        first, so the word `skip` may not stand on its own here."""
+        msg = ic.clone_failure(DS, ic.RepoStatus(ic.GONE, "HTTP 401"))
+        self.assertLess(msg.index("check the DatasetID"), msg.index("skipping"))
 
     def test_restricted_points_at_the_token(self):
         msg = ic.clone_failure(DS, ic.RepoStatus(ic.RESTRICTED, "HTTP 403"))
