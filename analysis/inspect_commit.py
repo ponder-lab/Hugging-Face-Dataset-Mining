@@ -248,6 +248,9 @@ def repo_status(ds):
     land here at all: a gated dataset still answers 200 on this endpoint and
     refuses only at the content.
 
+    Sending a token changes the code but not what it establishes, which is why
+    401 and 404 share one disposition below rather than being split (#67).
+
     Redirects are not followed, because the redirect itself is the finding: it
     carries the name the dataset now goes by.
 
@@ -265,6 +268,14 @@ def repo_status(ds):
         return RepoStatus(MOVED, f"HTTP {code}",
                           moved_to=moved_target(r.headers.get("Location", "")))
     if code in (401, 404):
+        # Measured against the live endpoint (#67): the code tracks who is
+        # asking, not what is wrong with the repo. Anonymously every unreadable
+        # dataset answers 401, deleted and private and never-created alike, and
+        # 404 means only that the path is no dataset route at all. Hand the Hub
+        # a token and all of them answer 404, a repo known to have existed when
+        # the corpus was mined included. Keying a disposition on which code came
+        # back would therefore report our own auth state as a fact about the
+        # dataset, so both land on GONE and the message names every cause.
         return RepoStatus(GONE, f"HTTP {code}")
     if code == 403:
         return RepoStatus(RESTRICTED, f"HTTP {code}")

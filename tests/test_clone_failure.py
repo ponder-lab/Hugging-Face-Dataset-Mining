@@ -77,8 +77,22 @@ class TestRepoStatus(unittest.TestCase):
             self.assertEqual(ic.repo_status(DS).kind, ic.GONE)
 
     def test_404_is_gone(self):
+        """What a token holder gets for every unreadable dataset, measured on
+        the live endpoint (#67), including one that existed when the corpus was
+        mined. The code follows the caller's credentials rather than the repo,
+        so it must not become a disposition of its own."""
         with heading(404):
             self.assertEqual(ic.repo_status(DS).kind, ic.GONE)
+
+    def test_401_and_404_are_one_disposition(self):
+        """Splitting them would report whether HF_TOKEN happens to be set as
+        though it were a finding about the dataset (#67)."""
+        with heading(401):
+            anonymous = ic.repo_status(DS)
+        with heading(404):
+            authenticated = ic.repo_status(DS)
+        self.assertEqual(anonymous.kind, authenticated.kind)
+        self.assertNotEqual(anonymous.detail, authenticated.detail)
 
     def test_403_is_restricted_not_gone(self):
         """A token can get into a restricted repo; nothing gets into a deleted
