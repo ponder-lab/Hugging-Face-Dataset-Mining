@@ -1,0 +1,18 @@
+dataset:    sajeelkazmi/PakistanBiggestEcommerceDatasetCleaned
+commit:     b317af712b7186fa77d4351349126f09488efd6a
+type:       cleaning
+message:    Add the main csv cleaned and processed file reado-to-be-analyzed
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# sajeelkazmi/PakistanBiggestEcommerceDatasetCleaned @ b317af712b
+message: Add the main csv cleaned and processed file reado-to-be-analyzed 
+
+file changes:
+M	.gitattributes
+A	Pakistan Biggest Ecommerce Analysis-Ready Dataset.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

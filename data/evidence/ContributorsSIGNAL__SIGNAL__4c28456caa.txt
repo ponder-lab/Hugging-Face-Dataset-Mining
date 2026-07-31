@@ -1,0 +1,14 @@
+dataset:    ContributorsSIGNAL/SIGNAL
+commit:     4c28456caa02bf5d3c29ebc3981bdf9c76b43974
+type:       column/field add-remove
+message:    add files with stimuli and their metadata (columns standardized)
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:47Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# ContributorsSIGNAL/SIGNAL @ 4c28456caa
+message: add files with stimuli and their metadata (columns standardized) 
+
+file changes:
+A	stimuli.csv
+A	stimuli_metadata.json

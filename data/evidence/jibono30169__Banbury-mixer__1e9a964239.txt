@@ -1,0 +1,13 @@
+dataset:    jibono30169/Banbury-mixer
+commit:     1e9a9642393ddd373a98c33894f925b33418faa8
+type:       normalize/standardize/encode
+message:    Upload normal.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:10Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# jibono30169/Banbury-mixer @ 1e9a964239
+message: Upload normal.csv 
+
+file changes:
+A	normal.csv

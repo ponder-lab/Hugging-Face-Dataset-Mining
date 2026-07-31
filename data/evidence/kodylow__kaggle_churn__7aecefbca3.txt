@@ -1,0 +1,18 @@
+dataset:    kodylow/kaggle_churn
+commit:     7aecefbca3220c7abb9b21ed758c0c25d66c0584
+type:       merge
+message:    Upload merged_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# kodylow/kaggle_churn @ 7aecefbca3
+message: Upload merged_data.csv 
+
+file changes:
+M	.gitattributes
+A	merged_data.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

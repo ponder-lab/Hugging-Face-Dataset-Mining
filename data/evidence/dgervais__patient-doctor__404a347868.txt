@@ -1,0 +1,13 @@
+dataset:    dgervais/patient-doctor
+commit:     404a3478683814f3c968703b3dd897b3ca934674
+type:       cleaning
+message:    Upload cleaned_data.csv with huggingface_hub
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:44Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# dgervais/patient-doctor @ 404a347868
+message: Upload cleaned_data.csv with huggingface_hub 
+
+file changes:
+A	cleaned_data.csv

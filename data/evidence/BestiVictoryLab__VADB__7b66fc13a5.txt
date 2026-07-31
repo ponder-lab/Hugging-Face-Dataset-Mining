@@ -1,0 +1,13 @@
+dataset:    BestiVictoryLab/VADB
+commit:     7b66fc13a50232ec7d83d1b7c3ccda822e369931
+type:       merge
+message:    Delete merged_comment_tag.json
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:41Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# BestiVictoryLab/VADB @ 7b66fc13a5
+message: Delete merged_comment_tag.json 
+
+file changes:
+D	merged_comment_tag.json   [stored in Git LFS]

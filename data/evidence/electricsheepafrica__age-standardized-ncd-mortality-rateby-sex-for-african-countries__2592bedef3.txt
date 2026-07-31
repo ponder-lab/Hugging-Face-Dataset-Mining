@@ -1,0 +1,14 @@
+dataset:    electricsheepafrica/age-standardized-ncd-mortality-rateby-sex-for-african-countries
+commit:     2592bedef35b72fb957f45191215879302902c42
+type:       normalize/standardize/encode
+message:    feat: Upload age-standardized-ncd-mortality-rateby-sex dataset and datacard
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:46Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# electricsheepafrica/age-standardized-ncd-mortality-rateby-sex-for-african-countries @ 2592bedef3
+message: feat: Upload age-standardized-ncd-mortality-rateby-sex dataset and datacard 
+
+file changes:
+A	README.md
+A	age-standardized-ncd-mortality-rateby-sex.csv

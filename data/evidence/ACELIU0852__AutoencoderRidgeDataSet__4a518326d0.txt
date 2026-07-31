@@ -1,0 +1,18 @@
+dataset:    ACELIU0852/AutoencoderRidgeDataSet
+commit:     4a518326d09fbab44b1dfedbc034067c15429878
+type:       merge
+message:    Upload merged_factors_processed_filled1.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:10Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# ACELIU0852/AutoencoderRidgeDataSet @ 4a518326d0
+message: Upload merged_factors_processed_filled1.csv 
+
+file changes:
+M	.gitattributes
+A	merged_factors_processed_filled1.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

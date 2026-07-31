@@ -1,0 +1,13 @@
+dataset:    smksaha/apt-eval
+commit:     d3a95edb4542bbb6caf35aef96e1101fbf09764c
+type:       merge
+message:    added apt-eval merged dataset
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:23Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# smksaha/apt-eval @ d3a95edb45
+message: added apt-eval merged dataset 
+
+file changes:
+A	merged_apt_eval_dataset.csv   [stored in Git LFS]

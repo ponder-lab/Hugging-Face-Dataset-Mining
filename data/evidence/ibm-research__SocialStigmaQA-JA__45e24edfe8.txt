@@ -1,0 +1,17 @@
+dataset:    ibm-research/SocialStigmaQA-JA
+commit:     45e24edfe8992f679fa12015b413e5c6d7961dc6
+type:       normalize/standardize/encode
+message:    Added "encoding: 'shift-jis'" to dataset card
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:04Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# ibm-research/SocialStigmaQA-JA @ 45e24edfe8
+message: Added "encoding: 'shift-jis'" to dataset card 
+
+file changes:
+M	README.md
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

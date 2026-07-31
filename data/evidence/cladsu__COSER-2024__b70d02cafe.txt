@@ -1,0 +1,18 @@
+dataset:    cladsu/COSER-2024
+commit:     b70d02cafe8fe2bbe820c41230013f1c82ced093
+type:       cleaning
+message:    Upload CLEAN_df_hack_full.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# cladsu/COSER-2024 @ b70d02cafe
+message: Upload CLEAN_df_hack_full.csv 
+
+file changes:
+M	.gitattributes
+A	CLEAN_df_hack_full.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

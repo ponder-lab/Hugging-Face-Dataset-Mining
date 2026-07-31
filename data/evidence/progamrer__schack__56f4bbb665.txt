@@ -1,0 +1,13 @@
+dataset:    progamrer/schack
+commit:     56f4bbb6651b4c9d5ebe3020384f74edc446677d
+type:       cleaning
+message:    Upload cleaned_output.zip
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:18Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# progamrer/schack @ 56f4bbb665
+message: Upload cleaned_output.zip 
+
+file changes:
+A	cleaned_output.zip   [stored in Git LFS]

@@ -1,0 +1,13 @@
+dataset:    Allen0307/LLMAgent
+commit:     b9b22d9e63239c309308781e1ae6811be44406a7
+type:       cleaning
+message:    Delete clean_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:09Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Allen0307/LLMAgent @ b9b22d9e63
+message: Delete clean_data.csv 
+
+file changes:
+D	clean_data.csv

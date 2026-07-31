@@ -1,0 +1,18 @@
+dataset:    brickbazooka9/LondonRealEstate1995to2024
+commit:     34aa333fed908da8096fdf88c877c0833c9a3989
+type:       cleaning
+message:    Upload cleaned_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:22Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# brickbazooka9/LondonRealEstate1995to2024 @ 34aa333fed
+message: Upload cleaned_data.csv 
+
+file changes:
+M	.gitattributes
+A	cleaned_data.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

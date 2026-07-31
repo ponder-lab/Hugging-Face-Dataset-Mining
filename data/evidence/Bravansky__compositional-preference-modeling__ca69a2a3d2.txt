@@ -1,0 +1,18 @@
+dataset:    Bravansky/compositional-preference-modeling
+commit:     ca69a2a3d2c2ecd3074f3a3af7505e3c4279571a
+type:       normalize/standardize/encode
+message:    Reformat repo
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:11Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Bravansky/compositional-preference-modeling @ ca69a2a3d2
+message: Reformat repo 
+
+file changes:
+R100	hh-rlhf/train_A.parquet	data/hh_A.parquet   [stored in Git LFS]
+R100	hh-rlhf/train_B.parquet	data/hh_B.parquet   [stored in Git LFS]
+R100	hh-rlhf/train_BON.parquet	data/hh_BON.parquet   [stored in Git LFS]
+R100	shp/train_A.parquet	data/shp_A.parquet   [stored in Git LFS]
+R100	shp/train_B.parquet	data/shp_B.parquet   [stored in Git LFS]
+R100	shp/train_BON.parquet	data/shp_BON.parquet   [stored in Git LFS]

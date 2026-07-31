@@ -1,0 +1,18 @@
+dataset:    Pcitycrypto/xauusd
+commit:     404e16e5ab2cd2630a1681238de9473a206fa7ee
+type:       cleaning
+message:    Upload cleaned XAUUSD data
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:10Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Pcitycrypto/xauusd @ 404e16e5ab
+message: Upload cleaned XAUUSD data 
+
+file changes:
+M	.gitattributes
+A	XAUUSD_1m.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

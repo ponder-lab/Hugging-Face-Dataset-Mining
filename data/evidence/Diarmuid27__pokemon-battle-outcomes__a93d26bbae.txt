@@ -1,0 +1,13 @@
+dataset:    Diarmuid27/pokemon-battle-outcomes
+commit:     a93d26bbae0f61d7803dbf1b428065c3a30bc6c5
+type:       merge
+message:    Upload merged_pokemon_combats.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Diarmuid27/pokemon-battle-outcomes @ a93d26bbae
+message: Upload merged_pokemon_combats.csv 
+
+file changes:
+A	merged_pokemon_combats.csv

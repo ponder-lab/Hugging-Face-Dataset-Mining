@@ -1,0 +1,55 @@
+dataset:    VerbACxSS/s-ItaIst
+commit:     be0f5fc47eec73ab50847d7b38ae134cbb5b2dde
+type:       cleaning
+message:    cleaning corpus
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:08Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# VerbACxSS/s-ItaIst @ be0f5fc47e
+message: cleaning corpus 
+
+file changes:
+M	corpus.xlsx   [stored in Git LFS]
+M	documents/2017-06-23_SAPGR - Servizio Provveditorato e Centrale Unica di Committenza_6d52bcc84ee3fa9bfec74bb009537bd2/human1.md
+M	documents/2017-06-23_SAPGR - Servizio Provveditorato e Centrale Unica di Committenza_6d52bcc84ee3fa9bfec74bb009537bd2/human2.md
+M	documents/2017-06-23_SAPGR - Servizio Provveditorato e Centrale Unica di Committenza_6d52bcc84ee3fa9bfec74bb009537bd2/original.md
+M	documents/2019-07-18_Comune di Rovigo (RO)_aae5c6f0c213946d265cb98c08106c0b/human1.md
+M	documents/2019-07-18_Comune di Rovigo (RO)_aae5c6f0c213946d265cb98c08106c0b/human2.md
+M	documents/2019-07-18_Comune di Rovigo (RO)_aae5c6f0c213946d265cb98c08106c0b/original.md
+M	documents/2020-06-23_Comune di Benevento (BN)_2f4c39c9fb796e5066ac28770c5724d6/human1.md
+M	documents/2020-12-01_Comune di Viterbo (VT)_396505aaf67c46b9ec1a6818d8fb9af6/human1.md
+M	documents/2020-12-01_Comune di Viterbo (VT)_396505aaf67c46b9ec1a6818d8fb9af6/human2.md
+M	documents/2020-12-01_Comune di Viterbo (VT)_396505aaf67c46b9ec1a6818d8fb9af6/original.md
+M	documents/2021-05-17_Comune di Firenze (FI)_70da2ae575436d19518deae1ff2125b0/human1.md
+M	documents/2021-05-17_Comune di Firenze (FI)_70da2ae575436d19518deae1ff2125b0/human2.md
+M	documents/2021-05-17_Comune di Firenze (FI)_70da2ae575436d19518deae1ff2125b0/original.md
+M	documents/2022-08-02_Regione Lombardia_3e0abd25f3bcf417e9e0a8b74e158ef5/human2.md
+M	documents/2022-12-22_Provincia di Catanzaro (CZ)_07108e7d68b7e897ed6a800be9802105/human1.md
+M	documents/2022-12-22_Provincia di Catanzaro (CZ)_07108e7d68b7e897ed6a800be9802105/human2.md
+M	documents/2022-12-22_Provincia di Catanzaro (CZ)_07108e7d68b7e897ed6a800be9802105/original.md
+M	documents/2022-12-30_Regione Basilicata_99bdc9fdd8097f067f77cb220074b1b5/human1.md
+M	documents/2022-12-30_Regione Basilicata_99bdc9fdd8097f067f77cb220074b1b5/human2.md
+
+not analyzed:
+  corpus.xlsx   [format this tool does not read, see #43]
+  documents/2017-06-23_SAPGR - Servizio Provveditorato e Centrale Unica di Committenza_6d52bcc84ee3fa9bfec74bb009537bd2/human1.md   [format this tool does not read, see #43]
+  documents/2017-06-23_SAPGR - Servizio Provveditorato e Centrale Unica di Committenza_6d52bcc84ee3fa9bfec74bb009537bd2/human2.md   [format this tool does not read, see #43]
+  documents/2017-06-23_SAPGR - Servizio Provveditorato e Centrale Unica di Committenza_6d52bcc84ee3fa9bfec74bb009537bd2/original.md   [format this tool does not read, see #43]
+  documents/2019-07-18_Comune di Rovigo (RO)_aae5c6f0c213946d265cb98c08106c0b/human1.md   [format this tool does not read, see #43]
+  documents/2019-07-18_Comune di Rovigo (RO)_aae5c6f0c213946d265cb98c08106c0b/human2.md   [format this tool does not read, see #43]
+  documents/2019-07-18_Comune di Rovigo (RO)_aae5c6f0c213946d265cb98c08106c0b/original.md   [format this tool does not read, see #43]
+  documents/2020-06-23_Comune di Benevento (BN)_2f4c39c9fb796e5066ac28770c5724d6/human1.md   [format this tool does not read, see #43]
+  documents/2020-12-01_Comune di Viterbo (VT)_396505aaf67c46b9ec1a6818d8fb9af6/human1.md   [format this tool does not read, see #43]
+  documents/2020-12-01_Comune di Viterbo (VT)_396505aaf67c46b9ec1a6818d8fb9af6/human2.md   [format this tool does not read, see #43]
+  documents/2020-12-01_Comune di Viterbo (VT)_396505aaf67c46b9ec1a6818d8fb9af6/original.md   [format this tool does not read, see #43]
+  documents/2021-05-17_Comune di Firenze (FI)_70da2ae575436d19518deae1ff2125b0/human1.md   [format this tool does not read, see #43]
+  documents/2021-05-17_Comune di Firenze (FI)_70da2ae575436d19518deae1ff2125b0/human2.md   [format this tool does not read, see #43]
+  documents/2021-05-17_Comune di Firenze (FI)_70da2ae575436d19518deae1ff2125b0/original.md   [format this tool does not read, see #43]
+  documents/2022-08-02_Regione Lombardia_3e0abd25f3bcf417e9e0a8b74e158ef5/human2.md   [format this tool does not read, see #43]
+  documents/2022-12-22_Provincia di Catanzaro (CZ)_07108e7d68b7e897ed6a800be9802105/human1.md   [format this tool does not read, see #43]
+  documents/2022-12-22_Provincia di Catanzaro (CZ)_07108e7d68b7e897ed6a800be9802105/human2.md   [format this tool does not read, see #43]
+  documents/2022-12-22_Provincia di Catanzaro (CZ)_07108e7d68b7e897ed6a800be9802105/original.md   [format this tool does not read, see #43]
+  documents/2022-12-30_Regione Basilicata_99bdc9fdd8097f067f77cb220074b1b5/human1.md   [format this tool does not read, see #43]
+  documents/2022-12-30_Regione Basilicata_99bdc9fdd8097f067f77cb220074b1b5/human2.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

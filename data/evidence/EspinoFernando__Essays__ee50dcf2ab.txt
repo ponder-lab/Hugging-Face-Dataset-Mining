@@ -1,0 +1,13 @@
+dataset:    EspinoFernando/Essays
+commit:     ee50dcf2abd86c17469866404eef1c0fefec1879
+type:       cleaning
+message:    Delete clean_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:06Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# EspinoFernando/Essays @ ee50dcf2ab
+message: Delete clean_data.csv 
+
+file changes:
+D	clean_data.csv

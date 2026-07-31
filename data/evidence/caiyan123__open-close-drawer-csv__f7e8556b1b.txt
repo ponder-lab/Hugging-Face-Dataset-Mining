@@ -1,0 +1,13 @@
+dataset:    caiyan123/open-close-drawer-csv
+commit:     f7e8556b1bbcb7405a197ee3ef319c6ca4516c1b
+type:       merge
+message:    Delete merged_open_close_drawer.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:22Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# caiyan123/open-close-drawer-csv @ f7e8556b1b
+message: Delete merged_open_close_drawer.csv 
+
+file changes:
+D	merged_open_close_drawer.csv   [stored in Git LFS]

@@ -1,0 +1,11 @@
+dataset:    commoncrawl/citations-annotated
+commit:     c896d417fae2a1b1eb4f0b2995bdd346080f4c1a
+type:       deduplication
+message:    remove commoncrawl_annotated.csv, which is a (duplicated) combination of the yearly csv files
+status:     repo-gone
+hub:        gone (HTTP 401)
+generated:  2026-07-31T18:09:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+NOTHING WAS ANALYZED: the dataset could not be cloned.
+
+cannot read commoncrawl/citations-annotated on the Hub (HTTP 401): the dataset was deleted or made private since the corpus was mined, or else no dataset ever went by this ID. Nothing here tells the three apart, so check the DatasetID against data/message_refactoring_candidates.csv before skipping the candidate: a corrupted key names a repo that was never there, while the dataset it should have named is still live. A token gets in only if you hold access to this repo; gating would look different.

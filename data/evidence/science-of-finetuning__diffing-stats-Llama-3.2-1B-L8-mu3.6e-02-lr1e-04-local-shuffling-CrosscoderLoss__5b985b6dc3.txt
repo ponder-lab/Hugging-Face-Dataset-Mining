@@ -1,0 +1,17 @@
+dataset:    science-of-finetuning/diffing-stats-Llama-3.2-1B-L8-mu3.6e-02-lr1e-04-local-shuffling-CrosscoderLoss
+commit:     5b985b6dc321151c91b073160c37f18cfae8bd60
+type:       column/field add-remove
+message:    Added betas columns to df
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:35Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# science-of-finetuning/diffing-stats-Llama-3.2-1B-L8-mu3.6e-02-lr1e-04-local-shuffling-CrosscoderLoss @ 5b985b6dc3
+message: Added betas columns to df 
+
+file changes:
+M	feature_df.csv   [stored in Git LFS]
+
+[feature_df.csv] no column-set change (values may still differ)
+  payload size 21,872,568 -> 21,872,523 bytes (-45): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches

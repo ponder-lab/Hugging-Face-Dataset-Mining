@@ -1,0 +1,16 @@
+dataset:    the-cramer-project/kyrgyz_MNIST
+commit:     5f3f80e7d8937e37b1f0d61cae08d309a9ecbd12
+type:       deduplication
+message:    Duplicate from CramerProject/kyrgyz_MNIST
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# the-cramer-project/kyrgyz_MNIST @ 5f3f80e7d8
+message: Duplicate from CramerProject/kyrgyz_MNIST 
+
+file changes:
+A	.gitattributes
+A	README.md
+A	test.csv.zip   [stored in Git LFS]
+A	train.csv.zip   [stored in Git LFS]

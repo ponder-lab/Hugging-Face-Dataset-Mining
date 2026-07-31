@@ -1,0 +1,13 @@
+dataset:    Ci-Dave/FIFA2019
+commit:     a7af3342466c4c418e5946f7dbb4815ce6268ea7
+type:       normalize/standardize/encode
+message:    Upload FIFA_Standardized_Data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:19Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Ci-Dave/FIFA2019 @ a7af334246
+message: Upload FIFA_Standardized_Data.csv 
+
+file changes:
+A	FIFA_Standardized_Data.csv

@@ -1,0 +1,18 @@
+dataset:    tahabou/HVDC-SIMULATED-FAULTS-FINAL-COMBINED
+commit:     5a3eccd2924c773f23d96777e616f79cb5ef3cd2
+type:       cleaning
+message:    Upload ./cleaned_data.csv with huggingface_hub
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:22Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# tahabou/HVDC-SIMULATED-FAULTS-FINAL-COMBINED @ 5a3eccd292
+message: Upload ./cleaned_data.csv with huggingface_hub 
+
+file changes:
+M	.gitattributes
+A	cleaned_data.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

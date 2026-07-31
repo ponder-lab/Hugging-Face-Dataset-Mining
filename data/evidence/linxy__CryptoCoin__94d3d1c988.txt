@@ -1,0 +1,19 @@
+dataset:    linxy/CryptoCoin
+commit:     94d3d1c9889017630a6e732e27194988da41526b
+type:       column/field add-remove
+message:    📝 [update README.md] standardize field names to lowercase
+status:     commit-unreachable
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+NOTHING WAS ANALYZED: commit 94d3d1c9889017630a6e732e27194988da41526b cannot be read from linxy/CryptoCoin any more.
+
+This is a revision no repository will produce, not a commit that
+changed no files. Two checks, because a stale local clone is not the
+same thing as a deleted commit:
+  1. local full clone: `git rev-parse 94d3d1c988^{commit}` finds no commit
+     `git fetch origin` completed; commit still absent
+     `git fetch origin 94d3d1c988` failed (fatal: remote error: upload-pack: not our ref 94d3d1c9889017630a6e732e27194988da41526b); commit still absent
+  2. Hub tree endpoint at this revision: HTTP 404
+
+The repository itself still answers on the Hub (HTTP 200) and still serves a history; that history no longer contains this commit. Upstream history was rewritten after mining.

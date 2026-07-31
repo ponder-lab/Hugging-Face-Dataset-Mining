@@ -1,0 +1,13 @@
+dataset:    nissenbaumbrad/healthcareProjectData
+commit:     ed9377131f7d5e6de14059988b286a47569f8054
+type:       cleaning
+message:    Upload clean_healthcare_data.csv with huggingface_hub
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:41Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# nissenbaumbrad/healthcareProjectData @ ed9377131f
+message: Upload clean_healthcare_data.csv with huggingface_hub 
+
+file changes:
+A	clean_healthcare_data.csv

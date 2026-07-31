@@ -1,0 +1,18 @@
+dataset:    lllaurenceee/Shopee_Bicycle_Reviews
+commit:     47f3c1136490cedbd29be436ceca5f9b7bc5274e
+type:       deduplication
+message:    Upload Dataset_D_Duplicate.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# lllaurenceee/Shopee_Bicycle_Reviews @ 47f3c11364
+message: Upload Dataset_D_Duplicate.csv 
+
+file changes:
+M	.gitattributes
+A	Dataset_D_Duplicate.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

@@ -1,0 +1,18 @@
+dataset:    zyllab/TTMs_on_MG
+commit:     6737bdc5aa797d4d2cb733cd8a81a05851035bf4
+type:       merge
+message:    Upload merged_full_dset.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# zyllab/TTMs_on_MG @ 6737bdc5aa
+message: Upload merged_full_dset.csv 
+
+file changes:
+M	.gitattributes
+A	merged_full_dset.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

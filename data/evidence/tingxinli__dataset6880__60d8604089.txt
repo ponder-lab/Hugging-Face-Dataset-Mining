@@ -1,0 +1,18 @@
+dataset:    tingxinli/dataset6880
+commit:     60d860408907ac73d37042a2ac86dd9c4cdbabe7
+type:       merge
+message:    Upload merged_qa_pairs.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:52Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# tingxinli/dataset6880 @ 60d8604089
+message: Upload merged_qa_pairs.csv 
+
+file changes:
+M	.gitattributes
+A	merged_qa_pairs.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

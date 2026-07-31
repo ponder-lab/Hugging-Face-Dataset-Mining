@@ -1,0 +1,13 @@
+dataset:    pauri32/fiqa-2018
+commit:     d8c84dd58075db450124073fc2d8de42d261f01c
+type:       rename/split-standardization
+message:    Delete non-split dataset
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:52Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# pauri32/fiqa-2018 @ d8c84dd580
+message: Delete non-split dataset 
+
+file changes:
+D	fiqa2018.csv

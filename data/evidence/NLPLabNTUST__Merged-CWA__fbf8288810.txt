@@ -1,0 +1,13 @@
+dataset:    NLPLabNTUST/Merged-CWA
+commit:     fbf8288810d7cb6501e9b381f4d4ef70904673c5
+type:       merge
+message:    Delete merge_2015_2018.tar.gz
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:01Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# NLPLabNTUST/Merged-CWA @ fbf8288810
+message: Delete merge_2015_2018.tar.gz 
+
+file changes:
+D	merge_2015_2018.tar.gz   [stored in Git LFS]

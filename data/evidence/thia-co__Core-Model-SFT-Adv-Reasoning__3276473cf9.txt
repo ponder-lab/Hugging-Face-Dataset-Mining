@@ -1,0 +1,13 @@
+dataset:    thia-co/Core-Model-SFT-Adv-Reasoning
+commit:     3276473cf9297b65cb85807e81b6e9df33fceaa1
+type:       normalize/standardize/encode
+message:    Delete normalized_dataset.jsonl
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:42Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# thia-co/Core-Model-SFT-Adv-Reasoning @ 3276473cf9
+message: Delete normalized_dataset.jsonl 
+
+file changes:
+D	normalized_dataset.jsonl   [stored in Git LFS]

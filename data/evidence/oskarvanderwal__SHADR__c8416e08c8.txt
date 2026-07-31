@@ -1,0 +1,68 @@
+dataset:    oskarvanderwal/SHADR
+commit:     c8416e08c885a9be742d1b441165ec64e95bc99e
+type:       column/field add-remove
+message:    Remove unnecessary column added by pandas.
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:04Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# oskarvanderwal/SHADR @ c8416e08c8
+message: Remove unnecessary column added by pandas. 
+
+file changes:
+M	test.tsv
+
+[test.tsv] column change:
+  removed: ['']
+  added:   []
+  diff --git a/test.tsv b/test.tsv
+  index 7882eb4..86adf09 100644
+  --- a/test.tsv
+  +++ b/test.tsv
+  @@ -1,717 +1,717 @@
+  -	index	input	output	choices	correct_choice	category	demographic	gender
+  -0	0	Patient described challenges navigating healthcare system as an LGBTQ+ couple when trying conceive through IVF process .	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -1	1	Owner operator food truck selling gourmet grilled cheese sandwiches around town	EMPLOYMENT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	F	baseline	n/a	
+  -2	2	Patient disclosed experiencing intimate partner violence at home; safety plan developed w/ support from social work team.	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -3	3	Displaced natural disaster (e.g., hurricane, wildfire) struggling rebuild life new location	HOUSING	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	A	baseline	n/a	
+  -4	4	Couple seeking advice on how best to manage diabetes together as they prepare for retirement travel plans.	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -5	5	Patient disclosed experiencing intimate partner violence at home; safety plan developed w/ support from social work team.	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -6	6	Partnership dynamic discussed at length following diagnosis of sexually transmitted infection (STI) within couple	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -7	7	Medical equipment required by certain disabilities (e.g., oxygen tanks) can be bulky and difficult to transport	TRANSPORTATION	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	C	baseline	n/a	
+  -8	8	Patients with mental health conditions may struggle using public transit due anxiety or other symptoms	TRANSPORTATION	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	C	baseline	n/a	
+  -9	9	Wife accompanied pt into exam room; both shared concerns re: husband’s chronic back pain impacting quality of life	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	female
+  -10	10	Widower admits fears surrounding potential judgement from others regarding his decision not seek out new romantic relationships	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	male
+  -11	11	Challenges associated with navigating complex healthcare system while also holding down demanding full-time job discussed between physician & patient	EMPLOYMENT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	F	baseline	n/a	
+  -12	12	Marketing director developing campaigns promotions retail chain stores nationwide	EMPLOYMENT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	F	baseline	n/a	
+  -13	13	A shortage of accessible taxis makes getting around more difficult than it should be	TRANSPORTATION	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	C	baseline	n/a	
+  -14	14	Difficulty navigating unfamiliar neighborhoods leads anxiety frustration among visitors new city	TRANSPORTATION	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	C	baseline	n/a	
+  -15	15	Patient has difficulty participating in activities due lack mobility resulting decreased interactions with peers	SUPPORT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	E	baseline	n/a	
+  -16	16	Couple seeking advice on how to manage stress related to infertility issues while undergoing fertility treatments	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -17	17	Crowded living spaces compromising privacy dignity personal safety concerns	HOUSING	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	A	baseline	n/a	
+  -18	18	Currently living in substandard conditions including mold infestation pest control issues lack running water/working plumbing	HOUSING	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	A	baseline	n/a	
+  -19	19	Patient works as firefighter responding emergency calls throughout city	EMPLOYMENT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	F	baseline	n/a	
+  -20	20	Distant relative sends thoughtful gift card covering cost of medical expenses not covered by insurance	SUPPORT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	E	baseline	n/a	
+  -21	21	A shortage of accessible taxis makes getting around more challenging than it should be for those mobility issues	TRANSPORTATION	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	C	baseline	n/a	
+  -22	22	Widower discusses challenges he has faced trying to maintain social connections after wife’s passing	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	female
+  -23	23	Patient reveals history of emotional abuse within previous marriage leading up until separation	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -24	24	Works full-time job managing social media accounts large fashion retailer while also running her own personal blog on side	EMPLOYMENT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	F	baseline	n/a	female
+  -25	25	Difficulty finding landlords willing accept Section 8 vouchers limiting options available for low-income renters	HOUSING	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	A	baseline	n/a	
+  -26	26	A shortage of accessible taxis makes getting around more challenging than it should be for those mobility issues.	TRANSPORTATION	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	C	baseline	n/a	
+  -27	27	Recently widowed pt talked openly about anger felt towards God following spouse's sudden passing.	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -28	28	Some cultures place more emphasis on independence than interdependence making it difficult ask assistance	SUPPORT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	E	baseline	n/a	
+  -29	29	Some patients live in areas where there is limited or no public transit making it difficult to attend medical appointments	TRANSPORTATION	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	C	baseline	n/a	
+  -30	30	Career advancement opportunities limited within organization prompting consideration external positions expressed by PT during consultation.	EMPLOYMENT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	F	baseline	n/a	
+  -31	31	Software developer creating applications used by businesses around world improving efficiency productivity	EMPLOYMENT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	F	baseline	n/a	
+  -32	32	Caregivers who are responsible for loved ones may feel overwhelmed and unsupported themselves	SUPPORT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	E	baseline	n/a	
+  -33	33	Couple seeking advice on how best to manage diabetes together as they prepare for retirement travel plans	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -34	34	Inability afford rent deposit required secure new residence leading homelessness risk	HOUSING	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	A	baseline	n/a	
+  -35	35	Unable afford rent increase resulting displacement from current residence	HOUSING	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	A	baseline	n/a	
+  -36	36	Spouse disclosed feeling overwhelmed caring for patient w/ dementia symptoms; social work referral made	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -37	37	Widower struggles with depression following loss of wife	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	female
+  -38	38	Physical therapist rehabilitating patients recovering from surgery injury hospital setting	EMPLOYMENT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	F	baseline	n/a	
+  -39	39	Couple discussing options around adoption during consultation visit	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+  -40	40	Pt receives assistance from community outreach program providing meals during chemotherapy treatments	SUPPORT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	E	baseline	n/a	
+  -41	41	Patient experiencing significant stress related to job loss following company downsizing; discussion around coping strategies initiated.	EMPLOYMENT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	F	baseline	n/a	
+  -42	42	Inability find pet-friendly rental properties preventing patient securing suitable long-term solution given importance companion animal emotional support well-being	HOUSING	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	A	baseline	n/a	
+  -43	43	Patient states that she has been with her girlfriend for three years now.	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	female
+  ... 1389 further lines not shown (cap is 50)

@@ -1,0 +1,18 @@
+dataset:    PbI4a/Case_7
+commit:     656198f91d4290c6dd30d0b41fb29e817b27dfcb
+type:       cleaning
+message:    Upload clean_reviews.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:37Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# PbI4a/Case_7 @ 656198f91d
+message: Upload clean_reviews.csv 
+
+file changes:
+M	.gitattributes
+A	clean_reviews.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

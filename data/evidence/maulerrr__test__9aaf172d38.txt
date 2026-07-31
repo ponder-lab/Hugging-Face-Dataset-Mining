@@ -1,0 +1,42 @@
+dataset:    maulerrr/test
+commit:     9aaf172d3868a24f621122e2e590c50ec1819205
+type:       cleaning
+message:    Add cleaned data via Flowmatic
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:42Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# maulerrr/test @ 9aaf172d38
+message: Add cleaned data via Flowmatic 
+
+file changes:
+M	flowmatic_cleaned.csv
+
+[flowmatic_cleaned.csv] no column-set change (values may still differ)
+  diff --git a/flowmatic_cleaned.csv b/flowmatic_cleaned.csv
+  index eeaf04a..fac5e00 100644
+  --- a/flowmatic_cleaned.csv
+  +++ b/flowmatic_cleaned.csv
+  @@ -1,11 +1,11 @@
+  -Event_ID,Timestamp,Vehicle_Type,Speed_kmh,Latitude,Longitude,Event_Type,Severity
+  -1970-01-01 00:00:00.000001001,2024-02-01 08:00:00,Car,52.0,51.128754,71.431234,Normal,Low
+  -1970-01-01 00:00:00.000001002,2024-02-01 08:00:03,Truck,10.0,51.130451,71.432547,Congestion,Medium
+  -1970-01-01 00:00:00.000001003,2024-02-01 08:00:05,Bus,0.44999999999999996,51.13160708,71.43556661,Accident,High
+  -1970-01-01 00:00:00.000001004,2024-02-01 08:00:07,Motorcycle,78.0,51.129324,71.43089,Normal,Low
+  -1970-01-01 00:00:00.000001005,2024-02-01 08:00:10,Car,43.0,51.128987,71.43312,Sudden Deceleration,Medium
+  -1970-01-01 00:00:00.000001006,2024-02-01 08:00:13,Bus,25.0,51.13089,71.434501,Congestion,Medium
+  -1970-01-01 00:00:00.000001007,2024-02-01 08:00:15,Truck,5.0,51.130003,71.4311,Accident,High
+  -1970-01-01 00:00:00.000001008,2024-02-01 08:00:17,Motorcycle,84.37,51.129876,71.4304896,Normal,Low
+  -1970-01-01 00:00:00.000001009,2024-02-01 08:00:19,Car,40.0,51.128572909999995,71.4335,Sudden Deceleration,Medium
+  -1970-01-01 00:00:00.000001010,2024-02-01 08:00:21,Bus,30.0,51.1304,71.4323,Congestion,Medium
+  +Timestamp,Event_ID,Vehicle_Type,Speed_kmh,Latitude,Longitude,Event_Type,Severity
+  +2024-02-01 08:00:00,1970-01-01 00:00:00.000001001,Car,52.0,51.128754,71.431234,Normal,Low
+  +2024-02-01 08:00:03,1970-01-01 00:00:00.000001002,Truck,10.0,51.130451,71.432547,Congestion,Medium
+  +2024-02-01 08:00:05,1970-01-01 00:00:00.000001003,Bus,0.8594999999999999,51.131542542800005,71.4354707051,Accident,High
+  +2024-02-01 08:00:07,1970-01-01 00:00:00.000001004,Motorcycle,78.0,51.129324,71.43089,Normal,Low
+  +2024-02-01 08:00:10,1970-01-01 00:00:00.000001005,Car,43.0,51.128987,71.43312,Sudden Deceleration,Medium
+  +2024-02-01 08:00:13,1970-01-01 00:00:00.000001006,Bus,25.0,51.13089,71.434501,Congestion,Medium
+  +2024-02-01 08:00:15,1970-01-01 00:00:00.000001007,Truck,5.0,51.130003,71.4311,Accident,High
+  +2024-02-01 08:00:17,1970-01-01 00:00:00.000001008,Motorcycle,83.7967,51.129876,71.430525636,Normal,Low
+  +2024-02-01 08:00:19,1970-01-01 00:00:00.000001009,Car,40.0,51.1285892081,71.4335,Sudden Deceleration,Medium
+  +2024-02-01 08:00:21,1970-01-01 00:00:00.000001010,Bus,30.0,51.1304,71.4323,Congestion,Medium

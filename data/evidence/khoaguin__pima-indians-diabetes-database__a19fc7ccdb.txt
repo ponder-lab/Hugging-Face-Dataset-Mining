@@ -1,0 +1,14 @@
+dataset:    khoaguin/pima-indians-diabetes-database
+commit:     a19fc7ccdb1239581dda87a172e51ee55f27dc28
+type:       rename/split-standardization
+message:    split diabetes.csv into train.csv and test.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:30Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# khoaguin/pima-indians-diabetes-database @ a19fc7ccdb
+message: split diabetes.csv into train.csv and test.csv 
+
+file changes:
+A	test.csv
+R077	diabetes.csv	train.csv

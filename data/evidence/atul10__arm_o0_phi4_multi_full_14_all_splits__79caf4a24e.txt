@@ -1,0 +1,19 @@
+dataset:    atul10/arm_o0_phi4_multi_full_14_all_splits
+commit:     79caf4a24ea9bc3e141a8e5d04c0998f30396e01
+type:       rename/split-standardization
+message:    Split dataset via CodeT5 GPU embeddings
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:47Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# atul10/arm_o0_phi4_multi_full_14_all_splits @ 79caf4a24e
+message: Split dataset via CodeT5 GPU embeddings 
+
+file changes:
+M	.gitattributes
+A	test_split.csv   [stored in Git LFS]
+A	train_split.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

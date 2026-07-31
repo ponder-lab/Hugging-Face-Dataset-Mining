@@ -1,0 +1,18 @@
+dataset:    cladsu/COSER-2024
+commit:     f6a68ab6badd610c8a724868ab97333ee6e428f6
+type:       cleaning
+message:    Rename CLEAN_df_hack_full.csv to df_hackathon.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# cladsu/COSER-2024 @ f6a68ab6ba
+message: Rename CLEAN_df_hack_full.csv to df_hackathon.csv 
+
+file changes:
+M	.gitattributes
+R100	CLEAN_df_hack_full.csv	df_hackathon.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

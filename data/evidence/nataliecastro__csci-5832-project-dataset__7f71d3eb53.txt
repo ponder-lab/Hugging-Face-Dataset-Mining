@@ -1,0 +1,18 @@
+dataset:    nataliecastro/csci-5832-project-dataset
+commit:     7f71d3eb53c5d2c9062e505536e6ed1d1f75d3db
+type:       cleaning
+message:    Upload Cleaned Sentiment140 Dataset with Tokenized Sequences.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:22Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# nataliecastro/csci-5832-project-dataset @ 7f71d3eb53
+message: Upload Cleaned Sentiment140 Dataset with Tokenized Sequences.csv 
+
+file changes:
+M	.gitattributes
+A	Cleaned Sentiment140 Dataset with Tokenized Sequences.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

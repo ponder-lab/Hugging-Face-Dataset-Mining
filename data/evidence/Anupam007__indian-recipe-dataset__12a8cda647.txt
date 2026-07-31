@@ -1,0 +1,18 @@
+dataset:    Anupam007/indian-recipe-dataset
+commit:     12a8cda64780a28337525ba73b3ffc2881edbe35
+type:       cleaning
+message:    Upload Cleaned_Indian_Food_Dataset.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:16Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Anupam007/indian-recipe-dataset @ 12a8cda647
+message: Upload Cleaned_Indian_Food_Dataset.csv 
+
+file changes:
+M	.gitattributes
+A	Cleaned_Indian_Food_Dataset.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

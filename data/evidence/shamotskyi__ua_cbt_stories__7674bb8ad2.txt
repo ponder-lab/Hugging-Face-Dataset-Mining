@@ -1,0 +1,16 @@
+dataset:    shamotskyi/ua_cbt_stories
+commit:     7674bb8ad2483fc30bd6b2d35eec2ffca1287448
+type:       cleaning
+message:    Update dataset with cleaned-up single-file version
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# shamotskyi/ua_cbt_stories @ 7674bb8ad2
+message: Update dataset with cleaned-up single-file version 
+
+file changes:
+D	data/batch_2.csv
+D	data/batch_3.csv
+R064	data/batch_1.csv	data/dataset.csv
+D	data/few_shot_split.csv

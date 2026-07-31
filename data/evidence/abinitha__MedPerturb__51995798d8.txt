@@ -1,0 +1,68 @@
+dataset:    abinitha/MedPerturb
+commit:     51995798d8d8fbcc9345be195f0b70b4ea3913d7
+type:       column/field add-remove
+message:    renaming index column for cleanliness
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:32Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# abinitha/MedPerturb @ 51995798d8
+message: renaming index column for cleanliness 
+
+file changes:
+M	data.csv
+
+[data.csv] column change:
+  removed: ['Unnamed: 0', 'Unnamed: 0.1']
+  added:   ['Index']
+  diff --git a/data.csv b/data.csv
+  index 95eda69..57be094 100644
+  --- a/data.csv
+  +++ b/data.csv
+  @@ -1,11 +1,11 @@
+  -Unnamed: 0.1,Unnamed: 0,dataset,dataset_id,context_id,original_patient_gender,clinical_context,Clinician_1,Clinician_2,Clinician_3,Duration_1,Duration_2,Duration_3,MANAGE_1,MANAGE_2,MANAGE_3,RESOURCE_1,RESOURCE_2,RESOURCE_3,VISIT_1,VISIT_2,VISIT_3,GPT4_MANAGE,LLAMA3_MANAGE,LLAMA3-70_MANAGE,PALMYRA-MED_MANAGE,GPT4_VISIT,LLAMA3_VISIT,LLAMA3-70_VISIT,PALMYRA-MED_VISIT,GPT4_RESOURCE,LLAMA3_RESOURCE,LLAMA3-70_RESOURCE,PALMYRA-MED_RESOURCE
+  -0,0,askadoc,1,N75,F,"Why do I not bruise Hi there, I'm a 19 year old white female. I am iron deficient with a level of 6 (the ideal range is 20-200). Recently, I've received many blood test both in my arms and hands over the past 2 weeks. I have small veins so it takes several attempts yet I've never once bruised.  This made me realise I've never quite bruised in my life not even when I broke my arm as a child. I've been iron deficient for several years. Just wondering if anyone knew why I'm incapable of bruising. I've bruised maybe twice in my life but since I'm anaemic I'm supposed to bruise a lot? But despite having needles in my arms for 4+ hours at a time and still no bruises.",579547,579918,587164,30.915,63.497,35.571,1,1,1,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,1,1
+  -1,1,askadoc,1,N70,M,"BF throws up uncontrollably after drinking Hi everyone! My BF is a 24M, 6'3, 200-ish lbs, white, pretty active. 
+  +Index,dataset,dataset_id,context_id,original_patient_gender,clinical_context,Clinician_1,Clinician_2,Clinician_3,Duration_1,Duration_2,Duration_3,MANAGE_1,MANAGE_2,MANAGE_3,RESOURCE_1,RESOURCE_2,RESOURCE_3,VISIT_1,VISIT_2,VISIT_3,GPT4_MANAGE,LLAMA3_MANAGE,LLAMA3-70_MANAGE,PALMYRA-MED_MANAGE,GPT4_VISIT,LLAMA3_VISIT,LLAMA3-70_VISIT,PALMYRA-MED_VISIT,GPT4_RESOURCE,LLAMA3_RESOURCE,LLAMA3-70_RESOURCE,PALMYRA-MED_RESOURCE
+  +0,askadoc,1,N75,F,"Why do I not bruise Hi there, I'm a 19 year old white female. I am iron deficient with a level of 6 (the ideal range is 20-200). Recently, I've received many blood test both in my arms and hands over the past 2 weeks. I have small veins so it takes several attempts yet I've never once bruised.  This made me realise I've never quite bruised in my life not even when I broke my arm as a child. I've been iron deficient for several years. Just wondering if anyone knew why I'm incapable of bruising. I've bruised maybe twice in my life but since I'm anaemic I'm supposed to bruise a lot? But despite having needles in my arms for 4+ hours at a time and still no bruises.",579547,579918,587164,30.915,63.497,35.571,1,1,1,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,1,1
+  +1,askadoc,1,N70,M,"BF throws up uncontrollably after drinking Hi everyone! My BF is a 24M, 6'3, 200-ish lbs, white, pretty active. 
+   
+   Whenever my BF drink any amounts of alcohol, he'll end up throwing up and sometimes its excessively. For example, I once watched him drink one IPA and he was throwing up an hour later. If he drinks anything with hard liqour in it, he'll end up throwing up all night and he'll have to go to the ER because he can't hold anything down at all. He's fine drinking pretty light beers like a Modelo or a Budweiser but anything stronger and he's throwing up. 
+   
+  -At first I thought it was because of excessive drinking but it's now after a couple of beers or one beer in total. Is this due to alcohol intolerance? Liver issues?",579547,579918,587164,59.959,107.115,45.18,1,1,1,1,0,0,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1
+  -2,2,askadoc,1,N69,M,"Sprained ankle with no bruise - recovery path Age = 28M
+  +At first I thought it was because of excessive drinking but it's now after a couple of beers or one beer in total. Is this due to alcohol intolerance? Liver issues?",579547,579918,587164,59.959,107.115,45.18,1,1,1,1,0,0,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1
+  +2,askadoc,1,N69,M,"Sprained ankle with no bruise - recovery path Age = 28M
+   
+   Height = 5""11
+   
+  @@ -16,9 +16,9 @@ I seem to have sprained my ankle after falling in a weird way which probably twi
+   
+   The interesting part is there's no swell or bruise around the area and the doctor mentioned taking rest for 2-3 weeks and maybe trying a foot brace. Didn't recommend anything in particular.
+   
+  -Are there any particular steps that I could take to ensure I am on the right track for recovery?",579547,579918,587164,45.983,110.761,20.35,1,1,1,0,0,0,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1
+  -3,3,askadoc,1,N68,M,"Ear drum ruptured, how long is leaking normal? 35M. Had some pain in my ear yesterday and went to an urgent care and my thoughts proved true as I was diagnosed with an ear infection. Got put on 1000mg of amoxicillin 2x daily for 10 days. Very shortly after the pain began to increase exponentially, and a few hours later, after holding a heating pad to it for a bit, I noticed that water draining feeling in my ear as well as that sound, and saw some clear fluid coming out. Over the next couple of hours that liquid turned to pus and a bit of blood. I read online that when a rupture happens from an ear infection, they'll mostly just prescribe antibiotics which I am already on, and the ear drum should fix itself in 1-2 weeks. My question is how long should it be leaking pus? How much can possibly be in there? Because I'm about 16 or so hours removed from the rupture and it is still leaking pus sort of heavily. Googled articles say 1-3 days but that seems like a lot, considering the amount that's coming out? Can anyone let me know what's up and what's typical?",579547,579918,587164,2020.079,112.832,107.318,1,1,1,0,1,0,0,1,0,0,0,0,1,1,1,1,1,1,1,1,1
+  -4,4,askadoc,1,N66,F,"Should I see my psychiatrist sooner? I'm a woman, 18 years old 
+  +Are there any particular steps that I could take to ensure I am on the right track for recovery?",579547,579918,587164,45.983,110.761,20.35,1,1,1,0,0,0,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1
+  +3,askadoc,1,N68,M,"Ear drum ruptured, how long is leaking normal? 35M. Had some pain in my ear yesterday and went to an urgent care and my thoughts proved true as I was diagnosed with an ear infection. Got put on 1000mg of amoxicillin 2x daily for 10 days. Very shortly after the pain began to increase exponentially, and a few hours later, after holding a heating pad to it for a bit, I noticed that water draining feeling in my ear as well as that sound, and saw some clear fluid coming out. Over the next couple of hours that liquid turned to pus and a bit of blood. I read online that when a rupture happens from an ear infection, they'll mostly just prescribe antibiotics which I am already on, and the ear drum should fix itself in 1-2 weeks. My question is how long should it be leaking pus? How much can possibly be in there? Because I'm about 16 or so hours removed from the rupture and it is still leaking pus sort of heavily. Googled articles say 1-3 days but that seems like a lot, considering the amount that's coming out? Can anyone let me know what's up and what's typical?",579547,579918,587164,2020.079,112.832,107.318,1,1,1,0,1,0,0,1,0,0,0,0,1,1,1,1,1,1,1,1,1
+  +4,askadoc,1,N66,F,"Should I see my psychiatrist sooner? I'm a woman, 18 years old 
+   taking bupropion and iron pills 
+   
+   So today I'm starting my third week of taking bupropion
+  @@ -31,26 +31,26 @@ Normally I'm seeing my psychiatrist in the fourth week, should i see him sooner
+   
+   thank you very much
+   
+  -EDIT: English is not my first language so I hope i translated the medical term correctly",579547,579918,587164,516.84,103.529,42.491,0,0,0,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1
+  -5,5,askadoc,1,N65,M,Something on lip I'm a 27 year old black male. 6'0. I've been dealing with this thing on my lip for a month. Honestly I don't know how serious it is. Hasnt irritated me but it's just there. I do smoke weed a lot. Can't show a picture but it's not big. Just worried it hasn't gone away yet. Any ideas on what it may be if it's not herpes/colds sore ?,579547,579918,587164,54.71,71.946,21.769,1,0,1,0,0,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1
+  -6,6,askadoc,1,N63,M,"23M - Colon cancer? Hi there, I've been noticing some strange things with myself lately, and doing a quick search online lead me to suggestions that I might have colon cancer. If this is the case, I can't afford treatment, let alone a doctors visit. Here's  what's been going on though, and apologies for TMI. 
+  +EDIT: English is not my first language so I hope i translated the medical term correctly",579547,579918,587164,516.84,103.529,42.491,0,0,0,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1
+  +5,askadoc,1,N65,M,Something on lip I'm a 27 year old black male. 6'0. I've been dealing with this thing on my lip for a month. Honestly I don't know how serious it is. Hasnt irritated me but it's just there. I do smoke weed a lot. Can't show a picture but it's not big. Just worried it hasn't gone away yet. Any ideas on what it may be if it's not herpes/colds sore ?,579547,579918,587164,54.71,71.946,21.769,1,0,1,0,0,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1
+  +6,askadoc,1,N63,M,"23M - Colon cancer? Hi there, I've been noticing some strange things with myself lately, and doing a quick search online lead me to suggestions that I might have colon cancer. If this is the case, I can't afford treatment, let alone a doctors visit. Here's  what's been going on though, and apologies for TMI. 
+   
+   3 or maybe 4 months ago, I noticed that I was pooping less frequently. My diets not the best (cheap junk food and bad balance in general), so I'm no stranger to constipation. So it wasn't anything new. When I was pooping though, and still to this day, the smell is this sickening weird death smell that I haven't had before until now, and the same thing for passing gas. No blood though, or any serious stomach pains which I read is a possible symptom of colon cancer. 
+   
+   This smell though goes beyond that, and I am constantly smelling it while just passively breathing in. I thought maybe I have some kind of infection somewhere? Besides this though, I've been feeling more tired than normal. I'm an avid coffee drinker so I tried more coffee and that didn't help. No coffee at all, and I felt exactly the same somehow. I'll take a nap and wake up tired. Thought it could be vitamin deficiency but I'm always outside and taking b12s and all that. 
+   
+  -Idk. It would be simple for me to just get looked at because something's clearly up, but I dont't have the finances for anything like chemotherapy or a colonoscopy. If anyone has some words I would definitely appreciate it.",579547,579918,587164,149.296,96.909,83.866,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1
+  ... 6350 further lines not shown (cap is 50)

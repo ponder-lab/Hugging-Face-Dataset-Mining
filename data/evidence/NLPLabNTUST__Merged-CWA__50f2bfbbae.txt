@@ -1,0 +1,13 @@
+dataset:    NLPLabNTUST/Merged-CWA
+commit:     50f2bfbbae30ca38890350c3817f78ee030f4947
+type:       merge
+message:    Upload merge_2012_2014.tar.gz with huggingface_hub
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:02Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# NLPLabNTUST/Merged-CWA @ 50f2bfbbae
+message: Upload merge_2012_2014.tar.gz with huggingface_hub 
+
+file changes:
+A	merge_2012_2014.tar.gz   [stored in Git LFS]

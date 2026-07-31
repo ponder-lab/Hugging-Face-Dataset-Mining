@@ -1,0 +1,14 @@
+dataset:    maomlab/MutagenLou2023
+commit:     ab15c3a9c554926f6493ba05c7b2f790f46fb591
+type:       column/field add-remove
+message:    Rename smiles column to SMILES
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# maomlab/MutagenLou2023 @ ab15c3a9c5
+message: Rename smiles column to SMILES 
+
+file changes:
+A	train_test/MutagenLou2023_test_fin.csv
+A	train_test/MutagenLou2023_train_fin.csv

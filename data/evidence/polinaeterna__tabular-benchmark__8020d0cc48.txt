@@ -1,0 +1,74 @@
+dataset:    polinaeterna/tabular-benchmark
+commit:     8020d0cc485b75b30126cc18aef40e6217fc5c70
+type:       deduplication
+message:    Duplicate from inria-soda/tabular-benchmark
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:54Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# polinaeterna/tabular-benchmark @ 8020d0cc48
+message: Duplicate from inria-soda/tabular-benchmark 
+
+file changes:
+A	.gitattributes
+A	README.md
+A	clf_cat/albert.csv
+A	clf_cat/compas-two-years.csv
+A	clf_cat/covertype.csv   [stored in Git LFS]
+A	clf_cat/default-of-credit-card-clients.csv
+A	clf_cat/electricity.csv
+A	clf_cat/eye_movements.csv
+A	clf_cat/road-safety.csv   [stored in Git LFS]
+A	clf_num/Bioresponse.csv
+A	clf_num/Diabetes130US.csv
+A	clf_num/Higgs.csv   [stored in Git LFS]
+A	clf_num/MagicTelescope.csv
+A	clf_num/MiniBooNE.csv   [stored in Git LFS]
+A	clf_num/bank-marketing.csv
+A	clf_num/california.csv
+A	clf_num/covertype.csv   [stored in Git LFS]
+A	clf_num/credit.csv
+A	clf_num/default-of-credit-card-clients.csv
+A	clf_num/electricity.csv
+A	clf_num/eye_movements.csv
+A	clf_num/heloc.csv
+A	clf_num/house_16H.csv
+A	clf_num/jannis.csv   [stored in Git LFS]
+A	clf_num/pol.csv
+A	git
+A	reg_cat/Airlines_DepDelay_1M.csv   [stored in Git LFS]
+A	reg_cat/Allstate_Claims_Severity.csv   [stored in Git LFS]
+A	reg_cat/Bike_Sharing_Demand.csv
+A	reg_cat/Brazilian_houses.csv
+A	reg_cat/Mercedes_Benz_Greener_Manufacturing.csv
+A	reg_cat/SGEMM_GPU_kernel_performance.csv   [stored in Git LFS]
+A	reg_cat/abalone.csv
+A	reg_cat/analcatdata_supreme.csv
+A	reg_cat/delays_zurich_transport.csv   [stored in Git LFS]
+A	reg_cat/diamonds.csv
+A	reg_cat/house_sales.csv
+A	reg_cat/medical_charges.csv
+A	reg_cat/nyc-taxi-green-dec-2016.csv   [stored in Git LFS]
+A	reg_cat/particulate-matter-ukair-2017.csv   [stored in Git LFS]
+A	reg_cat/seattlecrime6.csv
+A	reg_cat/topo_2_1.csv   [stored in Git LFS]
+A	reg_cat/visualizing_soil.csv
+A	reg_num/Ailerons.csv
+A	reg_num/Bike_Sharing_Demand.csv
+A	reg_num/Brazilian_houses.csv
+A	reg_num/MiamiHousing2016.csv
+A	reg_num/abalone.csv
+A	reg_num/cpu_act.csv
+A	reg_num/delays_zurich_transport.csv   [stored in Git LFS]
+A	reg_num/diamonds.csv
+A	reg_num/elevators.csv
+A	reg_num/house_16H.csv
+A	reg_num/house_sales.csv
+A	reg_num/houses.csv
+A	reg_num/medical_charges.csv
+A	reg_num/nyc-taxi-green-dec-2016.csv   [stored in Git LFS]
+A	reg_num/pol.csv
+A	reg_num/sulfur.csv
+A	reg_num/superconduct.csv   [stored in Git LFS]
+A	reg_num/wine_quality.csv
+A	reg_num/yprop_4_1.csv

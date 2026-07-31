@@ -1,0 +1,18 @@
+dataset:    yousry10/goHunt_JBG
+commit:     66b5a15372d9adc321cceec78a22ab8dd7956bd3
+type:       merge
+message:    Upload merged_shuffled_Safe_Unsafe.xlsx
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:42Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# yousry10/goHunt_JBG @ 66b5a15372
+message: Upload merged_shuffled_Safe_Unsafe.xlsx 
+
+file changes:
+M	.gitattributes
+A	merged_shuffled_Safe_Unsafe.xlsx   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

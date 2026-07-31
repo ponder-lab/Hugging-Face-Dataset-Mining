@@ -1,0 +1,18 @@
+dataset:    dmariko/clinical-trials-xml-2018-2024
+commit:     bdd4aa9bffc3fcfcf998ca59da7af9eebc14b195
+type:       merge
+message:    Upload merged-xml-simple-text-extractions.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:15Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# dmariko/clinical-trials-xml-2018-2024 @ bdd4aa9bff
+message: Upload merged-xml-simple-text-extractions.csv 
+
+file changes:
+M	.gitattributes
+A	merged-xml-simple-text-extractions.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

@@ -1,0 +1,68 @@
+dataset:    raniaaara/rose-dataset-with-acu
+commit:     562276570ac838fe6c4940f5f904342fe231591f
+type:       column/field add-remove
+message:    Update by adding ACU columns for matchsum, brio, gsum, and simcls
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:46Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# raniaaara/rose-dataset-with-acu @ 562276570a
+message: Update by adding ACU columns for matchsum, brio, gsum, and simcls 
+
+file changes:
+M	small_subset_data_with_acu_all.csv
+
+[small_subset_data_with_acu_all.csv] column change:
+  removed: []
+  added:   ['brio_summary', 'brio_summary_acu', 'gsum_summary', 'gsum_summary_acu', 'matchsum_summary', 'matchsum_summary_acu', 'simcls_summary', 'simcls_summary_acu']
+  diff --git a/small_subset_data_with_acu_all.csv b/small_subset_data_with_acu_all.csv
+  index 299ec83..2cf41d6 100644
+  --- a/small_subset_data_with_acu_all.csv
+  +++ b/small_subset_data_with_acu_all.csv
+  @@ -1,4 +1,4 @@
+  -source,reference,reference_acus,count_id,example_id,annotations,system_outputs,article_len,summary_len,gemini_summary,openai_summary,mistral_summary,cohere_summary,deepseek_summary,reference_acu,openai_summary_acu,gemini_summary_acu,mistral_summary_acu,deepseek_summary_acu,cohere_summary_acu
+  +source,reference,reference_acus,count_id,example_id,annotations,system_outputs,article_len,summary_len,gemini_summary,openai_summary,mistral_summary,cohere_summary,deepseek_summary,reference_acu,openai_summary_acu,gemini_summary_acu,mistral_summary_acu,deepseek_summary_acu,cohere_summary_acu,gsum_summary,matchsum_summary,brio_summary,simcls_summary,gsum_summary_acu,matchsum_summary_acu,brio_summary_acu,simcls_summary_acu
+   "Zinedine Zidane joined in the clamour for the highly-rated midfielder Paul Pogba by claiming it is 'only logical' that Real Madrid want him on board at the Bernabeu. The France international, who is currently nursing a hamstring injury, extended his contract with the Old Lady until the end of the 2018-19 season back in October, however he has been consistently linked with a move away from Turin. The 22-year-old has attracted interest from a number of top European clubs, with Manchester United, Paris Saint-Germain, Barcelona and Madrid all being tipped as potential suitors. Real Madrid Castilla coach Zinedine Zidane is not shocked by his club's interest in compatriot Paul Pogba . Pogba has been a key figure for Juventus this season and is a much sought after talent throughout Europe . Keen on a return to the Premier League, Pogba is reported to be part of a £100million summer wishlist at former club United and is also understood to have been closely monitored by Manchester City and Chelsea. With so much attention surrounding the young star - who has netted seven goals in 22 Serie A appearances this season - Zidane feels such interest should not come as a surprise to those aware of his talents. Juventus midfielder and former United player Pogba is also on Louis van Gaal's radar at Old Trafford . 'When we are talking about a player like Pogba, it is only logical Real Madrid are interested in signing him,' Zidane told French channel Canal+. 'He is a player with immense potential, who still has an important margin for improvement. 'He is still young and has an exciting future ahead of him. 'Where Pogba will play next season? I don't know the answer to that question. You will have to ask him.'","Zinedine Zidane said interest in Juventus star Paul Pogba is 'only logical'
+   The 22-year-old has seven goals in 22 Serie A appearances this season .
+   Pogba has also attracted interest from Manchester United, Chelsea and Manchester City .","[""Zinedine Zidane said interest in Juventus star Paul Pogba is 'only logical'""
+  @@ -80,7 +80,38 @@ Pogba has also attracted interest from Manchester United, Chelsea and Manchester
+    'Paul Pogba is 22 years old.'
+    'Paul Pogba has attracted attention from several top sides.'
+    'Paul Pogba has attracted attention from all sides.'
+  - 'Paul Pogba has admired his talent.']"
+  + 'Paul Pogba has admired his talent.']",Paul Pogba extended his contract with Juventus until the end of the 2018-19 season in October. The France international has been linked with a move away from Turin this summer. Zinedine Zidane says it is 'only logical' that Real Madrid are interested in signing him. Pogba is also on Louis van Gaal's £100million summer wishlist at Manchester United .,"The 22-year-old has attracted interest from a number of top European clubs, with Manchester United, Paris Saint-Germain, Barcelona and Madrid all being tipped as potential suitors. Real Madrid Castilla coach Zinedine Zidane is not shocked by his club's interest in compatriot Paul Pogba. Juventus midfielder and former United player Pogba is also on Louis van Gaal's radar at Old Trafford.",Paul Pogba has been linked with a move away from Juventus this summer. The midfielder is a target for Real Madrid and Manchester United. Zinedine Zidane says it is 'only logical' that his club are interested in the midfielder. The France international is currently out with a hamstring injury.,"Real Madrid coach Zinedine Zidane says it is 'only logical' that his club want Paul Pogba. Juventus midfielder Pogba has been linked with a move away from Turin this summer. Manchester United, PSG, Barcelona and Madrid are all interested in the 22-year-old.","['Paul Pogba extended his contract with Juventus.'
+  + 'Paul Pogba extended his contract until the end of the 2018-19 season.'
+  + 'Paul Pogba extended his contract in October.'
+  + 'Paul Pogba has been linked with a move away from Turin this summer.'
+  + 'Paul Pogba is a France international.'
+  + ""Zinedine Zidane says it is 'only logical' that Real Madrid are interested in signing him.""
+  + ""Pogba is on Louis van Gaal's £100million summer wishlist.""
+  + ""Pogba is on Louis van Gaal's summer wishlist at Manchester United.""]","['The 22-year-old has attracted interest from a number of top European clubs.'
+  + 'Manchester United is tipped as a potential su causer.'
+  + 'Paris Saint-Germain is tipped as a potential su causer.'
+  + 'Barcelona is tipped as a potential su causer.'
+  + 'Madrid is tipped as a potential su causer.'
+  + ""Zinedine Zidane is not shocked by his club's interest in Paul Pogba.""
+  + 'Zinedine Zidane is the Real Madrid Castilla coach.'
+  + 'Paul Pogba is a compatriot of Zinedine Zidane.'
+  + ""Pogba is on Louis van Gaal's radar at Old Trafford.""
+  + 'Pogba is a Juventus midfielder.' 'Pogba is a former United player.']","['Paul Pogba has been linked with a move away from Juventus.'
+  + 'Paul Pogba has been linked with a move this summer.'
+  + 'Paul Pogba is a target for Real Madrid.'
+  + 'Paul Pogba is a target for Manchester United.'
+  + 'Paul Pogba is a midfielder.'
+  + ""Zinedine Zidane says it is 'only logical' that his club are interested in the midfielder.""
+  + 'Paul Pogba is currently out with a hamstring injury.'
+  + 'Paul Pogba is a France international.']","[""Zinedine Zidane says it is 'only logical' that his club want Paul Pogba.""
+  + 'Zinedine Zidane is the Real Madrid coach.'
+  + 'Pogba has been linked with a move away from Turin.'
+  + 'Pogba has been linked with a move this summer.'
+  + 'Pogba is a Juventus midfielder.'
+  + 'Manchester United is interested in Paul Pogba.'
+  + 'PSG is interested in Paul Pogba.'
+  + 'Barcelona is interested in Paul Pogba.'
+  + 'Madrid is interested in Paul Pogba.' 'Paul Pogba is 22 years old.']"
+   "Match of the Day commentator Jonathan Pearce got more than he bargained for at the Emirates on Sunday afternoon, when a rogue sprinkler soaked him ahead of kick-off. The 55-year-old BBC stalwart was preparing to present a piece to camera ahead of Arsenal's match with Everton, but got caught short when a sprinkler was turned on just seconds before he went on air. 'You could have told us', Pearce can be heard saying after he jumped out of shot - and out of reach of the water - but he appeared to take it in good spirits when he explained the reason for his soaking on air minutes later. Jonathan Pearce prepares to go on air to talk about Arsenal's game with Everton at the Emirates Stadium . Pearce is caught short when a sprinkler is turned on behind him and he gets a soaking . Pearce later laughed off the incident when he eventually made it onto air, saying it was 'very funny' 'Just as we were getting ready to do this piece,' Pearce explained, 'go on, have a laugh, have a laugh... the sprinkler came on behind me, and I'm absolutely drenched. So yeah, very funny, this Sunday lunchtime.' Pearce was at the Emirates to see Arsenal attempt to take three points against Everton, a result which would see them go third in the Premier League table, ahead of Manchester United. Louis van Gaal's side beat Sunderland 2-0 at Old Trafford on Saturday to go above the Gunners, but Arsenal could recapture third place with a win.","Jonathan Pearce was at the Emirates to commentate for Match of the Day .
+   The 55-year-old was preparing a piece to camera when a sprinkler came on .
+   Pearce was soaked and ran out of shot, saying 'you could have told us'
+  ... 21445 further lines not shown (cap is 50)

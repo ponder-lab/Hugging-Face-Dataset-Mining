@@ -1,0 +1,19 @@
+dataset:    nscharrenberg/DBNL-public
+commit:     34cc57817fe115a94bc1214f229b3cbf5c476dc9
+type:       rename/split-standardization
+message:    Add books and chapters subsets for 50 books on a 50/50 forget-retain split.
+status:     commit-unreachable
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:40Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+NOTHING WAS ANALYZED: commit 34cc57817fe115a94bc1214f229b3cbf5c476dc9 cannot be read from nscharrenberg/DBNL-public any more.
+
+This is a revision no repository will produce, not a commit that
+changed no files. Two checks, because a stale local clone is not the
+same thing as a deleted commit:
+  1. local full clone: `git rev-parse 34cc57817f^{commit}` finds no commit
+     `git fetch origin` completed; commit still absent
+     `git fetch origin 34cc57817f` failed (fatal: remote error: upload-pack: not our ref 34cc57817fe115a94bc1214f229b3cbf5c476dc9); commit still absent
+  2. Hub tree endpoint at this revision: HTTP 404
+
+The repository itself still answers on the Hub (HTTP 200) and still serves a history; that history no longer contains this commit. Upstream history was rewritten after mining.

@@ -1,0 +1,18 @@
+dataset:    Abdulahad79/Crop_Classifiacation_Pakistan
+commit:     aa41ce587e081f13d27bea7ec52b963606944831
+type:       cleaning
+message:    Upload cleaned_combined.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:35Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Abdulahad79/Crop_Classifiacation_Pakistan @ aa41ce587e
+message: Upload cleaned_combined.csv 
+
+file changes:
+M	.gitattributes
+A	cleaned_combined.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

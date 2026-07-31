@@ -1,0 +1,18 @@
+dataset:    jr303/lexical-fields-with-tokens
+commit:     6f5c41c70f43871f46084a82eb112054bb1bfdc4
+type:       normalize/standardize/encode
+message:    Upload dataset_lexical_field_normalized_with_tokens-1.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:43Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# jr303/lexical-fields-with-tokens @ 6f5c41c70f
+message: Upload dataset_lexical_field_normalized_with_tokens-1.csv 
+
+file changes:
+M	.gitattributes
+A	dataset_lexical_field_normalized_with_tokens-1.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

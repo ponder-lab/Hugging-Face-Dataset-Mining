@@ -1,0 +1,18 @@
+dataset:    KeshavBanka/Cocvid
+commit:     54b1a9a1a50d4f0b7deecf457c78e28a4685e7e2
+type:       cleaning
+message:    Upload Covid Data Cleaned.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:50Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# KeshavBanka/Cocvid @ 54b1a9a1a5
+message: Upload Covid Data Cleaned.csv 
+
+file changes:
+M	.gitattributes
+A	Covid Data Cleaned.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

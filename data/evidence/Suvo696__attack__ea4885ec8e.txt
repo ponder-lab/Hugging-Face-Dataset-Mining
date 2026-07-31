@@ -1,0 +1,18 @@
+dataset:    Suvo696/attack
+commit:     ea4885ec8eef5777cb6a004b01bffcc65ebe6fe8
+type:       normalize/standardize/encode
+message:    Rename Normal_data.csv to data/Normal_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:20Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Suvo696/attack @ ea4885ec8e
+message: Rename Normal_data.csv to data/Normal_data.csv 
+
+file changes:
+M	.gitattributes
+R100	Normal_data.csv	data/Normal_data.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

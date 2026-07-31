@@ -1,0 +1,13 @@
+dataset:    BestiVictoryLab/VADB
+commit:     8bd608a6874d64cc7822be809c370d5fe897e3b4
+type:       merge
+message:    Upload merged_comment_tag.json
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:41Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# BestiVictoryLab/VADB @ 8bd608a687
+message: Upload merged_comment_tag.json 
+
+file changes:
+A	merged_comment_tag.json   [stored in Git LFS]

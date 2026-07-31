@@ -1,0 +1,68 @@
+dataset:    joelkoch/rag_eval
+commit:     9d9b906d462be9e5f2926eace7a30a7d5780027e
+type:       deduplication
+message:    Deduplicate context-question pairs
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# joelkoch/rag_eval @ 9d9b906d46
+message: Deduplicate context-question pairs 
+
+file changes:
+M	phoenix.csv
+
+[phoenix.csv] column change:
+  removed: ['answers', 'groundedness_response', 'groundedness_score', 'relevance_response', 'relevance_score', 'standalone_response', 'standalone_score']
+  added:   []
+  diff --git a/phoenix.csv b/phoenix.csv
+  index 22ec889..8e8d253 100644
+  --- a/phoenix.csv
+  +++ b/phoenix.csv
+  @@ -1,4 +1,4 @@
+  -context,questions,answers,groundedness_response,relevance_response,standalone_response,groundedness_score,relevance_score,standalone_score
+  +context,questions
+   "defmodule Mix.Tasks.Local.Phx do
+     use Mix.Task
+   
+  @@ -17,37 +17,7 @@ context,questions,answers,groundedness_response,relevance_response,standalone_re
+       Mix.Task.run(""archive.install"", [""hex"", ""phx_new"" | args])
+     end
+   end
+  -",What command is used to update the Phoenix project generator locally in Elixir?,mix local.phx,"Evaluation: The context provides a well-structured explanation of the Mix Task defined in the `Mix.Tasks.Local.Phx` module, which is specifically created to update the Phoenix project generator locally. The documentation clearly states that the command to execute this task is `$ mix local.phx`. Additionally, it specifies that it accepts the same command line options as `archive.install hex phx_new`, further indicating the command's purpose and usage. The context provides all necessary details to answer the question unambiguously.
+  -Total rating: 5","Evaluation: This question is relevant to web developers who are using Elixir and the Phoenix framework to build web applications. Updating the Phoenix project generator ensures developers have the latest features and bug fixes, which is important for maintaining a modern and efficient development environment. Knowing how to perform this update is essential for developers to keep their tools up-to-date and secure. However, it is specific to those using Elixir and Phoenix, so it may not be universally applicable to all web developers. Nevertheless, for those who are working within this ecosystem, it is a crucial piece of knowledge.
+  -
+  -Total rating: 4","Evaluation: The question is context-independent and provides enough specific information to be understood without additional context. It mentions ""command,"" ""update,"" ""Phoenix project generator,"" and ""Elixir,"" which are clear and specific terms that someone familiar with the Elixir programming environment would understand. Thus, the question is self-contained and does not rely on unseen context to be meaningful.
+  -
+  -Total rating: 5",5,4,5
+  -"defmodule Mix.Tasks.Local.Phx do
+  -  use Mix.Task
+  -
+  -  @shortdoc ""Updates the Phoenix project generator locally""
+  -
+  -  @moduledoc """"""
+  -  Updates the Phoenix project generator locally.
+  -
+  -      $ mix local.phx
+  -
+  -  Accepts the same command line options as `archive.install hex phx_new`.
+  -  """"""
+  -
+  -  @impl true
+  -  def run(args) do
+  -    Mix.Task.run(""archive.install"", [""hex"", ""phx_new"" | args])
+  -  end
+  -end
+  -",What is the purpose of the Mix.Tasks.Local.Phx module?,The purpose of the Mix.Tasks.Local.Phx module is to update the Phoenix project generator locally.,"Evaluation: The context provides a clear and detailed description of the purpose of the Mix.Tasks.Local.Phx module. It states that this module updates the Phoenix project generator locally, and it gives specific guidance on its use with a reference to the command line command. Additionally, it explains that it accepts the same command line options as `archive.install hex phx_new`, which adds further understanding of its functionality. Therefore, the context is sufficient and unambiguous for answering the question.
+  -
+  -Total rating: 5","Evaluation: The question pertains to understanding specific modules in the Phoenix web framework, which is a crucial part of building web applications using Elixir. Knowing the purpose of the `Mix.Tasks.Local.Phx` module helps developers manage tasks related to the Phoenix framework locally, potentially streamlining development workflows. For web developers working with Phoenix, having a clear understanding of this module is essential to effectively utilize the framework's features and automations, making this question very useful.
+  -
+  -Total rating: 5","Evaluation: The question asks for the purpose of a specific module, Mix.Tasks.Local.Phx. Although it uses a technical term, it is clear and understandable for those familiar with this domain, such as Elixir/Phoenix developers. It doesn't require additional context to make sense as it is specific about what information is being sought and about which module. 
+  -
+  -Total rating: 5",5,5,5
+  +",What command is used to update the Phoenix project generator locally in Elixir?
+   "defmodule Mix.Tasks.Local.Phx do
+     use Mix.Task
+   
+  @@ -66,12 +36,7 @@ Total rating: 5",5,5,5
+  ... 2967 further lines not shown (cap is 50)

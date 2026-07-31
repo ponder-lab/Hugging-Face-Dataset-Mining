@@ -1,0 +1,173 @@
+dataset:    imageomics/Heliconius-Collection_Cambridge-Butterfly
+commit:     38a17b32dbb4ccbfb770c9fca414c51ddbd3c820
+type:       normalize/standardize/encode
+message:    standardize datasets (#2)
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# imageomics/Heliconius-Collection_Cambridge-Butterfly @ 38a17b32db
+message: standardize datasets (#2) 
+
+file changes:
+M	.gitattributes
+M	Jiggins_Heliconius_Master.csv   [stored in Git LFS]
+M	Jiggins_Zenodo_Img_Master.csv   [stored in Git LFS]
+M	Jiggins_Zenodo_dorsal_Img_Master.csv
+M	README.md
+D	licenses.json
+A	metadata/Missing_taxa_Jiggins_Zenodo_Master.csv
+A	metadata/licenses.json
+A	notebooks/standardize_datasets.ipynb
+A	scripts/checksum.py
+A	scripts/download_jiggins_subset.py
+
+[Jiggins_Heliconius_Master.csv] column change:
+  removed: []
+  added:   ['file_url', 'genus', 'hybrid_stat']
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- Jiggins_Heliconius_Master.csv@2f33750b07
+  +++ Jiggins_Heliconius_Master.csv@38a17b32db
+  @@ -1,20 +1,20 @@
+  -CAMID,X,Image_name,View,zenodo_name,zenodo_link,Sequence,Taxonomic_Name,Locality,Sample_accession,Collected_by,Other_ID,Date,Dataset,Store,Brood,Death_Date,Cross_Type,Stage,Sex,Unit_Type,file_type,record_number,species,subspecies
+  -14N015,15138,14N015_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,15,Heliconius melpomene ssp. cythera,,ERS4212591,,,,Nadeau Sheffield,,,,,,Male,,jpg,4289223,Heliconius melpomene,cythera
+  -14N015,15137,14N015_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,15,Heliconius melpomene ssp. cythera,,ERS4212591,,,,Nadeau Sheffield,,,,,,Male,,jpg,4289223,Heliconius melpomene,cythera
+  -14N501,14934,14N501_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,501,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212612,,,06/02/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N501,14933,14N501_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,501,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212612,,,06/02/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N502,14936,14N502_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,502,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212613,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N502,14935,14N502_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,502,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212613,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N503,14938,14N503_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,503,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212614,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N503,14937,14N503_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,503,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212614,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N506,15154,14N506_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N506,15153,14N506_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N507,15155,14N507_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N507,15156,14N507_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N508,14939,14N508_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/11/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N508,14940,14N508_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/11/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N512,14942,14N512_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,512,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212615,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera
+  -14N512,14941,14N512_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,512,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212615,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera
+  -15N004,14943,15N004_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera
+  -15N004,14944,15N004_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera
+  -15N009,14946,15N009_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,9,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953826,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera
+  +CAMID,X,Image_name,View,zenodo_name,zenodo_link,Sequence,Taxonomic_Name,Locality,Sample_accession,Collected_by,Other_ID,Date,Dataset,Store,Brood,Death_Date,Cross_Type,Stage,Sex,Unit_Type,file_type,record_number,species,subspecies,genus,file_url,hybrid_stat
+  +14N015,15138,14N015_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,15,Heliconius melpomene ssp. cythera,,ERS4212591,,,,Nadeau Sheffield,,,,,,Male,,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N015_v.JPG,non-hybrid
+  +14N015,15137,14N015_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,15,Heliconius melpomene ssp. cythera,,ERS4212591,,,,Nadeau Sheffield,,,,,,Male,,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N015_d.JPG,non-hybrid
+  +14N501,14934,14N501_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,501,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212612,,,06/02/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N501_v.JPG,non-hybrid
+  +14N501,14933,14N501_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,501,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212612,,,06/02/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N501_d.JPG,non-hybrid
+  +14N502,14936,14N502_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,502,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212613,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N502_v.JPG,non-hybrid
+  +14N502,14935,14N502_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,502,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212613,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N502_d.JPG,non-hybrid
+  +14N503,14938,14N503_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,503,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212614,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N503_v.JPG,non-hybrid
+  +14N503,14937,14N503_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,503,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212614,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N503_d.JPG,non-hybrid
+  +14N506,15154,14N506_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N506_v.JPG,non-hybrid
+  +14N506,15153,14N506_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N506_d.JPG,non-hybrid
+  +14N507,15155,14N507_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N507_d.JPG,non-hybrid
+  +14N507,15156,14N507_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N507_v.JPG,non-hybrid
+  +14N508,14939,14N508_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/11/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N508_d.JPG,non-hybrid
+  +14N508,14940,14N508_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/11/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N508_v.JPG,non-hybrid
+  +14N512,14942,14N512_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,512,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212615,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N512_v.JPG,non-hybrid
+  +14N512,14941,14N512_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,512,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212615,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N512_d.JPG,non-hybrid
+  +15N004,14943,15N004_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N004_d.JPG,non-hybrid
+  +15N004,14944,15N004_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N004_v.JPG,non-hybrid
+  +15N009,14946,15N009_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,9,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953826,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N009_v.JPG,non-hybrid
+
+[Jiggins_Zenodo_Img_Master.csv] column change:
+  removed: []
+  added:   ['file_url', 'hybrid_stat']
+  payload size 13,583,175 -> 15,528,648 bytes (+1,945,473): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- Jiggins_Zenodo_Img_Master.csv@2f33750b07
+  +++ Jiggins_Zenodo_Img_Master.csv@38a17b32db
+  @@ -1,20 +1,20 @@
+  -CAMID,X,Image_name,View,zenodo_name,zenodo_link,Sequence,Taxonomic_Name,Locality,Sample_accession,Collected_by,Other_ID,Date,Dataset,Store,Brood,Death_Date,Cross_Type,Stage,Sex,Unit_Type,file_type,record_number,species,subspecies,genus
+  -14N004,15131,14N004_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,4,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N004,15132,14N004_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,4,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N009,15134,14N009_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,9,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N009,15133,14N009_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,9,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N014,15136,14N014_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,14,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N014,15135,14N014_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,14,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N015,15138,14N015_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,15,Heliconius melpomene ssp. cythera,,ERS4212591,,,,Nadeau Sheffield,,,,,,Male,,jpg,4289223,Heliconius melpomene,cythera,Heliconius
+  -14N015,15137,14N015_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,15,Heliconius melpomene ssp. cythera,,ERS4212591,,,,Nadeau Sheffield,,,,,,Male,,jpg,4289223,Heliconius melpomene,cythera,Heliconius
+  -14N023,15139,14N023_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,23,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N023,15140,14N023_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,23,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N037,15141,14N037_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,37,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N037,15142,14N037_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,37,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N038,15143,14N038_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,38,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N038,15144,14N038_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,38,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N039,15146,14N039_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,39,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N039,15145,14N039_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,39,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N043,15148,14N043_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,43,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N043,15147,14N043_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,43,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  -14N044,15150,14N044_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,44,,,,,,,Nadeau Sheffield,,,,,,,,jpg,4289223,,,
+  +CAMID,X,Image_name,View,zenodo_name,zenodo_link,Sequence,Taxonomic_Name,Locality,Sample_accession,Collected_by,Other_ID,Date,Dataset,Store,Brood,Death_Date,Cross_Type,Stage,Sex,Unit_Type,file_type,record_number,species,subspecies,genus,file_url,hybrid_stat
+  +14N015,15138,14N015_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,15,Heliconius melpomene ssp. cythera,,ERS4212591,,,,Nadeau Sheffield,,,,,,Male,,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N015_v.JPG,non-hybrid
+  +14N015,15137,14N015_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,15,Heliconius melpomene ssp. cythera,,ERS4212591,,,,Nadeau Sheffield,,,,,,Male,,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N015_d.JPG,non-hybrid
+  +14N501,14934,14N501_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,501,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212612,,,06/02/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N501_v.JPG,non-hybrid
+  +14N501,14933,14N501_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,501,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212612,,,06/02/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N501_d.JPG,non-hybrid
+  +14N502,14936,14N502_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,502,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212613,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N502_v.JPG,non-hybrid
+  +14N502,14935,14N502_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,502,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212613,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N502_d.JPG,non-hybrid
+  +14N503,14938,14N503_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,503,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212614,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N503_v.JPG,non-hybrid
+  +14N503,14937,14N503_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,503,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212614,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N503_d.JPG,non-hybrid
+  +14N506,15154,14N506_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N506_v.JPG,non-hybrid
+  +14N506,15153,14N506_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N506_d.JPG,non-hybrid
+  +14N507,15155,14N507_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N507_d.JPG,non-hybrid
+  +14N507,15156,14N507_v.JPG,ventral,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N507_v.JPG,non-hybrid
+  +14N508,14939,14N508_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/11/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N508_d.JPG,non-hybrid
+  +14N508,14940,14N508_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/11/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N508_v.JPG,non-hybrid
+  +14N512,14942,14N512_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,512,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212615,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N512_v.JPG,non-hybrid
+  +14N512,14941,14N512_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,512,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212615,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N512_d.JPG,non-hybrid
+  +15N004,14943,15N004_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N004_d.JPG,non-hybrid
+  +15N004,14944,15N004_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N004_v.JPG,non-hybrid
+  +15N009,14946,15N009_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,9,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953826,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N009_v.JPG,non-hybrid
+
+[Jiggins_Zenodo_dorsal_Img_Master.csv] column change:
+  removed: []
+  added:   ['file_url', 'genus', 'hybrid_stat', 'record_number', 'species', 'subspecies']
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- Jiggins_Zenodo_dorsal_Img_Master.csv@2f33750b07
+  +++ Jiggins_Zenodo_dorsal_Img_Master.csv@38a17b32db
+  @@ -1,20 +1,20 @@
+  -CAMID,X,Image_name,View,zenodo_name,zenodo_link,Sequence,Taxonomic_Name,Locality,Sample_accession,Collected_by,Other_ID,Date,Dataset,Store,Brood,Death_Date,Cross_Type,Stage,Sex,Unit_Type,file_type,CAM_Dupe
+  -14N004,15131,14N004_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,4,,,,,,,Nadeau Sheffield,,,,,,,,jpg,False
+  -14N009,15133,14N009_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,9,,,,,,,Nadeau Sheffield,,,,,,,,jpg,False
+  -14N014,15135,14N014_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,14,,,,,,,Nadeau Sheffield,,,,,,,,jpg,False
+  -14N015,15137,14N015_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,15,Heliconius melpomene ssp. cythera,,ERS4212591,,,,Nadeau Sheffield,,,,,,Male,,jpg,False
+  -14N023,15139,14N023_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,23,,,,,,,Nadeau Sheffield,,,,,,,,jpg,False
+  -14N037,15141,14N037_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,37,,,,,,,Nadeau Sheffield,,,,,,,,jpg,False
+  -14N038,15143,14N038_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,38,,,,,,,Nadeau Sheffield,,,,,,,,jpg,False
+  -14N039,15145,14N039_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,39,,,,,,,Nadeau Sheffield,,,,,,,,jpg,False
+  -14N043,15147,14N043_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,43,,,,,,,Nadeau Sheffield,,,,,,,,jpg,False
+  -14N044,15149,14N044_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,44,,,,,,,Nadeau Sheffield,,,,,,,,jpg,False
+  -14N045,15151,14N045_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,45,,,,,,,Nadeau Sheffield,,,,,,,,jpg,False
+  -14N501,14933,14N501_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,501,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212612,,,06/02/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,False
+  -14N502,14935,14N502_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,502,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212613,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,False
+  -14N503,14937,14N503_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,503,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212614,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,False
+  -14N506,15153,14N506_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,False
+  -14N507,15155,14N507_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,False
+  -14N508,14939,14N508_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/11/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,False
+  -14N512,14941,14N512_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,512,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212615,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,False
+  -15N004,14943,15N004_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,False
+  +CAMID,X,Image_name,View,zenodo_name,zenodo_link,Sequence,Taxonomic_Name,Locality,Sample_accession,Collected_by,Other_ID,Date,Dataset,Store,Brood,Death_Date,Cross_Type,Stage,Sex,Unit_Type,file_type,record_number,species,subspecies,genus,file_url,hybrid_stat,CAM_Dupe
+  +14N015,15137,14N015_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,15,Heliconius melpomene ssp. cythera,,ERS4212591,,,,Nadeau Sheffield,,,,,,Male,,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N015_d.JPG,non-hybrid,False
+  +14N501,14933,14N501_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,501,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212612,,,06/02/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N501_d.JPG,non-hybrid,False
+  +14N502,14935,14N502_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,502,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212613,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N502_d.JPG,non-hybrid,False
+  +14N503,14937,14N503_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,503,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212614,,,06/09/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N503_d.JPG,non-hybrid,False
+  +14N506,15153,14N506_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N506_d.JPG,non-hybrid,False
+  +14N507,15155,14N507_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/10/2014,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N507_d.JPG,non-hybrid,False
+  +14N508,14939,14N508_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Guayllabamba,,,,06/11/2014,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N508_d.JPG,non-hybrid,False
+  +14N512,14941,14N512_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,512,Heliconius melpomene ssp. cythera,Guayllabamba,ERS4212615,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/14N512_d.JPG,non-hybrid,False
+  +15N004,14943,15N004_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N004_d.JPG,non-hybrid,False
+  +15N009,14945,15N009_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,9,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953826,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N009_d.JPG,non-hybrid,False
+  +15N016,15157,15N016_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius erato ssp. cyrbia,Mashpi town (117),,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius erato,cyrbia,Heliconius,https://zenodo.org/record/4289223/files/15N016_d.JPG,non-hybrid,False
+  +15N017,15159,15N017_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius erato ssp. cyrbia,Mashpi town (117),,,,,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius erato,cyrbia,Heliconius,https://zenodo.org/record/4289223/files/15N017_d.JPG,non-hybrid,False
+  +15N020,15161,15N020_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,20,Heliconius melpomene ssp. cythera,Road to Mashpi 2 (116),ERS3953827,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N020_d.JPG,non-hybrid,False
+  +15N035,14947,15N035_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,35,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS4212616,,,,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N035_d.JPG,non-hybrid,False
+  +15N036,14949,15N036_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,36,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS4212617,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N036_d.JPG,non-hybrid,False
+  +15N038,15163,15N038_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Mashpi town (117),,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N038_d.JPG,non-hybrid,False
+  +15N041,14951,15N041_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,0,Heliconius melpomene ssp. cythera,Mashpi town (117),,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N041_d.JPG,non-hybrid,False
+  +15N101,14953,15N101_d.JPG,dorsal,0.1.nn.requests.csv,https://zenodo.org/record/4289223,0,Heliconius erato ssp. venus,Queremal,,,,,Nadeau Sheffield,,,,,,Female,wild,jpg,4289223,Heliconius erato,venus,Heliconius,https://zenodo.org/record/4289223/files/15N101_d.JPG,non-hybrid,False
+  +15N104,15165,15N104_d.JPG,dorsal,0.4.nn.requests2.csv,https://zenodo.org/record/4289223,0,Heliconius erato ssp. venus x chestertonii,Queremal,,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius erato,venus x chestertonii,Heliconius,https://zenodo.org/record/4289223/files/15N104_d.JPG,hybrid,False
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

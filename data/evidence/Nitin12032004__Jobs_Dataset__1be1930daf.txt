@@ -1,0 +1,18 @@
+dataset:    Nitin12032004/Jobs_Dataset
+commit:     1be1930daf4338bc143b425b5421f376ae679997
+type:       merge
+message:    Upload Merged_data2.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:45Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Nitin12032004/Jobs_Dataset @ 1be1930daf
+message: Upload Merged_data2.csv 
+
+file changes:
+M	.gitattributes
+A	Merged_data2.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

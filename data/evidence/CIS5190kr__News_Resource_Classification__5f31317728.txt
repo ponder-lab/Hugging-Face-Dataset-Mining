@@ -1,0 +1,124 @@
+dataset:    CIS5190kr/News_Resource_Classification
+commit:     5f31317728e36301ef1941565383d6b263545ee5
+type:       normalize/standardize/encode
+message:    Upload title_company_normalized dataset with train and test splits
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:10Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# CIS5190kr/News_Resource_Classification @ 5f31317728
+message: Upload title_company_normalized dataset with train and test splits 
+
+file changes:
+M	test/test.csv
+M	train/train.csv
+
+[test/test.csv] column change:
+  removed: ['news_company']
+  added:   ['News Outlet', 'Unnamed: 0', 'label']
+  diff --git a/test/test.csv b/test/test.csv
+  index 0ad84bd..0d7c3d5 100644
+  --- a/test/test.csv
+  +++ b/test/test.csv
+  @@ -1,762 +1,762 @@
+  -title,news_company
+  -poll: half of voter plan to cast their ballot earli — with a stark partisan divid,0
+  -kamala harri repeatedli pivot to trump when grill on immigr record in fox news interview,1
+  -georgia republican readi post-elect legal strategi,1
+  -whoopi goldberg rip cancel cultur target pepé le pew: 'i don't know whi you'v got to era everything',1
+  -"on thi day in history, august 24, 1814, british troop ransacked, torch white hou and capitol",1
+  -"isra militari abandon kibbutz for hour dure hamas' attack oct. 7, idf inquiri find",0
+  -"the best keyboard of 2024, test and review by our editor",0
+  -bala: everyth to know about the best at home fit gear,0
+  -"nearli 200 gop lawmak blast biden' epa for target farmers, ranchers: 'egregi feder overreach'",1
+  -"analysis: as war rages, some in lebanon see opportun in a weaken hezbollah",0
+  -4th gen farmer blast biden admin for send billion to ukrain as us farmer suffer: 'face extinction',1
+  -"ozemp and other glp-1 drug could reduc arthriti symptom in some, expert claim",1
+  -"wwii vet, 101, 'finally' walk at graduat 80 year after have to miss ceremoni amid global war",1
+  -u.s. intel say it ha ‚äòhigh confidence‚äô israel didn‚äôt cau gaza hospit blast,0
+  -wisconsin parent challeng titl ix chang dure school board meeting: 'boy are boy and girl are girls',1
+  -12 best groceri deliveri servic for food and everyday essenti,0
+  -"cat have more freedom than women in afghanistan, meryl streep say",0
+  -dolli parton and her sister share their 'sweet potato casserole' recipe: 'perfect for the fall',1
+  -iran may be prepar to arm russia with short-rang ballist missil,0
+  -iranian presid say tehran will spend the $6 billion relea in prison exchang ‘wherev we need it’,0
+  -"a timelin of trump' many, mani posit on abort",0
+  -biden award first medal of honor to korean war hero,1
+  -"arizona grandma, man she mistakenli texted, to share thanksgiv for 7th straight year sinc 2016",1
+  -high school student have a strong shot at success with career technic education: 'a win-win',1
+  -trump offici say cnn can't handl critic after host shut down her interview: 'censor me',1
+  -ellen degen reveal 3 health diagno after 'excruci pain': 'i could disintegr in the shower',1
+  -"former proud boy leader enriqu tarrio get 22 years, longest jan. 6 sentenc yet",0
+  -highlight from jan. 6 hear day 3: trump' pressur on penc,0
+  -"the best brush and comb for all hair types, accord to expert",0
+  -101+ latino-own busi to support in 2024 and beyond,0
+  -fan boo tim walz as he leav michigan-minnesota game: 'get out of here!',1
+  -biden reveal mean of 'come to jesus' express from hot mic moment follow the sotu,1
+  -nra leader knock back liber pol 'who want to exagg our death': 'we haven't lost a beat',1
+  -"15 best flat iron of 2024, accord to hair expert",0
+  -"jan. 6 rioter hold 'stop the steal' sign swung at offic with a trump flag, fbi say",0
+  -vet explain how to clean your dog’ ear,0
+  -biden announc israel ha offer a three-part propo to end the war in gaza,0
+  -hurrican helene: over 220 dead as some commun struggl to get basic suppli,0
+  -#emptyshelvesjo trend on twitter amid biden’ suppli chain crisi,1
+  -"iowa school shooter show 'warn signs' and 'copycat behavior,' polic say",0
+  -"who wa hassan nasrallah, the hezbollah leader kill in beirut strike",0
+  -15 best last-minut father' day gift for dad,0
+  -"how to treat acn scar and hyperpigmentation, accord to expert",0
+  -suprem court rule in favor of nra in key first amend case,1
+  ... 1479 further lines not shown (cap is 50)
+
+[train/train.csv] column change:
+  removed: ['news_company']
+  added:   ['News Outlet', 'Unnamed: 0', 'label']
+  diff --git a/train/train.csv b/train/train.csv
+  index 4cf752b..7ac85bb 100644
+  --- a/train/train.csv
+  +++ b/train/train.csv
+  @@ -1,3044 +1,3044 @@
+  -title,news_company
+  -taylor swift scream dure era tour concert for secur guard to stop harass fan,1
+  -atlanta shoot victim' husband say polic detain him for hour,0
+  -biden to host virtual meet with governor to 'protect women' reproduct health' after abort rule,1
+  -"dem strategist fret harri 'sugar high' is over: 'if you'r not nervous, you'r not pay attention'",1
+  -jelli roll embrac role in countri music revolut after overcom addict and prison time,1
+  -buttigieg face grill on harris’ immigr record: ‘let’ get real’,1
+  -"suprem court set to overturn roe v. wade, leak draft opinion shows: report",1
+  -"biden question on migrant surge, say 'not rational' to 'send them back' to venezuela, cuba, nicaragua",1
+  -war in israel test biden' foreign polici case for 2024,0
+  -qatar re-evalu it role as mediat in gaza cease-fir talk,0
+  -biden admin eye more deport flight to venezuela as migrant number shatter record,1
+  -patriot remembered: militari mom memori son who die in nation guard helicopt crash with new book,1
+  -kamala harri tell 'the view' she can't think of anyth she would have done differ from biden,1
+  -jelli roll say hi feloni prevent him from book gig oversea,1
+  -trump mock biden' beach naps: 'somebodi convinc him he look great in a bath suit',1
+  -make sen of the new poll seven week from elect day,0
+  -target ha announc it upcom target circl week — here’ what we know,0
+  -peloton recal 2.2 million exerci bike over safeti hazard,0
+  -"howard stern say he 'hates' anyon that vote for trump: 'they are stupid, i have no respect for them'",1
+  -stanley tumbler 'quenchers' maker is be su over lead claim,0
+  -progress content creator gear up for kamala harri,0
+  -trump urg biden to follow through with debat promise: 'i'm readi to go anywhere',1
+  -simon cowel pull out of judg duti in upcom ‘x factor israel’ appear,1
+  -mudsl candid in heat hou race face voter on big primari day,1
+  -ex-nypd offic who assault d.c. offic on jan. 6 get record 10-year sentenc,0
+  -what scott peterson' recent court win could mean for hi yearslong quest for freedom,1
+  -4 hor have die at churchil down ahead of 149th kentucki derbi,1
+  -sen. ron johnson relea preliminari find of probe into trump assassin attempt,1
+  -harris-trump cash dash: former presid look to flip script with fundrai swing in oil countri,1
+  -"harri doe about-fac on sever far-left policies, distanc herself from biden",1
+  -north korea’ kim enjoy a russian luxuri limousin gift by putin as the two nation expand tie,0
+  -sen. mitch mcconnel will step down as republican leader at the end of the year,0
+  -"influenc and popular podcast fuel elect disinform among black voters, report show",0
+  -"north carolina mom of 4 swept up by hurrican helen flood in front of husband, 8-year-old son",1
+  -"ohio boy, 8, prepar for blindness: ‘it’ heartbreaking,’ hi mom say",1
+  -"meet the press - may 12, 2024",0
+  -lawmak berat mayorka on laken riley murder: ‘your polici in action’,1
+  -prosecutor sue lo angel da for retali after he wa punish for 'misgendering' child predat,1
+  -first aid cross into gaza from egypt,0
+  -"trump slam harris' call for a price-goug ban, but 37 state alreadi have their own",0
+  -coalit to march on the dnc’ protest end peac where it began,0
+  -"on thi day in history, septemb 22, 1862, abraham lincoln proclaim slave will soon be 'forev free'",1
+  -elect 2024: trump campaign in pennsylvania ahead of biden' u.n. speech,0
+  -harri slam for pledg million to lebanon as north carolina suffer,1
+  ... 6043 further lines not shown (cap is 50)

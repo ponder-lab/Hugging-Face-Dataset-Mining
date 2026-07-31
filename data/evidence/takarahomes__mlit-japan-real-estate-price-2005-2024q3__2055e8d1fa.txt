@@ -1,0 +1,96 @@
+dataset:    takarahomes/mlit-japan-real-estate-price-2005-2024q3
+commit:     2055e8d1fa209de67e2a67a3c64cea0bd0d129c0
+type:       normalize/standardize/encode
+message:    Fix File Encoding to UTF8
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+  [warn] no content for 01_Hokkaido_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 02_Aomori Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 03_Iwate Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 04_Miyagi Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 05_Akita Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 06_Yamagata Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 07_Fukushima Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 08_Ibaraki Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 09_Tochigi Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 10_Gunma Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 11_Saitama Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 12_Chiba Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 13_Tokyo_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 14_Kanagawa Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 15_Niigata Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 16_Toyama Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 17_Ishikawa Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 19_Yamanashi Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 20_Nagano Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 21_Gifu Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 22_Shizuoka Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 23_Aichi Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 24_Mie Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 25_Shiga Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 26_Kyoto Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 27_Osaka Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 28_Hyogo Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 29_Nara Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 30_Wakayama Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 32_Shimane Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 33_Okayama Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 34_Hiroshima Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 35_Yamaguchi Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 37_Kagawa Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 38_Ehime Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 40_Fukuoka Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 42_Nagasaki Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 43_Kumamoto Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 44_Oita Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 45_Miyazaki Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 46_Kagoshima Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+  [warn] no content for 47_Okinawa Prefecture_20053_20243_en.csv at 2055e8d1fa on the Hub (Hub served an LFS pointer); the object was never uploaded for this revision, so a retry will not help; cannot compare columns
+# takarahomes/mlit-japan-real-estate-price-2005-2024q3 @ 2055e8d1fa
+message: Fix File Encoding to UTF8 
+
+file changes:
+M	01_Hokkaido_20053_20243_en.csv   [stored in Git LFS]
+M	02_Aomori Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	03_Iwate Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	04_Miyagi Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	05_Akita Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	06_Yamagata Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	07_Fukushima Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	08_Ibaraki Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	09_Tochigi Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	10_Gunma Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	11_Saitama Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	12_Chiba Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	13_Tokyo_20053_20243_en.csv   [stored in Git LFS]
+M	14_Kanagawa Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	15_Niigata Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	16_Toyama Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	17_Ishikawa Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	19_Yamanashi Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	20_Nagano Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	21_Gifu Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	22_Shizuoka Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	23_Aichi Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	24_Mie Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	25_Shiga Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	26_Kyoto Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	27_Osaka Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	28_Hyogo Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	29_Nara Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	30_Wakayama Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	32_Shimane Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	33_Okayama Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	34_Hiroshima Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	35_Yamaguchi Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	37_Kagawa Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	38_Ehime Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	40_Fukuoka Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	42_Nagasaki Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	43_Kumamoto Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	44_Oita Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	45_Miyazaki Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	46_Kagoshima Prefecture_20053_20243_en.csv   [stored in Git LFS]
+M	47_Okinawa Prefecture_20053_20243_en.csv   [stored in Git LFS]

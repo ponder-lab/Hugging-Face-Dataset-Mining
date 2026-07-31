@@ -1,0 +1,18 @@
+dataset:    TeamVioletEdifai/cleanedYelpData
+commit:     72a88eb0428f75832525f752ec5972561c4dd90c
+type:       cleaning
+message:    Upload cleaned_yelp_reviews(2).csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# TeamVioletEdifai/cleanedYelpData @ 72a88eb042
+message: Upload cleaned_yelp_reviews(2).csv 
+
+file changes:
+M	.gitattributes
+A	cleaned_yelp_reviews(2).csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

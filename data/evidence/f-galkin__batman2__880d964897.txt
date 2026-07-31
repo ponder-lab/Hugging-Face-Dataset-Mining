@@ -1,0 +1,20 @@
+dataset:    f-galkin/batman2
+commit:     880d96489790dfbf0dde12468e5e11d5a29a36f9
+type:       normalize/standardize/encode
+message:    Added reformatted BATMAN files
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# f-galkin/batman2 @ 880d964897
+message: Added reformatted BATMAN files 
+
+file changes:
+M	.gitattributes
+A	data/batman_formulas.csv   [stored in Git LFS]
+A	data/batman_herbs.csv   [stored in Git LFS]
+A	data/batman_ingredients.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

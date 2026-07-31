@@ -1,0 +1,13 @@
+dataset:    ritzfy/2019_Major_Indian_Airlines_Data
+commit:     b234f06fec29661b7bdf7d2680c9979698e4abe4
+type:       cleaning
+message:    Upload cleaned_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# ritzfy/2019_Major_Indian_Airlines_Data @ b234f06fec
+message: Upload cleaned_data.csv 
+
+file changes:
+A	cleaned_data.csv

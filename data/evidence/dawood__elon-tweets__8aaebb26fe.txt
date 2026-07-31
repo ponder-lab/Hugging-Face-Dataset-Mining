@@ -1,0 +1,13 @@
+dataset:    dawood/elon-tweets
+commit:     8aaebb26fee6e73b09e29a875b6ab9de3f136137
+type:       cleaning
+message:    Upload cleandata.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# dawood/elon-tweets @ 8aaebb26fe
+message: Upload cleandata.csv 
+
+file changes:
+A	cleandata.csv

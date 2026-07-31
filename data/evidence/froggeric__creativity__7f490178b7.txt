@@ -1,0 +1,17 @@
+dataset:    froggeric/creativity
+commit:     7f490178b76cc8c6a1225d840eb668789c4a2830
+type:       deduplication
+message:    removed duplicate
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# froggeric/creativity @ 7f490178b7
+message: removed duplicate 
+
+file changes:
+M	README.md
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

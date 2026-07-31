@@ -1,0 +1,13 @@
+dataset:    caiyan123/merged_other_task
+commit:     bfe1beee6ece7dba267fb8090a58d90b6b20bc80
+type:       merge
+message:    Delete merged_other_task.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:46Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# caiyan123/merged_other_task @ bfe1beee6e
+message: Delete merged_other_task.csv 
+
+file changes:
+D	merged_other_task.csv   [stored in Git LFS]

@@ -1,0 +1,18 @@
+dataset:    w139700701/CoV-AbDab-260722
+commit:     a15bb433f5318ce8ceac2df88ab945280b0df144
+type:       deduplication
+message:    Upload CoV-AbDab_260722_original_bind_postprocess_addPyProteinRegionindex_Dropduplicates.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:52Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# w139700701/CoV-AbDab-260722 @ a15bb433f5
+message: Upload CoV-AbDab_260722_original_bind_postprocess_addPyProteinRegionindex_Dropduplicates.csv 
+
+file changes:
+M	.gitattributes
+A	CoV-AbDab_260722_original_bind_postprocess_addPyProteinRegionindex_Dropduplicates.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

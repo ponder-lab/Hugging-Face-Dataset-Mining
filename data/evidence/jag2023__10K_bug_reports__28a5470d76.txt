@@ -1,0 +1,18 @@
+dataset:    jag2023/10K_bug_reports
+commit:     28a5470d761494976d1bc15ec89f3a31d9c99990
+type:       cleaning
+message:    Upload Cleaned_Bug_Comments_10_k.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:12Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# jag2023/10K_bug_reports @ 28a5470d76
+message: Upload Cleaned_Bug_Comments_10_k.csv 
+
+file changes:
+M	.gitattributes
+A	Cleaned_Bug_Comments_10_k.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

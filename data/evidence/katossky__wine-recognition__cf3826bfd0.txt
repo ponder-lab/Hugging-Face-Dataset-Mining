@@ -1,0 +1,27 @@
+dataset:    katossky/wine-recognition
+commit:     cf3826bfd019ce85c1baee2e841566e7d387ec31
+type:       column/field add-remove
+message:    suppress spaces after wines.csv's column name separators
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# katossky/wine-recognition @ cf3826bfd0
+message: suppress spaces after wines.csv's column name separators 
+
+file changes:
+M	wine.csv
+
+[wine.csv] column change:
+  removed: [' OD280/OD315 of diluted wines', ' alcalinity of ash', ' alcohol', ' ash', ' color intensity', ' flavanoids', ' hue', ' magnesium', ' malic acid', ' nonflavanoid phenols', ' proanthocyanins', ' proline      ', ' total phenols']
+  added:   ['OD280/OD315 of diluted wines', 'alcalinity of ash', 'alcohol', 'ash', 'color intensity', 'flavanoids', 'hue', 'magnesium', 'malic acid', 'nonflavanoid phenols', 'proanthocyanins', 'proline      ', 'total phenols']
+  diff --git a/wine.csv b/wine.csv
+  index 978cc27..e4b0e46 100644
+  --- a/wine.csv
+  +++ b/wine.csv
+  @@ -1,4 +1,4 @@
+  -label, alcohol, malic acid, ash, alcalinity of ash, magnesium, total phenols, flavanoids, nonflavanoid phenols, proanthocyanins, color intensity, hue, OD280/OD315 of diluted wines, proline      
+  +label,alcohol,malic acid,ash,alcalinity of ash,magnesium,total phenols,flavanoids,nonflavanoid phenols,proanthocyanins,color intensity,hue,OD280/OD315 of diluted wines,proline      
+   1,14.23,1.71,2.43,15.6,127,2.8,3.06,.28,2.29,5.64,1.04,3.92,1065
+   1,13.2,1.78,2.14,11.2,100,2.65,2.76,.26,1.28,4.38,1.05,3.4,1050
+   1,13.16,2.36,2.67,18.6,101,2.8,3.24,.3,2.81,5.68,1.03,3.17,1185

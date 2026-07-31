@@ -1,0 +1,13 @@
+dataset:    AdityaA44/RacepopulationAlabama
+commit:     42dc866ec9291826f20861e0d8cae7194fd9b1d2
+type:       cleaning
+message:    Upload cleaned_data (5).csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# AdityaA44/RacepopulationAlabama @ 42dc866ec9
+message: Upload cleaned_data (5).csv 
+
+file changes:
+A	cleaned_data (5).csv

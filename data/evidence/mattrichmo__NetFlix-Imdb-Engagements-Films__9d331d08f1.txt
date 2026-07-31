@@ -1,0 +1,13 @@
+dataset:    mattrichmo/NetFlix-Imdb-Engagements-Films
+commit:     9d331d08f1383a9b2a7083f4acbb678a89227a50
+type:       cleaning
+message:    Upload cleanDataFilmFlat.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:58Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# mattrichmo/NetFlix-Imdb-Engagements-Films @ 9d331d08f1
+message: Upload cleanDataFilmFlat.csv 
+
+file changes:
+A	cleanDataFilmFlat.csv

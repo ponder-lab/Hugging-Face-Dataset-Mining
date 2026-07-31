@@ -1,0 +1,17 @@
+dataset:    NLPLabNTUST/Merged-CWA
+commit:     713427dc768348d05b4998fc300b2e4e90285f91
+type:       merge
+message:    Upload merge2019_2021.tar.gz
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:01Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# NLPLabNTUST/Merged-CWA @ 713427dc76
+message: Upload merge2019_2021.tar.gz 
+
+file changes:
+M	merge2019_2021.tar.gz   [stored in Git LFS]
+
+not analyzed:
+  merge2019_2021.tar.gz   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

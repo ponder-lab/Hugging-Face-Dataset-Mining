@@ -1,0 +1,14 @@
+dataset:    scbirlab/thomas-2018-spark-wt
+commit:     1c780ca202d4719d163690b93f954504e30c38ca
+type:       cleaning
+message:    Clean up unused files (#2)
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# scbirlab/thomas-2018-spark-wt @ 1c780ca202
+message: Clean up unused files (#2) 
+
+file changes:
+D	species-with-dataset.txt
+D	species.txt

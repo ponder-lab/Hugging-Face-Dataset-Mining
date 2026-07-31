@@ -1,0 +1,23 @@
+dataset:    BurpBurp1402/NYP_SLLM_P3_Dataset
+commit:     331483433b6b07d63434b419b9dbdf80f994640d
+type:       merge
+message:    Delete merged_test_train_data_8k_v1.hf
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:08Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# BurpBurp1402/NYP_SLLM_P3_Dataset @ 331483433b
+message: Delete merged_test_train_data_8k_v1.hf 
+
+file changes:
+D	merged_test_train_data_8k_v1.hf/dataset_dict.json
+D	merged_test_train_data_8k_v1.hf/test/cache-64145d2c657eb009.arrow   [stored in Git LFS]
+D	merged_test_train_data_8k_v1.hf/test/cache-9ea0e059b83baa1e.arrow   [stored in Git LFS]
+D	merged_test_train_data_8k_v1.hf/test/data-00000-of-00001.arrow   [stored in Git LFS]
+D	merged_test_train_data_8k_v1.hf/test/dataset_info.json
+D	merged_test_train_data_8k_v1.hf/test/state.json
+D	merged_test_train_data_8k_v1.hf/train/cache-683a61337e1af7fd.arrow   [stored in Git LFS]
+D	merged_test_train_data_8k_v1.hf/train/cache-f343dc3b4e2d3b50.arrow   [stored in Git LFS]
+D	merged_test_train_data_8k_v1.hf/train/data-00000-of-00001.arrow   [stored in Git LFS]
+D	merged_test_train_data_8k_v1.hf/train/dataset_info.json
+D	merged_test_train_data_8k_v1.hf/train/state.json

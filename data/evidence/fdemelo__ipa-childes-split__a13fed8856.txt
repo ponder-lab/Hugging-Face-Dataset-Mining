@@ -1,0 +1,488 @@
+dataset:    fdemelo/ipa-childes-split
+commit:     a13fed8856f41b63e899535d5adc5b9e9699f217
+type:       cleaning
+message:    Clean up empty data
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:10:14Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# fdemelo/ipa-childes-split @ a13fed8856
+message: Clean up empty data 
+
+file changes:
+M	test/cy-GB/data.csv   [stored in Git LFS]
+M	test/de-DE/data.csv   [stored in Git LFS]
+M	test/es-ES/data.csv   [stored in Git LFS]
+M	test/eu-ES/data.csv   [stored in Git LFS]
+M	test/fa-IR/data.csv   [stored in Git LFS]
+M	test/fr-FR/data.csv   [stored in Git LFS]
+M	test/ga-IE/data.csv   [stored in Git LFS]
+M	test/id-ID/data.csv   [stored in Git LFS]
+M	test/ja-JP/data.csv   [stored in Git LFS]
+M	test/ko-KR/data.csv   [stored in Git LFS]
+M	test/yue-CN/data.csv   [stored in Git LFS]
+M	test/zh-CN/data.csv   [stored in Git LFS]
+M	train/cy-GB/data.csv   [stored in Git LFS]
+M	train/da-DK/data.csv   [stored in Git LFS]
+M	train/de-DE/data.csv   [stored in Git LFS]
+M	train/es-ES/data.csv   [stored in Git LFS]
+M	train/eu-ES/data.csv   [stored in Git LFS]
+M	train/fa-IR/data.csv   [stored in Git LFS]
+M	train/ga-IE/data.csv   [stored in Git LFS]
+M	train/id-ID/data.csv   [stored in Git LFS]
+M	train/ja-JP/data.csv   [stored in Git LFS]
+M	train/ko-KR/data.csv   [stored in Git LFS]
+M	train/sr-RS/data.csv   [stored in Git LFS]
+M	train/yue-CN/data.csv   [stored in Git LFS]
+M	train/zh-CN/data.csv   [stored in Git LFS]
+
+[test/cy-GB/data.csv] no column-set change (values may still differ)
+  payload size 4,092,762 -> 4,088,394 bytes (-4,368): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- test/cy-GB/data.csv@6bb20aa609
+  +++ test/cy-GB/data.csv@a13fed8856
+  @@ -6,8 +6,8 @@
+   cy-GB,cy,,haha,haha,,haha,h a h a | . |,True,10749401, ,declarative,cym eng,-2147483648,1, ,Target_Child,26.099098544117947,unknown,13,235,16524,16524,26634
+   cy-GB,cy,,hwnna rowndo fo,hʊnna | rɔʊndɔ | voː,,hʊnna | rɔʊndɔ | voː,h w n n a | r o w n d o | f o | . |,True,10694373, ,declarative,cym eng,-2147483648,3, ,Target_Child,,unknown,13,234,16476,-2147483648,26549
+   cy-GB,cy,,ie,jeː,,jeː,i e | . |,True,10784897, ,declarative,cym eng,-2147483648,1, ,Target_Child,23.887554159222983,unknown,13,235,16550,16550,26719
+  -cy-GB,cy,,a ma' Kmn gyda mewn fan+hyn hefyd,a | mɑː | kʌɛmɛn | ɡʌda | meʊn | van | (en)plʌs(cy) | høn | heːvød,,a | mɑː | kʌɛmɛn | ɡʌda | mɛun | van | høn | heːvød,a | m a ' | k m n | g y d a | m e w n | f a n | h y n | h e f y d | . |,True,10627275, ,declarative,cym eng,-2147483648,7, ,Target_Child,,unknown,13,234,16308,-2147483648,26449
+  -cy-GB,cy,,peidia gneud am funud dan ni 'sio gadal 'o fynd i+gyd i' gweld os o's 'na 'wbath 'di mynd i+mewn iddo fo,pəɪdja | ɡnəɨd | am | vɨːnød | dan | niː | ʃoː | ɡɑːdal | oː | vønd | ɨ | (en)plʌs(cy) | ɡɨːd | ɨ | ɡwɛld | ɔs | oːs | na | uːbaθ | diː | mønd | ɨ | (en)plʌs(cy) | meʊn | iːðɔ | voː,,pəidja | ɡnəid | am | viːnød | dan | niː | ʃoː | ɡɑːdal | oː | vønd | ɪ | ɡiːd | ɪ | ɡwɛld | ɔs | oːs | na | uːbaθ | diː | mønd | ɪ | mɛun | iːðɔ | voː,p e i d i a | g n e u d | a m | f u n u d | d a n | n i | ' s i o | g a d a l | ' o | f y n d | i | g y d | i ' | g w e l d | o s | o ' s | ' n a | ' w b a t h | ' d i | m y n d | i | m e w n | i d d o | f o | . |,True,10690659, ,declarative,cym eng,-2147483648,22, ,Target_Child,,unknown,13,234,16436,-2147483648,26551
+  +cy-GB,cy,,a ma' Kmn gyda mewn fan+hyn hefyd,a | mɑː | kʌɛmɛn | ɡʌda | meʊn | van | (en)plʌs | høn | heːvød,,a | mɑː | kʌɛmɛn | ɡʌda | mɛun | van | høn | heːvød,a | m a ' | k m n | g y d a | m e w n | f a n | h y n | h e f y d | . |,True,10627275, ,declarative,cym eng,-2147483648,7, ,Target_Child,,unknown,13,234,16308,-2147483648,26449
+  +cy-GB,cy,,peidia gneud am funud dan ni 'sio gadal 'o fynd i+gyd i' gweld os o's 'na 'wbath 'di mynd i+mewn iddo fo,pəɪdja | ɡnəɨd | am | vɨːnød | dan | niː | ʃoː | ɡɑːdal | oː | vønd | ɨ | (en)plʌs | ɡɨːd | ɨ | ɡwɛld | ɔs | oːs | na | uːbaθ | diː | mønd | ɨ | (en)plʌs | meʊn | iːðɔ | voː,,pəidja | ɡnəid | am | viːnød | dan | niː | ʃoː | ɡɑːdal | oː | vønd | ɪ | ɡiːd | ɪ | ɡwɛld | ɔs | oːs | na | uːbaθ | diː | mønd | ɪ | mɛun | iːðɔ | voː,p e i d i a | g n e u d | a m | f u n u d | d a n | n i | ' s i o | g a d a l | ' o | f y n d | i | g y d | i ' | g w e l d | o s | o ' s | ' n a | ' w b a t h | ' d i | m y n d | i | m e w n | i d d o | f o | . |,True,10690659, ,declarative,cym eng,-2147483648,22, ,Target_Child,,unknown,13,234,16436,-2147483648,26551
+   cy-GB,cy,,mynd i' garej,mønd | ɨ | ɡarɛdʒ,,mønd | ɪ | ɡarɛd̠ʒ,m y n d | i ' | g a r e j | . |,False,10805208, ,declarative,cym eng,-2147483648,3, ,Investigator,23.690424854719808,unknown,13,235,16563,16561,26761
+   cy-GB,cy,,Qef,keːv,,keːv,q e f | . |,True,10699459, ,declarative,cym eng,-2147483648,1, ,Target_Child,,unknown,13,234,16446,-2147483648,26541
+   cy-GB,cy,,oo,oː,,oː,o o | . |,True,10611194, ,trail off,cym eng,-2147483648,1, ,Target_Child,,unknown,13,234,16383,-2147483648,26422
+
+[test/de-DE/data.csv] no column-set change (values may still differ)
+  payload size 46,311,739 -> 46,305,407 bytes (-6,332): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[test/es-ES/data.csv] no column-set change (values may still differ)
+  payload size 15,136,914 -> 15,136,758 bytes (-156): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[test/eu-ES/data.csv] no column-set change (values may still differ)
+  payload size 1,863,980 -> 1,861,000 bytes (-2,980): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- test/eu-ES/data.csv@6bb20aa609
+  +++ test/eu-ES/data.csv@a13fed8856
+  @@ -9,11 +9,11 @@
+   eu-ES,eu,spa-Latn,eztakizo,es̻takis̻o,estakiso,es̪̻t̪akis̪̻o,e z t a k i z o | ? |,False,6195125, ,question,eus,-2147483648,1, ,Mother,37.7235672190394,unknown,8,172,13052,13050,20540
+   eu-ES,eu,spa-Latn,hau paratu zuk e,aʊ | paɾatu | s̻uk | e,au | paɾatu | suk | e,au̯ | paɾat̪u | s̪̻uk | e,h a u | p a r a t u | z u k | e | ? |,True,6203119, ,question,eus,-2147483648,4, ,Target_Child,58.42830448263825,unknown,8,172,13064,13064,20570
+   eu-ES,eu,spa-Latn,hau eta hau,aʊ | eta | aʊ,au | eta | au,au̯ | et̪a | au̯,h a u | e t a | h a u | . |,True,6207323, ,declarative,eus,-2147483648,3, ,Target_Child,59.395470132856936,unknown,8,172,13097,13097,20588
+  -eu-ES,eu,spa-Latn,baina ezin+dau hegan egin,baɪɲa | es̻in | (en)plʌs(eu) | daʊ | eɣan | eɣin,baina | esin+dau | eɡan | exin,bai̯ɲa | es̪̻in | d̪au̯ | eɣan | eɣin,b a i n a | e z i n | d a u | h e g a n | e g i n | . |,True,6264333, ,declarative,eus spa,-2147483648,4, ,Target_Child,,unknown,8,173,13280,13280,20718
+  +eu-ES,eu,spa-Latn,baina ezin+dau hegan egin,baɪɲa | es̻in | (en)plʌs | daʊ | eɣan | eɣin,baina | esin+dau | eɡan | exin,bai̯ɲa | es̪̻in | d̪au̯ | eɣan | eɣin,b a i n a | e z i n | d a u | h e g a n | e g i n | . |,True,6264333, ,declarative,eus spa,-2147483648,4, ,Target_Child,,unknown,8,173,13280,13280,20718
+   eu-ES,eu,spa-Latn,oain behar ttut,oaɪn | beaɾ | cut,oain | beaɾ | ttut,oai̯n | beaɾ | cut̪,o a i n | b e h a r | t t u t | . |,False,6251926, ,trail off,eus,-2147483648,3, ,Mother,35.06642846875706,unknown,8,172,13168,13166,20652
+   eu-ES,eu,spa-Latn,nola itzaltzen da,nola | its̻alts̻en | da,nola | it͡salt͡sen | da,nola | it̪̻s̪̻alt̪̻s̪̻en | d̪a,n o l a | i t z a l t z e n | d a | ? |,True,6253479, ,question,eus,-2147483648,3, ,Child,42.0008624407072,unknown,8,172,13210,13166,20662
+   eu-ES,eu,spa-Latn,itzaron eskerrik asko,its̻aɾon | es̺kerik | as̺ko,it͡saɾon | eskerik | asko,it̪̻s̪̻aɾon | es̺kerik | as̺ko,i t z a r o n | e s k e r r i k | a s k o | . |,False,6252547, ,trail off,eus spa,-2147483648,3, ,Teacher,,unknown,8,173,13229,-2147483648,20694
+  -eu-ES,eu,spa-Latn,eta orain Jonek esango+digu ia meriendatzeko bere amak izozki bat erosi+zion,eta | oɾaɪn | ɟonek | es̺anɡo | (en)plʌs(eu) | diɣu | ia | meɾiendats̻eko | βeɾe | amak | is̻os̻ki | βat | eɾos̺i | (en)plʌs(eu) | s̻ion,eta | oɾain | xonek | esanɡo+diɡw | ja | meɾjendat͡seko | beɾe | amak | isoski | bat | eɾosi+sjon,et̪a | oɾai̯n | ɟonek | es̺anɡo | ðiɣu | ia | meɾiend̪at̪̻s̪̻eko | βeɾe | amak | is̪̻os̪̻ki | βat̪ | eɾos̺i | s̪̻ion,e t a | o r a i n | j o n e k | e s a n g o | d i g u | i a | m e r i e n d a t z e k o | b e r e | a m a k | i z o z k i | b a t | e r o s i | z i o n | . |,False,6244161, ,declarative,eus spa,-2147483648,11, ,Teacher,,unknown,8,173,13229,-2147483648,20681
+  +eu-ES,eu,spa-Latn,eta orain Jonek esango+digu ia meriendatzeko bere amak izozki bat erosi+zion,eta | oɾaɪn | ɟonek | es̺anɡo | (en)plʌs | diɣu | ia | meɾiendats̻eko | βeɾe | amak | is̻os̻ki | βat | eɾos̺i | (en)plʌs | s̻ion,eta | oɾain | xonek | esanɡo+diɡw | ja | meɾjendat͡seko | beɾe | amak | isoski | bat | eɾosi+sjon,et̪a | oɾai̯n | ɟonek | es̺anɡo | ðiɣu | ia | meɾiend̪at̪̻s̪̻eko | βeɾe | amak | is̪̻os̪̻ki | βat̪ | eɾos̺i | s̪̻ion,e t a | o r a i n | j o n e k | e s a n g o | d i g u | i a | m e r i e n d a t z e k o | b e r e | a m a k | i z o z k i | b a t | e r o s i | z i o n | . |,False,6244161, ,declarative,eus spa,-2147483648,11, ,Teacher,,unknown,8,173,13229,-2147483648,20681
+   eu-ES,eu,spa-Latn,zu aman ondon e bai,s̻u | aman | ondon | e | βaɪ,su | aman | ondon | e | bai,s̪̻u | aman | ond̪on | e | βai̯,z u | a m a n | o n d o n | e | b a i | ? |,False,6240868, ,question,eus,-2147483648,5, ,Mother,37.46072814636851,unknown,8,172,13168,13166,20658
+   eu-ES,eu,spa-Latn,ese muñeco no es mío eh,es̺e | muɲeko | no | es̺ | mio | e,ese | muɲeko | no | es | mjo | e,es̺e | muɲeko | no | es̺ | mio | e,e s e | m u ñ e c o | n o | e s | m í o | e h | ! |,True,6247045, ,imperative_emphatic,eus spa,-2147483648,6, ,Target_Child,,unknown,8,173,13195,-2147483648,20688
+   eu-ES,eu,spa-Latn,gizona badakit non den,ɡis̻ona | βaðakit | non | den,xisona | badakit | non | den,ɡis̪̻ona | βaðakit̪ | non | d̪en,g i z o n a | b a d a k i t | n o n | d e n | . |,True,6224166, ,declarative,eus,-2147483648,4, ,Target_Child,47.85519209840038,unknown,8,172,13044,13044,20620
+
+[test/fa-IR/data.csv] no column-set change (values may still differ)
+  payload size 483,279 -> 474,235 bytes (-9,044): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- test/fa-IR/data.csv@6bb20aa609
+  +++ test/fa-IR/data.csv@a13fed8856
+  @@ -1,20 +1,20 @@
+   lang,espeak_lang_code,epitran_lang_code,sentence,ipa_espeak,ipa_epitran,ipa_g2p_plus,character_split_utterance,is_child,id,stem,type,language,num_morphemes,num_tokens,part_of_speech,speaker_role,target_child_age,target_child_sex,collection_id,corpus_id,speaker_id,target_child_id,transcript_id
+  -fa-IR,fa,fas-Arab,are,(en)ɑː(fa),are,a̟re,a r e | . |,True,6419233, ,declarative,fas,-2147483648,1, ,Target_Child,58.82256309164459,female,8,177,13602,13602,21041
+  -fa-IR,fa,fas-Arab,piano kar kardam,(en)pianəʊ | kɑː | kɑːdəm(fa),piano | kar | kardam,pʰia̟n̪o | kʰa̟r | kʰa̟rd̪a̟m,p i a n o | k a r | k a r d a m | . |,True,6425941, ,declarative,fas,-2147483648,3, ,Target_Child,33.00067763198423,unknown,8,178,13616,13616,21080
+  -fa-IR,fa,fas-Arab,mhm,(en)ɛmeɪtʃɛm(fa),mhm,mhm,m h m | . |,False,6373853, ,declarative,fas,-2147483648,1, ,Mother,28.98622148298733,female,8,177,13596,13594,20948
+  -fa-IR,fa,fas-Arab,bashe,(en)baʃ(fa),bashe,ba̟ʃe,b a s h e | . |,True,6403964, ,declarative,fas,-2147483648,1, ,Target_Child,52.59245569724224,female,8,177,13602,13602,20998
+  -fa-IR,fa,fas-Arab,kojakadam,(en)kɒdʒɐkadəm(fa),kojakadam,kʰod̠ʒa̟kʰa̟d̪a̟m,k o j a k a d a m | ? |,True,6423607, ,question,fas,-2147483648,1, ,Target_Child,33.00067763198423,unknown,8,178,13616,13616,21080
+  -fa-IR,fa,fas-Arab,xob,(en)zɒb(fa),xob,kʰsob,x o b | ? |,False,6412893, ,question,fas,-2147483648,1, ,Father,57.95396209367749,female,8,177,13603,13602,21037
+  -fa-IR,fa,fas-Arab,in az koja peyda kardi,(en)ɪn | az | kəʊdʒə | peɪdə | kɑːdi(fa),in | az | koja | peyda | kardi,in̪ | a̟z | kʰod̠ʒa̟ | pʰejd̪a̟ | kʰa̟rd̪i,i n | a z | k o j a | p e y d a | k a r d i | ? |,False,6423393, ,question,fas,-2147483648,5, ,Mother,34.00069816628678,unknown,8,178,13617,13616,21081
+  -fa-IR,fa,fas-Arab,ah ah,(en)ɑːɹ | ɑː(fa),ah | ah,a̟h | a̟h,a h | a h | . |,False,6421321, ,declarative,fas,-2147483648,2, ,Father,26.00053389186636,unknown,8,178,13618,13616,21074
+  -fa-IR,fa,fas-Arab,laugh,(en)laf(fa),laugh,la̟uɢ,l a u g h | . |,True,6373041, ,declarative,fas eng,-2147483648,1, ,Target_Child,29.95338713320602,female,8,177,13594,13594,20950
+  -fa-IR,fa,fas-Arab,inaha,(en)ɪnɑːhɑː(fa),inaha,in̪a̟ha̟,i n a h a | . |,False,6373120, ,declarative,fas,-2147483648,1, ,Caretaker,24.756155157190086,female,8,177,13595,13594,20937
+  -fa-IR,fa,fas-Arab,seta,(en)sɛtə(fa),seta,set̪ʰa̟,s e t a | . |,True,6397373, ,declarative,fas,-2147483648,1, ,Target_Child,50.03388159921148,female,8,177,13602,13602,20972
+  -fa-IR,fa,fas-Arab,injuri,(en)ɪndʒʊəɹi(fa),injuri,in̪d̠ʒuri,i n j u r i | . |,True,6402483, ,declarative,fas,-2147483648,1, ,Target_Child,51.953838887862176,female,8,177,13602,13602,20989
+  -fa-IR,fa,fas-Arab,babai bia bebin,(en)babaɪ | biə | bɪbɪn(fa),babai | bia | bebin,ba̟ba̟i | bia̟ | bebin̪,b a b a i | b i a | b e b i n | . |,True,6379087, ,declarative,fas,-2147483648,3, ,Target_Child,32.394915706688025,female,8,177,13594,13594,20958
+  -fa-IR,fa,fas-Arab,mibini,(en)mɪbiːnɪ(fa),mibini,mibin̪i,m i b i n i | ? |,False,6369438, ,question,fas,-2147483648,1, ,Brother,25.0990780098154,female,8,177,13597,13594,20938
+  -fa-IR,fa,fas-Arab,naz,(en)naz(fa),naz,n̪a̟z,n a z | . |,False,6384641, ,declarative,fas,-2147483648,1, ,Brother,28.55910798989712,female,8,177,13597,13594,20947
+  -fa-IR,fa,fas-Arab,are ma tu in xunehaye legoi ja nemishim,(en)ɑː | mɑː | tuː | ɪn | zʌnɪheɪ | lɛɡɔɪ | jɑː | nɛmɪʃɪm(fa),are | ma | tu | in | xunehaye | legoi | ja | nemishim,a̟re | ma̟ | t̪ʰu | in̪ | kʰsun̪eha̟je | leɡoi | d̠ʒa̟ | n̪emiʃim,a r e | m a | t u | i n | x u n e h a y e | l e g o i | j a | n e m i s h i m | . |,False,6417591, ,declarative,fas,-2147483648,8, ,Father,58.82256309164459,female,8,177,13603,13602,21041
+  -fa-IR,fa,fas-Arab,dibe,(en)daɪb(fa),dibe,d̪ibe,d i b e | . |,True,6424032, ,declarative,fas,-2147483648,1, ,Target_Child,31.000636563379125,unknown,8,178,13616,13616,21078
+  -fa-IR,fa,fas-Arab,are,(en)ɑː(fa),are,a̟re,a r e | ? |,False,6382957, ,question,fas eng,-2147483648,1, ,Brother,29.95338713320602,female,8,177,13597,13594,20950
+  -fa-IR,fa,fas-Arab,unaha,(en)ʌnɑːhɑː(fa),unaha,un̪a̟ha̟,u n a h a | . |,False,6375765, ,declarative,fas,-2147483648,1, ,Brother,27.69050699193001,female,8,177,13597,13594,20943
+  +fa-IR,fa,fas-Arab,are,(en)ɑː,are,a̟re,a r e | . |,True,6419233, ,declarative,fas,-2147483648,1, ,Target_Child,58.82256309164459,female,8,177,13602,13602,21041
+  +fa-IR,fa,fas-Arab,piano kar kardam,(en)pianəʊ | kɑː | kɑːdəm,piano | kar | kardam,pʰia̟n̪o | kʰa̟r | kʰa̟rd̪a̟m,p i a n o | k a r | k a r d a m | . |,True,6425941, ,declarative,fas,-2147483648,3, ,Target_Child,33.00067763198423,unknown,8,178,13616,13616,21080
+  +fa-IR,fa,fas-Arab,mhm,(en)ɛmeɪtʃɛm,mhm,mhm,m h m | . |,False,6373853, ,declarative,fas,-2147483648,1, ,Mother,28.98622148298733,female,8,177,13596,13594,20948
+  +fa-IR,fa,fas-Arab,bashe,(en)baʃ,bashe,ba̟ʃe,b a s h e | . |,True,6403964, ,declarative,fas,-2147483648,1, ,Target_Child,52.59245569724224,female,8,177,13602,13602,20998
+  +fa-IR,fa,fas-Arab,kojakadam,(en)kɒdʒɐkadəm,kojakadam,kʰod̠ʒa̟kʰa̟d̪a̟m,k o j a k a d a m | ? |,True,6423607, ,question,fas,-2147483648,1, ,Target_Child,33.00067763198423,unknown,8,178,13616,13616,21080
+  +fa-IR,fa,fas-Arab,xob,(en)zɒb,xob,kʰsob,x o b | ? |,False,6412893, ,question,fas,-2147483648,1, ,Father,57.95396209367749,female,8,177,13603,13602,21037
+  +fa-IR,fa,fas-Arab,in az koja peyda kardi,(en)ɪn | az | kəʊdʒə | peɪdə | kɑːdi,in | az | koja | peyda | kardi,in̪ | a̟z | kʰod̠ʒa̟ | pʰejd̪a̟ | kʰa̟rd̪i,i n | a z | k o j a | p e y d a | k a r d i | ? |,False,6423393, ,question,fas,-2147483648,5, ,Mother,34.00069816628678,unknown,8,178,13617,13616,21081
+  +fa-IR,fa,fas-Arab,ah ah,(en)ɑːɹ | ɑː,ah | ah,a̟h | a̟h,a h | a h | . |,False,6421321, ,declarative,fas,-2147483648,2, ,Father,26.00053389186636,unknown,8,178,13618,13616,21074
+  +fa-IR,fa,fas-Arab,laugh,(en)laf,laugh,la̟uɢ,l a u g h | . |,True,6373041, ,declarative,fas eng,-2147483648,1, ,Target_Child,29.95338713320602,female,8,177,13594,13594,20950
+  +fa-IR,fa,fas-Arab,inaha,(en)ɪnɑːhɑː,inaha,in̪a̟ha̟,i n a h a | . |,False,6373120, ,declarative,fas,-2147483648,1, ,Caretaker,24.756155157190086,female,8,177,13595,13594,20937
+  +fa-IR,fa,fas-Arab,seta,(en)sɛtə,seta,set̪ʰa̟,s e t a | . |,True,6397373, ,declarative,fas,-2147483648,1, ,Target_Child,50.03388159921148,female,8,177,13602,13602,20972
+  +fa-IR,fa,fas-Arab,injuri,(en)ɪndʒʊəɹi,injuri,in̪d̠ʒuri,i n j u r i | . |,True,6402483, ,declarative,fas,-2147483648,1, ,Target_Child,51.953838887862176,female,8,177,13602,13602,20989
+  +fa-IR,fa,fas-Arab,babai bia bebin,(en)babaɪ | biə | bɪbɪn,babai | bia | bebin,ba̟ba̟i | bia̟ | bebin̪,b a b a i | b i a | b e b i n | . |,True,6379087, ,declarative,fas,-2147483648,3, ,Target_Child,32.394915706688025,female,8,177,13594,13594,20958
+  +fa-IR,fa,fas-Arab,mibini,(en)mɪbiːnɪ,mibini,mibin̪i,m i b i n i | ? |,False,6369438, ,question,fas,-2147483648,1, ,Brother,25.0990780098154,female,8,177,13597,13594,20938
+  +fa-IR,fa,fas-Arab,naz,(en)naz,naz,n̪a̟z,n a z | . |,False,6384641, ,declarative,fas,-2147483648,1, ,Brother,28.55910798989712,female,8,177,13597,13594,20947
+  +fa-IR,fa,fas-Arab,are ma tu in xunehaye legoi ja nemishim,(en)ɑː | mɑː | tuː | ɪn | zʌnɪheɪ | lɛɡɔɪ | jɑː | nɛmɪʃɪm,are | ma | tu | in | xunehaye | legoi | ja | nemishim,a̟re | ma̟ | t̪ʰu | in̪ | kʰsun̪eha̟je | leɡoi | d̠ʒa̟ | n̪emiʃim,a r e | m a | t u | i n | x u n e h a y e | l e g o i | j a | n e m i s h i m | . |,False,6417591, ,declarative,fas,-2147483648,8, ,Father,58.82256309164459,female,8,177,13603,13602,21041
+  +fa-IR,fa,fas-Arab,dibe,(en)daɪb,dibe,d̪ibe,d i b e | . |,True,6424032, ,declarative,fas,-2147483648,1, ,Target_Child,31.000636563379125,unknown,8,178,13616,13616,21078
+  +fa-IR,fa,fas-Arab,are,(en)ɑː,are,a̟re,a r e | ? |,False,6382957, ,question,fas eng,-2147483648,1, ,Brother,29.95338713320602,female,8,177,13597,13594,20950
+  +fa-IR,fa,fas-Arab,unaha,(en)ʌnɑːhɑː,unaha,un̪a̟ha̟,u n a h a | . |,False,6375765, ,declarative,fas,-2147483648,1, ,Brother,27.69050699193001,female,8,177,13597,13594,20943
+
+[test/fr-FR/data.csv] no column-set change (values may still differ)
+  payload size 21,858,522 -> 21,858,354 bytes (-168): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[test/ga-IE/data.csv] no column-set change (values may still differ)
+  payload size 727,467 -> 727,435 bytes (-32): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[test/id-ID/data.csv] no column-set change (values may still differ)
+  payload size 20,254,491 -> 20,254,321 bytes (-170): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[test/ja-JP/data.csv] no column-set change (values may still differ)
+  payload size 29,479,770 -> 29,080,314 bytes (-399,456): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- test/ja-JP/data.csv@6bb20aa609
+  +++ test/ja-JP/data.csv@a13fed8856
+  @@ -1,20 +1,20 @@
+   lang,espeak_lang_code,epitran_lang_code,sentence,ipa_espeak,ipa_epitran,ipa_g2p_plus,character_split_utterance,is_child,id,stem,type,language,num_morphemes,num_tokens,part_of_speech,speaker_role,target_child_age,target_child_sex,collection_id,corpus_id,speaker_id,target_child_id,transcript_id
+  -ja-JP,ja,jpn-Jpan,hai genki dechu,(en)eɪtʃ | eɪ | aɪ | dʒiː | iː | ɛn | keɪ | aɪ | diː | iː | siː | eɪtʃ | juː(ja),,hai | ɡenki | det̠ʃɯ,h a i | g e n k i | d e c h u | . |,True,6705253, ,declarative,jpn,-2147483648,3, ,Target_Child,29.690548060535125,male,9,183,13681,13681,21518
+  -ja-JP,ja,jpn-Jpan,murasaki,(en)ɛm | juː | ɑː | eɪ | ɛs | eɪ | keɪ | aɪ(ja),,mɯɾasaki,m u r a s a k i | . |,False,7167862, ,declarative,jpn,-2147483648,1, ,Mother,50.59241462863714,male,9,186,14078,14072,21965
+  -ja-JP,ja,jpn-Jpan,shashin,(en)ɛs | eɪtʃ | eɪ | ɛs | eɪtʃ | aɪ | ɛn(ja),,ʃaʃin,s h a s h i n | ? |,True,7340409,shashin,question,jpn,1,1,n,Target_Child,61.756914926384525,male,9,186,14143,14143,22088
+  -ja-JP,ja,jpn-Jpan,kore,(en)keɪ | əʊ | ɑː | iː(ja),,koɾe,k o r e | . |,True,7416995, ,declarative,jpn,-2147483648,1, ,Target_Child,22.00045175465615,male,9,187,14195,14195,22242
+  -ja-JP,ja,jpn-Jpan,osakananamoya,(en)əʊ | ɛs | eɪ | keɪ | eɪ | ɛn | eɪ | ɛn | eɪ | ɛm | əʊ | waɪ | eɪ(ja),,osakananamoja,o s a k a n a n a m o y a | . |,True,6969326, ,declarative,jpn,-2147483648,1, ,Target_Child,49.65810386250231,female,9,186,14043,14043,21889
+  -ja-JP,ja,jpn-Jpan,Meejookooen,(en)ɛm | iː | iː | dʒeɪ | əʊ | əʊ | keɪ | əʊ | əʊ | iː | ɛn(ja),,meːd̠ʒoːkoːen,m e e j o o k o o e n | . |,True,7362661, ,declarative,jpn eng,-2147483648,1, ,Target_Child,30.95340766750857,male,9,187,14175,14175,22122
+  -ja-JP,ja,jpn-Jpan,koko mottenai to taorechau ue ga omotai kara,(en)keɪ | əʊ | keɪ | əʊ | ɛm | əʊ | tiː | tiː | iː | ɛn | eɪ | aɪ | tiː | əʊ | tiː | eɪ | əʊ | ɑː | iː | siː | eɪtʃ | eɪ | juː | juː | iː | dʒiː | eɪ | əʊ | ɛm | əʊ | tiː | eɪ | aɪ | keɪ | eɪ | ɑː | eɪ(ja),,koko | mottenai | to | taoɾet̠ʃaɯ | ɯe | ɡa | omotai | kaɾa,k o k o | m o t t e n a i | t o | t a o r e c h a u | u e | g a | o m o t a i | k a r a | . |,False,6656405, ,declarative,jpn,-2147483648,8, ,Mother,24.000492823261258,male,9,182,13673,13672,21410
+  -ja-JP,ja,jpn-Jpan,n,(en)ɛn(ja),,n,n | ? |,True,7340411, ,question,jpn,-2147483648,1, ,Target_Child,29.65769317645126,male,9,187,14175,14175,22119
+  -ja-JP,ja,jpn-Jpan,kumasan sagashite yo,(en)keɪ | juː | ɛm | eɪ | ɛs | eɪ | ɛn | ɛs | eɪ | dʒiː | eɪ | ɛs | eɪtʃ | aɪ | tiː | iː | waɪ | əʊ(ja),,kɯmasan | saɡaʃite | jo,k u m a s a n | s a g a s h i t e | y o | ! |,True,6916033, ,imperative_emphatic,jpn,-2147483648,3, ,Target_Child,37.13217930552989,female,9,186,14043,14043,21853
+  -ja-JP,ja,jpn-Jpan,shooboosha,(en)ɛs | eɪtʃ | əʊ | əʊ | biː | əʊ | əʊ | ɛs | eɪtʃ | eɪ(ja),,ʃoːboːʃa,s h o o b o o s h a | . |,True,6647705, ,declarative,jpn,-2147483648,1, ,Target_Child,38.00078030349699,male,9,182,13672,13672,21437
+  -ja-JP,ja,jpn-Jpan,doko ga itai no,(en)diː | əʊ | keɪ | əʊ | dʒiː | eɪ | aɪ | tiː | eɪ | aɪ | ɛn | əʊ(ja),,doko | ɡa | itai | no,d o k o | g a | i t a i | n o | ? |,False,6562645, ,question,jpn,-2147483648,4, ,Father,18.526047762787737,female,9,181,13632,13631,21308
+  -ja-JP,ja,jpn-Jpan,datte miyotta imasakki,(en)diː | eɪ | tiː | tiː | iː | ɛm | aɪ | waɪ | əʊ | tiː | tiː | eɪ | aɪ | ɛm | eɪ | ɛs | eɪ | keɪ | keɪ | aɪ(ja),,datte | mijotta | imasakki,d a t t e | m i y o t t a | i m a s a k k i | . |,True,6585200, ,declarative,jpn,-2147483648,3, ,Target_Child,31.789153781391818,female,9,181,13631,13631,21360
+  -ja-JP,ja,jpn-Jpan,daijoobu desu ka,(en)diː | eɪ | aɪ | dʒeɪ | əʊ | əʊ | biː | juː | diː | iː | ɛs | juː | keɪ | eɪ(ja),,daid̠ʒoːbɯ | desɯ | ka,d a i j o o b u | d e s u | k a | ? |,True,6941639, ,question,jpn,-2147483648,3, ,Target_Child,44.32945235015092,female,9,186,14043,14043,21874
+  -ja-JP,ja,jpn-Jpan,soo,(en)ɛs | əʊ | əʊ(ja),,soː,s o o | . |,False,6851763, ,declarative,jpn,-2147483648,1, ,Mother,42.0008624407072,male,9,185,13852,13850,21674
+  -ja-JP,ja,jpn-Jpan,zari,(en)zɛd | eɪ | ɑː | aɪ(ja),,zaɾi,z a r i | . |,True,19264337, ,declarative,jpn,-2147483648,1, ,Target_Child,57.001170455245486,male,27,365,24890,24890,48419
+  -ja-JP,ja,jpn-Jpan,tomete kureta n,(en)tiː | əʊ | ɛm | iː | tiː | iː | keɪ | juː | ɑː | iː | tiː | eɪ | ɛn(ja),,tomete | kɯɾeta | n,t o m e t e | k u r e t a | n | ? |,False,6700277, ,question,jpn,-2147483648,3, ,Mother,28.69052752623257,male,9,183,13682,13681,21512
+  -ja-JP,ja,jpn-Jpan,hai demo erai desu,(en)eɪtʃ | eɪ | aɪ | diː | iː | ɛm | əʊ | iː | ɑː | eɪ | aɪ | diː | iː | ɛs | juː(ja),,hai | demo | eɾai | desɯ,h a i | d e m o | e r a i | d e s u | . |,False,7448120, ,declarative,jpn,-2147483648,4, ,Mother,27.131973962504365,male,9,187,14196,14195,22263
+  -ja-JP,ja,jpn-Jpan,pachin shite goran,(en)piː | eɪ | siː | eɪtʃ | aɪ | ɛn | ɛs | eɪtʃ | aɪ | tiː | iː | dʒiː | əʊ | ɑː | eɪ | ɛn(ja),,pat̠ʃin | ʃite | ɡoɾan,p a c h i n | s h i t e | g o r a n | ! |,False,6697960, ,imperative_emphatic,jpn,-2147483648,3, ,Mother,46.00094457791741,male,9,182,13673,13672,21445
+  -ja-JP,ja,jpn-Jpan,zoo,(en)zɛd | əʊ | əʊ(ja),,zoː,z o o | ? |,False,7158744, ,question,jpn,-2147483648,1, ,Mother,36.46070761206595,female,9,186,14095,14093,22007
+  +ja-JP,ja,jpn-Jpan,hai genki dechu,(en)eɪtʃ | eɪ | aɪ | dʒiː | iː | ɛn | keɪ | aɪ | diː | iː | siː | eɪtʃ | juː,,hai | ɡenki | det̠ʃɯ,h a i | g e n k i | d e c h u | . |,True,6705253, ,declarative,jpn,-2147483648,3, ,Target_Child,29.690548060535125,male,9,183,13681,13681,21518
+  +ja-JP,ja,jpn-Jpan,murasaki,(en)ɛm | juː | ɑː | eɪ | ɛs | eɪ | keɪ | aɪ,,mɯɾasaki,m u r a s a k i | . |,False,7167862, ,declarative,jpn,-2147483648,1, ,Mother,50.59241462863714,male,9,186,14078,14072,21965
+  +ja-JP,ja,jpn-Jpan,shashin,(en)ɛs | eɪtʃ | eɪ | ɛs | eɪtʃ | aɪ | ɛn,,ʃaʃin,s h a s h i n | ? |,True,7340409,shashin,question,jpn,1,1,n,Target_Child,61.756914926384525,male,9,186,14143,14143,22088
+  +ja-JP,ja,jpn-Jpan,kore,(en)keɪ | əʊ | ɑː | iː,,koɾe,k o r e | . |,True,7416995, ,declarative,jpn,-2147483648,1, ,Target_Child,22.00045175465615,male,9,187,14195,14195,22242
+  +ja-JP,ja,jpn-Jpan,osakananamoya,(en)əʊ | ɛs | eɪ | keɪ | eɪ | ɛn | eɪ | ɛn | eɪ | ɛm | əʊ | waɪ | eɪ,,osakananamoja,o s a k a n a n a m o y a | . |,True,6969326, ,declarative,jpn,-2147483648,1, ,Target_Child,49.65810386250231,female,9,186,14043,14043,21889
+  +ja-JP,ja,jpn-Jpan,Meejookooen,(en)ɛm | iː | iː | dʒeɪ | əʊ | əʊ | keɪ | əʊ | əʊ | iː | ɛn,,meːd̠ʒoːkoːen,m e e j o o k o o e n | . |,True,7362661, ,declarative,jpn eng,-2147483648,1, ,Target_Child,30.95340766750857,male,9,187,14175,14175,22122
+  +ja-JP,ja,jpn-Jpan,koko mottenai to taorechau ue ga omotai kara,(en)keɪ | əʊ | keɪ | əʊ | ɛm | əʊ | tiː | tiː | iː | ɛn | eɪ | aɪ | tiː | əʊ | tiː | eɪ | əʊ | ɑː | iː | siː | eɪtʃ | eɪ | juː | juː | iː | dʒiː | eɪ | əʊ | ɛm | əʊ | tiː | eɪ | aɪ | keɪ | eɪ | ɑː | eɪ,,koko | mottenai | to | taoɾet̠ʃaɯ | ɯe | ɡa | omotai | kaɾa,k o k o | m o t t e n a i | t o | t a o r e c h a u | u e | g a | o m o t a i | k a r a | . |,False,6656405, ,declarative,jpn,-2147483648,8, ,Mother,24.000492823261258,male,9,182,13673,13672,21410
+  +ja-JP,ja,jpn-Jpan,n,(en)ɛn,,n,n | ? |,True,7340411, ,question,jpn,-2147483648,1, ,Target_Child,29.65769317645126,male,9,187,14175,14175,22119
+  +ja-JP,ja,jpn-Jpan,kumasan sagashite yo,(en)keɪ | juː | ɛm | eɪ | ɛs | eɪ | ɛn | ɛs | eɪ | dʒiː | eɪ | ɛs | eɪtʃ | aɪ | tiː | iː | waɪ | əʊ,,kɯmasan | saɡaʃite | jo,k u m a s a n | s a g a s h i t e | y o | ! |,True,6916033, ,imperative_emphatic,jpn,-2147483648,3, ,Target_Child,37.13217930552989,female,9,186,14043,14043,21853
+  +ja-JP,ja,jpn-Jpan,shooboosha,(en)ɛs | eɪtʃ | əʊ | əʊ | biː | əʊ | əʊ | ɛs | eɪtʃ | eɪ,,ʃoːboːʃa,s h o o b o o s h a | . |,True,6647705, ,declarative,jpn,-2147483648,1, ,Target_Child,38.00078030349699,male,9,182,13672,13672,21437
+  +ja-JP,ja,jpn-Jpan,doko ga itai no,(en)diː | əʊ | keɪ | əʊ | dʒiː | eɪ | aɪ | tiː | eɪ | aɪ | ɛn | əʊ,,doko | ɡa | itai | no,d o k o | g a | i t a i | n o | ? |,False,6562645, ,question,jpn,-2147483648,4, ,Father,18.526047762787737,female,9,181,13632,13631,21308
+  +ja-JP,ja,jpn-Jpan,datte miyotta imasakki,(en)diː | eɪ | tiː | tiː | iː | ɛm | aɪ | waɪ | əʊ | tiː | tiː | eɪ | aɪ | ɛm | eɪ | ɛs | eɪ | keɪ | keɪ | aɪ,,datte | mijotta | imasakki,d a t t e | m i y o t t a | i m a s a k k i | . |,True,6585200, ,declarative,jpn,-2147483648,3, ,Target_Child,31.789153781391818,female,9,181,13631,13631,21360
+  +ja-JP,ja,jpn-Jpan,daijoobu desu ka,(en)diː | eɪ | aɪ | dʒeɪ | əʊ | əʊ | biː | juː | diː | iː | ɛs | juː | keɪ | eɪ,,daid̠ʒoːbɯ | desɯ | ka,d a i j o o b u | d e s u | k a | ? |,True,6941639, ,question,jpn,-2147483648,3, ,Target_Child,44.32945235015092,female,9,186,14043,14043,21874
+  +ja-JP,ja,jpn-Jpan,soo,(en)ɛs | əʊ | əʊ,,soː,s o o | . |,False,6851763, ,declarative,jpn,-2147483648,1, ,Mother,42.0008624407072,male,9,185,13852,13850,21674
+  +ja-JP,ja,jpn-Jpan,zari,(en)zɛd | eɪ | ɑː | aɪ,,zaɾi,z a r i | . |,True,19264337, ,declarative,jpn,-2147483648,1, ,Target_Child,57.001170455245486,male,27,365,24890,24890,48419
+  +ja-JP,ja,jpn-Jpan,tomete kureta n,(en)tiː | əʊ | ɛm | iː | tiː | iː | keɪ | juː | ɑː | iː | tiː | eɪ | ɛn,,tomete | kɯɾeta | n,t o m e t e | k u r e t a | n | ? |,False,6700277, ,question,jpn,-2147483648,3, ,Mother,28.69052752623257,male,9,183,13682,13681,21512
+  +ja-JP,ja,jpn-Jpan,hai demo erai desu,(en)eɪtʃ | eɪ | aɪ | diː | iː | ɛm | əʊ | iː | ɑː | eɪ | aɪ | diː | iː | ɛs | juː,,hai | demo | eɾai | desɯ,h a i | d e m o | e r a i | d e s u | . |,False,7448120, ,declarative,jpn,-2147483648,4, ,Mother,27.131973962504365,male,9,187,14196,14195,22263
+  +ja-JP,ja,jpn-Jpan,pachin shite goran,(en)piː | eɪ | siː | eɪtʃ | aɪ | ɛn | ɛs | eɪtʃ | aɪ | tiː | iː | dʒiː | əʊ | ɑː | eɪ | ɛn,,pat̠ʃin | ʃite | ɡoɾan,p a c h i n | s h i t e | g o r a n | ! |,False,6697960, ,imperative_emphatic,jpn,-2147483648,3, ,Mother,46.00094457791741,male,9,182,13673,13672,21445
+  +ja-JP,ja,jpn-Jpan,zoo,(en)zɛd | əʊ | əʊ,,zoː,z o o | ? |,False,7158744, ,question,jpn,-2147483648,1, ,Mother,36.46070761206595,female,9,186,14095,14093,22007
+
+[test/ko-KR/data.csv] no column-set change (values may still differ)
+  payload size 2,700,889 -> 2,700,885 bytes (-4): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[test/yue-CN/data.csv] no column-set change (values may still differ)
+  payload size 5,760,725 -> 5,701,439 bytes (-59,286): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- test/yue-CN/data.csv@6bb20aa609
+  +++ test/yue-CN/data.csv@a13fed8856
+  @@ -1,20 +1,20 @@
+   lang,espeak_lang_code,epitran_lang_code,sentence,ipa_espeak,ipa_epitran,ipa_g2p_plus,character_split_utterance,is_child,id,stem,type,language,num_morphemes,num_tokens,part_of_speech,speaker_role,target_child_age,target_child_sex,collection_id,corpus_id,speaker_id,target_child_id,transcript_id
+   yue-CN,yue,yue-Hant,拜拜 囉,baai1baaiɜ | lo1,,paːĭ˥paːĭ˧ | lɔ̽˥,拜 拜 | 囉 | . |,False,4787739,baai1baai3 lo1,declarative,yue eng,2,2,co sfp,Investigator,29.427708987864225,male,7,126,9018,9016,15813
+   yue-CN,yue,yue-Hant,唔 要,nɡ4 | jiuɜ,,m̩˧˩̰ | jiːŭ˧,唔 | 要 | . |,False,4843455,m4 jiu3,declarative,yue eng,2,2,adv:neg v:aux,Investigator,35.953510339021335,female,7,126,9024,9023,15834
+  -yue-CN,yue,yue-Hant,係 laak3,hai6 | (en)lɑːkθɹiː(yue),,hɐi˨ | la̞˧k,係 | l a a k 3 | . |,False,4881307,hai6 laak3,declarative,yue eng,2,2,v sfp,Investigator,35.526396845931124,female,7,126,9037,9034,15855
+  -yue-CN,yue,yue-Hant,仲 喺度 ge2 點解 沖 完 都,zunɡ6 | hai2 | dou6 | (en)dʒɛtuː(yue) | di2m | ɡaai2 | cunɡ1 | jyu4n | dou1,,tsʊ̟˨ŋ | hɐi˧˥tou˨ | kɛ˧˥ | ti˧˥mkaːĭ˧˥ | tsʰʊ̟˥ŋ | jy˧˩̰n | tou˥,仲 | 喺 度 | g e 2 | 點 解 | 沖 | 完 | 都 | ? |,False,4840296,zung6 hai2dou6 ge2 dim2gaai2 cung1 jyun4 dou1,question,yue eng,7,7,adv asp sfp wh v asp adv,Investigator,36.36214295981437,female,7,126,9024,9023,15835
+  -yue-CN,yue,yue-Hant,食 豆豆 aa4 你 餵 公仔 aa1,si6k | dau6 | dau6 | (en)ɑːfɔː(yue) | nei5 | waiɜ | ɡunɡ1 | zai2 | (en)ɑːwɒn(yue),,sɪ̞˨k | tɐu˧˥ | a̞˧˩̰ | nei˩˧ | wɐi˧ | kʊ̟˥ŋtsɐi˧˥ | a̞˥,食 | 豆 豆 | a a 4 | 你 | 餵 | 公 仔 | a a 1 | . |,False,4646291,sik6 dau2 aa4 nei5 wai3 gung1zai2 aa1,declarative,yue eng,8,7,v n fil pro v n sfp,Investigator,47.55949814164562,female,7,125,8942,8939,15694
+  +yue-CN,yue,yue-Hant,係 laak3,hai6 | (en)lɑːkθɹiː,,hɐi˨ | la̞˧k,係 | l a a k 3 | . |,False,4881307,hai6 laak3,declarative,yue eng,2,2,v sfp,Investigator,35.526396845931124,female,7,126,9037,9034,15855
+  +yue-CN,yue,yue-Hant,仲 喺度 ge2 點解 沖 完 都,zunɡ6 | hai2 | dou6 | (en)dʒɛtuː | di2m | ɡaai2 | cunɡ1 | jyu4n | dou1,,tsʊ̟˨ŋ | hɐi˧˥tou˨ | kɛ˧˥ | ti˧˥mkaːĭ˧˥ | tsʰʊ̟˥ŋ | jy˧˩̰n | tou˥,仲 | 喺 度 | g e 2 | 點 解 | 沖 | 完 | 都 | ? |,False,4840296,zung6 hai2dou6 ge2 dim2gaai2 cung1 jyun4 dou1,question,yue eng,7,7,adv asp sfp wh v asp adv,Investigator,36.36214295981437,female,7,126,9024,9023,15835
+  +yue-CN,yue,yue-Hant,食 豆豆 aa4 你 餵 公仔 aa1,si6k | dau6 | dau6 | (en)ɑːfɔː | nei5 | waiɜ | ɡunɡ1 | zai2 | (en)ɑːwɒn,,sɪ̞˨k | tɐu˧˥ | a̞˧˩̰ | nei˩˧ | wɐi˧ | kʊ̟˥ŋtsɐi˧˥ | a̞˥,食 | 豆 豆 | a a 4 | 你 | 餵 | 公 仔 | a a 1 | . |,False,4646291,sik6 dau2 aa4 nei5 wai3 gung1zai2 aa1,declarative,yue eng,8,7,v n fil pro v n sfp,Investigator,47.55949814164562,female,7,125,8942,8939,15694
+   yue-CN,yue,yue-Hant,你 幫 佢 擒 入 張 被 先,nei5 | bonɡ1 | keoi5 | ka4m | ja6p | zoenɡ1 | bei6 | si1n,,nei˩˧ | pɔ̽˥ŋ | kʰɵy˩˧ | kʰɐ˧˩̰m | jɐ˨p | tsœ̞˥ŋ | pei˨ | si˥n,你 | 幫 | 佢 | 擒 | 入 | 張 | 被 | 先 | ! |,False,4645787,nei5 bong1 keoi5 kam4 jap6 zoeng1 bei6 sin1,imperative_emphatic,yue eng,8,8,pro v pro v v:dirc cl prep sfp,Investigator,35.1978480050925,female,7,125,8951,8939,15670
+  -yue-CN,yue,yue-Hant,公仔 喺度 笑 aa3,ɡunɡ1 | zai2 | hai2 | dou6 | siuɜ | (en)ɑːθɹiː(yue),,kʊ̟˥ŋtsɐi˧˥ | hɐi˧˥tou˨ | siːŭ˧ | a̞˧,公 仔 | 喺 度 | 笑 | a a 3 | . |,False,4851773,gung1zai2 hai2dou6 siu3 aa3,declarative,yue eng,4,4,n asp v fil,Investigator,27.98620094868478,female,7,126,9037,9034,15844
+  -yue-CN,yue,yue-Hant,laa4,(en)lɑːfɔː(yue),,la̞˧˩̰,l a a 4 | . |,False,4889121,laa4,declarative,yue eng,1,1,sfp,Mother,25.033368241647672,male,7,126,9050,9047,15861
+  +yue-CN,yue,yue-Hant,公仔 喺度 笑 aa3,ɡunɡ1 | zai2 | hai2 | dou6 | siuɜ | (en)ɑːθɹiː,,kʊ̟˥ŋtsɐi˧˥ | hɐi˧˥tou˨ | siːŭ˧ | a̞˧,公 仔 | 喺 度 | 笑 | a a 3 | . |,False,4851773,gung1zai2 hai2dou6 siu3 aa3,declarative,yue eng,4,4,n asp v fil,Investigator,27.98620094868478,female,7,126,9037,9034,15844
+  +yue-CN,yue,yue-Hant,laa4,(en)lɑːfɔː,,la̞˧˩̰,l a a 4 | . |,False,4889121,laa4,declarative,yue eng,1,1,sfp,Mother,25.033368241647672,male,7,126,9050,9047,15861
+   yue-CN,yue,yue-Hant,奶奶,naai4naai2,,naːĭ˧˩̰naːĭ˧˥,奶 奶 | . |,True,4632794,naai4naai2,declarative,nan eng,1,1,n,Target_Child,29.03345037885788,female,7,125,8939,8939,15661
+   yue-CN,yue,yue-Hant,瀄,zi1t,,tsi˥t,瀄 | . |,False,4723900,zit1,declarative,yue eng,1,1,v,Investigator,25.32906219840243,unknown,7,126,8957,8955,15765
+   yue-CN,yue,yue-Hant,八,baaɜt,,pa̞˧t,八 | . |,True,4834613,baat3,declarative,yue eng,1,1,num,Target_Child,32.263496170352575,male,7,126,9016,9016,15818
+   yue-CN,yue,yue-Hant,哦,ŋo4,,ŋɔ̽˧˩̰,哦 | . |,True,4849156,ngo4,declarative,yue eng,1,1,co,Target_Child,27.06626419433664,female,7,126,9034,9034,15845
+   yue-CN,yue,yue-Hant,快 啲,faaiɜ | di1,,faːĭ˧ | ti˥,快 | 啲 | . |,False,4859237,faai3 di1,declarative,yue eng,2,2,adj stprt,Investigator,25.033368241647672,male,7,126,9053,9047,15861
+   yue-CN,yue,yue-Hant,呢 個 女仔 女仔 嚟 架,ne1 | ɡoɜ | neoi5 | zai2 | neoi5 | zai2 | lai4 | ɡaaɜ,,nɛ˥ | kɔ̽˧ | nɵy˧˥ | nɵy˧˥ | lɐi˧˩̰ | ka̞˧,呢 | 個 | 女 仔 | 女 仔 | 嚟 | 架 | . |,False,4922840,ne1 go3 neoi2 neoi2 lai4 gaa3,declarative,yue eng,8,6,sfp cl n n v sfp,Investigator,30.29630998583133,female,7,126,9061,9060,15877
+  -yue-CN,yue,yue-Hant,就係 aa1,zau6 | hai6 | (en)ɑːwɒn(yue),,tsɐu˨hɐi˨ | a̞˥,就 係 | a a 1 | . |,False,4786956,zau6hai6 aa1,declarative,yue eng,2,2,adj sfp,Investigator,26.493357153124293,male,7,126,9009,9008,15803
+  -yue-CN,yue,yue-Hant,laa4,(en)lɑːfɔː(yue),,la̞˧˩̰,l a a 4 | . |,False,4840772,laa4,declarative,yue eng,1,1,sfp,Relative,24.29618678001601,male,7,126,9030,9008,15798
+  +yue-CN,yue,yue-Hant,就係 aa1,zau6 | hai6 | (en)ɑːwɒn,,tsɐu˨hɐi˨ | a̞˥,就 係 | a a 1 | . |,False,4786956,zau6hai6 aa1,declarative,yue eng,2,2,adj sfp,Investigator,26.493357153124293,male,7,126,9009,9008,15803
+  +yue-CN,yue,yue-Hant,laa4,(en)lɑːfɔː,,la̞˧˩̰,l a a 4 | . |,False,4840772,laa4,declarative,yue eng,1,1,sfp,Relative,24.29618678001601,male,7,126,9030,9008,15798
+   yue-CN,yue,yue-Hant,啤啤 跌 咗 會 喊喊 架 喎,be1 | be1 | diɜt | zo2 | wui2 | haaɜm | haaɜm | ɡaaɜ | waa1,,pi˧˩̰ | ti˧t | tsɔ̽˧˥ | wuːĭ˩˧ | ha̞˧m | ka̞˧ | wɔ̽˧,啤 啤 | 跌 | 咗 | 會 | 喊 喊 | 架 | 喎 | . |,False,4668177,bi4 dit3 zo2 wui5 haam3 gaa3 wo3,declarative,yue eng,9,7,n v asp v:aux v cl sfp,Investigator,55.06683915480811,female,7,125,8952,8939,15707
+   yue-CN,yue,yue-Hant,即係 警車,zi1k | hai6 | ɡinɡ2 | ce1,,tsɪ̞˥khɐi˨ | kɪ̞˧˥ŋtsʰɛ˥,即 係 | 警 車 | . |,False,4702271,zik1hai6 ging2ce1,declarative,yue eng,2,2,adv n,Investigator,25.559046386989465,unknown,7,126,8957,8955,15764
+  -yue-CN,yue,yue-Hant,lo2 個 桶 做 咩 aa3,(en)lətuː(yue) | ɡoɜ | tunɡ2 | zou6 | me1 | (en)ɑːθɹiː(yue),,lɔ̽˧˥ | kɔ̽˧ | tʰʊ̟˧˥ŋ | tsou˨ | mɛ˥ | a̞˧,l o 2 | 個 | 桶 | 做 | 咩 | a a 3 | ? |,False,4816410,lo2 go3 tung2 zou6 me1 aa3,question,yue eng jpn,6,6,v cl n v wh fil,Investigator,35.26355777326023,male,7,126,9018,9016,15821
+  +yue-CN,yue,yue-Hant,lo2 個 桶 做 咩 aa3,(en)lətuː | ɡoɜ | tunɡ2 | zou6 | me1 | (en)ɑːθɹiː,,lɔ̽˧˥ | kɔ̽˧ | tʰʊ̟˧˥ŋ | tsou˨ | mɛ˥ | a̞˧,l o 2 | 個 | 桶 | 做 | 咩 | a a 3 | ? |,False,4816410,lo2 go3 tung2 zou6 me1 aa3,question,yue eng jpn,6,6,v cl n v wh fil,Investigator,35.26355777326023,male,7,126,9018,9016,15821
+
+[test/zh-CN/data.csv] no column-set change (values may still differ)
+  payload size 19,891,795 -> 19,517,208 bytes (-374,587): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- test/zh-CN/data.csv@6bb20aa609
+  +++ test/zh-CN/data.csv@a13fed8856
+  @@ -1,20 +1,20 @@
+   lang,espeak_lang_code,epitran_lang_code,sentence,ipa_espeak,ipa_epitran,ipa_g2p_plus,character_split_utterance,is_child,id,stem,type,language,num_morphemes,num_tokens,part_of_speech,speaker_role,target_child_age,target_child_sex,collection_id,corpus_id,speaker_id,target_child_id,transcript_id
+  -zh-CN,cmn,cmn-Hans,我 现在 当 学生 坐 好 了 啊,wo2 | (en)zaɪənfɔː | zeɪfɔː | daŋwɒn | zjuːtuː(cmn) | s.ə5ŋ | (en)zjuːəfɔː | heɪəθɹiː | lɛfaɪv | afaɪv(cmn),wo | ɕiant͡sai | taŋ | ɕyeʂeŋ | t͡suo | xao | liao | a,wo˧˩˧ | ɕjɛ˥˩ntsai˥˩ | ta˥ŋ | ɕɥe˧˥ʃ̺ə˥ŋ | tswo˥˩ | xau˧˩˧ | lɤ | a˥,我 | 现 在 | 当 | 学 生 | 坐 | 好 | 了 | 啊 | . |,False,5336602,wo3 xian4zai4 dang1 xue2sheng1 zuo4 hao3 le a1,declarative,zho,8,8,pro:per adv prep n v adj asp sfp,Mother,45.00092404361486,female,7,138,11233,11232,18596
+  -zh-CN,cmn,cmn-Hans,大象 爸爸 用 手 伸呀伸 都 拿 不 到,(en)dafɔː | zaɪəŋfɔː | bafɔː | bafɔː(cmn) | yu5ŋ | s.ou2 | (en)ʃɛnwɒn | jafaɪv | ʃɛnwɒn | daʊwɒn | natuː | bʌfɔː | deɪəfɔː(cmn),taɕiaŋ | papa | joŋ | ʂou | ʂenjaʂen | tu | na | pu | tao,ta˥˩ɕja˥˩ŋ | pa˥˩ | jʊ˥˩ŋ | ʃ̺ou˧˩˧ | ʃ̺ə˥n | tou˥ | na˧˥ | pu˥˩ | tau˥˩,大 象 | 爸 爸 | 用 | 手 | 伸 呀 伸 | 都 | 拿 | 不 | 到 | . |,True,5270577,da4xiang4 ba4 yong4 shou3 shen1 dou1 na2 bu4 dao4,declarative,zho,11,9,n n:relat prep n v adv v adv v:resc,Target_Child,,male,7,135,10410,10410,18295
+  -zh-CN,cmn,cmn-Hans,滴 到 我 的 手,(en)dɪwɒn | deɪəfɔː(cmn) | wo2 | (en)dɛfaɪv(cmn) | s.ou2,ti | tao | wo | ti | ʂou,ti˥ | tau˥˩ | wo˧˩˧ | tɤ | ʃ̺ou˧˩˧,滴 | 到 | 我 | 的 | 手 | . |,True,5144406,di1 dao4 wo3 de shou3,declarative,zho,5,5,v v:resc pro:per poss n,Target_Child,36.00073923489189,unknown,7,133,10016,10016,16724
+  -zh-CN,cmn,cmn-Hans,哟,(en)jɒwɒn(cmn),jo,wo,哟 | ! |,False,5343974,yo,imperative_emphatic,zho,1,1,co,Mother,45.00092404361486,female,7,138,11233,11232,18596
+  -zh-CN,cmn,cmn-Hans,哦 你 爸 也 会 修 车 啊,(en)ɒtuː | nɪθɹiː | bafɔː | jɛθɹiː | hjuːɪfɔː | zɪəwɒn | tʃɛwɒn | afaɪv(cmn),o | ni | pa | je | kʰuai | ɕiou | t͡ɕy | a,ɔ˥ | ni˧˩˧ | pa˥˩ | je˧˩˧ | xwei˥˩ | ɕjou˥ | t̠ʃ̺ʰɤ˥ | a˥,哦 | 你 | 爸 | 也 | 会 | 修 | 车 | 啊 | ? |,False,5224179,o1 ni3 ba4 ye3 hui4 xiu1 che1 a1,question,zho,8,8,co pro:per n:relat adv v:aux v n sfp,Mother,36.39499784389823,male,7,134,10063,10061,16846
+  -zh-CN,cmn,cmn-Hans,死 掉 了 就 要 拜 他,(en)sɪθɹiː | daɪəɹəfɔː | lɛfaɪv | dʒɪəfɔː | jeɪəfɔː | beɪfɔː | tawɒn(cmn),si | tiao | liao | t͡ɕiou | jao | pai | tʰa,sɹ̪̩˧˩˧ | tjau˥˩ | lɤ | tɕjou˥˩ | jau˥˩ | pai˥˩ | tʰa˥,死 | 掉 | 了 | 就 | 要 | 拜 | 他 | . |,False,5360870,si3 diao4 le jiu4 yao4 bai4 ta1,declarative,zho eng,7,7,v:resc v:resc asp adv v:aux v pro:per,Mother,36.29643319164664,male,7,140,11285,11284,18644
+  -zh-CN,cmn,cmn-Hans,我 觉得 茶壶 可以 倒 茶,wo2 | (en)dʒjuːtuː | dɛfaɪv | tʃatuː | hʌtuː | kɛθɹiː | jɪθɹiː | deɪəfɔː | tʃatuː(cmn),wo | t͡ɕyete | ʈ͡ʂʰaxu | kʰei | tao | ʈ͡ʂʰa,wo˧˩˧ | tɕɥe˧˥tɤ | t̠ʃ̺ʰa˧˥xu˧˥ | kʰɤ˧˩˧i˧˩˧ | tau˥˩ | t̠ʃ̺ʰa˧˥,我 | 觉 得 | 茶 壶 | 可 以 | 倒 | 茶 | . |,True,5092483,wo3 jue2de cha2hu2 ke3yi3 dao4 cha2,declarative,zho,6,6,pro:per v n v:aux v n,Child,,unknown,7,132,10006,-2147483648,16696
+  -zh-CN,cmn,cmn-Hans,这边 有,(en)ʒɛfɔː | baɪənwɒn | jaʊθɹiː(cmn),ʈ͡ʂepian | jou,t̠ʃ̺ɤ˥˩pjɛ˥n | jou˧˩˧,这 边 | 有 | . |,False,5401880,zhe4bian1 you3,declarative,zho eng,2,2,post v,Adult,24.69044538902236,male,7,140,11286,11284,18670
+  -zh-CN,cmn,cmn-Hans,老虎 再见,(en)leɪəθɹiː | hʌθɹiː | zeɪfɔː | dʒaɪənfɔː(cmn),laoxu | t͡sait͡ɕian,lau˧˩˧xu˧˩˧ | tsai˥˩tɕjɛ˥˩n,老 虎 | 再 见 | . |,False,5389865,lao3hu3 zai4jian4,declarative,zho eng,2,2,n v,Adult,24.03334770734512,male,7,140,11286,11284,18663
+  -zh-CN,cmn,cmn-Hans,是不是 跟 我 跟 我 妹妹 吵架 一样,s.i.5 | (en)bʌfɔː(cmn) | s.i.5 | (en)dʒɛnwɒn(cmn) | wo2 | (en)dʒɛnwɒn(cmn) | wo2 | (en)meɪfɔː | meɪfɔː(cmn) | ts.hɑu2 | (en)dʒaɪəfɔː | jɪwɒn | jaŋfɔː(cmn),ʂɻ̩puʂɻ̩ | ken | wo | ken | wo | meimei | ʈ͡ʂʰaot͡ɕia | ijaŋ,ʃ̺ɻ̩˥˩pu˧˥ʃ̺ɻ̩˥˩ | kə˥n | wo˧˩˧ | mei˥˩ | t̠ʃ̺ʰau˧˩˧tɕja˥˩ | i˥ja˥˩ŋ,是 不 是 | 跟 | 我 | 跟 | 我 | 妹 妹 | 吵 架 | 一 样 | ? |,False,4944432,shi4bu2shi4 gen1 wo3 mei4 chao3jia4 yi1yang4,question,zho,7,8,co:int prep pro:per n:relat v adj,Investigator,63.0012936610608,male,7,129,9159,9158,16010
+  -zh-CN,cmn,cmn-Hans,下雨 真 讨厌 啊,(en)zaɪəfɔː(cmn) | ʲy2 | (en)ʒɛnwɒn | taʊθɹiː | janfɔː | afaɪv(cmn),ɕiaju | ʈ͡ʂen | tʰaojan | a,ɕja˥˩y˧˩˧ | t̠ʃ̺ə˥n | tʰau˧˩˧jɛ˥˩n | a˥,下 雨 | 真 | 讨 厌 | 啊 | . |,False,5158135,xia4yu3 zhen1 tao3yan4 a1,declarative,zho,4,4,v adv v sfp,Investigator,31.000636563379125,unknown,7,133,10045,10043,16793
+  +zh-CN,cmn,cmn-Hans,我 现在 当 学生 坐 好 了 啊,wo2 | (en)zaɪənfɔː | zeɪfɔː | daŋwɒn | zjuːtuː | s.ə5ŋ | (en)zjuːəfɔː | heɪəθɹiː | lɛfaɪv | afaɪv,wo | ɕiant͡sai | taŋ | ɕyeʂeŋ | t͡suo | xao | liao | a,wo˧˩˧ | ɕjɛ˥˩ntsai˥˩ | ta˥ŋ | ɕɥe˧˥ʃ̺ə˥ŋ | tswo˥˩ | xau˧˩˧ | lɤ | a˥,我 | 现 在 | 当 | 学 生 | 坐 | 好 | 了 | 啊 | . |,False,5336602,wo3 xian4zai4 dang1 xue2sheng1 zuo4 hao3 le a1,declarative,zho,8,8,pro:per adv prep n v adj asp sfp,Mother,45.00092404361486,female,7,138,11233,11232,18596
+  +zh-CN,cmn,cmn-Hans,大象 爸爸 用 手 伸呀伸 都 拿 不 到,(en)dafɔː | zaɪəŋfɔː | bafɔː | bafɔː | yu5ŋ | s.ou2 | (en)ʃɛnwɒn | jafaɪv | ʃɛnwɒn | daʊwɒn | natuː | bʌfɔː | deɪəfɔː,taɕiaŋ | papa | joŋ | ʂou | ʂenjaʂen | tu | na | pu | tao,ta˥˩ɕja˥˩ŋ | pa˥˩ | jʊ˥˩ŋ | ʃ̺ou˧˩˧ | ʃ̺ə˥n | tou˥ | na˧˥ | pu˥˩ | tau˥˩,大 象 | 爸 爸 | 用 | 手 | 伸 呀 伸 | 都 | 拿 | 不 | 到 | . |,True,5270577,da4xiang4 ba4 yong4 shou3 shen1 dou1 na2 bu4 dao4,declarative,zho,11,9,n n:relat prep n v adv v adv v:resc,Target_Child,,male,7,135,10410,10410,18295
+  +zh-CN,cmn,cmn-Hans,滴 到 我 的 手,(en)dɪwɒn | deɪəfɔː | wo2 | (en)dɛfaɪv | s.ou2,ti | tao | wo | ti | ʂou,ti˥ | tau˥˩ | wo˧˩˧ | tɤ | ʃ̺ou˧˩˧,滴 | 到 | 我 | 的 | 手 | . |,True,5144406,di1 dao4 wo3 de shou3,declarative,zho,5,5,v v:resc pro:per poss n,Target_Child,36.00073923489189,unknown,7,133,10016,10016,16724
+  +zh-CN,cmn,cmn-Hans,哟,(en)jɒwɒn,jo,wo,哟 | ! |,False,5343974,yo,imperative_emphatic,zho,1,1,co,Mother,45.00092404361486,female,7,138,11233,11232,18596
+  +zh-CN,cmn,cmn-Hans,哦 你 爸 也 会 修 车 啊,(en)ɒtuː | nɪθɹiː | bafɔː | jɛθɹiː | hjuːɪfɔː | zɪəwɒn | tʃɛwɒn | afaɪv,o | ni | pa | je | kʰuai | ɕiou | t͡ɕy | a,ɔ˥ | ni˧˩˧ | pa˥˩ | je˧˩˧ | xwei˥˩ | ɕjou˥ | t̠ʃ̺ʰɤ˥ | a˥,哦 | 你 | 爸 | 也 | 会 | 修 | 车 | 啊 | ? |,False,5224179,o1 ni3 ba4 ye3 hui4 xiu1 che1 a1,question,zho,8,8,co pro:per n:relat adv v:aux v n sfp,Mother,36.39499784389823,male,7,134,10063,10061,16846
+  +zh-CN,cmn,cmn-Hans,死 掉 了 就 要 拜 他,(en)sɪθɹiː | daɪəɹəfɔː | lɛfaɪv | dʒɪəfɔː | jeɪəfɔː | beɪfɔː | tawɒn,si | tiao | liao | t͡ɕiou | jao | pai | tʰa,sɹ̪̩˧˩˧ | tjau˥˩ | lɤ | tɕjou˥˩ | jau˥˩ | pai˥˩ | tʰa˥,死 | 掉 | 了 | 就 | 要 | 拜 | 他 | . |,False,5360870,si3 diao4 le jiu4 yao4 bai4 ta1,declarative,zho eng,7,7,v:resc v:resc asp adv v:aux v pro:per,Mother,36.29643319164664,male,7,140,11285,11284,18644
+  +zh-CN,cmn,cmn-Hans,我 觉得 茶壶 可以 倒 茶,wo2 | (en)dʒjuːtuː | dɛfaɪv | tʃatuː | hʌtuː | kɛθɹiː | jɪθɹiː | deɪəfɔː | tʃatuː,wo | t͡ɕyete | ʈ͡ʂʰaxu | kʰei | tao | ʈ͡ʂʰa,wo˧˩˧ | tɕɥe˧˥tɤ | t̠ʃ̺ʰa˧˥xu˧˥ | kʰɤ˧˩˧i˧˩˧ | tau˥˩ | t̠ʃ̺ʰa˧˥,我 | 觉 得 | 茶 壶 | 可 以 | 倒 | 茶 | . |,True,5092483,wo3 jue2de cha2hu2 ke3yi3 dao4 cha2,declarative,zho,6,6,pro:per v n v:aux v n,Child,,unknown,7,132,10006,-2147483648,16696
+  +zh-CN,cmn,cmn-Hans,这边 有,(en)ʒɛfɔː | baɪənwɒn | jaʊθɹiː,ʈ͡ʂepian | jou,t̠ʃ̺ɤ˥˩pjɛ˥n | jou˧˩˧,这 边 | 有 | . |,False,5401880,zhe4bian1 you3,declarative,zho eng,2,2,post v,Adult,24.69044538902236,male,7,140,11286,11284,18670
+  +zh-CN,cmn,cmn-Hans,老虎 再见,(en)leɪəθɹiː | hʌθɹiː | zeɪfɔː | dʒaɪənfɔː,laoxu | t͡sait͡ɕian,lau˧˩˧xu˧˩˧ | tsai˥˩tɕjɛ˥˩n,老 虎 | 再 见 | . |,False,5389865,lao3hu3 zai4jian4,declarative,zho eng,2,2,n v,Adult,24.03334770734512,male,7,140,11286,11284,18663
+  +zh-CN,cmn,cmn-Hans,是不是 跟 我 跟 我 妹妹 吵架 一样,s.i.5 | (en)bʌfɔː | s.i.5 | (en)dʒɛnwɒn | wo2 | (en)dʒɛnwɒn | wo2 | (en)meɪfɔː | meɪfɔː | ts.hɑu2 | (en)dʒaɪəfɔː | jɪwɒn | jaŋfɔː,ʂɻ̩puʂɻ̩ | ken | wo | ken | wo | meimei | ʈ͡ʂʰaot͡ɕia | ijaŋ,ʃ̺ɻ̩˥˩pu˧˥ʃ̺ɻ̩˥˩ | kə˥n | wo˧˩˧ | mei˥˩ | t̠ʃ̺ʰau˧˩˧tɕja˥˩ | i˥ja˥˩ŋ,是 不 是 | 跟 | 我 | 跟 | 我 | 妹 妹 | 吵 架 | 一 样 | ? |,False,4944432,shi4bu2shi4 gen1 wo3 mei4 chao3jia4 yi1yang4,question,zho,7,8,co:int prep pro:per n:relat v adj,Investigator,63.0012936610608,male,7,129,9159,9158,16010
+  +zh-CN,cmn,cmn-Hans,下雨 真 讨厌 啊,(en)zaɪəfɔː | ʲy2 | (en)ʒɛnwɒn | taʊθɹiː | janfɔː | afaɪv,ɕiaju | ʈ͡ʂen | tʰaojan | a,ɕja˥˩y˧˩˧ | t̠ʃ̺ə˥n | tʰau˧˩˧jɛ˥˩n | a˥,下 雨 | 真 | 讨 厌 | 啊 | . |,False,5158135,xia4yu3 zhen1 tao3yan4 a1,declarative,zho,4,4,v adv v sfp,Investigator,31.000636563379125,unknown,7,133,10045,10043,16793
+   zh-CN,cmn,cmn-Hans,嗯,ŋɜ,en,ə˥n,嗯 | . |,True,5014574,en1,declarative,zho,1,1,co,Target_Child,60.00123205815314,male,7,130,9438,9438,16292
+  -zh-CN,cmn,cmn-Hans,来 喔 往 这 边 走 去 找 妈妈,(en)leɪtuː | ɒwɒn(cmn) | wɑ2ŋ | (en)ʒɛfɔː | baɪənwɒn | zaʊθɹiː | kwfɔː(cmn) | ts.ɑu2 | (en)mawɒn | mawɒn(cmn),lai | wo | waŋ | ʈ͡ʂei | pian | t͡sou | t͡ɕʰy | ʈ͡ʂao | mama,lai˧˥ | wo˥˩ | wa˧˩˧ŋ | t̠ʃ̺ɤ˥˩ | pjɛ˥n | tsou˧˩˧ | tɕʰy˥˩ | t̠ʃ̺au˧˩˧ | ma˥,来 | 喔 | 往 | 这 | 边 | 走 | 去 | 找 | 妈 妈 | . |,False,5144399,lai2 wo4 wang3 zhe4 bian1 zou3 qu4 zhao3 ma1,declarative,zho,10,9,co co prep pro:dem n v:dirc v:dirc v n:relat,Investigator,37.00075976919444,unknown,7,133,10030,10021,16764
+  -zh-CN,cmn,cmn-Hans,对,(en)djuːɪfɔː(cmn),tuei,twei˥˩,对 | . |,True,5566240,dui4,declarative,zho,1,1,adj,Target_Child,54.00110885233783,female,7,144,11869,11869,19104
+  -zh-CN,cmn,cmn-Hans,哦 小心 哦 小心 哦,(en)ɒtuː | zaɪəɹəθɹiː | zɪnwɒn | ɒtuː | zaɪəɹəθɹiː | zɪnwɒn | ɒtuː(cmn),o | ɕiaoɕin | o | ɕiaoɕin | o,ɔ˥ | ɕjau˧˩˧ɕi˥n | ɔ˥ | ɕjau˧˩˧ɕi˥n | ɔ˥,哦 | 小 心 | 哦 | 小 心 | 哦 | . |,False,5187954,o1 xiao3xin1 o1 xiao3xin1 o1,declarative,zho,5,5,co v sfp v sfp,Investigator,30.00061602907657,unknown,7,133,10057,10055,16826
+  -zh-CN,cmn,cmn-Hans,不 知道,(en)bʌfɔː(cmn) | ts.i.5 | (en)deɪəfɔː(cmn),pu | ʈ͡ʂɻ̩tao,pu˥˩ | t̠ʃ̺ɻ̩˥tau˥˩,不 | 知 道 | . |,True,5364683,bu4 zhi1dao4,declarative,zho eng,2,2,adv v,Target_Child,34.953489804718785,male,7,140,11284,11284,18643
+  -zh-CN,cmn,cmn-Hans,还有 捡 到 了 皮球 了,(en)heɪtuː | jaʊθɹiː | dʒaɪənθɹiː | deɪəfɔː | lɛfaɪv | pɪtuː | kɪətuː | lɛfaɪv(cmn),xaijou | t͡ɕian | tao | liao | pʰit͡ɕʰiou | liao,xai˧˥jou˧˩˧ | tɕjɛ˧˩˧n | tau˥˩ | lɤ | pʰi˧˥tɕʰjou˧˥ | lɤ,还 有 | 捡 | 到 | 了 | 皮 球 | 了 | . |,True,5263687,hai2you3 jian3 dao4 le pi2qiu2 le,declarative,zho,6,6,conj v v:resc asp n asp,Target_Child,84.0017248814144,female,7,135,10859,10859,18089
+  -zh-CN,cmn,cmn-Hans,有,(en)jaʊθɹiː(cmn),jou,jou˧˩˧,有 | . |,True,5120735,you3,declarative,zho,1,1,v,Target_Child,28.000574960471468,unknown,7,133,10024,10024,16740
+  -zh-CN,cmn,cmn-Hans,妈妈,(en)mawɒn | mawɒn(cmn),mama,ma˥,妈 妈 | . |,True,4987376,ma1,declarative,zho,2,1,n:relat,Target_Child,49.001006180825065,male,7,130,9266,9266,16207
+  +zh-CN,cmn,cmn-Hans,来 喔 往 这 边 走 去 找 妈妈,(en)leɪtuː | ɒwɒn | wɑ2ŋ | (en)ʒɛfɔː | baɪənwɒn | zaʊθɹiː | kwfɔː | ts.ɑu2 | (en)mawɒn | mawɒn,lai | wo | waŋ | ʈ͡ʂei | pian | t͡sou | t͡ɕʰy | ʈ͡ʂao | mama,lai˧˥ | wo˥˩ | wa˧˩˧ŋ | t̠ʃ̺ɤ˥˩ | pjɛ˥n | tsou˧˩˧ | tɕʰy˥˩ | t̠ʃ̺au˧˩˧ | ma˥,来 | 喔 | 往 | 这 | 边 | 走 | 去 | 找 | 妈 妈 | . |,False,5144399,lai2 wo4 wang3 zhe4 bian1 zou3 qu4 zhao3 ma1,declarative,zho,10,9,co co prep pro:dem n v:dirc v:dirc v n:relat,Investigator,37.00075976919444,unknown,7,133,10030,10021,16764
+  +zh-CN,cmn,cmn-Hans,对,(en)djuːɪfɔː,tuei,twei˥˩,对 | . |,True,5566240,dui4,declarative,zho,1,1,adj,Target_Child,54.00110885233783,female,7,144,11869,11869,19104
+  +zh-CN,cmn,cmn-Hans,哦 小心 哦 小心 哦,(en)ɒtuː | zaɪəɹəθɹiː | zɪnwɒn | ɒtuː | zaɪəɹəθɹiː | zɪnwɒn | ɒtuː,o | ɕiaoɕin | o | ɕiaoɕin | o,ɔ˥ | ɕjau˧˩˧ɕi˥n | ɔ˥ | ɕjau˧˩˧ɕi˥n | ɔ˥,哦 | 小 心 | 哦 | 小 心 | 哦 | . |,False,5187954,o1 xiao3xin1 o1 xiao3xin1 o1,declarative,zho,5,5,co v sfp v sfp,Investigator,30.00061602907657,unknown,7,133,10057,10055,16826
+  +zh-CN,cmn,cmn-Hans,不 知道,(en)bʌfɔː | ts.i.5 | (en)deɪəfɔː,pu | ʈ͡ʂɻ̩tao,pu˥˩ | t̠ʃ̺ɻ̩˥tau˥˩,不 | 知 道 | . |,True,5364683,bu4 zhi1dao4,declarative,zho eng,2,2,adv v,Target_Child,34.953489804718785,male,7,140,11284,11284,18643
+  +zh-CN,cmn,cmn-Hans,还有 捡 到 了 皮球 了,(en)heɪtuː | jaʊθɹiː | dʒaɪənθɹiː | deɪəfɔː | lɛfaɪv | pɪtuː | kɪətuː | lɛfaɪv,xaijou | t͡ɕian | tao | liao | pʰit͡ɕʰiou | liao,xai˧˥jou˧˩˧ | tɕjɛ˧˩˧n | tau˥˩ | lɤ | pʰi˧˥tɕʰjou˧˥ | lɤ,还 有 | 捡 | 到 | 了 | 皮 球 | 了 | . |,True,5263687,hai2you3 jian3 dao4 le pi2qiu2 le,declarative,zho,6,6,conj v v:resc asp n asp,Target_Child,84.0017248814144,female,7,135,10859,10859,18089
+  +zh-CN,cmn,cmn-Hans,有,(en)jaʊθɹiː,jou,jou˧˩˧,有 | . |,True,5120735,you3,declarative,zho,1,1,v,Target_Child,28.000574960471468,unknown,7,133,10024,10024,16740
+  +zh-CN,cmn,cmn-Hans,妈妈,(en)mawɒn | mawɒn,mama,ma˥,妈 妈 | . |,True,4987376,ma1,declarative,zho,2,1,n:relat,Target_Child,49.001006180825065,male,7,130,9266,9266,16207
+
+[train/cy-GB/data.csv] no column-set change (values may still differ)
+  payload size 36,775,097 -> 36,735,947 bytes (-39,150): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- train/cy-GB/data.csv@6bb20aa609
+  +++ train/cy-GB/data.csv@a13fed8856
+  @@ -5,7 +5,7 @@
+   cy-GB,cy,,oedd 'o 'di torri be sy 'n digwydd,ɔɨð | oː | diː | tɔrrɨ | beː | sø | ɛn | diːɡuɨð,,ɔið | oː | diː | tɔrrɪ | beː | sø | ɛn | diːɡʊið,o e d d | ' o | ' d i | t o r r i | b e | s y | ' n | d i g w y d d | ? |,False,10727216, ,question,cym eng,-2147483648,8, ,Investigator,13.62450974352656,unknown,13,235,16525,16524,26613
+   cy-GB,cy,,hwnna wedi torri hwnna 'di torri,hʊnna | wɛdɨ | tɔrrɨ | hʊnna | diː | tɔrrɨ,,hʊnna | wɛdɪ | tɔrrɪ | hʊnna | diː | tɔrrɪ,h w n n a | w e d i | t o r r i | h w n n a | ' d i | t o r r i | . |,True,10727239, ,declarative,cym eng,-2147483648,6, ,Target_Child,13.62450974352656,unknown,13,235,16524,16524,26613
+   cy-GB,cy,,hwnna 'di torri mae 'n iawn rwan mae 'n gweithio rwan doedd hi ddim yn gweithio ah wel,hʊnna | diː | tɔrrɨ | mɑɨ | ɛn | jaʊn | rwan | mɑɨ | ɛn | ɡwəɪθjɔ | rwan | dɔɨð | hiː | ðɨm | ən | ɡwəɪθjɔ | ah | wɛl,,hʊnna | diː | tɔrrɪ | mai | ɛn | jaun | rwan | mai | ɛn | ɡwəiθjɔ | rwan | dɔið | hiː | ðɪm | ən | ɡwəiθjɔ | ah | wɛl,h w n n a | ' d i | t o r r i | m a e | ' n | i a w n | r w a n | m a e | ' n | g w e i t h i o | r w a n | d o e d d | h i | d d i m | y n | g w e i t h i o | a h | w e l | . |,False,10727255, ,declarative,cym eng,-2147483648,18, ,Investigator,13.62450974352656,unknown,13,235,16525,16524,26613
+  -cy-GB,cy,,ie rhaid i' ni wneud 'o i+gyd eto sy 'n golygu mod i 'n aros yn hwyr oh Alaw be ti 'di wneud rwan ym,jeː | hraɪd | ɨ | niː | ʊnəɨd | oː | ɨ | (en)plʌs(cy) | ɡɨːd | ɛtɔ | sø | ɛn | ɡɔlʌɡø | moːd | ɨ | ɛn | arɔs | ən | huɨr | ɔh | alaʊ | beː | tiː | diː | ʊnəɨd | rwan | ə,,jeː | hraid | ɪ | niː | ʊnəid | oː | ɪ | ɡiːd | ɛtɔ | sø | ɛn | ɡɔlʌɡø | moːd | ɪ | ɛn | arɔs | ən | hʊir | ɔh | alau | beː | tiː | diː | ʊnəid | rwan | ə,i e | r h a i d | i ' | n i | w n e u d | ' o | i | g y d | e t o | s y | ' n | g o l y g u | m o d | i | ' n | a r o s | y n | h w y r | o h | a l a w | b e | t i | ' d i | w n e u d | r w a n | y m | ? |,False,10727285, ,question,cym eng,-2147483648,25, ,Investigator,13.62450974352656,unknown,13,235,16525,16524,26613
+  +cy-GB,cy,,ie rhaid i' ni wneud 'o i+gyd eto sy 'n golygu mod i 'n aros yn hwyr oh Alaw be ti 'di wneud rwan ym,jeː | hraɪd | ɨ | niː | ʊnəɨd | oː | ɨ | (en)plʌs | ɡɨːd | ɛtɔ | sø | ɛn | ɡɔlʌɡø | moːd | ɨ | ɛn | arɔs | ən | huɨr | ɔh | alaʊ | beː | tiː | diː | ʊnəɨd | rwan | ə,,jeː | hraid | ɪ | niː | ʊnəid | oː | ɪ | ɡiːd | ɛtɔ | sø | ɛn | ɡɔlʌɡø | moːd | ɪ | ɛn | arɔs | ən | hʊir | ɔh | alau | beː | tiː | diː | ʊnəid | rwan | ə,i e | r h a i d | i ' | n i | w n e u d | ' o | i | g y d | e t o | s y | ' n | g o l y g u | m o d | i | ' n | a r o s | y n | h w y r | o h | a l a w | b e | t i | ' d i | w n e u d | r w a n | y m | ? |,False,10727285, ,question,cym eng,-2147483648,25, ,Investigator,13.62450974352656,unknown,13,235,16525,16524,26613
+   cy-GB,cy,,be sy wrong hwnna,beː | sø | ʊrɔŋ | hʊnna,,beː | sø | ʊrɔŋ | hʊnna,b e | s y | w r o n g | h w n n a | ? |,True,10727307, ,question,cym eng,-2147483648,4, ,Target_Child,13.62450974352656,unknown,13,235,16524,16524,26613
+   cy-GB,cy,,torri fo,tɔrrɨ | voː,,tɔrrɪ | voː,t o r r i | f o | . |,False,10727322, ,declarative,cym eng,-2147483648,2, ,Investigator,13.62450974352656,unknown,13,235,16525,16524,26613
+   cy-GB,cy,,mynd dan bont,mønd | dan | bɔnt,,mønd | dan | bɔnt,m y n d | d a n | b o n t | . |,True,10727353, ,declarative,cym eng,-2147483648,3, ,Target_Child,13.62450974352656,unknown,13,235,16524,16524,26613
+
+[train/da-DK/data.csv] no column-set change (values may still differ)
+  payload size 16,093,115 -> 16,092,970 bytes (-145): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[train/de-DE/data.csv] no column-set change (values may still differ)
+  payload size 416,793,132 -> 416,736,916 bytes (-56,216): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[train/es-ES/data.csv] no column-set change (values may still differ)
+  payload size 136,261,131 -> 136,259,741 bytes (-1,390): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[train/eu-ES/data.csv] no column-set change (values may still differ)
+  payload size 16,771,217 -> 16,746,973 bytes (-24,244): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[train/fa-IR/data.csv] no column-set change (values may still differ)
+  payload size 4,324,016 -> 4,242,604 bytes (-81,412): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- train/fa-IR/data.csv@6bb20aa609
+  +++ train/fa-IR/data.csv@a13fed8856
+  @@ -1,20 +1,20 @@
+   lang,espeak_lang_code,epitran_lang_code,sentence,ipa_espeak,ipa_epitran,ipa_g2p_plus,character_split_utterance,is_child,id,stem,type,language,num_morphemes,num_tokens,part_of_speech,speaker_role,target_child_age,target_child_sex,collection_id,corpus_id,speaker_id,target_child_id,transcript_id
+  -fa-IR,fa,fas-Arab,mama,(en)mamɐ(fa),mama,ma̟ma̟,m a m a | . |,True,6422791, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  -fa-IR,fa,fas-Arab,base base maryam mahsa che kar kardan,(en)beɪs | beɪs | meəɹɪam | mɑːsə | tʃiː | kɑː | kɑːdən(fa),base | base | maryam | mahsa | che | kar | kardan,ba̟se | ba̟se | ma̟rja̟m | ma̟hsa̟ | t̠ʃe | kʰa̟r | kʰa̟rd̪a̟n̪,b a s e | b a s e | m a r y a m | m a h s a | c h e | k a r | k a r d a n | ? |,False,6422810, ,question,fas,-2147483648,7, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  -fa-IR,fa,fas-Arab,mayam mahza,(en)meɪam | mɑːzə(fa),mayam | mahza,ma̟ja̟m | ma̟hza̟,m a y a m | m a h z a | . |,True,6422827, ,declarative,fas,-2147483648,2, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  -fa-IR,fa,fas-Arab,zadesh maryam geye kard,(en)zeɪdəʃ | meəɹɪam | dʒeɪ | kɑːd(fa),zadesh | maryam | geye | kard,za̟d̪eʃ | ma̟rja̟m | ɡeje | kʰa̟rd̪,z a d e s h | m a r y a m | g e y e | k a r d | ? |,False,6422846, ,question,fas,-2147483648,4, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  -fa-IR,fa,fas-Arab,baba bash,(en)bɑːbə | baʃ(fa),baba | bash,ba̟ba̟ | ba̟ʃ,b a b a | b a s h | . |,True,6422880, ,declarative,fas,-2147483648,2, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  -fa-IR,fa,fas-Arab,baba bade,(en)bɑːbə | beɪd(fa),baba | bade,ba̟ba̟ | ba̟d̪e,b a b a | b a d e | ? |,False,6422893, ,question,fas,-2147483648,2, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  -fa-IR,fa,fas-Arab,ha,(en)hɑː(fa),ha,ha̟,h a | . |,True,6422906, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  -fa-IR,fa,fas-Arab,eh eh eh in kiye in kiye in kiye in kiye,(en)eɪ | eɪ | eɪ | ɪn | kɪaɪ | ɪn | kɪaɪ | ɪn | kɪaɪ | ɪn | kɪaɪ(fa),eh | eh | eh | in | kiye | in | kiye | in | kiye | in | kiye,eh | eh | eh | in̪ | kʰije | in̪ | kʰije | in̪ | kʰije | in̪ | kʰije,e h | e h | e h | i n | k i y e | i n | k i y e | i n | k i y e | i n | k i y e | ? |,False,6422915, ,question,fas,-2147483648,11, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  -fa-IR,fa,fas-Arab,in,(en)ɪn(fa),in,in̪,i n | . |,True,6422935, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  -fa-IR,fa,fas-Arab,in kiye mama,(en)ɪn | kɪaɪ | mamɐ(fa),in | kiye | mama,in̪ | kʰije | ma̟ma̟,i n | k i y e | m a m a | ? |,False,6422946, ,question,fas,-2147483648,3, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  -fa-IR,fa,fas-Arab,mashoud,(en)maʃaʊd(fa),mashoud,ma̟ʃud̪,m a s h o u d | . |,True,6422959, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  -fa-IR,fa,fas-Arab,in masoude kiye mama,(en)ɪn | masaʊd | kɪaɪ | mamɐ(fa),in | masoude | kiye | mama,in̪ | ma̟sud̪e | kʰije | ma̟ma̟,i n | m a s o u d e | k i y e | m a m a | ? |,False,6422971, ,question,fas,-2147483648,4, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  -fa-IR,fa,fas-Arab,in,(en)ɪn(fa),in,in̪,i n | . |,True,6422984, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  -fa-IR,fa,fas-Arab,in bebe che kar mikone bebe,(en)ɪn | bɪbɛ | tʃiː | kɑː | mɪkəʊn | bɪbɛ(fa),in | bebe | che | kar | mikone | bebe,in̪ | bebe | t̠ʃe | kʰa̟r | mikʰon̪e | bebe,i n | b e b e | c h e | k a r | m i k o n e | b e b e | ? |,False,6422996, ,question,fas,-2147483648,6, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  -fa-IR,fa,fas-Arab,bebe,(en)bɪbɛ(fa),bebe,bebe,b e b e | . |,True,6423009, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  -fa-IR,fa,fas-Arab,ina che kar mikonan,(en)ɪnɐ | tʃiː | kɑː | mɪkəʊnən(fa),ina | che | kar | mikonan,in̪a̟ | t̠ʃe | kʰa̟r | mikʰon̪a̟n̪,i n a | c h e | k a r | m i k o n a n | ? |,False,6423021, ,question,fas,-2147483648,4, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  -fa-IR,fa,fas-Arab,in,(en)ɪn(fa),in,in̪,i n | . |,True,6423038, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  -fa-IR,fa,fas-Arab,asan bebaba begu raftim xeyabuun mashin umad begu be baba,(en)ɐsan | bɪbɑːbə | bɪɡuː | ɹaftɪm | zeɪɐbuːn | maʃɪn | juːmad | bɪɡuː | biː | bɑːbə(fa),asan | bebaba | begu | raftim | xeyabuun | mashin | umad | begu | be | baba,a̟sa̟n̪ | beba̟ba̟ | beɡu | ra̟ft̪ʰim | kʰseja̟buun̪ | ma̟ʃin̪ | uma̟d̪ | beɡu | be | ba̟ba̟,a s a n | b e b a b a | b e g u | r a f t i m | x e y a b u u n | m a s h i n | u m a d | b e g u | b e | b a b a | . |,False,6423054, ,declarative,fas,-2147483648,10, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  -fa-IR,fa,fas-Arab,goft,(en)ɡɒft(fa),goft,ɡoft̪ʰ,g o f t | . |,True,6423067, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  +fa-IR,fa,fas-Arab,mama,(en)mamɐ,mama,ma̟ma̟,m a m a | . |,True,6422791, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  +fa-IR,fa,fas-Arab,base base maryam mahsa che kar kardan,(en)beɪs | beɪs | meəɹɪam | mɑːsə | tʃiː | kɑː | kɑːdən,base | base | maryam | mahsa | che | kar | kardan,ba̟se | ba̟se | ma̟rja̟m | ma̟hsa̟ | t̠ʃe | kʰa̟r | kʰa̟rd̪a̟n̪,b a s e | b a s e | m a r y a m | m a h s a | c h e | k a r | k a r d a n | ? |,False,6422810, ,question,fas,-2147483648,7, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  +fa-IR,fa,fas-Arab,mayam mahza,(en)meɪam | mɑːzə,mayam | mahza,ma̟ja̟m | ma̟hza̟,m a y a m | m a h z a | . |,True,6422827, ,declarative,fas,-2147483648,2, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  +fa-IR,fa,fas-Arab,zadesh maryam geye kard,(en)zeɪdəʃ | meəɹɪam | dʒeɪ | kɑːd,zadesh | maryam | geye | kard,za̟d̪eʃ | ma̟rja̟m | ɡeje | kʰa̟rd̪,z a d e s h | m a r y a m | g e y e | k a r d | ? |,False,6422846, ,question,fas,-2147483648,4, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  +fa-IR,fa,fas-Arab,baba bash,(en)bɑːbə | baʃ,baba | bash,ba̟ba̟ | ba̟ʃ,b a b a | b a s h | . |,True,6422880, ,declarative,fas,-2147483648,2, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  +fa-IR,fa,fas-Arab,baba bade,(en)bɑːbə | beɪd,baba | bade,ba̟ba̟ | ba̟d̪e,b a b a | b a d e | ? |,False,6422893, ,question,fas,-2147483648,2, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  +fa-IR,fa,fas-Arab,ha,(en)hɑː,ha,ha̟,h a | . |,True,6422906, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  +fa-IR,fa,fas-Arab,eh eh eh in kiye in kiye in kiye in kiye,(en)eɪ | eɪ | eɪ | ɪn | kɪaɪ | ɪn | kɪaɪ | ɪn | kɪaɪ | ɪn | kɪaɪ,eh | eh | eh | in | kiye | in | kiye | in | kiye | in | kiye,eh | eh | eh | in̪ | kʰije | in̪ | kʰije | in̪ | kʰije | in̪ | kʰije,e h | e h | e h | i n | k i y e | i n | k i y e | i n | k i y e | i n | k i y e | ? |,False,6422915, ,question,fas,-2147483648,11, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  +fa-IR,fa,fas-Arab,in,(en)ɪn,in,in̪,i n | . |,True,6422935, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  +fa-IR,fa,fas-Arab,in kiye mama,(en)ɪn | kɪaɪ | mamɐ,in | kiye | mama,in̪ | kʰije | ma̟ma̟,i n | k i y e | m a m a | ? |,False,6422946, ,question,fas,-2147483648,3, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  +fa-IR,fa,fas-Arab,mashoud,(en)maʃaʊd,mashoud,ma̟ʃud̪,m a s h o u d | . |,True,6422959, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  +fa-IR,fa,fas-Arab,in masoude kiye mama,(en)ɪn | masaʊd | kɪaɪ | mamɐ,in | masoude | kiye | mama,in̪ | ma̟sud̪e | kʰije | ma̟ma̟,i n | m a s o u d e | k i y e | m a m a | ? |,False,6422971, ,question,fas,-2147483648,4, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  +fa-IR,fa,fas-Arab,in,(en)ɪn,in,in̪,i n | . |,True,6422984, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  +fa-IR,fa,fas-Arab,in bebe che kar mikone bebe,(en)ɪn | bɪbɛ | tʃiː | kɑː | mɪkəʊn | bɪbɛ,in | bebe | che | kar | mikone | bebe,in̪ | bebe | t̠ʃe | kʰa̟r | mikʰon̪e | bebe,i n | b e b e | c h e | k a r | m i k o n e | b e b e | ? |,False,6422996, ,question,fas,-2147483648,6, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  +fa-IR,fa,fas-Arab,bebe,(en)bɪbɛ,bebe,bebe,b e b e | . |,True,6423009, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  +fa-IR,fa,fas-Arab,ina che kar mikonan,(en)ɪnɐ | tʃiː | kɑː | mɪkəʊnən,ina | che | kar | mikonan,in̪a̟ | t̠ʃe | kʰa̟r | mikʰon̪a̟n̪,i n a | c h e | k a r | m i k o n a n | ? |,False,6423021, ,question,fas,-2147483648,4, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  +fa-IR,fa,fas-Arab,in,(en)ɪn,in,in̪,i n | . |,True,6423038, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+  +fa-IR,fa,fas-Arab,asan bebaba begu raftim xeyabuun mashin umad begu be baba,(en)ɐsan | bɪbɑːbə | bɪɡuː | ɹaftɪm | zeɪɐbuːn | maʃɪn | juːmad | bɪɡuː | biː | bɑːbə,asan | bebaba | begu | raftim | xeyabuun | mashin | umad | begu | be | baba,a̟sa̟n̪ | beba̟ba̟ | beɡu | ra̟ft̪ʰim | kʰseja̟buun̪ | ma̟ʃin̪ | uma̟d̪ | beɡu | be | ba̟ba̟,a s a n | b e b a b a | b e g u | r a f t i m | x e y a b u u n | m a s h i n | u m a d | b e g u | b e | b a b a | . |,False,6423054, ,declarative,fas,-2147483648,10, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
+  +fa-IR,fa,fas-Arab,goft,(en)ɡɒft,goft,ɡoft̪ʰ,g o f t | . |,True,6423067, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
+
+[train/ga-IE/data.csv] no column-set change (values may still differ)
+  payload size 6,548,600 -> 6,548,268 bytes (-332): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[train/id-ID/data.csv] no column-set change (values may still differ)
+  payload size 182,696,548 -> 182,696,210 bytes (-338): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[train/ja-JP/data.csv] no column-set change (values may still differ)
+  payload size 265,557,042 -> 261,961,766 bytes (-3,595,276): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- train/ja-JP/data.csv@6bb20aa609
+  +++ train/ja-JP/data.csv@a13fed8856
+  @@ -1,20 +1,20 @@
+   lang,espeak_lang_code,epitran_lang_code,sentence,ipa_espeak,ipa_epitran,ipa_g2p_plus,character_split_utterance,is_child,id,stem,type,language,num_morphemes,num_tokens,part_of_speech,speaker_role,target_child_age,target_child_sex,collection_id,corpus_id,speaker_id,target_child_id,transcript_id
+  -ja-JP,ja,jpn-Jpan,kyaa,(en)keɪ | waɪ | eɪ | eɪ(ja),,kʲaː,k y a a | . |,True,6654234, ,declarative,jpn,-2147483648,1, ,Target_Child,2.0000410686051047,male,9,183,13681,13681,21450
+  -ja-JP,ja,jpn-Jpan,otsukai wa jitensha de,(en)əʊ | tiː | ɛs | juː | keɪ | eɪ | aɪ | dʌbəljuː | eɪ | dʒeɪ | aɪ | tiː | iː | ɛn | ɛs | eɪtʃ | eɪ | diː | iː(ja),,otsɯkai | wa | d̠ʒitenʃa | de,o t s u k a i | w a | j i t e n s h a | d e | . |,False,6654279, ,trail off,jpn,-2147483648,4, ,Father,2.0000410686051047,male,9,183,13684,13681,21450
+  -ja-JP,ja,jpn-Jpan,u u,(en)juː | juː(ja),,ɯ | ɯ,u | u | . |,True,6654616, ,trail off,jpn,-2147483648,2, ,Target_Child,3.000061602907657,male,9,183,13681,13681,21451
+  -ja-JP,ja,jpn-Jpan,Sumiharechan baa,(en)ɛs | juː | ɛm | aɪ | eɪtʃ | eɪ | ɑː | iː | siː | eɪtʃ | eɪ | ɛn | biː | eɪ | eɪ(ja),,sɯmihaɾet̠ʃan | baː,s u m i h a r e c h a n | b a a | . |,False,6654681, ,declarative,jpn,-2147483648,2, ,Father,3.000061602907657,male,9,183,13684,13681,21451
+  -ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn(ja),,ɯn | ɯn,u n | u n | . |,True,6654713, ,trail off,jpn,-2147483648,2, ,Target_Child,3.000061602907657,male,9,183,13681,13681,21451
+  -ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn(ja),,ɯn | ɯn,u n | u n | . |,True,6654768, ,declarative,jpn,-2147483648,2, ,Target_Child,3.000061602907657,male,9,183,13681,13681,21451
+  -ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn(ja),,ɯn | ɯn,u n | u n | . |,True,6654794, ,declarative,jpn,-2147483648,2, ,Target_Child,3.000061602907657,male,9,183,13681,13681,21451
+  -ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn(ja),,ɯn | ɯn,u n | u n | . |,True,6654839, ,declarative,jpn,-2147483648,2, ,Target_Child,3.000061602907657,male,9,183,13681,13681,21451
+  -ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn(ja),,ɯn | ɯn,u n | u n | . |,True,6655176, ,declarative,jpn,-2147483648,2, ,Target_Child,4.000082137210209,male,9,183,13681,13681,21452
+  -ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn(ja),,ɯn | ɯn,u n | u n | . |,True,6655193, ,declarative,jpn,-2147483648,2, ,Target_Child,4.000082137210209,male,9,183,13681,13681,21452
+  -ja-JP,ja,jpn-Jpan,Sumiharechan,(en)ɛs | juː | ɛm | aɪ | eɪtʃ | eɪ | ɑː | iː | siː | eɪtʃ | eɪ | ɛn(ja),,sɯmihaɾet̠ʃan,s u m i h a r e c h a n | . |,False,6655211, ,declarative,jpn,-2147483648,1, ,Father,4.000082137210209,male,9,183,13684,13681,21452
+  -ja-JP,ja,jpn-Jpan,abuu,(en)eɪ | biː | juː | juː(ja),,abɯː,a b u u | . |,True,6540916, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  -ja-JP,ja,jpn-Jpan,baaba,(en)biː | eɪ | eɪ | biː | eɪ(ja),,baːba,b a a b a | . |,True,6540934, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  -ja-JP,ja,jpn-Jpan,babu,(en)biː | eɪ | biː | juː(ja),,babɯ,b a b u | . |,True,6540959, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  -ja-JP,ja,jpn-Jpan,baba,(en)biː | eɪ | biː | eɪ(ja),,baba,b a b a | . |,True,6541010, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  -ja-JP,ja,jpn-Jpan,baabuu,(en)biː | eɪ | eɪ | biː | juː | juː(ja),,baːbɯː,b a a b u u | . |,True,6541025, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  -ja-JP,ja,jpn-Jpan,ombu,(en)əʊ | ɛm | biː | juː(ja),,ombɯ,o m b u | . |,True,6541037,ombu,declarative,jpn,1,1,n:vn:mot,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  -ja-JP,ja,jpn-Jpan,da,(en)diː | eɪ(ja),,da,d a | . |,True,6541047, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  -ja-JP,ja,jpn-Jpan,ombu ombu,(en)əʊ | ɛm | biː | juː | əʊ | ɛm | biː | juː(ja),,ombɯ | ombɯ,o m b u | o m b u | . |,True,6541075,ombu,declarative,jpn,1,2,n:vn:mot,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  +ja-JP,ja,jpn-Jpan,kyaa,(en)keɪ | waɪ | eɪ | eɪ,,kʲaː,k y a a | . |,True,6654234, ,declarative,jpn,-2147483648,1, ,Target_Child,2.0000410686051047,male,9,183,13681,13681,21450
+  +ja-JP,ja,jpn-Jpan,otsukai wa jitensha de,(en)əʊ | tiː | ɛs | juː | keɪ | eɪ | aɪ | dʌbəljuː | eɪ | dʒeɪ | aɪ | tiː | iː | ɛn | ɛs | eɪtʃ | eɪ | diː | iː,,otsɯkai | wa | d̠ʒitenʃa | de,o t s u k a i | w a | j i t e n s h a | d e | . |,False,6654279, ,trail off,jpn,-2147483648,4, ,Father,2.0000410686051047,male,9,183,13684,13681,21450
+  +ja-JP,ja,jpn-Jpan,u u,(en)juː | juː,,ɯ | ɯ,u | u | . |,True,6654616, ,trail off,jpn,-2147483648,2, ,Target_Child,3.000061602907657,male,9,183,13681,13681,21451
+  +ja-JP,ja,jpn-Jpan,Sumiharechan baa,(en)ɛs | juː | ɛm | aɪ | eɪtʃ | eɪ | ɑː | iː | siː | eɪtʃ | eɪ | ɛn | biː | eɪ | eɪ,,sɯmihaɾet̠ʃan | baː,s u m i h a r e c h a n | b a a | . |,False,6654681, ,declarative,jpn,-2147483648,2, ,Father,3.000061602907657,male,9,183,13684,13681,21451
+  +ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn,,ɯn | ɯn,u n | u n | . |,True,6654713, ,trail off,jpn,-2147483648,2, ,Target_Child,3.000061602907657,male,9,183,13681,13681,21451
+  +ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn,,ɯn | ɯn,u n | u n | . |,True,6654768, ,declarative,jpn,-2147483648,2, ,Target_Child,3.000061602907657,male,9,183,13681,13681,21451
+  +ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn,,ɯn | ɯn,u n | u n | . |,True,6654794, ,declarative,jpn,-2147483648,2, ,Target_Child,3.000061602907657,male,9,183,13681,13681,21451
+  +ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn,,ɯn | ɯn,u n | u n | . |,True,6654839, ,declarative,jpn,-2147483648,2, ,Target_Child,3.000061602907657,male,9,183,13681,13681,21451
+  +ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn,,ɯn | ɯn,u n | u n | . |,True,6655176, ,declarative,jpn,-2147483648,2, ,Target_Child,4.000082137210209,male,9,183,13681,13681,21452
+  +ja-JP,ja,jpn-Jpan,un un,(en)juː | ɛn | juː | ɛn,,ɯn | ɯn,u n | u n | . |,True,6655193, ,declarative,jpn,-2147483648,2, ,Target_Child,4.000082137210209,male,9,183,13681,13681,21452
+  +ja-JP,ja,jpn-Jpan,Sumiharechan,(en)ɛs | juː | ɛm | aɪ | eɪtʃ | eɪ | ɑː | iː | siː | eɪtʃ | eɪ | ɛn,,sɯmihaɾet̠ʃan,s u m i h a r e c h a n | . |,False,6655211, ,declarative,jpn,-2147483648,1, ,Father,4.000082137210209,male,9,183,13684,13681,21452
+  +ja-JP,ja,jpn-Jpan,abuu,(en)eɪ | biː | juː | juː,,abɯː,a b u u | . |,True,6540916, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  +ja-JP,ja,jpn-Jpan,baaba,(en)biː | eɪ | eɪ | biː | eɪ,,baːba,b a a b a | . |,True,6540934, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  +ja-JP,ja,jpn-Jpan,babu,(en)biː | eɪ | biː | juː,,babɯ,b a b u | . |,True,6540959, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  +ja-JP,ja,jpn-Jpan,baba,(en)biː | eɪ | biː | eɪ,,baba,b a b a | . |,True,6541010, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  +ja-JP,ja,jpn-Jpan,baabuu,(en)biː | eɪ | eɪ | biː | juː | juː,,baːbɯː,b a a b u u | . |,True,6541025, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  +ja-JP,ja,jpn-Jpan,ombu,(en)əʊ | ɛm | biː | juː,,ombɯ,o m b u | . |,True,6541037,ombu,declarative,jpn,1,1,n:vn:mot,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  +ja-JP,ja,jpn-Jpan,da,(en)diː | eɪ,,da,d a | . |,True,6541047, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+  +ja-JP,ja,jpn-Jpan,ombu ombu,(en)əʊ | ɛm | biː | juː | əʊ | ɛm | biː | juː,,ombɯ | ombɯ,o m b u | o m b u | . |,True,6541075,ombu,declarative,jpn,1,2,n:vn:mot,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
+
+[train/ko-KR/data.csv] no column-set change (values may still differ)
+  payload size 24,296,890 -> 24,296,863 bytes (-27): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[train/sr-RS/data.csv] no column-set change (values may still differ)
+  payload size 75,562,776 -> 75,562,768 bytes (-8): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
+
+[train/yue-CN/data.csv] no column-set change (values may still differ)
+  payload size 51,806,757 -> 51,272,934 bytes (-533,823): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- train/yue-CN/data.csv@6bb20aa609
+  +++ train/yue-CN/data.csv@a13fed8856
+  @@ -1,20 +1,20 @@
+   lang,espeak_lang_code,epitran_lang_code,sentence,ipa_espeak,ipa_epitran,ipa_g2p_plus,character_split_utterance,is_child,id,stem,type,language,num_morphemes,num_tokens,part_of_speech,speaker_role,target_child_age,target_child_sex,collection_id,corpus_id,speaker_id,target_child_id,transcript_id
+   yue-CN,yue,yue-Hant,一 九 九 二 年 九 月 十 二 日 周景臻,ja1t | ɡau2 | ɡau2 | ji6 | ni4n | ɡau2 | jyu6t | sa6p | ji6 | ja6t | zau1 | ɡinɡ2 | zeo1n,,jɐ˥t | kɐu˧˥ | kɐu˧˥ | ji˨ | ni˧˩̰n | kɐu˧˥ | jy˨t | sɐ˨p | ji˨ | jɐ˨t | tsɐu˥kɪ̞˧˥ŋtsɵ˧n,一 | 九 | 九 | 二 | 年 | 九 | 月 | 十 | 二 | 日 | 周 景 臻 | . |,False,4745311,jat1 gau2 gau2 ji6 nin4 gau2 jyut6 sap6 ji6 jat6 zau1ging2zeon3,declarative,yue eng,11,11,num num num num n num n num num n n:prop,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+  -yue-CN,yue,yue-Hant,aa3 得 喇,(en)ɑːθɹiː(yue) | da1klaaɜ,,a̞˧ | tɐ˥k | la̞˧,a a 3 | 得 | 喇 | . |,False,4745313,aa3 dak1 laa3,declarative,yue eng,3,3,co stprt sfp,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+  -yue-CN,yue,yue-Hant,laa4,(en)lɑːfɔː(yue),,la̞˧˩̰,l a a 4 | . |,False,4745317,laa4,declarative,yue eng,1,1,sfp,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+  +yue-CN,yue,yue-Hant,aa3 得 喇,(en)ɑːθɹiː | da1klaaɜ,,a̞˧ | tɐ˥k | la̞˧,a a 3 | 得 | 喇 | . |,False,4745313,aa3 dak1 laa3,declarative,yue eng,3,3,co stprt sfp,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+  +yue-CN,yue,yue-Hant,laa4,(en)lɑːfɔː,,la̞˧˩̰,l a a 4 | . |,False,4745317,laa4,declarative,yue eng,1,1,sfp,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+   yue-CN,yue,yue-Hant,郁 喇,wa1t | laa1,,jʊ̟˥k | la̞˧,郁 | 喇 | . |,False,4745318,juk1 laa3,declarative,yue eng,2,2,v sfp,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+   yue-CN,yue,yue-Hant,郁 喇,wa1t | laa1,,jʊ̟˥k | la̞˧,郁 | 喇 | . |,False,4745320,juk1 laa3,declarative,yue eng,2,2,v sfp,Father,22.98609827717201,male,7,126,9010,9008,15795
+   yue-CN,yue,yue-Hant,得 喇,da1klaaɜ,,tɐ˥k | la̞˧,得 | 喇 | . |,False,4745321,dak1 laa3,declarative,yue eng,2,2,stprt sfp,Father,22.98609827717201,male,7,126,9010,9008,15795
+   yue-CN,yue,yue-Hant,叻 叻,le1k | le1k,,lɛ˥k | lɛ˥k,叻 | 叻 | . |,False,4745323,lek1 lek1,declarative,yue eng,2,2,adj adj,Father,22.98609827717201,male,7,126,9010,9008,15795
+   yue-CN,yue,yue-Hant,話 話,waa6 | waa6,,wa̞˨ | wa̞˧˥,話 | 話 | . |,True,4745328,waa6 waa2,declarative,yue eng,2,2,v n,Target_Child,22.98609827717201,male,7,126,9008,9008,15795
+  -yue-CN,yue,yue-Hant,m2,(en)mtuː(yue),,m̩˧˥,m 2 | ? |,False,4745329,m2,question,yue eng,1,1,co,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+  +yue-CN,yue,yue-Hant,m2,(en)mtuː,,m̩˧˥,m 2 | ? |,False,4745329,m2,question,yue eng,1,1,co,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+   yue-CN,yue,yue-Hant,乜 都 話 話,ma1t | dou1 | waa6 | waa6,,mɐ˥t | tou˥ | wa̞˨ | wa̞˧˥,乜 | 都 | 話 | 話 | . |,False,4745331,mat1 dou1 waa6 waa2,declarative,yue eng,4,4,wh adv v n,Father,22.98609827717201,male,7,126,9010,9008,15795
+  -yue-CN,yue,yue-Hant,ei1 jaak3 跌 咗 添,(en)aɪwɒn | dʒɑːkθɹiː(yue) | diɜt | zo2 | ti1m,,ei˥ | ja̞˧k | ti˧t | tsɔ̽˧˥ | tʰi˥m,e i 1 | j a a k 3 | 跌 | 咗 | 添 | . |,False,4745333,ei1 jaak3 dit3 zo2 tim1,declarative,yue eng,5,5,co co v asp vprt,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+  -yue-CN,yue,yue-Hant,laa4 入 lei4 呢度 玩 啦,(en)lɑːfɔː(yue) | ja6p | (en)leɪfɔː(yue) | lei1dou6 | waa2n | laa1,,la̞˧˩̰ | jɐ˨p | lei˧˩̰ | nei˥tou˨ | wa̞˧˥n | la̞˥,l a a 4 | 入 | l e i 4 | 呢 度 | 玩 | 啦 | . |,False,4745336,laa4 jap6 lei4 nei1dou6 waan2 laa1,declarative,yue eng,6,6,co v:dirc v loc v sfp,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+  +yue-CN,yue,yue-Hant,ei1 jaak3 跌 咗 添,(en)aɪwɒn | dʒɑːkθɹiː | diɜt | zo2 | ti1m,,ei˥ | ja̞˧k | ti˧t | tsɔ̽˧˥ | tʰi˥m,e i 1 | j a a k 3 | 跌 | 咗 | 添 | . |,False,4745333,ei1 jaak3 dit3 zo2 tim1,declarative,yue eng,5,5,co co v asp vprt,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+  +yue-CN,yue,yue-Hant,laa4 入 lei4 呢度 玩 啦,(en)lɑːfɔː | ja6p | (en)leɪfɔː | lei1dou6 | waa2n | laa1,,la̞˧˩̰ | jɐ˨p | lei˧˩̰ | nei˥tou˨ | wa̞˧˥n | la̞˥,l a a 4 | 入 | l e i 4 | 呢 度 | 玩 | 啦 | . |,False,4745336,laa4 jap6 lei4 nei1dou6 waan2 laa1,declarative,yue eng,6,6,co v:dirc v loc v sfp,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+   yue-CN,yue,yue-Hant,喂 喂,waiɜ | waiɜ,,wɐi˧˥ | wɐi˧˥,喂 | 喂 | . |,True,4745338,wai2 wai2,declarative,yue eng,2,2,co co,Target_Child,22.98609827717201,male,7,126,9008,9008,15795
+  -yue-CN,yue,yue-Hant,m2,(en)mtuː(yue),,m̩˧˥,m 2 | ? |,False,4745340,m2,question,yue eng,1,1,co,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+  +yue-CN,yue,yue-Hant,m2,(en)mtuː,,m̩˧˥,m 2 | ? |,False,4745340,m2,question,yue eng,1,1,co,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+   yue-CN,yue,yue-Hant,呢 個 邊個 嚟 架,ne1 | ɡoɜ | bi1n | ɡoɜ | lai4 | ɡaaɜ,,nei˥ | kɔ̽˧ | pi˥nkɔ̽˧ | lɐi˧˩̰ | ka̞˧,呢 | 個 | 邊 個 | 嚟 | 架 | ? |,False,4745348,nei1 go3 bin1go3 lai4 gaa3,question,yue eng,5,5,dem cl wh sfp sfp,Investigator,22.98609827717201,male,7,126,9009,9008,15795
+   yue-CN,yue,yue-Hant,媽媽,maa4maa1,,ma̞˥,媽 媽 | . |,True,4745350,maa1,declarative,yue eng,2,1,n,Target_Child,22.98609827717201,male,7,126,9008,9008,15795
+   yue-CN,yue,yue-Hant,媽媽,maa4maa1,,ma̞˥,媽 媽 | . |,True,4745353,maa1,declarative,yue eng,2,1,n,Target_Child,22.98609827717201,male,7,126,9008,9008,15795
+   yue-CN,yue,yue-Hant,媽媽,maa4maa1,,ma̞˥,媽 媽 | . |,True,4745355,maa1,declarative,yue eng,2,1,n,Target_Child,22.98609827717201,male,7,126,9008,9008,15795
+  -yue-CN,yue,yue-Hant,媽媽 嚟 gu3 咩,maa4maa1 | lai4 | (en)ɡʌθɹiː(yue) | me1,,ma̞˥ | lɐi˧˩̰ | ku˧ | mɛ˥,媽 媽 | 嚟 | g u 3 | 咩 | ? |,False,4745356,maa1 lai4 gu3 me1,question,yue eng,5,4,n v sfp wh,Father,22.98609827717201,male,7,126,9010,9008,15795
+  +yue-CN,yue,yue-Hant,媽媽 嚟 gu3 咩,maa4maa1 | lai4 | (en)ɡʌθɹiː | me1,,ma̞˥ | lɐi˧˩̰ | ku˧ | mɛ˥,媽 媽 | 嚟 | g u 3 | 咩 | ? |,False,4745356,maa1 lai4 gu3 me1,question,yue eng,5,4,n v sfp wh,Father,22.98609827717201,male,7,126,9010,9008,15795
+
+[train/zh-CN/data.csv] no column-set change (values may still differ)
+  payload size 179,323,396 -> 175,951,546 bytes (-3,371,850): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- train/zh-CN/data.csv@6bb20aa609
+  +++ train/zh-CN/data.csv@a13fed8856
+  @@ -1,20 +1,20 @@
+   lang,espeak_lang_code,epitran_lang_code,sentence,ipa_espeak,ipa_epitran,ipa_g2p_plus,character_split_utterance,is_child,id,stem,type,language,num_morphemes,num_tokens,part_of_speech,speaker_role,target_child_age,target_child_sex,collection_id,corpus_id,speaker_id,target_child_id,transcript_id
+  -zh-CN,cmn,cmn-Hans,啊呜,(en)afaɪv(cmn) | wu5,au,a˧˥u˧˥,啊 呜 | . |,True,5449301,a2wu2,trail off,zho,1,1,on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
+  -zh-CN,cmn,cmn-Hans,啊呜 啊,(en)afaɪv(cmn) | wu5 | (en)afaɪv(cmn),au | a,a˧˥u˧˥ | a˥,啊 呜 | 啊 | ! |,False,5449318,a2wu2 a1,imperative_emphatic,zho,2,2,on sfp,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,奥 那 是 什么,ɑu5 | (en)nafɔː(cmn) | s.i.5 | (en)ʃɛntuː | mɛfaɪv(cmn),ao | nuo | ʂɻ̩ | ʂenme,au | na˥˩ | ʃ̺ɻ̩˥˩ | ʃ̺ə˧˥nmɤ,奥 | 那 | 是 | 什 么 | ? |,False,5449330,ao na4 shi4 shen2me,question,zho,4,4,co pro:dem v:cop pro:wh,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,别 看 那 个,(en)biːtuː | kanfɔː | nafɔː | dʒɛfaɪv(cmn),pie | kʰan | nuo | ke,pje˧˥ | kʰa˥˩n | na˥˩ | kɤ˥˩,别 | 看 | 那 | 个 | . |,False,5449348,bie2 kan4 na4 ge4,declarative,zho,4,4,adv v det cl,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,那 是 锅,(en)nafɔː(cmn) | s.i.5 | (en)ɡjuːəwɒn(cmn),nuo | ʂɻ̩ | kuo,na˥˩ | ʃ̺ɻ̩˥˩ | kwo˥,那 | 是 | 锅 | . |,False,5449366,na4 shi4 guo1,declarative,zho,3,3,pro:dem v:cop n,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,嘎 嘎,(en)ɡawɒŋɡɐwɒn | ɡatuː(cmn),ka | ka,ka˥ka˥ | ka˥ka˥,嘎 | 嘎 | . |,True,5449378,ga1ga1 ga1ga1,trail off,zho,2,2,on on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
+  -zh-CN,cmn,cmn-Hans,嘎 嘎,(en)ɡawɒŋɡɐwɒn | ɡatuː(cmn),ka | ka,ka˥ka˥ | ka˥ka˥,嘎 | 嘎 | . |,False,5449401,ga1ga1 ga1ga1,declarative,zho,2,2,on on,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,啊呜,(en)afaɪv | wu5,au,a˧˥u˧˥,啊 呜 | . |,True,5449301,a2wu2,trail off,zho,1,1,on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
+  +zh-CN,cmn,cmn-Hans,啊呜 啊,(en)afaɪv | wu5 | (en)afaɪv,au | a,a˧˥u˧˥ | a˥,啊 呜 | 啊 | ! |,False,5449318,a2wu2 a1,imperative_emphatic,zho,2,2,on sfp,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,奥 那 是 什么,ɑu5 | (en)nafɔː | s.i.5 | (en)ʃɛntuː | mɛfaɪv,ao | nuo | ʂɻ̩ | ʂenme,au | na˥˩ | ʃ̺ɻ̩˥˩ | ʃ̺ə˧˥nmɤ,奥 | 那 | 是 | 什 么 | ? |,False,5449330,ao na4 shi4 shen2me,question,zho,4,4,co pro:dem v:cop pro:wh,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,别 看 那 个,(en)biːtuː | kanfɔː | nafɔː | dʒɛfaɪv,pie | kʰan | nuo | ke,pje˧˥ | kʰa˥˩n | na˥˩ | kɤ˥˩,别 | 看 | 那 | 个 | . |,False,5449348,bie2 kan4 na4 ge4,declarative,zho,4,4,adv v det cl,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,那 是 锅,(en)nafɔː | s.i.5 | (en)ɡjuːəwɒn,nuo | ʂɻ̩ | kuo,na˥˩ | ʃ̺ɻ̩˥˩ | kwo˥,那 | 是 | 锅 | . |,False,5449366,na4 shi4 guo1,declarative,zho,3,3,pro:dem v:cop n,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,嘎 嘎,(en)ɡawɒŋɡɐwɒn | ɡatuː,ka | ka,ka˥ka˥ | ka˥ka˥,嘎 | 嘎 | . |,True,5449378,ga1ga1 ga1ga1,trail off,zho,2,2,on on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
+  +zh-CN,cmn,cmn-Hans,嘎 嘎,(en)ɡawɒŋɡɐwɒn | ɡatuː,ka | ka,ka˥ka˥ | ka˥ka˥,嘎 | 嘎 | . |,False,5449401,ga1ga1 ga1ga1,declarative,zho,2,2,on on,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+   zh-CN,cmn,cmn-Hans,称称 称称,ts.hə5ŋ | ts.hə5ŋ | ts.hə5ŋ | ts.hə5ŋ,ʈ͡ʂʰeŋʈ͡ʂʰeŋ | ʈ͡ʂʰeŋʈ͡ʂʰeŋ,t̠ʃ̺ʰə˥ŋt̠ʃ̺ʰə˥ŋ | t̠ʃ̺ʰə˥ŋ,称 称 | 称 称 | . |,False,5449424,cheng1cheng1 cheng1,declarative,zho,3,2,n:prop v,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,嘎 嘎,(en)ɡawɒŋɡɐwɒn | ɡatuː(cmn),ka | ka,ka˥ka˥ | ka˥ka˥,嘎 | 嘎 | . |,True,5449444,ga1ga1 ga1ga1,declarative,zho,2,2,on on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
+  -zh-CN,cmn,cmn-Hans,那 是 什么 东西 呀,(en)nafɔː(cmn) | s.i.5 | (en)ʃɛntuː | mɛfaɪv | dəŋwɒn | zɪwɒn | jafaɪv(cmn),nuo | ʂɻ̩ | ʂenme | toŋɕi | ja,na˥˩ | ʃ̺ɻ̩˥˩ | ʃ̺ə˧˥nmɤ | tʊ˥ŋɕi | ja,那 | 是 | 什 么 | 东 西 | 呀 | ? |,False,5449455,na4 shi4 shen2me dong1xi ya,question,zho,5,5,pro:dem v:cop pro:wh n sfp,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,老虎,(en)leɪəθɹiː | hʌθɹiː(cmn),laoxu,lau˧˩˧xu˧˩˧,老 虎 | . |,False,5449483,lao3hu3,declarative,zho,1,1,n,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,一 个 水 瓶,(en)jɪwɒn | dʒɛfaɪv(cmn) | s.wei2 | (en)pɪŋtuː(cmn),i | ke | ʂuei | pʰiŋ,i˥ | kɤ˥˩ | ʃ̺wei˧˩˧ | pʰi˧˥ŋ,一 | 个 | 水 | 瓶 | . |,False,5449498,yi1 ge4 shui3 ping2,declarative,zho,4,4,num cl n n,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,还 有 锅 是不是,(en)heɪtuː | jaʊθɹiː | ɡjuːəwɒn(cmn) | s.i.5 | (en)bʌfɔː(cmn) | s.i.5,xuan | jou | kuo | ʂɻ̩puʂɻ̩,xai˧˥ | jou˧˩˧ | kwo˥ | ʃ̺ɻ̩˥˩pu˧˥ʃ̺ɻ̩˥˩,还 | 有 | 锅 | 是 不 是 | ? |,False,5449514,hai2 you3 guo1 shi4bu2shi4,question,zho,4,4,adv v n co:int,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,和 我们 家 的 一样 是不是,(en)hɛtuː(cmn) | wo2 | (en)mɛnfaɪv | dʒaɪəwɒn | dɛfaɪv | jɪwɒn | jaŋfɔː(cmn) | s.i.5 | (en)bʌfɔː(cmn) | s.i.5,xe | women | t͡ɕia | ti | ijaŋ | ʂɻ̩puʂɻ̩,xɤ˧˥ | wo˧˩˧ | tɕja˥ | tɤ | i˥ja˥˩ŋ | ʃ̺ɻ̩˥˩pu˧˥ʃ̺ɻ̩˥˩,和 | 我 们 | 家 | 的 | 一 样 | 是 不 是 | ? |,False,5449532,he2 wo3 jia1 de yi1yang4 shi4bu2shi4,question,zho,7,6,prep pro:per n poss adj co:int,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,浩浩 小 鸭 是 怎么 叫 的,(en)heɪəfɔː | heɪəfɔː | zaɪəɹəθɹiː | jawɒn(cmn) | s.i.5 | (en)zɛnθɹiː | mɛfaɪv | dʒaɪəɹəfɔː | dɛfaɪv(cmn),xaoxao | ɕiao | ja | ʂɻ̩ | t͡senme | t͡ɕiao | ti,xau˥˩xau˥˩ | ɕjau˧˩˧ | ja˥ | ʃ̺ɻ̩˥˩ | tsə˧˩˧nmɤ | tɕjau˥˩ | tɤ,浩 浩 | 小 | 鸭 | 是 | 怎 么 | 叫 | 的 | ? |,False,5449571,hao4hao4 xiao3 ya1 shi4 zen3me jiao4 de,question,zho,7,7,n:prop adj n v:cop adv:wh v cleft,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,嘎 嘎,(en)ɡawɒŋɡɐwɒn | ɡatuː(cmn),ka | ka,ka˥ka˥ | ka˥ka˥,嘎 | 嘎 | . |,True,5449584,ga1ga1 ga1ga1,declarative,zho,2,2,on on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
+  -zh-CN,cmn,cmn-Hans,小 鸭 是 嘎 嘎 叫 的 呀,(en)zaɪəɹəθɹiː | jawɒn(cmn) | s.i.5 | (en)ɡawɒŋɡɐwɒn | ɡatuː | dʒaɪəɹəfɔː | dɛfaɪv | jafaɪv(cmn),ɕiao | ja | ʂɻ̩ | ka | ka | t͡ɕiao | ti | ja,ɕjau˧˩˧ | ja˥ | ʃ̺ɻ̩˥˩ | ka˥ka˥ | ka˥ka˥ | tɕjau˥˩ | tɤ | ja,小 | 鸭 | 是 | 嘎 | 嘎 | 叫 | 的 | 呀 | ? |,False,5449599,xiao3 ya1 shi4 ga1ga1 ga1ga1 jiao4 de ya,question,zho,8,8,adj n v:cop on on v cleft sfp,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  -zh-CN,cmn,cmn-Hans,嘎 嘎,(en)ɡawɒŋɡɐwɒn | ɡatuː(cmn),ka | ka,ka˥ka˥ | ka˥ka˥,嘎 | 嘎 | . |,True,5449622,ga1ga1 ga1ga1,declarative,zho,2,2,on on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
+  -zh-CN,cmn,cmn-Hans,哥哥 是 谁 呀,(en)dʒɛwɒn | dʒɛwɒn(cmn) | s.i.5 | s.weiɜ | (en)jafaɪv(cmn),keke | ʂɻ̩ | ʂei | ja,kɤ˥ | ʃ̺ɻ̩˥˩ | ʃ̺ei˧˥ | ja,哥 哥 | 是 | 谁 | 呀 | ? |,False,5449643,ge1 shi4 shei2 ya,question,zho,5,4,n:relat v:cop pro:wh sfp,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,嘎 嘎,(en)ɡawɒŋɡɐwɒn | ɡatuː,ka | ka,ka˥ka˥ | ka˥ka˥,嘎 | 嘎 | . |,True,5449444,ga1ga1 ga1ga1,declarative,zho,2,2,on on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
+  +zh-CN,cmn,cmn-Hans,那 是 什么 东西 呀,(en)nafɔː | s.i.5 | (en)ʃɛntuː | mɛfaɪv | dəŋwɒn | zɪwɒn | jafaɪv,nuo | ʂɻ̩ | ʂenme | toŋɕi | ja,na˥˩ | ʃ̺ɻ̩˥˩ | ʃ̺ə˧˥nmɤ | tʊ˥ŋɕi | ja,那 | 是 | 什 么 | 东 西 | 呀 | ? |,False,5449455,na4 shi4 shen2me dong1xi ya,question,zho,5,5,pro:dem v:cop pro:wh n sfp,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,老虎,(en)leɪəθɹiː | hʌθɹiː,laoxu,lau˧˩˧xu˧˩˧,老 虎 | . |,False,5449483,lao3hu3,declarative,zho,1,1,n,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,一 个 水 瓶,(en)jɪwɒn | dʒɛfaɪv | s.wei2 | (en)pɪŋtuː,i | ke | ʂuei | pʰiŋ,i˥ | kɤ˥˩ | ʃ̺wei˧˩˧ | pʰi˧˥ŋ,一 | 个 | 水 | 瓶 | . |,False,5449498,yi1 ge4 shui3 ping2,declarative,zho,4,4,num cl n n,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,还 有 锅 是不是,(en)heɪtuː | jaʊθɹiː | ɡjuːəwɒn | s.i.5 | (en)bʌfɔː | s.i.5,xuan | jou | kuo | ʂɻ̩puʂɻ̩,xai˧˥ | jou˧˩˧ | kwo˥ | ʃ̺ɻ̩˥˩pu˧˥ʃ̺ɻ̩˥˩,还 | 有 | 锅 | 是 不 是 | ? |,False,5449514,hai2 you3 guo1 shi4bu2shi4,question,zho,4,4,adv v n co:int,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,和 我们 家 的 一样 是不是,(en)hɛtuː | wo2 | (en)mɛnfaɪv | dʒaɪəwɒn | dɛfaɪv | jɪwɒn | jaŋfɔː | s.i.5 | (en)bʌfɔː | s.i.5,xe | women | t͡ɕia | ti | ijaŋ | ʂɻ̩puʂɻ̩,xɤ˧˥ | wo˧˩˧ | tɕja˥ | tɤ | i˥ja˥˩ŋ | ʃ̺ɻ̩˥˩pu˧˥ʃ̺ɻ̩˥˩,和 | 我 们 | 家 | 的 | 一 样 | 是 不 是 | ? |,False,5449532,he2 wo3 jia1 de yi1yang4 shi4bu2shi4,question,zho,7,6,prep pro:per n poss adj co:int,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,浩浩 小 鸭 是 怎么 叫 的,(en)heɪəfɔː | heɪəfɔː | zaɪəɹəθɹiː | jawɒn | s.i.5 | (en)zɛnθɹiː | mɛfaɪv | dʒaɪəɹəfɔː | dɛfaɪv,xaoxao | ɕiao | ja | ʂɻ̩ | t͡senme | t͡ɕiao | ti,xau˥˩xau˥˩ | ɕjau˧˩˧ | ja˥ | ʃ̺ɻ̩˥˩ | tsə˧˩˧nmɤ | tɕjau˥˩ | tɤ,浩 浩 | 小 | 鸭 | 是 | 怎 么 | 叫 | 的 | ? |,False,5449571,hao4hao4 xiao3 ya1 shi4 zen3me jiao4 de,question,zho,7,7,n:prop adj n v:cop adv:wh v cleft,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,嘎 嘎,(en)ɡawɒŋɡɐwɒn | ɡatuː,ka | ka,ka˥ka˥ | ka˥ka˥,嘎 | 嘎 | . |,True,5449584,ga1ga1 ga1ga1,declarative,zho,2,2,on on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
+  +zh-CN,cmn,cmn-Hans,小 鸭 是 嘎 嘎 叫 的 呀,(en)zaɪəɹəθɹiː | jawɒn | s.i.5 | (en)ɡawɒŋɡɐwɒn | ɡatuː | dʒaɪəɹəfɔː | dɛfaɪv | jafaɪv,ɕiao | ja | ʂɻ̩ | ka | ka | t͡ɕiao | ti | ja,ɕjau˧˩˧ | ja˥ | ʃ̺ɻ̩˥˩ | ka˥ka˥ | ka˥ka˥ | tɕjau˥˩ | tɤ | ja,小 | 鸭 | 是 | 嘎 | 嘎 | 叫 | 的 | 呀 | ? |,False,5449599,xiao3 ya1 shi4 ga1ga1 ga1ga1 jiao4 de ya,question,zho,8,8,adj n v:cop on on v cleft sfp,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
+  +zh-CN,cmn,cmn-Hans,嘎 嘎,(en)ɡawɒŋɡɐwɒn | ɡatuː,ka | ka,ka˥ka˥ | ka˥ka˥,嘎 | 嘎 | . |,True,5449622,ga1ga1 ga1ga1,declarative,zho,2,2,on on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
+  +zh-CN,cmn,cmn-Hans,哥哥 是 谁 呀,(en)dʒɛwɒn | dʒɛwɒn | s.i.5 | s.weiɜ | (en)jafaɪv,keke | ʂɻ̩ | ʂei | ja,kɤ˥ | ʃ̺ɻ̩˥˩ | ʃ̺ei˧˥ | ja,哥 哥 | 是 | 谁 | 呀 | ? |,False,5449643,ge1 shi4 shei2 ya,question,zho,5,4,n:relat v:cop pro:wh sfp,Mother,14.000287480235734,unknown,7,142,11624,11622,18952

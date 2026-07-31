@@ -1,0 +1,27 @@
+dataset:    z4fL/mpl_s14_dataset
+commit:     203eaf04cb3edb7c515c08d189cbc22054f52752
+type:       column/field add-remove
+message:    rename column match_length to game_length
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:08Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# z4fL/mpl_s14_dataset @ 203eaf04cb
+message: rename column match_length to game_length 
+
+file changes:
+M	mpl_ph_s14.csv
+
+[mpl_ph_s14.csv] column change:
+  removed: ['match_length']
+  added:   ['game_length']
+  diff --git a/mpl_ph_s14.csv b/mpl_ph_s14.csv
+  index 282b03b..e6f47d0 100644
+  --- a/mpl_ph_s14.csv
+  +++ b/mpl_ph_s14.csv
+  @@ -1,4 +1,4 @@
+  -no,week,date,match,game,match_length,blue_team,blue_explaner,blue_jungler,blue_midlaner,blue_goldlaner,blue_roamer,red_team,red_explaner,red_jungler,red_midlaner,red_goldlaner,red_roamer,result
+  +no,week,date,match,game,game_length,blue_team,blue_explaner,blue_jungler,blue_midlaner,blue_goldlaner,blue_roamer,red_team,red_explaner,red_jungler,red_midlaner,red_goldlaner,red_roamer,result
+   1,1,aug-16,1,1,16,OMG,Edith,Ling,Aurora,Harith,Hylos,TNC,Terizla,Nolan,Zhask,Roger,Chou,BLUE
+   2,1,aug-16,1,2,18,TNC,Terizla,Alpha,Aurora,Karrie,Tigreal,OMG,Ruby,Hanzo,Vexana,Roger,Minotaur,RED
+   3,1,aug-16,2,1,15,RORA,Edith,Ling,Zhask,Bruno,Mathilda,BLCK,Cici,Martis,Terizla,Harith,Angela,BLUE

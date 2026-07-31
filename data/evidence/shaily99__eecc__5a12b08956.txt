@@ -1,0 +1,17 @@
+dataset:    shaily99/eecc
+commit:     5a12b089562fba9d9458e11e87210c3df9ca2da8
+type:       rename/split-standardization
+message:    yaml story one split
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:06Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# shaily99/eecc @ 5a12b08956
+message: yaml story one split 
+
+file changes:
+M	README.md
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

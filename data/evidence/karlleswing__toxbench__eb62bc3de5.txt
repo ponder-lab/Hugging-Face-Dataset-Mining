@@ -1,0 +1,21 @@
+dataset:    karlleswing/toxbench
+commit:     eb62bc3de5664192b06c88f5415d6160c8033870
+type:       rename/split-standardization
+message:    Split into multiple files for dataset viewer
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:41Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# karlleswing/toxbench @ eb62bc3de5
+message: Split into multiple files for dataset viewer 
+
+file changes:
+A	.gitignore
+M	README.md
+A	toxbench_test.csv
+R070	toxbench.csv	toxbench_train.csv
+A	toxbench_valid.csv
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

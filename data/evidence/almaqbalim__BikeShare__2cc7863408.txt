@@ -1,0 +1,18 @@
+dataset:    almaqbalim/BikeShare
+commit:     2cc7863408dfd1ab6218b6027515fb8f2a846a6f
+type:       cleaning
+message:    cleaned data sets uploaded
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:42Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# almaqbalim/BikeShare @ 2cc7863408
+message: cleaned data sets uploaded 
+
+file changes:
+M	.gitattributes
+A	dataset.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

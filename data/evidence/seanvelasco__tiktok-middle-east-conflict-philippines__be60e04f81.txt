@@ -1,0 +1,18 @@
+dataset:    seanvelasco/tiktok-middle-east-conflict-philippines
+commit:     be60e04f81e43b7c2b10aecfad54c0773ed4b648
+type:       column/field add-remove
+message:    Change order of columns
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:06Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# seanvelasco/tiktok-middle-east-conflict-philippines @ be60e04f81
+message: Change order of columns 
+
+file changes:
+M	.gitattributes
+A	tiktok-mde-conflict-ph.csv.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

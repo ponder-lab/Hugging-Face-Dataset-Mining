@@ -1,0 +1,13 @@
+dataset:    katarinayuan/ProtST-SubcellularLocalization
+commit:     942419395d983978255fdc29c68f6f068d56897d
+type:       rename/split-standardization
+message:    valid split
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# katarinayuan/ProtST-SubcellularLocalization @ 942419395d
+message: valid split 
+
+file changes:
+A	subcellular_localization_valid.csv

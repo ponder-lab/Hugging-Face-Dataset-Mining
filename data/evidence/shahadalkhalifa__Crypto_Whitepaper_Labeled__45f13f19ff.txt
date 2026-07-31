@@ -1,0 +1,13 @@
+dataset:    shahadalkhalifa/Crypto_Whitepaper_Labeled
+commit:     45f13f19ffa2cbd7e0c78a7a32e44391dbe69791
+type:       cleaning
+message:    Upload Clean_crypto_text.xlsx
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# shahadalkhalifa/Crypto_Whitepaper_Labeled @ 45f13f19ff
+message: Upload Clean_crypto_text.xlsx 
+
+file changes:
+A	Clean_crypto_text.xlsx

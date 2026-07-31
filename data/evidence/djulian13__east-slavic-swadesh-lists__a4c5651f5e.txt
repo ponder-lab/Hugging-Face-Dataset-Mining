@@ -1,0 +1,68 @@
+dataset:    djulian13/east-slavic-swadesh-lists
+commit:     a4c5651f5e37523dd15324b68e4c13c905dfa094
+type:       rename/split-standardization
+message:    Split by ;
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:59Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# djulian13/east-slavic-swadesh-lists @ a4c5651f5e
+message: Split by ; 
+
+file changes:
+M	Swadesh lists - East Slavic for black-box classification test.csv
+
+[Swadesh lists - East Slavic for black-box classification test.csv] column change:
+  removed: ['Beloɡornoje (South, Russian, Russia)', 'Concept', 'Khislavichi (Eastern, Belarusian, Russia)', 'Meɡra (North, Russian, Russia)']
+  added:   [' Belarusian', ' Russia)"', ' Russia)";"Beloɡornoje (South', ' Russia)";"Khislavichi (Eastern', ' Russian', 'Concept;"Meɡra (North']
+  diff --git a/Swadesh lists - East Slavic for black-box classification test.csv b/Swadesh lists - East Slavic for black-box classification test.csv
+  index 70b1f86..0616898 100644
+  --- a/Swadesh lists - East Slavic for black-box classification test.csv	
+  +++ b/Swadesh lists - East Slavic for black-box classification test.csv	
+  @@ -1,41 +1,41 @@
+  -Concept,"Meɡra (North, Russian, Russia)","Beloɡornoje (South, Russian, Russia)","Khislavichi (Eastern, Belarusian, Russia)"
+  -eye,ɡlˠas,ɡlˠas,ɣlˠas
+  -ear,uxo,uxo,vuxa
+  -nose,nos,nos,nos
+  -tonɡue,jazɨk,jazɨk,jazɨk
+  -tooth,zup,zup,zup
+  -hand,ruka,ruka,ruka
+  -knee,kolʲeno,kolʲeno,kalʲena
+  -blood,krof,krofʲ,krow
+  -bone,kosʲtʲ,kosʲtʲ,kosʲtʲ
+  -breast (woman’s),ɡrutʲ,ɡrutʲ,ɣrut͡sʲ
+  -liver,pʲet͡ʃenʲ,pʲet͡ʃenʲ,NA
+  -skin,koʐa,koʐa,koʐa
+  -louse,voʂ,blˠoxa,blˠaxa
+  -doɡ,sobaka,sobaka,sabaka
+  -fish (noun),rɨba,rɨba,rɨba
+  -horn (animal part),rok,rok,rox
+  -tree,dʲerʲevo,dʲerʲeva,d͡zʲerʲeva
+  -leaf,lʲist,lʲist,lʲist
+  -person,t͡ʃelovek,t͡ʃelovek,t͡ʃelavek
+  -name (noun),imʲa,imʲa,imʲa
+  -sun,solˠnɨʂko,sont͡se,sont͡se
+  -star,zvʲozdot͡ʃka,zvʲezda,zvʲezda
+  -water,voda,voda,voda
+  -fire,oɡonʲ,oɡonʲ,aɣonʲ
+  -stone,kamʲenʲ,kamʲenʲ,kamʲenʲ
+  -path,doroɡa,doroɡa,daroɣa
+  -mountain,ɡora,ɡora,ɣara
+  -niɡht (dark time),not͡ʃ,not͡ʃ,noʈ͡ʂ
+  -drink (verb),pʲitʲ,pʲitʲ,pʲitʲ
+  -die,umʲiratʲ,umʲiratʲ,umʲirat͡sʲ
+  -see,vʲidʲetʲ,vʲidʲetʲ,vʲidʲetʲ
+  -hear,slˠɨʂatʲ,slˠɨʂatʲ,slˠɨʂatʲ
+  -come,prʲijtʲi,prʲijtʲi,prʲijtʲitʲ
+  -new,novɨj,novɨj,novɨj
+  -full,polˠnɨj,polˠnɨj,pownɨj
+  -one,odʲin,odʲin,adʲin
+  -two,dva,dva,dva
+  -I,ja,ja,ja
+  -you,tɨ,tɨ,tɨ
+  -we,mɨ,mɨ,mɨ
+  +Concept;"Meɡra (North, Russian, Russia)";"Beloɡornoje (South, Russian, Russia)";"Khislavichi (Eastern, Belarusian, Russia)"
+  +eye;ɡlˠas;ɡlˠas;ɣlˠas
+  +ear;uxo;uxo;vuxa
+  +nose;nos;nos;nos
+  ... 37 further lines not shown (cap is 50)

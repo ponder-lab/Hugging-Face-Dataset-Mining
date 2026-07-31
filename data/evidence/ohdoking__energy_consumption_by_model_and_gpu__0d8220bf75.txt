@@ -1,0 +1,13 @@
+dataset:    ohdoking/energy_consumption_by_model_and_gpu
+commit:     0d8220bf751975cd4833dca6a7f7777240f98ba6
+type:       cleaning
+message:    clean up data
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:42Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# ohdoking/energy_consumption_by_model_and_gpu @ 0d8220bf75
+message: clean up data 
+
+file changes:
+  (none)

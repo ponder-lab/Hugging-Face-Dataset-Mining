@@ -1,0 +1,15 @@
+dataset:    Brandon-h/offensive-and-grooming-dataset
+commit:     545b0ea518224b5bb9c052c2ef0fec97c51f3dbe
+type:       rename/split-standardization
+message:    test-train-validation split up!
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Brandon-h/offensive-and-grooming-dataset @ 545b0ea518
+message: test-train-validation split up! 
+
+file changes:
+A	test.csv
+A	train.csv
+A	validation.csv

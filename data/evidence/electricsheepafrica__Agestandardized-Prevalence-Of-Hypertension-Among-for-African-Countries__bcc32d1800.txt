@@ -1,0 +1,17 @@
+dataset:    electricsheepafrica/Agestandardized-Prevalence-Of-Hypertension-Among-for-African-Countries
+commit:     bcc32d1800bebb58850fa54ccbc798f907f13023
+type:       normalize/standardize/encode
+message:    Upload Age-standardized prevalence of hypertension among adults aged 30 to 79 years (% dataset
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:45Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# electricsheepafrica/Agestandardized-Prevalence-Of-Hypertension-Among-for-African-Countries @ bcc32d1800
+message: Upload Age-standardized prevalence of hypertension among adults aged 30 to 79 years (% dataset 
+
+file changes:
+M	README.md
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

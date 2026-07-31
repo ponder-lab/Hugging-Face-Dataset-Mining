@@ -1,0 +1,24 @@
+dataset:    lab-v2/mdsa
+commit:     708e5ed32213012a648a56c116297d9c527e6d42
+type:       normalize/standardize/encode
+message:    feat: normal-val dataset 9.
+status:     archived
+hub:        moved (HTTP 307)
+renamed_to: leibnitz-lab/mdsa
+generated:  2026-07-31T18:09:18Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# lab-v2/mdsa @ 708e5ed322
+message: feat: normal-val dataset 9. 
+
+file changes:
+A	normal-val/9.png   [stored in Git LFS]
+A	normal-val/90.png   [stored in Git LFS]
+A	normal-val/91.png   [stored in Git LFS]
+A	normal-val/92.png   [stored in Git LFS]
+A	normal-val/93.png   [stored in Git LFS]
+A	normal-val/94.png   [stored in Git LFS]
+A	normal-val/95.png   [stored in Git LFS]
+A	normal-val/96.png   [stored in Git LFS]
+A	normal-val/97.png   [stored in Git LFS]
+A	normal-val/98.png   [stored in Git LFS]
+A	normal-val/99.png   [stored in Git LFS]

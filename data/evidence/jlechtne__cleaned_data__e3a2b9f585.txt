@@ -1,0 +1,13 @@
+dataset:    jlechtne/cleaned_data
+commit:     e3a2b9f5856e0e72698f47bb9dd76a70d0008fe8
+type:       cleaning
+message:    Upload cleaned_data.csv with huggingface_hub
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:41Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# jlechtne/cleaned_data @ e3a2b9f585
+message: Upload cleaned_data.csv with huggingface_hub 
+
+file changes:
+A	cleaned_data.csv

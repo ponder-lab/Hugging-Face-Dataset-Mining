@@ -1,0 +1,17 @@
+dataset:    electricsheepafrica/Agestandardized-Prevalence-Of-Obesity-Among-Adults-for-African-Countries
+commit:     fd71351d6a8e41fb88bdc532ac547d294e765edc
+type:       normalize/standardize/encode
+message:    Upload Age-standardized prevalence of obesity among adults (18+ years dataset
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:45Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# electricsheepafrica/Agestandardized-Prevalence-Of-Obesity-Among-Adults-for-African-Countries @ fd71351d6a
+message: Upload Age-standardized prevalence of obesity among adults (18+ years dataset 
+
+file changes:
+M	README.md
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

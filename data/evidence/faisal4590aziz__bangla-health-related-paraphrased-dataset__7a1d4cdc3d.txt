@@ -1,0 +1,13 @@
+dataset:    faisal4590aziz/bangla-health-related-paraphrased-dataset
+commit:     7a1d4cdc3d78ce1bb280a55f5090b4a93b9a80eb
+type:       cleaning
+message:    cleaned paraphrased dataset
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:58Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# faisal4590aziz/bangla-health-related-paraphrased-dataset @ 7a1d4cdc3d
+message: cleaned paraphrased dataset 
+
+file changes:
+A	all_paraphrased_data.csv   [stored in Git LFS]

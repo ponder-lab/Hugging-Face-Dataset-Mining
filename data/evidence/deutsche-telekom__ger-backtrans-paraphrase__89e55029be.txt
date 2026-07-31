@@ -1,0 +1,17 @@
+dataset:    deutsche-telekom/ger-backtrans-paraphrase
+commit:     89e55029be7ea594abc902204977c5f56c993a02
+type:       column/field add-remove
+message:    add column names
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# deutsche-telekom/ger-backtrans-paraphrase @ 89e55029be
+message: add column names 
+
+file changes:
+M	README.md
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.
