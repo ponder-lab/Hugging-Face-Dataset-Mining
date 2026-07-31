@@ -2,7 +2,7 @@
 
 Regenerates the committed label CSVs from the annotation sheets they come from.
 
-The sheets are the source of truth. A CSV committed here is a snapshot of them, and a snapshot with no committed generator cannot be checked or refreshed by anyone who does not already have the pipeline on their machine. That is how `tests/gold_set.csv` ended up with no way to reproduce it.
+A CSV committed here is a snapshot of an annotation source held outside this repository. A snapshot with no committed generator cannot be checked or refreshed by anyone who does not already have the pipeline on their machine, which is the gap this directory exists to close.
 
 ## `verified_set.py`
 
