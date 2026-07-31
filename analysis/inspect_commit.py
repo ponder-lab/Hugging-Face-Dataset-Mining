@@ -21,6 +21,8 @@ What you see:
     the above, so that silence is never mistaken for "the data did not change"
   - when the dataset cannot be cloned at all, why: deleted or made private,
     restricted, renamed, or a failure on our side rather than the Hub's
+  - when the commit is not in the repository, that it was never found, rather
+    than the empty report a commit that changed nothing would produce
 
 Renames/adds/deletes are visible from Git history alone (no download). Only
 in-file changes to LFS-stored files (often parquet) need an actual download, and
@@ -68,6 +70,33 @@ def clone(ds):
     return path
 
 def show(repo,*a): return run("git","-C",repo,*a).stdout
+
+def resolve_commit(repo, rev):
+    """Full SHA of the commit `rev` names in `repo`, or None if it names none.
+
+    `^{commit}` is what makes this an existence check rather than a spelling
+    check: rev-parse alone echoes a well-formed 40-character SHA straight back
+    whether or not the repo holds the object. Peeling to a commit also rejects
+    the near misses that read as success otherwise, an object that is a tag or a
+    blob and an abbreviation short enough to be ambiguous among them.
+    """
+    r = run("git", "-C", repo, "rev-parse", "--verify", "--quiet",
+            f"{rev}^{{commit}}")
+    return r.stdout.strip() or None
+
+def missing_commit(ds, sha):
+    """Why nothing was analyzed when the revision is not in the repo (#71).
+
+    Said in the rater's terms, because the failure it replaces was not a crash
+    but a plausible reading: an unresolvable SHA printed a blank message and an
+    empty file list, which is exactly what a commit that touched nothing prints,
+    and `not-a-refactoring` is the reasonable label to write from that.
+    """
+    return (f"commit {sha} not found in {ds}; check the SHA against "
+            f"{CANDIDATES}. Nothing was analyzed here: this is a revision the "
+            f"repository does not hold, not a commit that changed no files. A "
+            f"truncated or mistyped CommitId is the usual cause, so the join "
+            f"key that produced it is worth checking wherever it came from.")
 
 def show_blob(repo, rev, path):
     """Raw bytes of the blob at rev:path, or None if git holds none there.
@@ -571,12 +600,21 @@ def row_sample(ds, repo, parent, sha, path):
 
 def inspect(ds, sha, download, show_rows):
     repo = clone(ds)
+    # Resolved before a line is printed, so that "the revision was never found"
+    # and "the revision changed nothing" stop producing the same output (#71).
+    # Every git call below fails quietly on a revision the repo does not hold:
+    # the message comes back empty, the name-status listing comes back empty,
+    # and the report that results is indistinguishable from an empty commit.
+    if resolve_commit(repo, sha) is None:
+        sys.exit(missing_commit(ds, sha))
     print(f"# {ds} @ {sha[:10]}")
     print("message:", show(repo,"log","-1","--pretty=%s",sha).strip(), "\n")
     parent = show(repo,"rev-parse",f"{sha}^").strip()
     ns = show(repo,"show","--name-status","--find-renames","--pretty=format:",sha).strip()
     print("file changes:")
     if not ns:
+        # The revision resolved, so this is the genuine case the check above
+        # keeps distinguishable: a commit that exists and touched no files.
         print("  (none)")
     for line in ns.splitlines():
         p = line.split("\t")
