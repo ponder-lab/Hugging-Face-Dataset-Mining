@@ -17,6 +17,12 @@ Install the dependencies first with `pip install -r requirements.txt`.
 1. Use `python mining/2getHFcommits.py` to extract more information, including the commit logs, from all the datasets included in `filtered_datasets.json`. The script extracts `datasetId`, `tags`, `downloads`, `likes`, `lastModified`, `created_at`, `commits`; saves this information in `FilteredHFDatasets.csv`.
 1. Run `python mining/3HFcommitFormatting.py FilteredHFDatasets.csv outputFilename.csv`. Formats all previously extracted commits into separate rows; includes `DatasetID`, `CommitId`, `Authors`, `Date`, `Log message`, and `message`.
 
+## Evidence Archive
+
+Upstream repositories drift after mining: within weeks of the June 2026 sweep, some candidate datasets were deleted or renamed on the Hub, and a few had their histories rewritten so that the mined commit no longer exists anywhere. `data/evidence/` therefore holds one committed file per row of `data/message_refactoring_candidates.csv`: the report `analysis/inspect_commit.py` produces for that commit (commit message, file-level change list with LFS flags, column-header diff, row samples), frozen at generation time. Every label is reproducible from this repository alone, with no network.
+
+A commit that can no longer be read appears in the archive carrying the reason, never omitted, and the record states which checks established the loss. `data/evidence/INDEX.csv` lists every row with its disposition and, where the Hub reported a rename, the name the dataset now goes by alongside the mined one. Regenerate with `python analysis/archive_evidence.py`; existing records are kept unless `--force` is passed.
+
 ## Provenance, License, and Citation
 
 This tool was developed by **Ayla Zhang**, a high-school student (Thomas Jefferson High School for Science and Technology) participating in NYU GSTEM (Summer 2025), under the mentorship of **Raffi Khatchadourian** (CUNY Hunter College), as a preliminary study of data-dependency refactorings and technical debt in machine learning systems.
