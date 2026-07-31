@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export both annotators' verified sheets to one CSV, in the gold-set schema.
+"""Export the verified candidate labels to one CSV, in the gold-set schema.
 
 WHAT THIS PRODUCES
 
@@ -9,9 +9,9 @@ columns and nothing else:
     DatasetID, CommitId, label, verified_by, notes
 
 `log_message` is dropped for symmetry with the gold set, and the debt fields are
-dropped because they are a separate judgment on a separate axis; a consumer that
-wants them should read the sheets. Column order is irrelevant downstream, since
-the repository loads candidate CSVs with `csv.DictReader`.
+dropped because they are a separate judgment on a separate axis. Column order is
+irrelevant downstream, since the repository loads candidate CSVs with
+`csv.DictReader`.
 
 Both annotators' rows survive for overlap commits. `verified_by` distinguishes
 them, which is what keeps the agreement subset recoverable from this file alone.
@@ -20,18 +20,17 @@ TWO FILTERS, AND BOTH ARE THE POINT
 
 1. GOLD-SET EXCLUSION, applied automatically rather than from a list. Any row
    whose (DatasetID, CommitId) appears in tests/gold_set.csv is dropped. Gold
-   commits are worked examples the annotators were meant never to see; three
-   leaked into the rater pool anyway, and a rater labeling a worked example is
-   not producing an independent verification. Doing this by rule rather than by
-   remembered list is the durable fix: the leak recurs whenever the gold set
-   grows, and a list is only correct until the next sync.
+   commits are worked examples the annotators were meant never to see, and a
+   rater labeling a worked example is not producing an independent verification.
+   Doing this by rule rather than by remembered list is the durable fix: the
+   exclusion has to hold whenever the gold set grows, and a list is only correct
+   until the next time it does.
 
 2. DISPOSITION NORMALIZATION. A row that could not be judged carries one of
    three words from clarification 7 of the protocol -- `absent`, `inaccessible`,
    `opaque` -- in place of a label, never a guessed type. Older rows predate the
-   distinction and say `LFS-opaque` or a bare `opaque` for all three cases;
-   scripts/adjudications.csv holds the settled disposition for every such row and
-   wins over what the sheet says.
+   distinction and use a coarser word for all three cases; the adjudications file
+   named on the command line holds the settled disposition and wins.
 
 WHAT THIS IS NOT
 
@@ -43,37 +42,35 @@ and is built elsewhere.
 NAMES ARE REPLACED WITH HANDLES
 
 `verified_by` is emitted as a handle rather than a full name, matching the form
-`tests/gold_set.csv` already uses (`miridonoso`, `khatchad`). The two
-secondary-school annotators have no GitHub account, so their institutional
-identifiers stand in; an account minted to fill a CSV column would be the
-throwaway pattern the onboarding checklist warns about, and a handle is what the
-gold set's convention actually calls for.
+`tests/gold_set.csv` already uses. Two of the annotators are secondary-school
+students with no GitHub account, so their institutional identifiers stand in; an
+account minted to fill a CSV column would be the throwaway pattern the onboarding
+checklist warns about.
 
-The substitution is driven by the name in the sheet, not by the order the sheets
-are passed, so re-running with the arguments swapped cannot silently reassign
-anyone. A name absent from the map is a hard error rather than a pass-through:
-passing an unrecognized name straight into a published file is the failure this
-map exists to prevent.
+The substitution is keyed on the recorded annotator name rather than on argument
+order, so re-running with the arguments swapped cannot silently reassign anyone.
+A name with no handle on file is a hard error rather than a pass-through, since
+letting an unrecognized name through is the failure the map exists to prevent.
 
-The map itself lives outside this repository, in a JSON file named on the command
-line, because this repository is public and a committed map would undo the
-substitution it performs.
+WHAT IS NOT COMMITTED, AND WHY
+
+Every input except the candidate list is named on the command line and held
+outside this repository, which is public:
+
+  - the annotation source identifiers,
+  - the name-to-handle map, which would undo the substitution above,
+  - the adjudications file.
+
+The annotation source is read live rather than from an exported copy. An export
+cannot detect that its source has moved, and scoring against stale labels is a
+failure that does not announce itself; reading the source turns the same drift
+into a row-count mismatch at export time.
 
 Usage:
 
     export GOOGLE_ACCESS_TOKEN=$(gcloud auth application-default print-access-token)
-    python3 export/verified_set.py <sheet-id-a> <sheet-id-b> \
+    python3 export/verified_set.py <source-id-a> <source-id-b> \\
         <handles.json> <adjudications.csv> <out.csv>
-
-`handles.json` maps annotator name to published handle. `adjudications.csv` is
-the settled disposition per commit. Both live outside this repository and are
-named on the command line, for the same reason the sheet identifiers are.
-
-Sheet identifiers are arguments rather than constants, as in label_map.py and
-kappa_denominator.py, so that neither verifier's sheet is named in a repository
-either of them might one day read. The sheets are fetched live: a pre-exported
-file would go stale silently, and scoring a classifier against last month's
-labels is the failure this whole pipeline keeps running into.
 """
 import csv
 import io
@@ -92,11 +89,9 @@ CAND = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir,
                     "data", "message_refactoring_candidates.csv")
 DISPOSITIONS = ("absent", "inaccessible", "opaque")
 
-# Annotator name as it appears in the sheet -> the handle published in the CSV.
-# Held OUTSIDE this repository, in a JSON file passed on the command line, for the
-# same reason the sheet identifiers are: this repository is public, and a file
-# mapping a handle back to a full name would undo the substitution it performs.
-# A name with no handle on file is a hard error rather than a pass-through.
+# The name-to-handle map is held OUTSIDE this repository, in a JSON file passed on
+# the command line: this repository is public, and a committed map would undo the
+# substitution it performs.
 FIELDS = ["DatasetID", "CommitId", "label", "verified_by", "notes"]
 
 
@@ -113,16 +108,16 @@ def access_token():
         sys.exit("no token: set GOOGLE_ACCESS_TOKEN or install the gcloud CLI")
 
 
-def rows(sheet_id, token):
-    """Yield the sheet's rows, live, padded to the full column count."""
-    url = VALUES_URL.format(sid=sheet_id, rng=urllib.parse.quote(RANGE))
+def rows(source_id, token):
+    """Yield the source's rows, live, padded to the full column count."""
+    url = VALUES_URL.format(sid=source_id, rng=urllib.parse.quote(RANGE))
     req = urllib.request.Request(url, headers={"Authorization": "Bearer " + token})
     with urllib.request.urlopen(req) as response:
         for r in json.load(response).get("values", [])[1:]:
             yield list(r) + [""] * (8 - len(r))
 
 
-def main(sheet_a, sheet_b, handles_path, adj_path, out):
+def main(source_a, source_b, handles_path, adj_path, out):
     token = access_token()
     handles = json.load(open(handles_path))
     gold = {(r["DatasetID"].strip(), r["CommitId"].strip())
@@ -138,8 +133,8 @@ def main(sheet_a, sheet_b, handles_path, adj_path, out):
 
     kept, dropped_gold, unjoinable, normalized = [], 0, [], 0
     raters = {}
-    for sheet_id in (sheet_a, sheet_b):
-        for r in rows(sheet_id, token):
+    for source_id in (source_a, source_b):
+        for r in rows(source_id, token):
             key = (r[0].strip(), r[1].strip())
             if key not in valid:
                 unjoinable.append(key)
@@ -197,6 +192,6 @@ def main(sheet_a, sheet_b, handles_path, adj_path, out):
 
 if __name__ == "__main__":
     if len(sys.argv) != 6:
-        sys.exit("usage: verified_set.py <sheet-id-a> <sheet-id-b> "
+        sys.exit("usage: verified_set.py <source-id-a> <source-id-b> "
                  "<handles.json> <adjudications.csv> <out.csv>")
     sys.exit(main(*sys.argv[1:]))
