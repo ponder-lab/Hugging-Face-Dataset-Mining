@@ -23,6 +23,8 @@ Upstream repositories drift after mining: within weeks of the June 2026 sweep, s
 
 A commit that can no longer be read appears in the archive carrying the reason, never omitted, and the record states which checks established the loss. `data/evidence/INDEX.csv` lists every row with its disposition and, where the Hub reported a rename, the name the dataset now goes by alongside the mined one. Regenerate with `python analysis/archive_evidence.py`; existing records are kept unless `--force` is passed.
 
+The full git histories behind these records are archived separately on Zenodo as a snapshot of the clone cache, captured 2026-07-31 ([10.5281/zenodo.21727324](https://doi.org/10.5281/zenodo.21727324)). Access to the snapshot is restricted because it aggregates 270 third-party datasets, each governed by its own upstream license; the in-repo evidence records above are the open form of the same facts.
+
 ## Provenance, License, and Citation
 
 This tool was developed by **Ayla Zhang**, a high-school student (Thomas Jefferson High School for Science and Technology) participating in NYU GSTEM (Summer 2025), under the mentorship of **Raffi Khatchadourian** (CUNY Hunter College), as a preliminary study of data-dependency refactorings and technical debt in machine learning systems.
