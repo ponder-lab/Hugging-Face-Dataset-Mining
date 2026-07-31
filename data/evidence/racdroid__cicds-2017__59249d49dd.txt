@@ -1,0 +1,18 @@
+dataset:    racdroid/cicds-2017
+commit:     59249d49dd97667c3973d57b55338b462d15df4e
+type:       cleaning
+message:    Upload cleaned_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# racdroid/cicds-2017 @ 59249d49dd
+message: Upload cleaned_data.csv 
+
+file changes:
+M	.gitattributes
+A	cleaned_data.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

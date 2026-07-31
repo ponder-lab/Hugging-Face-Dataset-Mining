@@ -1,0 +1,68 @@
+dataset:    litagin/Galgame_Dataset_stats
+commit:     a8ca3a79319eb63fb050a5d7b6ebad7da159795b
+type:       column/field add-remove
+message:    Add specs columns
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:06Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# litagin/Galgame_Dataset_stats @ a8ca3a7931
+message: Add specs columns 
+
+file changes:
+M	galgame_dataset_stats.tsv
+
+[galgame_dataset_stats.tsv] column change:
+  removed: []
+  added:   ['spec1', 'spec2', 'spec3', 'spec4', 'spec5']
+  diff --git a/galgame_dataset_stats.tsv b/galgame_dataset_stats.tsv
+  index f7164ef..078321f 100644
+  --- a/galgame_dataset_stats.tsv
+  +++ b/galgame_dataset_stats.tsv
+  @@ -1,293 +1,293 @@
+  -game_name	num_speakers	num_mono_files	num_stereo_files	num_error_files	total_duration_hours	avg_sample_rate_kHz	avg_precision	avg_bitrate_kbps	codec	total_size_GB
+  -Aino+Links_Sousaku_Kanojo_no_Ren'ai_Koushiki	47	15055	1	8	20.08965	48.0	16.0	88.45157359192349	Vorbis	0.7313136523589492
+  -AKABEiSOFT3_CharaBration!_~Otome_wa_Koi_shite_Charabureru~	40	15370	0	7	30.105372222222222	47.888861418347425	16.0	87.11372121014963	Vorbis	1.073794229887426
+  -AKABEiSOFT3_Dekinai_Watashi_ga,_Kurikaesu	45	16217	0	5	20.480825	44.1	16.0	91.47093753468583	Vorbis	0.7453301129862666
+  -AKABEiSOFT3_Hakata_DYINGZOMBIES_~Second_Chance_for_BEAUTIFUL_LIVE~	97	7891	4	0	12.571944444444444	44.59299556681444	16.0	83.03394540848639	Vorbis	0.42649585101753473
+  -AKABEiSOFT3_Hataraku_Otona_no_Ren'ai_Jijou	65	19498	0	0	28.062277777777776	44.1	16.0	81.30839050158991	Vorbis	0.9621569560840726
+  -AKABEiSOFT3_Hataraku_Otona_no_Ren'ai_Jijou_2	51	15305	0	0	24.74025833333333	44.1	16.0	79.93327010780791	Vorbis	0.8364444691687822
+  -AKABEiSOFT3_Maho_x_Roba_-Witches_Spiritual_Home-	59	22225	0	0	38.70615	44.1	16.0	80.20614600674915	Vorbis	1.311239785514772
+  -AKABEiSOFT3_Ryuukishi_Bloody_†_Saga	84	16152	0	0	18.802516666666666	44.1	16.0	82.71939505943537	Vorbis	0.6247724313288927
+  -ALcot_Clover_Day's	83	25841	0	0	35.7941763375	48.0	16.0	71.75847231144306	Opus (Opus Interactive Audio Codec)	1.093996323645115
+  -ALcot_Onigokko!	61	18537	225	0	26.536441666666665	44.1	16.0	76.10645091141669	Vorbis	0.8144928831607103
+  -ALcot_Onigokko!_Fandisc	17	6784	186	0	10.920155555555555	44.1	16.0	77.8057512195122	Vorbis	0.3420654544606805
+  -ALcot_Shogun-sama_wa_Otoshigoro	136	16238	311	0	25.16801111111111	44.1	16.0	167.89975225089128	Vorbis	1.7482743179425597
+  -ALcot_Shogun-sama_wa_Otoshigoro_Fandisc_-Gosanke_Da_yo!_Zen'in_Shuugou-	81	7608	11	0	12.603280555555555	44.1	16.0	103.64698779367372	Vorbis	0.5481422338634729
+  -ALcot_Yomegami_My_Sweet_Goddess!	62	18730	388	0	24.700366666666667	44.1	16.0	144.96938487289464	Vorbis	1.4714881405234337
+  -Alice_Soft_Choukou_Shinki_Ixseal	161	19966	0	0	34.19999166666667	44.1	16.0	96.54353400781329	Vorbis	1.3239164846017957
+  -Alice_Soft_doHna_doHna_-Issho_ni_Warui_Koto_o_Shiyou-	273	21666	0	0	30.571538888888888	44.1	16.0	96.13473183790269	Vorbis	1.182107836008072
+  -Alice_Soft_Evenicle_2	106	19132	4	0	28.562308333333334	44.1	16.0	95.30298390468228	Vorbis	1.1050329795107245
+  -Alice_Soft_Rance_03_-_Leazas_Kanraku	226	16627	0	0	22.719138888888892	44.1	16.0	100.1560413784808	Vorbis	0.9080199422314763
+  -ASa_Project_Futamata_Ren'ai	11	10877	0	0	18.46673888888889	48.0	16.0	768.0022984278754	16-bit Signed Integer PCM	5.944244142621756
+  -ASa_Project_Futamata_Ren'ai_-_Rui_&_Miyako_Mini_After_Story	11	1229	0	0	2.1302722222222226	48.0	16.0	768.0	16-bit Signed Integer PCM	0.6857106052339077
+  -ASa_Project_Futamata_Ren'ai_-_Yua_&_Kirame_Mini_After_Story	11	1390	0	0	2.777755555555555	48.0	16.0	768.0007194244604	16-bit Signed Integer PCM	0.8941194787621498
+  -ASa_Project_Karigurashi_Ren'ai	14	13363	0	0	19.315616666666667	48.0	16.0	768.0048641772057	16-bit Signed Integer PCM	6.217570129781961
+  -ASa_Project_Koibana_Ren'ai	14	11921	0	0	18.994463694166665	48.0	16.0	155.31754567569834	Opus (Opus Interactive Audio Codec)	1.2528126630932093
+  -ASa_Project_Koibana_Ren'ai_-_Mini_Fandisk_-_After_Festival	14	3818	0	0	6.699041229166666	48.0	16.0	156.7664324253536	Opus (Opus Interactive Audio Codec)	0.4445787090808153
+  -ASa_Project_Puramai_Wars	19	14220	0	0	19.89588333333333	44.1	16.0	235.21448663853727	Vorbis	1.9736351734027267
+  -ASa_Project_Ren'ai,_Karichaimashita	12	14360	0	0	23.20510047444444	48.0	16.0	166.83719394150418	Opus (Opus Interactive Audio Codec)	1.637059511616826
+  -ASa_Project_Ren'ai,_Karichaimashita_-_Emi_&_Hasumi_Mini_After_Story	11	1472	0	0	2.6796611111111113	48.0	16.0	768.000679347826	16-bit Signed Integer PCM	0.8625496625900269
+  -ASa_Project_Ren'ai,_Karichaimashita_-_Tsubaki_&_Chinatsu_&_Konatsu_Mini_After_Story	11	1302	0	0	2.6174888888888885	48.0	16.0	768.0	16-bit Signed Integer PCM	0.8425316289067268
+  -ASa_Project_Ren'ai_x_Royale	12	11373	0	0	23.22329289861111	48.0	16.0	163.52853618218586	Opus (Opus Interactive Audio Codec)	1.6041969554498792
+  -ASa_Project_Ren'ai_x_Royale_-_Mari_&_Shione_&_Ao_Mini_After_Story	12	1888	0	0	4.136716666666667	48.0	16.0	768.000529661017	16-bit Signed Integer PCM	1.3315420150756836
+  -ASa_Project_Ren'ai_x_Royale_-_Nonoka_&_Renna_&_Yuna_Mini_After_Story	12	1916	0	0	4.336922222222222	48.0	16.0	768.0010438413361	16-bit Signed Integer PCM	1.395982339978218
+  -ASa_Project_Suki_to_Suki_to_de_Sankaku_Ren'ai	9	13902	0	0	18.109227900833336	48.0	16.0	151.9960312185297	Opus (Opus Interactive Audio Codec)	1.1736817052587867
+  -Azarashi_Soft+1_Makimura_Hazuki_no_Koigatari	5	4876	0	0	8.310225	48.0	16.0	77.41798031173091	Vorbis	0.27178671956062317
+  -Azarashi_Soft+1_Uchi_no_Aruji_wa_Youkai_no_Joushiki_o_Shiranai	7	5806	0	0	9.02553611111111	47.98589390285911	16.0	104.89779538408543	Vorbis	0.39399765711277723
+  -Azarashi_Soft_Aibeya	1	2372	0	0	4.4492972222222225	47.998355817875215	16.0	205.64097807757167	Vorbis	0.3800928024575114
+  -Azarashi_Soft_Aibeya_2	1	2092	0	0	3.111463888888889	48.0	16.0	196.36376673040152	Vorbis	0.2528237970545888
+  -Azarashi_Soft_Aikagi_2	1	3028	0	0	3.462972222222222	48.0	16.0	199.59105019815058	Vorbis	0.28427095990628004
+  -Azarashi_Soft_Aikagi_3	1	2010	32	0	2.6819777777777776	48.0	16.0	70.8216376101861	Vorbis	0.07863125577569008
+  -Azarashi_Soft_Amaemi_-longing_for_you-	7	9829	0	0	15.847616666666665	48.0	16.0	85.00607233696205	Vorbis	0.5395419029518962
+  -Azarashi_Soft_Amakano+	18	8436	0	0	16.350047222222223	48.0	16.0	92.79892117117117	Vorbis	0.6191931068897247
+  -Azarashi_Soft_Amakano_-_Perfect_Edition	21	14066	0	0	27.181091666666664	48.0	16.0	75.54585902175458	Vorbis	0.8813413633033633
+  -Azarashi_Soft_Amakano_2+	5	18623	0	0	26.58689166666667	48.0	16.0	109.53293765773506	Vorbis	1.1766696088016033
+  -Azarashi_Soft_Amakano_2_-_Perfect_Edition	26	17059	1	0	22.19333333333333	48.0	16.0	174.3984407971864	Vorbis	1.6077558966353536
+  -Azarashi_Soft_Amakano_~Second_Season~	40	19002	0	0	30.948597222222222	48.0	16.0	91.46121460898853	Vorbis	1.1400166740640998
+  ... 541 further lines not shown (cap is 50)

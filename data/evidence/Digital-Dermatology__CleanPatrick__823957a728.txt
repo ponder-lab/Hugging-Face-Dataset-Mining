@@ -1,0 +1,13 @@
+dataset:    Digital-Dermatology/CleanPatrick
+commit:     823957a72883d8259ae54b8625d6dbcfd1bc4c91
+type:       cleaning
+message:    Upload CleanPatrick_Teaser_compressed.pdf
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Digital-Dermatology/CleanPatrick @ 823957a728
+message: Upload CleanPatrick_Teaser_compressed.pdf 
+
+file changes:
+A	assets/CleanPatrick_Teaser_compressed.pdf   [stored in Git LFS]

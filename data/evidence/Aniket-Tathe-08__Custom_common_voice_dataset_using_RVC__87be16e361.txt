@@ -1,0 +1,103 @@
+dataset:    Aniket-Tathe-08/Custom_common_voice_dataset_using_RVC
+commit:     87be16e361982c4838b3f4e786906fc2fff88c74
+type:       cleaning
+message:    Clean up of tsv files (#11)
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Aniket-Tathe-08/Custom_common_voice_dataset_using_RVC @ 87be16e361
+message: Clean up of tsv files (#11) 
+
+file changes:
+M	transcript/hi/other.tsv
+M	transcript/hi/test.tsv
+
+[transcript/hi/other.tsv] no column-set change (values may still differ)
+  diff --git a/transcript/hi/other.tsv b/transcript/hi/other.tsv
+  index 3763a03..065a923 100644
+  --- a/transcript/hi/other.tsv
+  +++ b/transcript/hi/other.tsv
+  @@ -2409,11 +2409,11 @@ ae0207e1b992822da425c226998ea35fa5a75ad2e871945773ba6a3a2a1198e2b949343a3576e484
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29736121.wav	चुनार के पत्थरों से संवरेंगे काशी के घाट	0	0				hi	
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29736122.wav	आज है पारसी समुदाय के लोगों का नया साल, ऐसे मनाते हैं नवरोज	1	0				hi	
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29736123.wav	सीवीसी पद की गरिमा बहाल हुईः सुषमा स्वराज	0	0				hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29742428.wav	शास्त्रीय संगीत का सितारा थीं 'ठुमरी की रानी' गिरिजा देवी	0	0	twenties	male	Odisha, India	hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29742429.wav	तेलांगना ने शुरू किया मेट्रो एंड रेल टेक्नोलॉजी में भारत का पहला पीजी कोर्स	0	0	twenties	male	Odisha, India	hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29742431.wav	इंटरनेट पर खुद के हमशक्ल की फोटो देख निशब्द हुए करण जौहर	0	0	twenties	male	Odisha, India	hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29742432.wav	शिक्षिका ने दिखाई बहादुरी, लुटेरों का किया मुकाबला	0	0	twenties	male	Odisha, India	hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29742433.wav	आप बहुत कुछ सीखेंगी।	0	0	twenties	male	Odisha, India	hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29742428.wav	शास्त्रीय संगीत का सितारा थीं 'ठुमरी की रानी' गिरिजा देवी	0	0	twenties	male		hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29742429.wav	तेलांगना ने शुरू किया मेट्रो एंड रेल टेक्नोलॉजी में भारत का पहला पीजी कोर्स	0	0	twenties	male		hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29742431.wav	इंटरनेट पर खुद के हमशक्ल की फोटो देख निशब्द हुए करण जौहर	0	0	twenties	male		hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29742432.wav	शिक्षिका ने दिखाई बहादुरी, लुटेरों का किया मुकाबला	0	0	twenties	male		hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29742433.wav	आप बहुत कुछ सीखेंगी।	0	0	twenties	male		hi	
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29776042.wav	बारिश बनी विलेन, बांग्लादेश और दक्षिण अफ्रीका के बीच दूसरा टेस्ट भी ड्रॉ हुआ	0	1				hi	
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29776046.wav	मुंडा सरकार देगी बेहतर शासन: गडकरी	0	1				hi	
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29776049.wav	लालकृष्ण आडवाणी जायेंगे संघ मुख्यालय	0	0				hi	
+  @@ -2468,13 +2468,13 @@ ae0207e1b992822da425c226998ea35fa5a75ad2e871945773ba6a3a2a1198e2b949343a3576e484
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29777920.wav	विराट कोहली को लगी बाउंसर, खुद घबरा गए मिशेल जॉनसन	0	0				hi	
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29777923.wav	दुबई में पहली बार आयोजित होगी योग महोत्सव	1	0				hi	
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29777924.wav	झांसी: आधुनिक जीवन का नया पता	1	0				hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29792437.wav	मराठी अभिनेता पर लगा शरद पवार का मजाक उड़ाने का आरोप	0	0			Odisha, India	hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29792438.wav	छत्तीसगढ़ में जानलेवा साबित हो रहे हैं एंटी लैंड माइन वेहिकल	0	0			Odisha, India	hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29792439.wav	अपनी शादी के बाद दोबारा सात फेरे लेंगी दिव्यांका	0	0			Odisha, India	hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29792440.wav	Xiaomi के रिपब्लिक डे सेल में सस्ते मिलेंगे ढेरों प्रोडक्ट्स	0	0			Odisha, India	hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29801700.wav	Royal Enfield ने भारत में लॉन्च की दो नई बाइक्स	0	0	twenties	male	Odisha, India	hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29801701.wav	एसिड अटैक सर्वाइवर के लिए Delhi University में सीट आरक्षित होगी	0	0	twenties	male	Odisha, India	hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29801702.wav	अपराधी को पनाह, उमा भारती का रिश्तेदार गिरफ्तार	0	0	twenties	male	Odisha, India	hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29792437.wav	मराठी अभिनेता पर लगा शरद पवार का मजाक उड़ाने का आरोप	0	0				hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29792438.wav	छत्तीसगढ़ में जानलेवा साबित हो रहे हैं एंटी लैंड माइन वेहिकल	0	0				hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29792439.wav	अपनी शादी के बाद दोबारा सात फेरे लेंगी दिव्यांका	0	0				hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29792440.wav	Xiaomi के रिपब्लिक डे सेल में सस्ते मिलेंगे ढेरों प्रोडक्ट्स	0	0				hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29801700.wav	Royal Enfield ने भारत में लॉन्च की दो नई बाइक्स	0	0	twenties	male		hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29801701.wav	एसिड अटैक सर्वाइवर के लिए Delhi University में सीट आरक्षित होगी	0	0	twenties	male		hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29801702.wav	अपराधी को पनाह, उमा भारती का रिश्तेदार गिरफ्तार	0	0	twenties	male		hi	
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29818480.wav	हिंदी में इसे क्या कहते हैं	1	0				hi	
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29818481.wav	नीतीश राज में बिहार में सुशासन एक बकवास हैः तेजस्वी यादव	0	0				hi	
+   2b0295a46df33cca7111334e28048e4ca8856ac39e51ceba5d127c2defec2c84aa3dbbe0b2cd9a0057a3710d4ca5936186ac62306a21dbc4f493acb9486d1452	common_voice_hi_29818486.wav	जम्मू कश्मीर के बारामूला में सुरक्षाबलों से मुठभेड़ में एक आतंकी ढेर	0	1				hi	
+  @@ -2938,9 +2938,9 @@ a369cbdbd6fc02425ab9598f13c12222eaea3820d58a28d26b7d1f9d11d769c30fc296af9c8f7757
+   9296b5aa6010d28b45a780046d322620298dbbf3189b322a311bd2aaf58e1b3d55d7ca923cccd5f1fadb32a84b85b5c86517b92c6cdefbcee928d6ea9af98645	common_voice_hi_31998550.wav	शर्तों के उल्लंघन के कारण कोच्चि टस्कर्स आईपीएल से निलंबित	0	0				hi	
+   9296b5aa6010d28b45a780046d322620298dbbf3189b322a311bd2aaf58e1b3d55d7ca923cccd5f1fadb32a84b85b5c86517b92c6cdefbcee928d6ea9af98645	common_voice_hi_31998551.wav	तमांग की हत्या का मुख्य आरोपी फरार	0	0				hi	
+   9296b5aa6010d28b45a780046d322620298dbbf3189b322a311bd2aaf58e1b3d55d7ca923cccd5f1fadb32a84b85b5c86517b92c6cdefbcee928d6ea9af98645	common_voice_hi_31998552.wav	दिल्ली को वर्ल्ड क्लास बनाना चाहते हैं, विकासपुरी से विकास नदारद	1	0				hi	
+  -e6f76063e0bed01647274603154c6319e89caf2d63a94e0c72490f58e3bca473aba94f53d264079979a367057af8c6e8152ef88087ac70720ea6175f8f9e4970	common_voice_hi_32038053.wav	अश्विन की फिरकी का जादू, जहीर को पीछे छोड़ बनाया रिकॉर्ड	0	0	teens	male	natural and clear	hi	
+  -e6f76063e0bed01647274603154c6319e89caf2d63a94e0c72490f58e3bca473aba94f53d264079979a367057af8c6e8152ef88087ac70720ea6175f8f9e4970	common_voice_hi_32038058.wav	बजट में उत्पाद शुल्क, सेवा कर ना बढ़े: उद्योग जगत	0	0	teens	male	natural and clear	hi	
+  -e6f76063e0bed01647274603154c6319e89caf2d63a94e0c72490f58e3bca473aba94f53d264079979a367057af8c6e8152ef88087ac70720ea6175f8f9e4970	common_voice_hi_32038061.wav	चंद्रबाबू नायडू बोले- जगन मोहन रेड्डी साइको की तरह कर रहे काम	0	0	teens	male	natural and clear	hi	
+  +e6f76063e0bed01647274603154c6319e89caf2d63a94e0c72490f58e3bca473aba94f53d264079979a367057af8c6e8152ef88087ac70720ea6175f8f9e4970	common_voice_hi_32038053.wav	अश्विन की फिरकी का जादू, जहीर को पीछे छोड़ बनाया रिकॉर्ड	0	0	teens	male		hi	
+  ... 94 further lines not shown (cap is 50)
+
+[transcript/hi/test.tsv] no column-set change (values may still differ)
+  diff --git a/transcript/hi/test.tsv b/transcript/hi/test.tsv
+  index 8f1d028..fe67b8c 100644
+  --- a/transcript/hi/test.tsv
+  +++ b/transcript/hi/test.tsv
+  @@ -11,15 +11,15 @@ client_id	path	sentence	up_votes	down_votes	age	gender	accents	locale	segment
+   7570a71e8291317409ff389bd743ae3946da5a2b9540b1d3be2b8e42560a8338f8ced7349b801dee318d981a4d51d1fe60ece80dc66222d056395f1476a1df67	common_voice_hi_27546787.wav	मैं गाड़ी साफ़ करता हूँ।	2	0				hi	
+   7ee51ec09b8af4f5d3502101adc32f4c67fe0a30b5566bf94a9854fc03ca4b259a0d5669d5ab493a6f9c3d989368a86e6bdc03c1bf0dc61a4995e783776c2ba2	common_voice_hi_25655728.wav	वे एक-साथ खेल रहे हैं।	2	0				hi	
+   934de794387594de8b250cecb3bced204ead5062e9735ba872e81ddfa0b534ae5a9e052351de43452f817e7785103afcf3fb5bc56ac2ae88bb53927a738f447c	common_voice_hi_27344313.wav	मोरारी बापू ने भी माना, मोदी सरकार का ग्राफ नीचे आया	2	1				hi	
+  -9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29792442.wav	महाराष्ट्र सरकार को एनएचआरसी का नोटिस	2	0			Odisha, India	hi	
+  +9698b39cb85f238f1346eea2dba721e4e8fb440bd4d14b632aef84108f02f47d028463a7076a9eb0333b72fab260a9357f045de63eaaa3c7374ce6a692e081ba	common_voice_hi_29792442.wav	महाराष्ट्र सरकार को एनएचआरसी का नोटिस	2	0				hi	
+   a2b044a3cc841c74db098b363426777071a763d77db580920c5fc4e1955a9099b5c35c47b7e4225544e88c454349e2877524aacedf99fc459bfd50146fcb48d3	common_voice_hi_27570572.wav	शीना का चौथा हत्यारा कौन है!	2	0				hi	
+   a2c28d117539109b28276d5e5540bdbecbb41fa7636feb31c13b30ef682d84510bc4f850d7f3fa14d4304d61267d1c8f3f6352ae409d69df77f10dbb657a9c01	common_voice_hi_26941296.wav	सरकार को खतरा नहीं: पी. चिदंबरम	2	0	teens	male		hi	
+  -aafda704e52784565ee078117b2a7941d822e96444d43cfe115de75e654f8c08c23b050eebe7b4264498537464b6e45cd0624f23aec65f904b156464d5056d52	common_voice_hi_32322039.wav	नोटबंदी से अब किसान हुए परेशान, मंडी में नहीं मिल रहा कैश	2	0	thirties	male	Bihari Hindi	hi	
+  +aafda704e52784565ee078117b2a7941d822e96444d43cfe115de75e654f8c08c23b050eebe7b4264498537464b6e45cd0624f23aec65f904b156464d5056d52	common_voice_hi_32322039.wav	नोटबंदी से अब किसान हुए परेशान, मंडी में नहीं मिल रहा कैश	2	0	thirties	male		hi	
+   c0c130a042ca336930590bd4ee7ac3a1ddc31953a4a5848ca2b8dc92142e738a1624463ce88100c1acf4fd19242bfcfc04b6c62c0f89e7a958ff9f02f6520a51	common_voice_hi_27637219.wav	हैरतअंगेजः ऑस्ट्रेलिया की झाड़ियों में लगी आग का जिम्मेदार भारतीय मॉनसून!	2	0				hi	
+   c7a77aac9398049c593a06e3bde552061eb033612d2266a548202cc8790a06dd5c5c4fb002e8013ef38f94abed95b3bea0e56c4cb6aa8deecf7c63373764826d	common_voice_hi_27913564.wav	परमाणु मुद्दे पर ईरान से अलग रहने को तैयार तुर्की	2	0				hi	
+   dca9be8d2014090294e1fe982fdc9a6c84b8a3361de99a76b0fac1a02f7c3831b71a2d0908080c2263422ec2df26cf2ef844294119839d33cefb06152223532c	common_voice_hi_26232453.wav	पत्र किसको लिखा गया था?	2	1				hi	
+   e3d7f69caea5efb2f5319a49faacdc76440549b08282bef1d81bc2ce2e823cf05f2bbb7d1ec46ef4f681113376a098b117c1ac6a8b1dfe88acf27fa6a9961f31	common_voice_hi_29127033.wav	"जिस नाटक की राजनीति नहीं, उसके मंचन का कोई मतलब नहीं"	2	0				hi	
+  -e6f76063e0bed01647274603154c6319e89caf2d63a94e0c72490f58e3bca473aba94f53d264079979a367057af8c6e8152ef88087ac70720ea6175f8f9e4970	common_voice_hi_32038054.wav	ओपेराः मुकाम पर सुरीलापन	2	0	teens	male	natural and clear	hi	
+  +e6f76063e0bed01647274603154c6319e89caf2d63a94e0c72490f58e3bca473aba94f53d264079979a367057af8c6e8152ef88087ac70720ea6175f8f9e4970	common_voice_hi_32038054.wav	ओपेराः मुकाम पर सुरीलापन	2	0	teens	male		hi	
+   ec98bf4f4c7ebeb53552af57da3d7a49f21818abc1725b040a1b968399e00793bb92c3c43fc8a718ebdf2cd08df8a20903f45474f2545ae873ddfb15c6a759c5	common_voice_hi_27945054.wav	आईएएस की एक सीट खाली रखे यूपीएससी: कोर्ट	2	0				hi	
+   f4eaf1a4c5d9c519a8d70d41f155c73661ababef448156ca952ac016a8013ac82f6d765947af61b517bd0ad1a29465bf17532c32ee0e7bd019fbcaf940e151fb	common_voice_hi_24361298.wav	उसके हात-पैर लंबे हैं।	2	0				hi	
+   0245f184ea5b6ed43fdf98061265386a868ff96b2566d123a88efdaaa7aeade1ce59fdd77595bf40a98fe15f578afaf6b4a2fbfbbf2a1e589d519238c07b799a	common_voice_hi_31807031.wav	कर्मचारी को पहले तमाचा जड़ा, फिर हिरासत में लिया गया	2	0				hi	
+  @@ -50,8 +50,8 @@ b7fde8b01808baf29c65724c04b9461381f7985ce4825b5663eb776d15da60e04453179bb8655290
+   b7fde8b01808baf29c65724c04b9461381f7985ce4825b5663eb776d15da60e04453179bb8655290425de10178de70a1bd3e57b2381901578b63e663e90c0628	common_voice_hi_25152228.wav	ऐसा लगता है कि वह अमीर है।	2	0				hi	
+   c3ef3ab4323cf25135e6b13c5baf4f313c3c59fea4cf21337ecb956e033b5b79db26a65c4279f7092dda2c2d1a5175e591e08ba495a247500fe295c3b8cc5327	common_voice_hi_23964612.wav	आप दोनों देख रही हैं।	2	0	teens	male		hi	
+   c3ef3ab4323cf25135e6b13c5baf4f313c3c59fea4cf21337ecb956e033b5b79db26a65c4279f7092dda2c2d1a5175e591e08ba495a247500fe295c3b8cc5327	common_voice_hi_23964614.wav	यह रही तेरी चाय।	2	0	teens	male		hi	
+  -cea40007071ea914e41633e74d05142fd1f5f8f49c154534816017cf89ce625657c804fe479fe87c08854ecd847697d6ca0fb6bcf424006c307f65430c34785e	common_voice_hi_32267737.wav	अपराधियों के पीछे लगा पुलिस का व्हाट्सएप	2	0			Urban Hindi	hi	
+  -cea40007071ea914e41633e74d05142fd1f5f8f49c154534816017cf89ce625657c804fe479fe87c08854ecd847697d6ca0fb6bcf424006c307f65430c34785e	common_voice_hi_32267760.wav	फाइनल मैच देखने आमिर, शाहरुख भी पहुचेंगे	2	0			Urban Hindi	hi	
+  +cea40007071ea914e41633e74d05142fd1f5f8f49c154534816017cf89ce625657c804fe479fe87c08854ecd847697d6ca0fb6bcf424006c307f65430c34785e	common_voice_hi_32267737.wav	अपराधियों के पीछे लगा पुलिस का व्हाट्सएप	2	0				hi	
+  +cea40007071ea914e41633e74d05142fd1f5f8f49c154534816017cf89ce625657c804fe479fe87c08854ecd847697d6ca0fb6bcf424006c307f65430c34785e	common_voice_hi_32267760.wav	फाइनल मैच देखने आमिर, शाहरुख भी पहुचेंगे	2	0				hi	
+   ddc0ae40d79e0f3980eb00cedd80e03d7a0cbf3ab7880588429060f50c16895262e0a1874caae85ee39e8bdd72e5ac94830df955d0cf0ec817d50ce83d61f055	common_voice_hi_27466123.wav	पहले मेरे सामने छोटे दिखते थे इमरान: बिपाशा	2	0	fourties	male		hi	
+   ddc0ae40d79e0f3980eb00cedd80e03d7a0cbf3ab7880588429060f50c16895262e0a1874caae85ee39e8bdd72e5ac94830df955d0cf0ec817d50ce83d61f055	common_voice_hi_27466125.wav	चुनावी मौसम में फोन और टैब्स पर आए मजेदार गेम्स	2	0	fourties	male		hi	
+   f80e8e7256ea5492f4348976b84ada48d5eb23b88fcdf8d91416a71dd893fe5b04b8d3499d1f7b32520a99532ccf8246cf21e077ae08b65d5d16f4edd11601dc	common_voice_hi_25256920.wav	मैं इस वक़्त नारिता हवाई अड्डे पर हूँ।	3	0	teens	male		hi	

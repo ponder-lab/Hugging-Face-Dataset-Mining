@@ -1,0 +1,19 @@
+dataset:    ohdoking/energy_consumption_by_model_and_gpu
+commit:     99c245821b0916e93ac4bf094f984cf2c91fe171
+type:       cleaning
+message:    clean up local data
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:41Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# ohdoking/energy_consumption_by_model_and_gpu @ 99c245821b
+message: clean up local data 
+
+file changes:
+D	data/benchmark_20250531_141724_CPU.csv
+D	data/benchmark_20250531_142243_CPU.csv
+D	data/benchmark_20250531_142830_CPU.csv
+D	data/benchmark_20250531_143301_CPU.csv
+D	data/benchmark_20250531_143616_CPU.csv
+D	data/benchmark_20250531_143859_CPU.csv
+D	data/benchmark_20250531_144355_CPU.csv

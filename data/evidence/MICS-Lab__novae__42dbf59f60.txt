@@ -1,0 +1,31 @@
+dataset:    MICS-Lab/novae
+commit:     42dbf59f6057086344d7192a3c7e487f2cba0ce5
+type:       column/field add-remove
+message:    fix swapped columns for visium samples in metadata file
+status:     archived
+hub:        moved (HTTP 307)
+renamed_to: prism-oncology/novae
+generated:  2026-07-31T18:09:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# MICS-Lab/novae @ 42dbf59f60
+message: fix swapped columns for visium samples in metadata file 
+
+file changes:
+M	metadata.csv
+
+[metadata.csv] no column-set change (values may still differ)
+  diff --git a/metadata.csv b/metadata.csv
+  index ec27ebb..e9422b9 100644
+  --- a/metadata.csv
+  +++ b/metadata.csv
+  @@ -23,7 +23,7 @@ slide_0_4,282690,0,200,0,,v2,toy
+   13H079750314H0227010_up,191141,0,0,63,cosmx,head_and_neck,human
+   14H042050615H0377937_up,64347,0,0,63,cosmx,head_and_neck,human
+   Visium_HD_Human_Lung_Cancer_Fixed_Frozen,0,617107,18085,0,visium_hd,lung,human
+  -DLPFC_151675,3592,33538,0,0,visium,brain,human
+  -DLPFC_151673,3639,33538,0,0,visium,brain,human
+  -DLPFC_151674,3673,33538,0,0,visium,brain,human
+  +DLPFC_151675,0,3592,33538,0,visium,brain,human
+  +DLPFC_151673,0,3639,33538,0,visium,brain,human
+  +DLPFC_151674,0,3673,33538,0,visium,brain,human
+   Xenium_V1_mouse_pup_outs,1355849,0,379,0,xenium,whole_mouse,mouse

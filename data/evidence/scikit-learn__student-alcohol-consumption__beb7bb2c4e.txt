@@ -1,0 +1,13 @@
+dataset:    scikit-learn/student-alcohol-consumption
+commit:     beb7bb2c4e1b6245320773dccbe5e5a281aff9ed
+type:       merge
+message:    Upload student-merge.R
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:50Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# scikit-learn/student-alcohol-consumption @ beb7bb2c4e
+message: Upload student-merge.R 
+
+file changes:
+A	student-merge.R

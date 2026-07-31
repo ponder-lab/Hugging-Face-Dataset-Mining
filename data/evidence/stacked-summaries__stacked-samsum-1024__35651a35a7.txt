@@ -1,0 +1,66 @@
+dataset:    stacked-summaries/stacked-samsum-1024
+commit:     35651a35a77113a088e024f13b73eddf215f8538
+type:       deduplication
+message:    randomization and drop duplicates
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# stacked-summaries/stacked-samsum-1024 @ 35651a35a7
+message: randomization and drop duplicates 
+
+file changes:
+M	validation.csv
+
+[validation.csv] no column-set change (values may still differ)
+  diff --git a/validation.csv b/validation.csv
+  index 96cb559..40fa969 100644
+  --- a/validation.csv
+  +++ b/validation.csv
+  @@ -1,223 +1,164 @@
+   dialogue,summary,chapter_length,summary_length,is_stacked
+  -"Barney: Does anyone know where I can buy this kind of bark that orchids grow in?
+  -Lewis: Don't tell me you've taken up gardening :D
+  -Barney: No, I dropped my mum's favorite orchid and now I have to replant it before she comes back.
+  -Lewis: LOL, you're so clumsy!
+  -Judith: Wait, I'll ask my Mum.
+  -Lewis: You can always say it was the cat's fault :P
+  -Barney: Then she'll say it was my fault anyway because I let the cat do it.
+  -Lewis: Do you think she won't notice that you replanted it?
+  -Barney: I hope so :D No, but in all seriousness, I hope that if she sees I did all I could to save it, she won't be that mad. She got that bloody plant from Dad on their 25th anniversary, it means a lot to her.
+  -Judith: I'm back.
+  -Barney: And?
+  -Judith: Mum says to try at The Home Depot. She buys pots for her plants there.
+  -Barney: Thank you! I've already ordered an identical pot from Amazon, but I forgot to order that bark too, and now it's too late to buy it online. Why can't orchids grow in soil like normal plants?
+  -Lewis: Because they're too fancy for that?
+  -Barney: LOL, right :D Okay, thanks for help, guys. And by “guys” I actually mean Judith :P Now I've gotta go to The Home Depot and pray that they have that goddamn bark there...","Barney dropped his mum's favourite orchid and wants to replant it. He needs bark, but doesn't know where to get it. Judith suggests The Home Depot.",362,39,False
+  -"Henry: ur laaaaaaate!
+  -Jess: I know, b there in 5!!
+  -Henry: douchebag!",Jess is 5 minutes late.,31,9,False
+  -"William: do you wanna watch new Marvel movie with me?
+  -William: <file_other>
+  -Sam: seen it
+  -Quinn: I'm free on Sunday and Monday
+  -William: Monday is perfect for me and I think Isabel will be able to come
+  -Quinn: great!
+  -Sam: I think Mondays are cheapier
+  -William: even better
+  -Quinn: could you make a reservation for us?
+  -William: <file_gif>
+  -Sam: have fun!",Quinn and William will watch a new Marvel movie together on Monday.,98,16,False
+  -"Liam: timebreak?
+  -Oliver: in the lobby in 10 minutes.
+  -Liam: hurry up! i'm fed up... 
+  -Oliver: finishing my paper!",Liam and Oliver will meet in the hall in 10 minutes to have a break.,35,19,False
+  -"Saanvi: Are you awake?
+  -Konnor: Yeah
+  -Saanvi: What pet would you like to have tomorrow?
+  -Konnor: I want to have a cat
+  -Saanvi: I am thinking to buy a German boxer
+  -Konnor: Nice choice
+  -Saanvi: We would also need to take care of their food :/
+  -Konnor: Dont worry, I have a friend
+  -Saanvi: Wht about her?
+  -Konnor: She has a lot of pets so we can ask her for advice
+  -Saanvi: That would work
+  ... 151437 further lines not shown (cap is 50)

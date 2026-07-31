@@ -1,0 +1,18 @@
+dataset:    terminxted/gte_games
+commit:     1dc681bfbe5f838c1d7e9717c3cf42f2ef9d2cca
+type:       cleaning
+message:    Upload cleaned_chess_games.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:15Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# terminxted/gte_games @ 1dc681bfbe
+message: Upload cleaned_chess_games.csv 
+
+file changes:
+M	.gitattributes
+A	cleaned_chess_games.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

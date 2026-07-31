@@ -1,0 +1,17 @@
+dataset:    AngelBottomless/Danbooru2023-CSV-Simple
+commit:     a16053b1b5542f7f8bbf06c165cf65cc426b2646
+type:       merge
+message:    Merge ratings
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:59Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# AngelBottomless/Danbooru2023-CSV-Simple @ a16053b1b5
+message: Merge ratings 
+
+file changes:
+M	dataset.csv   [stored in Git LFS]
+
+[dataset.csv] no column-set change (values may still differ)
+  payload size 1,463,633,849 -> 1,463,432,533 bytes (-201,316): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches

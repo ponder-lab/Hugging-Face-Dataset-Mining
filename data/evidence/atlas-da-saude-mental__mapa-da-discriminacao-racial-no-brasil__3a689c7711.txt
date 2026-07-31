@@ -1,0 +1,13 @@
+dataset:    atlas-da-saude-mental/mapa-da-discriminacao-racial-no-brasil
+commit:     3a689c7711a3fdfe451eee65014da2ae10058ca0
+type:       normalize/standardize/encode
+message:    Upload coeficientes_por_municipio_standardized.csv with huggingface_hub
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:32Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# atlas-da-saude-mental/mapa-da-discriminacao-racial-no-brasil @ 3a689c7711
+message: Upload coeficientes_por_municipio_standardized.csv with huggingface_hub 
+
+file changes:
+A	coeficientes_por_municipio_standardized.csv

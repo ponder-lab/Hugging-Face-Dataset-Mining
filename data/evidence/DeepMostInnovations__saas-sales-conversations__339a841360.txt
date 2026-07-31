@@ -1,0 +1,18 @@
+dataset:    DeepMostInnovations/saas-sales-conversations
+commit:     339a841360b19a1bcd41b25acae39e0bb20757d6
+type:       cleaning
+message:    Upload cleaned_custom_dataset.csv with huggingface_hub
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:31Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# DeepMostInnovations/saas-sales-conversations @ 339a841360
+message: Upload cleaned_custom_dataset.csv with huggingface_hub 
+
+file changes:
+M	.gitattributes
+A	cleaned_custom_dataset.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

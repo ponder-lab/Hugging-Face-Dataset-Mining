@@ -1,0 +1,13 @@
+dataset:    EspinoFernando/Essays
+commit:     1878049573951522daf8bc7ee4929e2c4214f6c9
+type:       cleaning
+message:    Upload clean_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:06Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# EspinoFernando/Essays @ 1878049573
+message: Upload clean_data.csv 
+
+file changes:
+A	clean_data.csv

@@ -1,0 +1,18 @@
+dataset:    handiism/kalorize
+commit:     52de5e1719617b17ea0ef005971eed6251e75d90
+type:       cleaning
+message:    Upload cleaned_recipes.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# handiism/kalorize @ 52de5e1719
+message: Upload cleaned_recipes.csv 
+
+file changes:
+M	.gitattributes
+A	cleaned_recipes.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

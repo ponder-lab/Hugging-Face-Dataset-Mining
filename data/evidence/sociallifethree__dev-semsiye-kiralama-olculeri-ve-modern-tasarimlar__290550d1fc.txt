@@ -1,0 +1,13 @@
+dataset:    sociallifethree/dev-semsiye-kiralama-olculeri-ve-modern-tasarimlar
+commit:     290550d1fceaf8869ab85713ed8bd64468c9165f
+type:       cleaning
+message:    Upload Unit3-Project-TrainingData-clean.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# sociallifethree/dev-semsiye-kiralama-olculeri-ve-modern-tasarimlar @ 290550d1fc
+message: Upload Unit3-Project-TrainingData-clean.csv 
+
+file changes:
+A	Unit3-Project-TrainingData-clean.csv

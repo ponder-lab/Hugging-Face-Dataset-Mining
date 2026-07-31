@@ -1,0 +1,17 @@
+dataset:    Digital-Dermatology/CleanPatrick
+commit:     e77eeed7b253005bc054e89743fb2929e2869055
+type:       cleaning
+message:    Upload CleanPatrick_Teaser_compressed.png
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Digital-Dermatology/CleanPatrick @ e77eeed7b2
+message: Upload CleanPatrick_Teaser_compressed.png 
+
+file changes:
+M	assets/CleanPatrick_Teaser_compressed.png   [stored in Git LFS]
+
+not analyzed:
+  assets/CleanPatrick_Teaser_compressed.png   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

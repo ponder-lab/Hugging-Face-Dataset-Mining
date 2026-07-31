@@ -1,0 +1,13 @@
+dataset:    hanR07/safe_packets
+commit:     befdbce8b5ef6dfc218c1e467adce2d4146e44ec
+type:       normalize/standardize/encode
+message:    Delete packet_normal_1.csv (#8)
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:15Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# hanR07/safe_packets @ befdbce8b5
+message: Delete packet_normal_1.csv (#8) 
+
+file changes:
+D	packet_normal_1.csv

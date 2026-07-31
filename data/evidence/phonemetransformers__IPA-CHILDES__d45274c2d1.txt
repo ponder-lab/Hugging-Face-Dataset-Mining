@@ -1,0 +1,64 @@
+dataset:    phonemetransformers/IPA-CHILDES
+commit:     d45274c2d18b4aa53f816f5844777f566f087e34
+type:       column/field add-remove
+message:    Fix Turkish target_child_sex column loading issue
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:39Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# phonemetransformers/IPA-CHILDES @ d45274c2d1
+message: Fix Turkish target_child_sex column loading issue 
+
+file changes:
+M	Turkish/train.csv   [stored in Git LFS]
+M	Turkish/valid.csv   [stored in Git LFS]
+
+[Turkish/train.csv] no column-set change (values may still differ)
+  payload size 1,413,313 -> 1,444,722 bytes (+31,409): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- Turkish/train.csv@60d41c96b3
+  +++ Turkish/train.csv@d45274c2d1
+  @@ -1,20 +1,20 @@
+   id,gloss,stem,type,language,num_morphemes,num_tokens,part_of_speech,speaker_role,target_child_age,target_child_sex,collection_id,corpus_id,speaker_id,target_child_id,transcript_id,is_child,processed_gloss,phonemized_utterance,language_code,character_split_utterance
+  -6341512,sen oyun oynarmısın, ,question,tur,-2147483648,3, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,sen oyun oynarmısın ?,s æ n WORD_BOUNDARY o j ʊ n WORD_BOUNDARY ɔ j n a r m ɯ s ɯ n WORD_BOUNDARY,tr,s e n WORD_BOUNDARY o y u n WORD_BOUNDARY o y n a r m ı s ı n WORD_BOUNDARY
+  -6341531,kimlen oynarsın, ,declarative,tur,-2147483648,2, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,kimlen oynarsın .,k ɪ m l æ n WORD_BOUNDARY ɔ j n a r s ɯ n WORD_BOUNDARY,tr,k i m l e n WORD_BOUNDARY o y n a r s ı n WORD_BOUNDARY
+  -6341548,kiminle ama evde kimler var, ,question,tur,-2147483648,5, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,kiminle ama evde kimler var ?,k i m ɪ n l ɛ WORD_BOUNDARY a m a WORD_BOUNDARY ɛ v d ɛ WORD_BOUNDARY k ɪ m l ɛ r WORD_BOUNDARY v a r WORD_BOUNDARY,tr,k i m i n l e WORD_BOUNDARY a m a WORD_BOUNDARY e v d e WORD_BOUNDARY k i m l e r WORD_BOUNDARY v a r WORD_BOUNDARY
+  -6341568,Ercüment baban mı var, ,declarative,tur,-2147483648,4, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,ercüment baban mı var .,ɛ r d̠ʒ y m æ n t WORD_BOUNDARY b a b a n WORD_BOUNDARY m ɯ WORD_BOUNDARY v a r WORD_BOUNDARY,tr,e r c ü m e n t WORD_BOUNDARY b a b a n WORD_BOUNDARY m ı WORD_BOUNDARY v a r WORD_BOUNDARY
+  -6341590,baban senlen oynuyormu bazen, ,question,tur,-2147483648,4, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,baban senlen oynuyormu bazen ?,b a b a n WORD_BOUNDARY s æ n l æ n WORD_BOUNDARY ɔ j n u j ɔ r m ʊ WORD_BOUNDARY b a z æ n WORD_BOUNDARY,tr,b a b a n WORD_BOUNDARY s e n l e n WORD_BOUNDARY o y n u y o r m u WORD_BOUNDARY b a z e n WORD_BOUNDARY
+  -6341607,ne zaman oynamıyor, ,question,tur,-2147483648,3, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,ne zaman oynamıyor ?,n ɛ WORD_BOUNDARY z a m a n WORD_BOUNDARY ɔ j n a m ɯ j ɔ r WORD_BOUNDARY,tr,n e WORD_BOUNDARY z a m a n WORD_BOUNDARY o y n a m ı y o r WORD_BOUNDARY
+  -6341630,oynamıyormu, ,question,tur,-2147483648,1, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,oynamıyormu ?,ɔ j n a m ɯ j ɔ r m ʊ WORD_BOUNDARY,tr,o y n a m ı y o r m u WORD_BOUNDARY
+  -6341638,işe mi gidiyor, ,question,tur,-2147483648,3, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,işe mi gidiyor ?,i ʃ ɛ WORD_BOUNDARY m ɪ WORD_BOUNDARY ɟ i d i j ɔ r WORD_BOUNDARY,tr,i ş e WORD_BOUNDARY m i WORD_BOUNDARY g i d i y o r WORD_BOUNDARY
+  -6341661,gece geliyor sonra, ,question,tur,-2147483648,3, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,gece geliyor sonra ?,ɟ e d̠ʒ ɛ WORD_BOUNDARY ɟ e l i j ɔ r WORD_BOUNDARY s ɔ n r a WORD_BOUNDARY,tr,g e c e WORD_BOUNDARY g e l i y o r WORD_BOUNDARY s o n r a WORD_BOUNDARY
+  -6341678,ne yapıyor gelince, ,question,tur,-2147483648,3, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,ne yapıyor gelince ?,n ɛ WORD_BOUNDARY j a p ɯ j ɔ r WORD_BOUNDARY ɟ e l ɪ n d̠ʒ ɛ WORD_BOUNDARY,tr,n e WORD_BOUNDARY y a p ı y o r WORD_BOUNDARY g e l i n c e WORD_BOUNDARY
+  -6341696,gazete okuyormu, ,question,tur,-2147483648,2, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,gazete okuyormu ?,ɡ a z e t ɛ WORD_BOUNDARY o k u j ɔ r m ʊ WORD_BOUNDARY,tr,g a z e t e WORD_BOUNDARY o k u y o r m u WORD_BOUNDARY
+  -6341719,al bak sen bebeği, ,declarative,tur,-2147483648,4, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,al bak sen bebeği .,a ɫ WORD_BOUNDARY b a k WORD_BOUNDARY s æ n WORD_BOUNDARY b e b e j ɪ WORD_BOUNDARY,tr,a l WORD_BOUNDARY b a k WORD_BOUNDARY s e n WORD_BOUNDARY b e b e ğ i WORD_BOUNDARY
+  -6341787,sığar herhalde, ,declarative,tur,-2147483648,2, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,sığar herhalde .,s ɯɯ a r WORD_BOUNDARY h ɛ r h a ɫ d ɛ WORD_BOUNDARY,tr,s ı ğ a r WORD_BOUNDARY h e r h a l d e WORD_BOUNDARY
+  -6341806,evin de tepesini açarsan sığar zannederim, ,declarative,tur,-2147483648,6, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,evin de tepesini açarsan sığar zannederim .,e v ɪ n WORD_BOUNDARY d ɛ WORD_BOUNDARY t e p e s i n ɪ WORD_BOUNDARY a t̠ʃ a r s a n WORD_BOUNDARY s ɯɯ a r WORD_BOUNDARY z a n n e d e ɾ ɪ m WORD_BOUNDARY,tr,e v i n WORD_BOUNDARY d e WORD_BOUNDARY t e p e s i n i WORD_BOUNDARY a ç a r s a n WORD_BOUNDARY s ı ğ a r WORD_BOUNDARY z a n n e d e r i m WORD_BOUNDARY
+  -6341817,evin çatısını aç, ,declarative,tur,-2147483648,3, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,evin çatısını aç .,e v ɪ n WORD_BOUNDARY t̠ʃ a t ɯ s ɯ n ɯ WORD_BOUNDARY a t̠ʃ WORD_BOUNDARY,tr,e v i n WORD_BOUNDARY ç a t ı s ı n ı WORD_BOUNDARY a ç WORD_BOUNDARY
+  -6341827,çatısından içeri koy, ,declarative,tur,-2147483648,3, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,çatısından içeri koy .,t̠ʃ a t ɯ s ɯ n d a n WORD_BOUNDARY i t̠ʃ e ɾ ɪ WORD_BOUNDARY k ɔ j WORD_BOUNDARY,tr,ç a t ı s ı n d a n WORD_BOUNDARY i ç e r i WORD_BOUNDARY k o y WORD_BOUNDARY
+  -6341846,efendim, ,question,tur,-2147483648,1, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,efendim ?,e f æ n d ɪ m WORD_BOUNDARY,tr,e f e n d i m WORD_BOUNDARY
+  -6341874,küçült, ,declarative,tur,-2147483648,1, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,küçült .,k y t̠ʃ ø l t WORD_BOUNDARY,tr,k ü ç ü l t WORD_BOUNDARY
+  -6341894,sokarız sokarız, ,declarative,tur,-2147483648,2, ,Investigator,44.00090350931231,,8,175,13524,13514,20893,False,sokarız sokarız .,s o k a ɾ ɯ z WORD_BOUNDARY s o k a ɾ ɯ z WORD_BOUNDARY,tr,s o k a r ı z WORD_BOUNDARY s o k a r ı z WORD_BOUNDARY
+  +6341512,sen oyun oynarmısın, ,question,tur,-2147483648,3, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,sen oyun oynarmısın ?,s æ n WORD_BOUNDARY o j ʊ n WORD_BOUNDARY ɔ j n a r m ɯ s ɯ n WORD_BOUNDARY,tr,s e n WORD_BOUNDARY o y u n WORD_BOUNDARY o y n a r m ı s ı n WORD_BOUNDARY
+  +6341531,kimlen oynarsın, ,declarative,tur,-2147483648,2, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,kimlen oynarsın .,k ɪ m l æ n WORD_BOUNDARY ɔ j n a r s ɯ n WORD_BOUNDARY,tr,k i m l e n WORD_BOUNDARY o y n a r s ı n WORD_BOUNDARY
+  +6341548,kiminle ama evde kimler var, ,question,tur,-2147483648,5, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,kiminle ama evde kimler var ?,k i m ɪ n l ɛ WORD_BOUNDARY a m a WORD_BOUNDARY ɛ v d ɛ WORD_BOUNDARY k ɪ m l ɛ r WORD_BOUNDARY v a r WORD_BOUNDARY,tr,k i m i n l e WORD_BOUNDARY a m a WORD_BOUNDARY e v d e WORD_BOUNDARY k i m l e r WORD_BOUNDARY v a r WORD_BOUNDARY
+  +6341568,Ercüment baban mı var, ,declarative,tur,-2147483648,4, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,ercüment baban mı var .,ɛ r d̠ʒ y m æ n t WORD_BOUNDARY b a b a n WORD_BOUNDARY m ɯ WORD_BOUNDARY v a r WORD_BOUNDARY,tr,e r c ü m e n t WORD_BOUNDARY b a b a n WORD_BOUNDARY m ı WORD_BOUNDARY v a r WORD_BOUNDARY
+  +6341590,baban senlen oynuyormu bazen, ,question,tur,-2147483648,4, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,baban senlen oynuyormu bazen ?,b a b a n WORD_BOUNDARY s æ n l æ n WORD_BOUNDARY ɔ j n u j ɔ r m ʊ WORD_BOUNDARY b a z æ n WORD_BOUNDARY,tr,b a b a n WORD_BOUNDARY s e n l e n WORD_BOUNDARY o y n u y o r m u WORD_BOUNDARY b a z e n WORD_BOUNDARY
+  +6341607,ne zaman oynamıyor, ,question,tur,-2147483648,3, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,ne zaman oynamıyor ?,n ɛ WORD_BOUNDARY z a m a n WORD_BOUNDARY ɔ j n a m ɯ j ɔ r WORD_BOUNDARY,tr,n e WORD_BOUNDARY z a m a n WORD_BOUNDARY o y n a m ı y o r WORD_BOUNDARY
+  +6341630,oynamıyormu, ,question,tur,-2147483648,1, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,oynamıyormu ?,ɔ j n a m ɯ j ɔ r m ʊ WORD_BOUNDARY,tr,o y n a m ı y o r m u WORD_BOUNDARY
+  +6341638,işe mi gidiyor, ,question,tur,-2147483648,3, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,işe mi gidiyor ?,i ʃ ɛ WORD_BOUNDARY m ɪ WORD_BOUNDARY ɟ i d i j ɔ r WORD_BOUNDARY,tr,i ş e WORD_BOUNDARY m i WORD_BOUNDARY g i d i y o r WORD_BOUNDARY
+  +6341661,gece geliyor sonra, ,question,tur,-2147483648,3, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,gece geliyor sonra ?,ɟ e d̠ʒ ɛ WORD_BOUNDARY ɟ e l i j ɔ r WORD_BOUNDARY s ɔ n r a WORD_BOUNDARY,tr,g e c e WORD_BOUNDARY g e l i y o r WORD_BOUNDARY s o n r a WORD_BOUNDARY
+  +6341678,ne yapıyor gelince, ,question,tur,-2147483648,3, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,ne yapıyor gelince ?,n ɛ WORD_BOUNDARY j a p ɯ j ɔ r WORD_BOUNDARY ɟ e l ɪ n d̠ʒ ɛ WORD_BOUNDARY,tr,n e WORD_BOUNDARY y a p ı y o r WORD_BOUNDARY g e l i n c e WORD_BOUNDARY
+  +6341696,gazete okuyormu, ,question,tur,-2147483648,2, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,gazete okuyormu ?,ɡ a z e t ɛ WORD_BOUNDARY o k u j ɔ r m ʊ WORD_BOUNDARY,tr,g a z e t e WORD_BOUNDARY o k u y o r m u WORD_BOUNDARY
+  +6341719,al bak sen bebeği, ,declarative,tur,-2147483648,4, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,al bak sen bebeği .,a ɫ WORD_BOUNDARY b a k WORD_BOUNDARY s æ n WORD_BOUNDARY b e b e j ɪ WORD_BOUNDARY,tr,a l WORD_BOUNDARY b a k WORD_BOUNDARY s e n WORD_BOUNDARY b e b e ğ i WORD_BOUNDARY
+  +6341787,sığar herhalde, ,declarative,tur,-2147483648,2, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,sığar herhalde .,s ɯɯ a r WORD_BOUNDARY h ɛ r h a ɫ d ɛ WORD_BOUNDARY,tr,s ı ğ a r WORD_BOUNDARY h e r h a l d e WORD_BOUNDARY
+  +6341806,evin de tepesini açarsan sığar zannederim, ,declarative,tur,-2147483648,6, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,evin de tepesini açarsan sığar zannederim .,e v ɪ n WORD_BOUNDARY d ɛ WORD_BOUNDARY t e p e s i n ɪ WORD_BOUNDARY a t̠ʃ a r s a n WORD_BOUNDARY s ɯɯ a r WORD_BOUNDARY z a n n e d e ɾ ɪ m WORD_BOUNDARY,tr,e v i n WORD_BOUNDARY d e WORD_BOUNDARY t e p e s i n i WORD_BOUNDARY a ç a r s a n WORD_BOUNDARY s ı ğ a r WORD_BOUNDARY z a n n e d e r i m WORD_BOUNDARY
+  +6341817,evin çatısını aç, ,declarative,tur,-2147483648,3, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,evin çatısını aç .,e v ɪ n WORD_BOUNDARY t̠ʃ a t ɯ s ɯ n ɯ WORD_BOUNDARY a t̠ʃ WORD_BOUNDARY,tr,e v i n WORD_BOUNDARY ç a t ı s ı n ı WORD_BOUNDARY a ç WORD_BOUNDARY
+  +6341827,çatısından içeri koy, ,declarative,tur,-2147483648,3, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,çatısından içeri koy .,t̠ʃ a t ɯ s ɯ n d a n WORD_BOUNDARY i t̠ʃ e ɾ ɪ WORD_BOUNDARY k ɔ j WORD_BOUNDARY,tr,ç a t ı s ı n d a n WORD_BOUNDARY i ç e r i WORD_BOUNDARY k o y WORD_BOUNDARY
+  +6341846,efendim, ,question,tur,-2147483648,1, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,efendim ?,e f æ n d ɪ m WORD_BOUNDARY,tr,e f e n d i m WORD_BOUNDARY
+  +6341874,küçült, ,declarative,tur,-2147483648,1, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,küçült .,k y t̠ʃ ø l t WORD_BOUNDARY,tr,k ü ç ü l t WORD_BOUNDARY
+  +6341894,sokarız sokarız, ,declarative,tur,-2147483648,2, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,sokarız sokarız .,s o k a ɾ ɯ z WORD_BOUNDARY s o k a ɾ ɯ z WORD_BOUNDARY,tr,s o k a r ı z WORD_BOUNDARY s o k a r ı z WORD_BOUNDARY
+
+[Turkish/valid.csv] no column-set change (values may still differ)
+  payload size 3,001,611 -> 3,045,690 bytes (+44,079): the data did change
+  first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches

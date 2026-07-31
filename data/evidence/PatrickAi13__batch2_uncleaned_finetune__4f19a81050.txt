@@ -1,0 +1,13 @@
+dataset:    PatrickAi13/batch2_uncleaned_finetune
+commit:     4f19a81050602f71f1ff8cd1571415651ea24ea9
+type:       column/field add-remove
+message:    Upload batch2_cleared_columns.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# PatrickAi13/batch2_uncleaned_finetune @ 4f19a81050
+message: Upload batch2_cleared_columns.csv 
+
+file changes:
+A	batch2_cleared_columns.csv

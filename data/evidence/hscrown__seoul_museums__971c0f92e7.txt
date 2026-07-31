@@ -1,0 +1,13 @@
+dataset:    hscrown/seoul_museums
+commit:     971c0f92e744def9d2fba5d26cdcce86692d79a6
+type:       cleaning
+message:    Delete cleaned_seoul_museums.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:01Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# hscrown/seoul_museums @ 971c0f92e7
+message: Delete cleaned_seoul_museums.csv 
+
+file changes:
+D	cleaned_seoul_museums.csv

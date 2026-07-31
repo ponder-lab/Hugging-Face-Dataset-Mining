@@ -1,0 +1,13 @@
+dataset:    maringetxway/local
+commit:     3f6486c81f745d5fadbaee9ed55cd3869e4807cd
+type:       cleaning
+message:    Upload local-hackathon-location-cleaned.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:22Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# maringetxway/local @ 3f6486c81f
+message: Upload local-hackathon-location-cleaned.csv 
+
+file changes:
+A	local-hackathon-location-cleaned.csv

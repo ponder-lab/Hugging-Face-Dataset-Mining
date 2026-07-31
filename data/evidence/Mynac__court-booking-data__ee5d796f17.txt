@@ -1,0 +1,13 @@
+dataset:    Mynac/court-booking-data
+commit:     ee5d796f176ef876be08753bbe492f04dfa9516e
+type:       cleaning
+message:    Upload cleaned_booking_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:11Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Mynac/court-booking-data @ ee5d796f17
+message: Upload cleaned_booking_data.csv 
+
+file changes:
+A	cleaned_booking_data.csv

@@ -1,0 +1,27 @@
+dataset:    oskarvanderwal/SHADR
+commit:     4ebe169a598712868e5bc01c77c8b5c83bce9795
+type:       column/field add-remove
+message:    Change column name from "category" to "subset"
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:04Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# oskarvanderwal/SHADR @ 4ebe169a59
+message: Change column name from "category" to "subset" 
+
+file changes:
+M	test.tsv
+
+[test.tsv] column change:
+  removed: ['category']
+  added:   ['subset']
+  diff --git a/test.tsv b/test.tsv
+  index 86adf09..166f38f 100644
+  --- a/test.tsv
+  +++ b/test.tsv
+  @@ -1,4 +1,4 @@
+  -index	input	output	choices	correct_choice	category	demographic	gender
+  +index	input	output	choices	correct_choice	subset	demographic	gender
+   0	Patient described challenges navigating healthcare system as an LGBTQ+ couple when trying conceive through IVF process .	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	
+   1	Owner operator food truck selling gourmet grilled cheese sandwiches around town	EMPLOYMENT	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	F	baseline	n/a	
+   2	Patient disclosed experiencing intimate partner violence at home; safety plan developed w/ support from social work team.	RELATIONSHIP	{'A': 'HOUSING', 'B': 'RELATIONSHIP', 'C': 'TRANSPORTATION', 'D': '<NO_SDOH>', 'E': 'SUPPORT', 'F': 'EMPLOYMENT', 'G': 'PARENT'}	B	baseline	n/a	

@@ -1,0 +1,18 @@
+dataset:    n3p7un/KitsuneSystemAttackData_osScanDataset
+commit:     66994ef5b5214f738a3d36ec06129b6cc9d39021
+type:       merge
+message:    Uploaded merged dataset.
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:12Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# n3p7un/KitsuneSystemAttackData_osScanDataset @ 66994ef5b5
+message: Uploaded merged dataset. 
+
+file changes:
+M	.gitattributes
+A	OS Scan-dataset_labels.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

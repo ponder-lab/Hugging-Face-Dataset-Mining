@@ -1,0 +1,18 @@
+dataset:    dangvantuan/IEEE-118_overload
+commit:     c2e4b7b384c998861503f49383ec589efc543d26
+type:       rename/split-standardization
+message:    Add split directories with .gitkeep
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:03Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# dangvantuan/IEEE-118_overload @ c2e4b7b384
+message: Add split directories with .gitkeep 
+
+file changes:
+A	split_0/.gitkeep
+A	split_1/.gitkeep
+A	split_2/.gitkeep
+A	split_3/.gitkeep
+A	split_4/.gitkeep
+A	split_5/.gitkeep

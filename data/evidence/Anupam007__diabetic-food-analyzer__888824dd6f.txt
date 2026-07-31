@@ -1,0 +1,13 @@
+dataset:    Anupam007/diabetic-food-analyzer
+commit:     888824dd6f15f7818cc2cc6b2ec35d9ff39f79db
+type:       cleaning
+message:    Upload cleaned_data - cleaned_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:20Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Anupam007/diabetic-food-analyzer @ 888824dd6f
+message: Upload cleaned_data - cleaned_data.csv 
+
+file changes:
+A	cleaned_data - cleaned_data.csv

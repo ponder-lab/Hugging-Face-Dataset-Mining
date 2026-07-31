@@ -1,0 +1,18 @@
+dataset:    plnezooo/clean_dataset
+commit:     b0591c2413c870f70c5f12ddf7774ebabed04544
+type:       cleaning
+message:    Upload clean_dataset.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:37Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# plnezooo/clean_dataset @ b0591c2413
+message: Upload clean_dataset.csv 
+
+file changes:
+M	.gitattributes
+A	clean_dataset.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

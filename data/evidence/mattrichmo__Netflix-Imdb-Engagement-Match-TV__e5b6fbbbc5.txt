@@ -1,0 +1,13 @@
+dataset:    mattrichmo/Netflix-Imdb-Engagement-Match-TV
+commit:     e5b6fbbbc56f70f07946cdf547532052309193e4
+type:       cleaning
+message:    Upload cleanDataTVFlat.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:58Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# mattrichmo/Netflix-Imdb-Engagement-Match-TV @ e5b6fbbbc5
+message: Upload cleanDataTVFlat.csv 
+
+file changes:
+A	cleanDataTVFlat.csv

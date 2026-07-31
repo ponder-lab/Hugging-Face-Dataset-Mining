@@ -1,0 +1,26 @@
+dataset:    Anthropic/EconomicIndex
+commit:     1779b5efe00577781868a4306206e4432e1ab45c
+type:       cleaning
+message:    Clean up repo
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:35Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Anthropic/EconomicIndex @ 1779b5efe0
+message: Clean up repo 
+
+file changes:
+D	README.md
+D	SOC_Structure.csv
+D	automation_vs_augmentation.csv
+D	bls_employment_may_2023.csv
+D	onet_task_mappings.csv
+D	onet_task_statements.csv
+D	plots.ipynb
+D	plots/automation_vs_augmentation.png   [stored in Git LFS]
+D	plots/occupational_category_distribution.png   [stored in Git LFS]
+D	plots/occupational_category_distribution_bls.png   [stored in Git LFS]
+D	plots/occupations_distribution.png   [stored in Git LFS]
+D	plots/task_distribution.png   [stored in Git LFS]
+D	plots/wage_distribution.png   [stored in Git LFS]
+D	wage_data.csv

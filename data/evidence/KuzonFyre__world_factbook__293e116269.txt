@@ -1,0 +1,13 @@
+dataset:    KuzonFyre/world_factbook
+commit:     293e116269059da0c7101155fbb99d936189470e
+type:       cleaning
+message:    cleaned data
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:04Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# KuzonFyre/world_factbook @ 293e116269
+message: cleaned data 
+
+file changes:
+A	extracted_data.csv

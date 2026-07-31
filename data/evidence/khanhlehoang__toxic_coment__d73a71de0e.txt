@@ -1,0 +1,18 @@
+dataset:    khanhlehoang/toxic_coment
+commit:     d73a71de0e94e38c2b99f5798ea973f94a35d592
+type:       merge
+message:    Upload merged_comments_new.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:10Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# khanhlehoang/toxic_coment @ d73a71de0e
+message: Upload merged_comments_new.csv 
+
+file changes:
+M	.gitattributes
+A	merged_comments_new.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

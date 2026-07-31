@@ -1,0 +1,16 @@
+dataset:    Sadaftb/clinical-nlp-dataset-raw
+commit:     d77c4eef0f8354bea58da183e8c68b2aa3514c54
+type:       cleaning
+message:    Re-add CSVs under LFS after filter-repo cleanup
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:46Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Sadaftb/clinical-nlp-dataset-raw @ d77c4eef0f
+message: Re-add CSVs under LFS after filter-repo cleanup 
+
+file changes:
+A	features.csv   [stored in Git LFS]
+A	patient_notes.csv   [stored in Git LFS]
+A	test.csv   [stored in Git LFS]
+A	train.csv   [stored in Git LFS]

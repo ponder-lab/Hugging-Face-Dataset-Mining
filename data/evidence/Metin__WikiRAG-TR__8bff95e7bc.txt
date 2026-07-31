@@ -1,0 +1,13 @@
+dataset:    Metin/WikiRAG-TR
+commit:     8bff95e7bccf2427ff573a01c2f84dd168a25c46
+type:       column/field add-remove
+message:    Update train.csv to include ctx_split_points and correct_intro_idx columns
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Metin/WikiRAG-TR @ 8bff95e7bc
+message: Update train.csv to include ctx_split_points and correct_intro_idx columns 
+
+file changes:
+A	data/train.csv   [stored in Git LFS]

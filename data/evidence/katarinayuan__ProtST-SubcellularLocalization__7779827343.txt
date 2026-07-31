@@ -1,0 +1,13 @@
+dataset:    katarinayuan/ProtST-SubcellularLocalization
+commit:     77798273430d13baf7a22aad18820e08f361f6b5
+type:       rename/split-standardization
+message:    test split
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# katarinayuan/ProtST-SubcellularLocalization @ 7779827343
+message: test split 
+
+file changes:
+A	subcellular_localization_test.csv

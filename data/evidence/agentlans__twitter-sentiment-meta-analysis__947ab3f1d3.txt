@@ -1,0 +1,62 @@
+dataset:    agentlans/twitter-sentiment-meta-analysis
+commit:     947ab3f1d30d2524864e7060b11f6307ec300ade
+type:       column/field add-remove
+message:    Shuffle the data and remove the group column
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# agentlans/twitter-sentiment-meta-analysis @ 947ab3f1d3
+message: Shuffle the data and remove the group column 
+
+file changes:
+M	train.csv.gz   [stored in Git LFS]
+
+[train.csv.gz] column change:
+  removed: ['sentiment_group']
+  added:   []
+  payload size 5,943,339 -> 6,007,516 bytes (+64,177): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- train.csv.gz@6218a8fe68
+  +++ train.csv.gz@947ab3f1d3
+  @@ -1,20 +1,20 @@
+  -id,text,ahmed-sentiment,auditor-sentiment,cardiffnlp-sentiment,finiteautomata-sentiment,fintwit-sentiment,kaludi-sentiment,lxyuan-sentiment,nlptown-sentiment,siebert-sentiment,soleimanian-sentiment,sentiment,sentiment_group
+  -109215,That was a bad idea.,-8.625,-3.0781,-4.3438,-5.875,-7.25,-3.8594,-3.7031,-0.9531,-6.9062,-8.3125,-2.294952111544125,"(-2.65,-2.1]"
+  -71367,"Sad as it is, Tony Romo is even worse than the _TAG_ show. Green Bay has missed out on approximately 407 near interceptions (this drive alone).",-7.8125,-3.9062,-4.9688,-5.75,-4.7188,-3.3125,-3.3125,-1.4531,-7.5625,-7.9375,-2.228157993703612,"(-2.65,-2.1]"
+  -120527,"Shit... Fucking assholes. RT _USER_: Well, everything we own was stolen this morning... _URL_",-7.375,-3.2344,-5.3125,-5.5625,-4.9375,-2.75,-2.3438,-1.9219,-6.375,-8.375,-2.1068485971948188,"(-2.65,-2.1]"
+  -18722,_USER_ Redfly for Blackberry is bad because the Blackberry interface is terrible. A larger screen just magnifies its faults,-8,-2.6875,-4.625,-5.625,-8.125,-4.3125,-3.75,-1.1562,-7.5938,-8.25,-2.357063297300883,"(-2.65,-2.1]"
+  -78192,_USER_ When did you you decided to become a left leaning propaganda machine? Seriously that report was terrible.,-7.625,-2.9688,-5.3125,-5.7812,-6.3125,-4.375,-3.5,-1.7578,-7.5625,-7.5938,-2.337416092167205,"(-2.65,-2.1]"
+  -108358,"blockbuster had a press release yesterday. closing 960 stores. which is about 10,000-15,000 people losing jobs. fuck bbusta.",-8.5,-4.0625,-5.125,-5.75,-7.75,-1.7969,-1.6484,-1.8125,-5.6875,-8.125,-2.222111913162179,"(-2.65,-2.1]"
+  -141906,Feels really really really bad for taylor swift. Kanye west has always been a jerk.,-7.2812,-3.5,-5.375,-5.7188,-7.75,-3.6719,-3.2188,-1.3359,-6.5938,-8.125,-2.335348511985299,"(-2.65,-2.1]"
+  -31282,"Talk about a shitty day. Too much is going wrong. No taping, ex giving me hell, BOMBED a quiz, traffic sucked, and I can't seem to wake up!",-6.1875,-2.9531,-5.0625,-5.375,-5.5312,-4.2188,-3.0938,-1.8516,-7.5625,-8.25,-2.2107451971574448,"(-2.65,-2.1]"
+  -125374,mad that I'm feeling terrible!!! grr,-4.0312,-3.0938,-4.5625,-5.4375,-6.375,-3.7188,-4.1562,-1.8125,-7.125,-8.25,-2.2393720731874263,"(-2.65,-2.1]"
+  -100218,_USER_ that is a terrible thing to say. you're going to hell,-7.4375,-2.3438,-5.1875,-5.8125,-9.1875,-3.375,-3.0625,-1.8906,-7.5,-8.125,-2.3762711948499446,"(-2.65,-2.1]"
+  -18502,its such a bad idea for me to lay down bc i always fall asleep lol :(,-6.9375,-3.0156,-4.9062,-5.25,-4.9375,-3.9375,-2.9688,-1.3203,-7.5,-8.375,-2.11174071645125,"(-2.65,-2.1]"
+  -62667,I'm sick of reading about Chicago shootings. Every. Single. Day. another life is lost. This is nuts! This city is just trash.,-3.5469,-3.1562,-5.0938,-5.4688,-7.7812,-3.9062,-3.0312,-1.9297,-7,-8.125,-2.245372869824501,"(-2.65,-2.1]"
+  -122668,I'm never going to eat again. _TAG_ This is ridiculous.,-3.9844,-1.8438,-4.6875,-5.7188,-7.3125,-4.0625,-3.25,-1.7031,-7.5625,-7.5938,-2.1130493933097587,"(-2.65,-2.1]"
+  -126209,nokia is officially the worst company in the world they have very shifty customer resolution practices and cheat you out of money...ouch!,-7.6875,0.5586,-5.0625,-5.375,-7.4375,-4.4375,-4.1562,-1.9141,-7.5938,-7.8125,-2.16822647651233,"(-2.65,-2.1]"
+  -106947,fuck the shit people do today. i'm sick and tired of certain people.,-5.5,-2.7188,-5.0625,-5.3125,-7.2188,-2.1875,-3.4062,-1.7031,-6.25,-7.5,-2.127595744405505,"(-2.65,-2.1]"
+  -133000,_USER_ LMAO that is the worst,-6.125,-2.5156,-4.5625,-5.5312,-6.7812,-3.75,-3.0312,-1.8516,-6.7188,-8.25,-2.177994551838282,"(-2.65,-2.1]"
+  -24462,i feel very bad about copping out in Scribblenauts and using a gun on a ninja ....,-8.8125,-3.4062,-5.125,-5.9688,-4.125,-2.0156,-4.75,-1.4141,-7.0938,-8.375,-2.2646620127192487,"(-2.65,-2.1]"
+  -54607,Bally Fitness has to be one of the worst run businesses I have ever seen. They have to be losing huge dollars and customers by being so bad.,-8.4375,-3.5938,-5.0625,-5.625,-9.125,-4.4375,-2.7188,-1.8594,-7.625,-8.125,-2.5138113512514058,"(-2.65,-2.1]"
+  -95396,X factor (guilty pleasure) shock! Simon Cowell has lost his mind in letting Lucie go...those twins are a joke. Ugh. _URL_,-8.375,-2.375,-4.4062,-5.5312,-5.75,-4.0625,-3,-1.5469,-7.4062,-8.1875,-2.1632230378455035,"(-2.65,-2.1]"
+  +id,text,ahmed-sentiment,auditor-sentiment,cardiffnlp-sentiment,finiteautomata-sentiment,fintwit-sentiment,kaludi-sentiment,lxyuan-sentiment,nlptown-sentiment,siebert-sentiment,soleimanian-sentiment,sentiment
+  +75654,"_USER_ I'm sad, too. I want to have my cake and eat it too! Is that too much to ask?",-2.8125,-0.8945,-3.7344,-5,-4.5625,2.4375,-3.6562,-0.9219,-5.9375,-6.7188,-1.3736674485170577
+  +136658,"the kids couldn't agree on a face for the pumpkin, so we carved two. Apparently the angry face up front is scaring the sad face in the back.",-5.9375,-3.0312,-2.625,-3.0312,-3.375,-1.3516,-2.5312,-0.5,-6,-8.3125,-1.5402514707555712
+  +48066,"Super busy today helping so many wonderful patients. We want everyone to feel good and have a happy, healthy life! Visit us today!",9.3125,3.5,5.9688,6.25,3.6875,4.7188,4.4375,1.9375,6.8125,8.0625,2.4497193116622777
+  +10286,"I DO NOT WANNA WATCH FOOTBALL, WHEN THE FUCK IS GOSSIP GIRL COMING ON TONIGHT",1.9141,-0.7734,-4.8125,-5.625,-1.5625,-3.7969,0.3047,-0.7031000000000001,-7.1875,-1.2109,-0.9006991229575892
+  +45370,has come to the conclusion there's no way to ask someone to come try out my hot tub without sounding creepy.,-2.2188,-0.7695,-2.7031,-3.2656,-2.9375,-2.7812,-1.2344,-0.10939999999999994,-7.5312,-8.3125,-1.1603696606772018
+  +92327,"_USER_ Not sure, bet early! Probably going to be like black Friday there!",0.5312,-0.457,2.2969,1.0469,-1.1328,2.5938,-1.6719,-1,5.125,0.4531,0.02811585891196053
+  +89955,_USER_ Its alryte juzz grindin we undefeated ryte wit1 mo regular season game saturday den playoffs start...we ranked numba 1 n all of D3,2.3125,1.5547,5.5938,5.4375,2.625,3.5,0.3164,-1.4141,6.2812,5.5625,1.070840831562376
+  +17291,_USER_ That's a great picture!! :D,5.4688,3.3906,5.5,6.5625,3.4531,4.25,4.125,1.4375,6.5312,6.75,2.148126476956941
+  +26191,_USER_ My husband will be shaking in his boots over this.,3.2656,2.4375,-2.1719,-3.5938,-2.6562,-1.4297,-0.6328,-1.0938,-6.3438,-8.3125,-0.6683272680179944
+  +30155,"Sindicate gives thanks to everyone for support, love, and thoughts on this great day. RSVP for Dec 3 event. _PHONE_",7.6562,2.1875,6.125,6.375,3.0625,4.5625,4.3125,1.6875,6.75,0.125,2.000902877134456
+  +7223,Jason Calacanis Manages to Annoy Angels Stadium Security Guards _URL_,0.0781,0.4766,-2.0156,-5.5,-0.8047,0.3555,0.5977,-0.23439999999999991,-6.4375,-4.4375,-0.4917576891451972
+  +91390,Photo of the Day: 1969 Cadillac Eldorado _URL_,-0.3281,0.1328,1.25,3.1719,-0.6094,2.2812,1.2031,0.75,5,0.5156,0.5510580656973836
+  +83667,"Life is like music; it must be composed by ear, feeling, and instinct, not by rule.",-1.3594,0.4844,1.0703,2.1562,0.5938,3.2188,1.0781,-0.26560000000000006,6.2188,-0.1094,0.4958590232335954
+  +99067,RT _USER_: _USER_ yea I'm a child of the early 80s. God I feel old. - me too :D i'm too immature to be old tho :P,-1.1719,-0.8555,1.6562,4.9375,-1.1016,0.8672,0.373,-0.8906000000000001,5.375,-6.3125,-0.01826723297554373
+  +66668,DFW. About to board plane to La Guardia.,0.8906,0.5312,0.8281,2.3594,0.3047,2.0312,0.5859,-0.7968999999999999,5.375,-0.0312,0.3730277277139254
+  +88852,RT _USER_ 95% of independently produced CDs contain regurgitated ideas that were ripped off from some other more gifted musicians.,-5.875,-2.5,-4.0625,-5.1875,-1.4062,-4.3438,0.3105,-1.0625,-7.3125,-8.375,-1.4973122597552098
+  +138006,_USER_ Ooh teal would be nice! i had thought of painting room teal actually. Will remember pictures!,9.75,1.3516,5.2812,6.875,1.375,3.3594,3.6406,-0.07810000000000006,4.4688,1.7969,1.5545301822024988
+  +134139,? Dark Horse by Converge _TAG_: _URL_ amazon: _URL_,0.2656,0.2344,1.6797,1.3828,-0.4766,2.0625,0.457,-0.875,4.5,0.7812,0.27288003332597244
+  +71462,"well, the class wasa bust. Not very informative... but I guess You've got to keep trying to learn.",0.9688,-0.0391,-4.375,-5.8125,-3.7188,-3.4688,-0.0527,-0.6406000000000001,-7.5625,-8.625,-1.1927236500622789

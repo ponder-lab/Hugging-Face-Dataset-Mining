@@ -1,0 +1,17 @@
+dataset:    donb-hf/secondary-screen-dose-response-curve-parameters
+commit:     c4a359ffbfa36a824c52854c9f5736d810cdbaa5
+type:       column/field add-remove
+message:    add citation and field descriptions
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# donb-hf/secondary-screen-dose-response-curve-parameters @ c4a359ffbf
+message: add citation and field descriptions 
+
+file changes:
+M	README.md
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

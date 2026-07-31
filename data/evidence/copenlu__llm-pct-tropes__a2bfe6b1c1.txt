@@ -1,0 +1,17 @@
+dataset:    copenlu/llm-pct-tropes
+commit:     a2bfe6b1c1936521c5e6cf17faf4d9424d5ddbac
+type:       column/field add-remove
+message:    Added new config and column description
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:04Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# copenlu/llm-pct-tropes @ a2bfe6b1c1
+message: Added new config and column description 
+
+file changes:
+M	README.md
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

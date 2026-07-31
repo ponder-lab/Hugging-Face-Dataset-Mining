@@ -1,0 +1,17 @@
+dataset:    hafsteinn/faroese_sentiment_analysis
+commit:     8e6f5b1512a445337271bc8d590a8c2bbe97be2b
+type:       column/field add-remove
+message:    Updated column names.
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# hafsteinn/faroese_sentiment_analysis @ 8e6f5b1512
+message: Updated column names. 
+
+file changes:
+M	hf_dataset.xlsx
+
+not analyzed:
+  hf_dataset.xlsx   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

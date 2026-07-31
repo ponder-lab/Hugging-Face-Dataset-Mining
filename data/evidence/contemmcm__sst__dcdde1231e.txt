@@ -1,0 +1,103 @@
+dataset:    contemmcm/sst
+commit:     dcdde1231e0e6b1ecdfe92e099531a2ba4358039
+type:       column/field add-remove
+message:    fix: id column
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:03Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# contemmcm/sst @ dcdde1231e
+message: fix: id column 
+
+file changes:
+M	sst2.csv   [stored in Git LFS]
+M	sst5.csv   [stored in Git LFS]
+
+[sst2.csv] no column-set change (values may still differ)
+  payload size unchanged at 8,711,896 bytes (equal size is not equal content)
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- sst2.csv@67e6fbd925
+  +++ sst2.csv@dcdde1231e
+  @@ -1,20 +1,20 @@
+   id,phrase,sentiment,label
+  -100,` blue crush,0.65278,1
+  -10000,rarely does a film so graceless and devoid of merit,0.16667,0
+  -100001,which very simply sets out to entertain and ends up delivering in good measure,0.72222,1
+  -100002,"which will please Eastwood 's loyal fans -- and suits the story , wherein our hero must ride roughshod over incompetent cops to get his man",0.69444,1
+  -100003,"which works so well for the first 89 minutes , but ends so horrendously confusing",0.22222,0
+  -100005,"while Dark Water is n't a complete wash ( no pun intended ) , watched side-by-side with Ringu , it ultimately comes off as a pale successor .",0.31944,0
+  -100008,while Thurman and Lewis give what can easily be considered career-best performances,0.86111,1
+  -100009,while adding a bit of heart and unsettling subject matter,0.68056,1
+  -10001,rarely does a film so graceless and devoid of merit as this one come along,0.013889,0
+  -100010,while adding the rich details and go-for-broke acting that heralds something special,0.70833,1
+  -100014,while his characters are acting horribly,0.27778,0
+  -100015,"while illuminating an era of theatrical comedy that , while past ,",0.61111,1
+  -10002,rarely does a film so graceless and devoid of merit as this one come along .,0.33333,0
+  -100024,while reaffirming Washington as possibly the best actor working in movies today,0.86111,1
+  -100025,while something of Bubba Ho-Tep 's clearly evident quality may end up languishing on a shelf somewhere,0.29167,0
+  -100030,while we delight in the images,0.77778,1
+  -100032,whimsical humor,0.80556,1
+  -100033,whimsicality,0.70833,1
+  -100034,"whimsicality ,",0.625,1
+  +5,' ( the cockettes ) provides a window into a subculture hell-bent on expressing itself in every way imaginable,0.375,0
+  +8,' a nightmare on elm street,0.33333,0
+  +12,' a nightmare on elm street ' or ` the hills,0.33333,0
+  +13,' a perfect family film,0.93056,1
+  +14,"' a perfect family film ,",0.80556,1
+  +15,"' a perfect family film , '",0.81944,1
+  +16,"' a perfect family film , ' because it 's about family",0.76389,1
+  +19,'ll like it,0.69444,1
+  +21,'s a certain style and wit to the dialogue,0.75,1
+  +22,'s a demented kitsch mess ( although the smeary digital video does match the muddled narrative ),0.29167,0
+  +23,'s a pale imitation,0.31944,0
+  +24,'s a visual delight and a decent popcorn adventure,0.73611,1
+  +25,"'s a visual delight and a decent popcorn adventure ,",0.77778,1
+  +28,'s all pretty,0.68056,1
+  +31,"'s back-stabbing , inter-racial desire and , most importantly",0.23611,0
+  +32,"'s back-stabbing , inter-racial desire and , most importantly ,",0.29167,0
+  +34,'s enough melodrama in this magnolia primavera,0.375,0
+  +36,'s enough melodrama in this magnolia primavera to make pta proud yet director muccino 's characters are less worthy of puccini than they are of daytime television,0.29167,0
+  +37,'s enough to make one pine for the day when godard can no longer handle the rigors of filmmaking,0.375,0
+
+[sst5.csv] no column-set change (values may still differ)
+  payload size unchanged at 14,290,598 bytes (equal size is not equal content)
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- sst5.csv@67e6fbd925
+  +++ sst5.csv@dcdde1231e
+  @@ -1,20 +1,20 @@
+   id,phrase,sentiment,label
+   0,!,0.5,2
+   1,',0.5,2
+  +2,' (,0.44444,2
+  +3,' ( the cockettes,0.5,2
+  +4,' ( the cockettes ),0.42708,2
+  +5,' ( the cockettes ) provides a window into a subculture hell-bent on expressing itself in every way imaginable,0.375,1
+  +6,' ( the cockettes ) provides a window into a subculture hell-bent on expressing itself in every way imaginable .,0.41667,2
+  +7,' ( the cockettes ) provides a window into a subculture hell-bent on expressing itself in every way imaginable . ',0.54167,2
+  +8,' a nightmare on elm street,0.33333,1
+  +9,' a nightmare on elm street ',0.45833,2
+   10,' a nightmare on elm street ' or,0.47222,2
+  -100,` blue crush,0.65278,3
+  -1000,footnote,0.5,2
+  -10000,rarely does a film so graceless and devoid of merit,0.16667,0
+  -100000,which started in a muddle,0.5,2
+  -100001,which very simply sets out to entertain and ends up delivering in good measure,0.72222,3
+  -100002,"which will please Eastwood 's loyal fans -- and suits the story , wherein our hero must ride roughshod over incompetent cops to get his man",0.69444,3
+  -100003,"which works so well for the first 89 minutes , but ends so horrendously confusing",0.22222,1
+  -100004,"while Dark Water is n't a complete wash ( no pun intended ) , watched side-by-side with Ringu",0.55556,2
+  -100005,"while Dark Water is n't a complete wash ( no pun intended ) , watched side-by-side with Ringu , it ultimately comes off as a pale successor .",0.31944,1
+  -100006,while I ne,0.5,2
+  -100007,while Tavernier is more concerned with the entire period of history,0.5,2
+  -100008,while Thurman and Lewis give what can easily be considered career-best performances,0.86111,4
+  -100009,while adding a bit of heart and unsettling subject matter,0.68056,3
+  -10001,rarely does a film so graceless and devoid of merit as this one come along,0.013889,0
+  -100010,while adding the rich details and go-for-broke acting that heralds something special,0.70833,3
+  -100011,while each moment of this broken character study is rich in emotional texture,0.58333,2
+  +11,' a nightmare on elm street ' or `,0.59722,2
+  +12,' a nightmare on elm street ' or ` the hills,0.33333,1
+  +13,' a perfect family film,0.93056,4
+  +14,"' a perfect family film ,",0.80556,4
+  +15,"' a perfect family film , '",0.81944,4
+  +16,"' a perfect family film , ' because it 's about family",0.76389,3
+  +17,'',0.5,2
+  +18,'ll,0.5,2

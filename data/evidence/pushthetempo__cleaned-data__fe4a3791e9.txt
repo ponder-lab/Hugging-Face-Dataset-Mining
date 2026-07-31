@@ -1,0 +1,13 @@
+dataset:    pushthetempo/cleaned-data
+commit:     fe4a3791e999d5bb5d3d78644a766509cfe6cf92
+type:       cleaning
+message:    Add cleaned data via Flowmatic
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:42Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# pushthetempo/cleaned-data @ fe4a3791e9
+message: Add cleaned data via Flowmatic 
+
+file changes:
+A	flowmatic_cleaned.csv

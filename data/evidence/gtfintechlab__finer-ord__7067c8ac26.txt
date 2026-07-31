@@ -1,0 +1,17 @@
+dataset:    gtfintechlab/finer-ord
+commit:     7067c8ac26a32c4c5c5a8408488830e618c0cf59
+type:       rename/split-standardization
+message:    Removed information about train test split in huggingface and keeping in paper
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# gtfintechlab/finer-ord @ 7067c8ac26
+message: Removed information about train test split in huggingface and keeping in paper 
+
+file changes:
+M	README.md
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

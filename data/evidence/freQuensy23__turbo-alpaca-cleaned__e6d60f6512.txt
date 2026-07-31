@@ -1,0 +1,18 @@
+dataset:    freQuensy23/turbo-alpaca-cleaned
+commit:     e6d60f6512f74fe706307f35ee599e5bbe760f8a
+type:       cleaning
+message:    Upload turbo-alpaca-cleaned.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:53Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# freQuensy23/turbo-alpaca-cleaned @ e6d60f6512
+message: Upload turbo-alpaca-cleaned.csv 
+
+file changes:
+M	.gitattributes
+A	turbo-alpaca-cleaned.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

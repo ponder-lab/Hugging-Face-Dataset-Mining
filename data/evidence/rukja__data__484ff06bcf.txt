@@ -1,0 +1,18 @@
+dataset:    rukja/data
+commit:     484ff06bcfe537334efd9a75877ec0c448cb81be
+type:       cleaning
+message:    Upload cleaned_opinions_df.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# rukja/data @ 484ff06bcf
+message: Upload cleaned_opinions_df.csv 
+
+file changes:
+M	.gitattributes
+A	cleaned_opinions_df.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

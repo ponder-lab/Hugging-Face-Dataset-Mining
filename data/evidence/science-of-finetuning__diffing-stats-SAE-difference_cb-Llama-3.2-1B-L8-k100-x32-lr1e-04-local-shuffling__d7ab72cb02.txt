@@ -1,0 +1,68 @@
+dataset:    science-of-finetuning/diffing-stats-SAE-difference_cb-Llama-3.2-1B-L8-k100-x32-lr1e-04-local-shuffling
+commit:     d7ab72cb027604282e5cb7db43f53a2b3be84d60
+type:       column/field add-remove
+message:    Added betas columns to df
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:43Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# science-of-finetuning/diffing-stats-SAE-difference_cb-Llama-3.2-1B-L8-k100-x32-lr1e-04-local-shuffling @ d7ab72cb02
+message: Added betas columns to df 
+
+file changes:
+M	feature_df.csv
+
+[feature_df.csv] column change:
+  removed: []
+  added:   ['beta_activation_base', 'beta_activation_chat', 'beta_activation_ratio']
+  diff --git a/feature_df.csv b/feature_df.csv
+  index ecdfa5a..cfeb94d 100644
+  --- a/feature_df.csv
+  +++ b/feature_df.csv
+  @@ -1,65537 +1,65537 @@
+  -,dec_norm,enc_norm
+  -0,0.9999999,1.2442243
+  -1,0.99999994,1.0008789
+  -2,0.9999999,1.2525885
+  -3,0.9999999,1.0244857
+  -4,0.9999999,1.0816036
+  -5,0.9999999,1.0470009
+  -6,0.99999994,0.9199859
+  -7,0.99999994,1.006093
+  -8,0.99999994,1.0707412
+  -9,0.99999994,1.0735995
+  -10,0.9999999,1.2121202
+  -11,0.9999998,0.97610635
+  -12,0.99999994,1.1472317
+  -13,0.99999994,1.0038629
+  -14,0.99999994,0.99763167
+  -15,0.99999994,1.0099819
+  -16,0.9999999,0.9995271
+  -17,0.9999999,0.9904187
+  -18,0.9999999,1.2160662
+  -19,0.99999994,1.0722071
+  -20,0.9999998,0.9731903
+  -21,0.9999999,1.0221926
+  -22,0.99999994,1.1584305
+  -23,0.99999994,1.2254875
+  -24,0.9999999,1.0533624
+  -25,0.99999994,1.1681542
+  -26,0.99999994,0.9074288
+  -27,0.9999998,1.0473108
+  -28,0.99999994,1.2739259
+  -29,0.9999998,1.1241838
+  -30,1.0,1.0336714
+  -31,1.0,1.2398343
+  -32,0.99999994,1.0077795
+  -33,0.9999998,0.9480389
+  -34,0.99999994,0.9831785
+  -35,0.9999998,1.0058366
+  -36,0.9999999,1.056247
+  -37,0.9999999,1.1257925
+  -38,0.99999994,1.0278486
+  -39,0.99999994,1.0882221
+  -40,0.9999998,1.2875092
+  -41,0.9999999,0.8681407
+  -42,0.99999994,0.971532
+  -43,0.99999994,1.0168914
+  ... 131029 further lines not shown (cap is 50)

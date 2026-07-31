@@ -1,0 +1,13 @@
+dataset:    arize-ai/movie_reviews_with_context_drift
+commit:     8d58224ebb5b0723f8c19dd51cec33bdb9073fe8
+type:       merge
+message:    Merge 'main' of https://huggingface.co/datasets/arize-ai/reviews_with_drift
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:50Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# arize-ai/movie_reviews_with_context_drift @ 8d58224ebb
+message: Merge 'main' of https://huggingface.co/datasets/arize-ai/reviews_with_drift 
+
+file changes:
+  (none)

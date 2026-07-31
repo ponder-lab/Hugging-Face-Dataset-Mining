@@ -1,0 +1,62 @@
+dataset:    ibm-research/popqa-tp
+commit:     4f2e7e4224ed70e5fded428b1a3d9867b12ac224
+type:       column/field add-remove
+message:    drop group column
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# ibm-research/popqa-tp @ 4f2e7e4224
+message: drop group column 
+
+file changes:
+M	popQA_template_paraphrases.csv   [stored in Git LFS]
+
+[popQA_template_paraphrases.csv] column change:
+  removed: ['group']
+  added:   []
+  payload size 16,650,688 -> 15,546,228 bytes (-1,104,460): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- popQA_template_paraphrases.csv@1f5d8d4489
+  +++ popQA_template_paraphrases.csv@4f2e7e4224
+  @@ -1,20 +1,20 @@
+  -paraphrase,group,template_id,prop,possible_answers,id
+  -What is George Rankin's occupation?,occupation,0,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  -What is the occupation of George Rankin?,occupation,1,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  -What kind of work does George Rankin do?,occupation,2,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  -What does George Rankin earn a living as?,occupation,3,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  -What job does George Rankin do?,occupation,4,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  -What is George Rankin's job?,occupation,5,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  -What is John Mayne's occupation?,occupation,0,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  -What is the occupation of John Mayne?,occupation,1,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  -What kind of work does John Mayne do?,occupation,2,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  -What does John Mayne earn a living as?,occupation,3,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  -What job does John Mayne do?,occupation,4,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  -What is John Mayne's job?,occupation,5,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  -What is Henry Feilden's occupation?,occupation,0,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  -What is the occupation of Henry Feilden?,occupation,1,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  -What kind of work does Henry Feilden do?,occupation,2,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  -What does Henry Feilden earn a living as?,occupation,3,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  -What job does Henry Feilden do?,occupation,4,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  -What is Henry Feilden's job?,occupation,5,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  -What is Kathy Saltzman's occupation?,occupation,0,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4822110
+  +paraphrase,template_id,prop,possible_answers,id
+  +What is George Rankin's occupation?,0,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  +What is the occupation of George Rankin?,1,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  +What kind of work does George Rankin do?,2,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  +What does George Rankin earn a living as?,3,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  +What job does George Rankin do?,4,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  +What is George Rankin's job?,5,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4222362
+  +What is John Mayne's occupation?,0,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  +What is the occupation of John Mayne?,1,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  +What kind of work does John Mayne do?,2,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  +What does John Mayne earn a living as?,3,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  +What job does John Mayne do?,4,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  +What is John Mayne's job?,5,occupation,"[""journalist"", ""journo"", ""journalists""]",4725190
+  +What is Henry Feilden's occupation?,0,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  +What is the occupation of Henry Feilden?,1,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  +What kind of work does Henry Feilden do?,2,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  +What does Henry Feilden earn a living as?,3,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  +What job does Henry Feilden do?,4,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  +What is Henry Feilden's job?,5,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4382392
+  +What is Kathy Saltzman's occupation?,0,occupation,"[""politician"", ""political leader"", ""political figure"", ""polit."", ""pol""]",4822110

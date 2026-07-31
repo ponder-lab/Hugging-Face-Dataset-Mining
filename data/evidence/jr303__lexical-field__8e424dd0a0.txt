@@ -1,0 +1,18 @@
+dataset:    jr303/lexical-field
+commit:     8e424dd0a09230f5a4cabc65e2feff51e4066b74
+type:       normalize/standardize/encode
+message:    Upload dataset_lexical_field_normalized-3.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:42Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# jr303/lexical-field @ 8e424dd0a0
+message: Upload dataset_lexical_field_normalized-3.csv 
+
+file changes:
+M	.gitattributes
+A	dataset_lexical_field_normalized-3.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

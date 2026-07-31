@@ -1,0 +1,17 @@
+dataset:    RiTA-nlp/UINAUIL
+commit:     21f5574c4c1117f5db411894a323d408d44fccb4
+type:       column/field add-remove
+message:    fix column source
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:03Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# RiTA-nlp/UINAUIL @ 21f5574c4c
+message: fix column source 
+
+file changes:
+M	haspeede2/taskAB_development.parquet   [stored in Git LFS]
+
+not analyzed:
+  haspeede2/taskAB_development.parquet   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

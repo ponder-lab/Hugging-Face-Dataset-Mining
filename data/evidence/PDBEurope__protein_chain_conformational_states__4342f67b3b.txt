@@ -1,0 +1,13 @@
+dataset:    PDBEurope/protein_chain_conformational_states
+commit:     4342f67b3b919158bb1cc9c5f07740083d088123
+type:       column/field add-remove
+message:    Benchmark dataset with label_asym_id column
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# PDBEurope/protein_chain_conformational_states @ 4342f67b3b
+message: Benchmark dataset with label_asym_id column 
+
+file changes:
+A	benchmark_monomeric_open_closed_conformers_struct_asym_id.csv

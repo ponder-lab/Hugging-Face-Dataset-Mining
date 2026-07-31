@@ -1,0 +1,14 @@
+dataset:    maomlab/AqSolDB
+commit:     4c7e1813bd18896c56c3666a1d917a2e86975102
+type:       column/field add-remove
+message:    Sanitized smiles column and renamed to SMILES
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:59Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# maomlab/AqSolDB @ 4c7e1813bd
+message: Sanitized smiles column and renamed to SMILES 
+
+file changes:
+A	AqSolDB/AqsolDB_test_san.csv
+A	AqSolDB/AqsolDB_train_san.csv

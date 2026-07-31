@@ -1,0 +1,132 @@
+dataset:    kaistdata/RDB2G-Bench
+commit:     ba616c008aeb42ab0dc22aba36333d65c454a827
+type:       rename/split-standardization
+message:    Add split for metadata generation
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:40Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# kaistdata/RDB2G-Bench @ ba616c008a
+message: Add split for metadata generation 
+
+file changes:
+R100	rel-avito_ad-ctr_0.csv	train/rel-avito/ad-ctr/0.csv
+R100	rel-avito_ad-ctr_1.csv	train/rel-avito/ad-ctr/1.csv
+R100	rel-avito_ad-ctr_2.csv	train/rel-avito/ad-ctr/2.csv
+R100	rel-avito_ad-ctr_3.csv	train/rel-avito/ad-ctr/3.csv
+R100	rel-avito_ad-ctr_4.csv	train/rel-avito/ad-ctr/4.csv
+R100	rel-avito_user-ad-visit_0.csv	train/rel-avito/user-ad-visit/0.csv
+R100	rel-avito_user-ad-visit_1.csv	train/rel-avito/user-ad-visit/1.csv
+R100	rel-avito_user-ad-visit_2.csv	train/rel-avito/user-ad-visit/2.csv
+R100	rel-avito_user-ad-visit_3.csv	train/rel-avito/user-ad-visit/3.csv
+R100	rel-avito_user-ad-visit_4.csv	train/rel-avito/user-ad-visit/4.csv
+R100	rel-avito_user-clicks_0.csv	train/rel-avito/user-clicks/0.csv
+R100	rel-avito_user-clicks_1.csv	train/rel-avito/user-clicks/1.csv
+R100	rel-avito_user-clicks_2.csv	train/rel-avito/user-clicks/2.csv
+R100	rel-avito_user-clicks_3.csv	train/rel-avito/user-clicks/3.csv
+R100	rel-avito_user-clicks_4.csv	train/rel-avito/user-clicks/4.csv
+R100	rel-avito_user-visits_0.csv	train/rel-avito/user-visits/0.csv
+R100	rel-avito_user-visits_1.csv	train/rel-avito/user-visits/1.csv
+R100	rel-avito_user-visits_2.csv	train/rel-avito/user-visits/2.csv
+R100	rel-avito_user-visits_3.csv	train/rel-avito/user-visits/3.csv
+R100	rel-avito_user-visits_4.csv	train/rel-avito/user-visits/4.csv
+R100	rel-event_user-attendance_0.csv	train/rel-event/user-attendance/0.csv
+R100	rel-event_user-attendance_1.csv	train/rel-event/user-attendance/1.csv
+R100	rel-event_user-attendance_10.csv	train/rel-event/user-attendance/10.csv
+R100	rel-event_user-attendance_11.csv	train/rel-event/user-attendance/11.csv
+R100	rel-event_user-attendance_12.csv	train/rel-event/user-attendance/12.csv
+R100	rel-event_user-attendance_13.csv	train/rel-event/user-attendance/13.csv
+R100	rel-event_user-attendance_14.csv	train/rel-event/user-attendance/14.csv
+R100	rel-event_user-attendance_2.csv	train/rel-event/user-attendance/2.csv
+R100	rel-event_user-attendance_3.csv	train/rel-event/user-attendance/3.csv
+R100	rel-event_user-attendance_4.csv	train/rel-event/user-attendance/4.csv
+R100	rel-event_user-attendance_5.csv	train/rel-event/user-attendance/5.csv
+R100	rel-event_user-attendance_6.csv	train/rel-event/user-attendance/6.csv
+R100	rel-event_user-attendance_7.csv	train/rel-event/user-attendance/7.csv
+R100	rel-event_user-attendance_8.csv	train/rel-event/user-attendance/8.csv
+R100	rel-event_user-attendance_9.csv	train/rel-event/user-attendance/9.csv
+R100	rel-event_user-ignore_0.csv	train/rel-event/user-ignore/0.csv
+R100	rel-event_user-ignore_1.csv	train/rel-event/user-ignore/1.csv
+R100	rel-event_user-ignore_10.csv	train/rel-event/user-ignore/10.csv
+R100	rel-event_user-ignore_11.csv	train/rel-event/user-ignore/11.csv
+R100	rel-event_user-ignore_12.csv	train/rel-event/user-ignore/12.csv
+R100	rel-event_user-ignore_13.csv	train/rel-event/user-ignore/13.csv
+R100	rel-event_user-ignore_14.csv	train/rel-event/user-ignore/14.csv
+R100	rel-event_user-ignore_2.csv	train/rel-event/user-ignore/2.csv
+R100	rel-event_user-ignore_3.csv	train/rel-event/user-ignore/3.csv
+R100	rel-event_user-ignore_4.csv	train/rel-event/user-ignore/4.csv
+R100	rel-event_user-ignore_5.csv	train/rel-event/user-ignore/5.csv
+R100	rel-event_user-ignore_6.csv	train/rel-event/user-ignore/6.csv
+R100	rel-event_user-ignore_7.csv	train/rel-event/user-ignore/7.csv
+R100	rel-event_user-ignore_8.csv	train/rel-event/user-ignore/8.csv
+R100	rel-event_user-ignore_9.csv	train/rel-event/user-ignore/9.csv
+R100	rel-event_user-repeat_0.csv	train/rel-event/user-repeat/0.csv
+R100	rel-event_user-repeat_1.csv	train/rel-event/user-repeat/1.csv
+R100	rel-event_user-repeat_10.csv	train/rel-event/user-repeat/10.csv
+R100	rel-event_user-repeat_11.csv	train/rel-event/user-repeat/11.csv
+R100	rel-event_user-repeat_12.csv	train/rel-event/user-repeat/12.csv
+R100	rel-event_user-repeat_13.csv	train/rel-event/user-repeat/13.csv
+R100	rel-event_user-repeat_14.csv	train/rel-event/user-repeat/14.csv
+R100	rel-event_user-repeat_2.csv	train/rel-event/user-repeat/2.csv
+R100	rel-event_user-repeat_3.csv	train/rel-event/user-repeat/3.csv
+R100	rel-event_user-repeat_4.csv	train/rel-event/user-repeat/4.csv
+R100	rel-event_user-repeat_5.csv	train/rel-event/user-repeat/5.csv
+R100	rel-event_user-repeat_6.csv	train/rel-event/user-repeat/6.csv
+R100	rel-event_user-repeat_7.csv	train/rel-event/user-repeat/7.csv
+R100	rel-event_user-repeat_8.csv	train/rel-event/user-repeat/8.csv
+R100	rel-event_user-repeat_9.csv	train/rel-event/user-repeat/9.csv
+R100	rel-f1_driver-dnf_0.csv	train/rel-f1/driver-dnf/0.csv
+R100	rel-f1_driver-dnf_1.csv	train/rel-f1/driver-dnf/1.csv
+R100	rel-f1_driver-dnf_10.csv	train/rel-f1/driver-dnf/10.csv
+R100	rel-f1_driver-dnf_11.csv	train/rel-f1/driver-dnf/11.csv
+R100	rel-f1_driver-dnf_12.csv	train/rel-f1/driver-dnf/12.csv
+R100	rel-f1_driver-dnf_13.csv	train/rel-f1/driver-dnf/13.csv
+R100	rel-f1_driver-dnf_14.csv	train/rel-f1/driver-dnf/14.csv
+R100	rel-f1_driver-dnf_2.csv	train/rel-f1/driver-dnf/2.csv
+R100	rel-f1_driver-dnf_3.csv	train/rel-f1/driver-dnf/3.csv
+R100	rel-f1_driver-dnf_4.csv	train/rel-f1/driver-dnf/4.csv
+R100	rel-f1_driver-dnf_5.csv	train/rel-f1/driver-dnf/5.csv
+R100	rel-f1_driver-dnf_6.csv	train/rel-f1/driver-dnf/6.csv
+R100	rel-f1_driver-dnf_7.csv	train/rel-f1/driver-dnf/7.csv
+R100	rel-f1_driver-dnf_8.csv	train/rel-f1/driver-dnf/8.csv
+R100	rel-f1_driver-dnf_9.csv	train/rel-f1/driver-dnf/9.csv
+R100	rel-f1_driver-position_0.csv	train/rel-f1/driver-position/0.csv
+R100	rel-f1_driver-position_1.csv	train/rel-f1/driver-position/1.csv
+R100	rel-f1_driver-position_10.csv	train/rel-f1/driver-position/10.csv
+R100	rel-f1_driver-position_11.csv	train/rel-f1/driver-position/11.csv
+R100	rel-f1_driver-position_12.csv	train/rel-f1/driver-position/12.csv
+R100	rel-f1_driver-position_13.csv	train/rel-f1/driver-position/13.csv
+R100	rel-f1_driver-position_14.csv	train/rel-f1/driver-position/14.csv
+R100	rel-f1_driver-position_2.csv	train/rel-f1/driver-position/2.csv
+R100	rel-f1_driver-position_3.csv	train/rel-f1/driver-position/3.csv
+R100	rel-f1_driver-position_4.csv	train/rel-f1/driver-position/4.csv
+R100	rel-f1_driver-position_5.csv	train/rel-f1/driver-position/5.csv
+R100	rel-f1_driver-position_6.csv	train/rel-f1/driver-position/6.csv
+R100	rel-f1_driver-position_7.csv	train/rel-f1/driver-position/7.csv
+R100	rel-f1_driver-position_8.csv	train/rel-f1/driver-position/8.csv
+R100	rel-f1_driver-position_9.csv	train/rel-f1/driver-position/9.csv
+R100	rel-f1_driver-top3_0.csv	train/rel-f1/driver-top3/0.csv
+R100	rel-f1_driver-top3_1.csv	train/rel-f1/driver-top3/1.csv
+R100	rel-f1_driver-top3_10.csv	train/rel-f1/driver-top3/10.csv
+R100	rel-f1_driver-top3_11.csv	train/rel-f1/driver-top3/11.csv
+R100	rel-f1_driver-top3_12.csv	train/rel-f1/driver-top3/12.csv
+R100	rel-f1_driver-top3_13.csv	train/rel-f1/driver-top3/13.csv
+R100	rel-f1_driver-top3_14.csv	train/rel-f1/driver-top3/14.csv
+R100	rel-f1_driver-top3_2.csv	train/rel-f1/driver-top3/2.csv
+R100	rel-f1_driver-top3_3.csv	train/rel-f1/driver-top3/3.csv
+R100	rel-f1_driver-top3_4.csv	train/rel-f1/driver-top3/4.csv
+R100	rel-f1_driver-top3_5.csv	train/rel-f1/driver-top3/5.csv
+R100	rel-f1_driver-top3_6.csv	train/rel-f1/driver-top3/6.csv
+R100	rel-f1_driver-top3_7.csv	train/rel-f1/driver-top3/7.csv
+R100	rel-f1_driver-top3_8.csv	train/rel-f1/driver-top3/8.csv
+R100	rel-f1_driver-top3_9.csv	train/rel-f1/driver-top3/9.csv
+R100	rel-stack_post-post-related_0.csv	train/rel-stack/post-post-related/0.csv
+R100	rel-stack_post-post-related_1.csv	train/rel-stack/post-post-related/1.csv
+R100	rel-stack_post-post-related_2.csv	train/rel-stack/post-post-related/2.csv
+R100	rel-stack_post-post-related_3.csv	train/rel-stack/post-post-related/3.csv
+R100	rel-stack_post-post-related_4.csv	train/rel-stack/post-post-related/4.csv
+R100	rel-trial_study-outcome_0.csv	train/rel-trial/study-outcome/0.csv
+R100	rel-trial_study-outcome_1.csv	train/rel-trial/study-outcome/1.csv
+R100	rel-trial_study-outcome_2.csv	train/rel-trial/study-outcome/2.csv
+R100	rel-trial_study-outcome_3.csv	train/rel-trial/study-outcome/3.csv
+R100	rel-trial_study-outcome_4.csv	train/rel-trial/study-outcome/4.csv

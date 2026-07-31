@@ -1,0 +1,18 @@
+dataset:    newvikova/Mining_WB
+commit:     188581a96389343e86cd0ea7d44a92f2cd236ce1
+type:       merge
+message:    Upload merged_wildberries_data_full.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# newvikova/Mining_WB @ 188581a963
+message: Upload merged_wildberries_data_full.csv 
+
+file changes:
+M	.gitattributes
+A	merged_wildberries_data_full.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

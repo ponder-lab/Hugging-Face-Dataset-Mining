@@ -1,0 +1,68 @@
+dataset:    joelkoch/rag_eval
+commit:     6861dc2788f6c3ef84bcf020a8b8fc82b1db07a8
+type:       deduplication
+message:    Bring back deleted columns in deduplicated dataset
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# joelkoch/rag_eval @ 6861dc2788
+message: Bring back deleted columns in deduplicated dataset 
+
+file changes:
+M	phoenix.csv
+
+[phoenix.csv] column change:
+  removed: []
+  added:   ['answers', 'groundedness_response', 'groundedness_score', 'relevance_response', 'relevance_score', 'standalone_response', 'standalone_score']
+  diff --git a/phoenix.csv b/phoenix.csv
+  index 8e8d253..36d2615 100644
+  --- a/phoenix.csv
+  +++ b/phoenix.csv
+  @@ -1,4 +1,4 @@
+  -context,questions
+  +context,questions,answers,groundedness_response,relevance_response,standalone_response,groundedness_score,relevance_score,standalone_score
+   "defmodule Mix.Tasks.Local.Phx do
+     use Mix.Task
+   
+  @@ -17,7 +17,12 @@ context,questions
+       Mix.Task.run(""archive.install"", [""hex"", ""phx_new"" | args])
+     end
+   end
+  -",What command is used to update the Phoenix project generator locally in Elixir?
+  +",What command is used to update the Phoenix project generator locally in Elixir?,mix local.phx,"Evaluation: The context provides a well-structured explanation of the Mix Task defined in the `Mix.Tasks.Local.Phx` module, which is specifically created to update the Phoenix project generator locally. The documentation clearly states that the command to execute this task is `$ mix local.phx`. Additionally, it specifies that it accepts the same command line options as `archive.install hex phx_new`, further indicating the command's purpose and usage. The context provides all necessary details to answer the question unambiguously.
+  +Total rating: 5","Evaluation: This question is relevant to web developers who are using Elixir and the Phoenix framework to build web applications. Updating the Phoenix project generator ensures developers have the latest features and bug fixes, which is important for maintaining a modern and efficient development environment. Knowing how to perform this update is essential for developers to keep their tools up-to-date and secure. However, it is specific to those using Elixir and Phoenix, so it may not be universally applicable to all web developers. Nevertheless, for those who are working within this ecosystem, it is a crucial piece of knowledge.
+  +
+  +Total rating: 4","Evaluation: The question is context-independent and provides enough specific information to be understood without additional context. It mentions ""command,"" ""update,"" ""Phoenix project generator,"" and ""Elixir,"" which are clear and specific terms that someone familiar with the Elixir programming environment would understand. Thus, the question is self-contained and does not rely on unseen context to be meaningful.
+  +
+  +Total rating: 5",5,4,5
+   "defmodule Mix.Tasks.Local.Phx do
+     use Mix.Task
+   
+  @@ -36,7 +41,13 @@ end
+       Mix.Task.run(""archive.install"", [""hex"", ""phx_new"" | args])
+     end
+   end
+  -",What is the purpose of the Mix.Tasks.Local.Phx module?
+  +",What is the purpose of the Mix.Tasks.Local.Phx module?,The purpose of the Mix.Tasks.Local.Phx module is to update the Phoenix project generator locally.,"Evaluation: The context provides a clear and detailed description of the purpose of the Mix.Tasks.Local.Phx module. It states that this module updates the Phoenix project generator locally, and it gives specific guidance on its use with a reference to the command line command. Additionally, it explains that it accepts the same command line options as `archive.install hex phx_new`, which adds further understanding of its functionality. Therefore, the context is sufficient and unambiguous for answering the question.
+  +
+  +Total rating: 5","Evaluation: The question pertains to understanding specific modules in the Phoenix web framework, which is a crucial part of building web applications using Elixir. Knowing the purpose of the `Mix.Tasks.Local.Phx` module helps developers manage tasks related to the Phoenix framework locally, potentially streamlining development workflows. For web developers working with Phoenix, having a clear understanding of this module is essential to effectively utilize the framework's features and automations, making this question very useful.
+  +
+  +Total rating: 5","Evaluation: The question asks for the purpose of a specific module, Mix.Tasks.Local.Phx. Although it uses a technical term, it is clear and understandable for those familiar with this domain, such as Elixir/Phoenix developers. It doesn't require additional context to make sense as it is specific about what information is being sought and about which module. 
+  +
+  +Total rating: 5",5,5,5
+   "defmodule Mix.Tasks.Phx.New.Ecto do
+     @moduledoc """"""
+     Creates a new Ecto project within an umbrella project.
+  @@ -101,7 +112,13 @@ end
+       Mix.Tasks.Phx.New.run(args ++ [""--no-assets"", ""--ecto""], Phx.New.Ecto, :app_path)
+     end
+   end
+  -",What is the default database adapter for Ecto in the Mix.Tasks.Phx.New.Ecto task?
+  +",What is the default database adapter for Ecto in the Mix.Tasks.Phx.New.Ecto task?,"The default database adapter is ""postgres"".","Evaluation: The context provides detailed information about the Mix.Tasks.Phx.New.Ecto module, specifically mentioning various options that can be specified when creating a new Ecto project. One of these options is `--database`, which details different database adapters available for use with Ecto. The context explicitly states that the default database adapter is ""postgres."" Therefore, the question about the default database adapter for Ecto in the Mix.Tasks.Phx.New.Ecto task is clearly and unambiguously answerable with the provided context.
+  +
+  +Total rating: 5","Evaluation: This question is fairly specific and directly relevant to developers working with the Phoenix framework in Elixir, specifically those using Ecto for database management. The default database adapter is an essential piece of information needed to set up a new application using `Mix.Tasks.Phx.New.Ecto`. Understanding what the default is helps developers know what to expect or informs them if they need to specify a different adapter. This can save time in the setup process and avoid common configuration errors.
+  +
+  +Total rating: 4","Evaluation: The question refers to a specific task within the Elixir programming environment, particularly in the context of generating a new Ecto project using the Phoenix framework. It implies that the reader has knowledge of Ecto, Mix tasks, and Phoenix. However, it is clear and can be answered by someone familiar with these tools without additional context, as it refers to the default database adapter used specifically for this task. Thus, it is not highly context-dependent.
+  +
+  ... 1784 further lines not shown (cap is 50)

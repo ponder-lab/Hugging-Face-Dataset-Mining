@@ -1,0 +1,17 @@
+dataset:    Krooz/Campus_Recruitment_CSV
+commit:     ef1722f20a8a14a572b468e8f1e15a169290366b
+type:       rename/split-standardization
+message:    Split the raw dataset
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:59Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Krooz/Campus_Recruitment_CSV @ ef1722f20a
+message: Split the raw dataset 
+
+file changes:
+A	.gitignore
+A	Placement_raw_test.csv
+A	Placement_raw_train.csv
+A	Placement_raw_val.csv
+A	data_preprocess.ipynb

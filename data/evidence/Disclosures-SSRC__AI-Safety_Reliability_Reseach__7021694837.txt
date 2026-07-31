@@ -1,0 +1,18 @@
+dataset:    Disclosures-SSRC/AI-Safety_Reliability_Reseach
+commit:     70216948378db7984e70d094c5751784a67cbfe4
+type:       deduplication
+message:    Upload data_merged_classified_deduplicated_FINAL.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:23Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Disclosures-SSRC/AI-Safety_Reliability_Reseach @ 7021694837
+message: Upload data_merged_classified_deduplicated_FINAL.csv 
+
+file changes:
+M	.gitattributes
+A	data_merged_classified_deduplicated_FINAL.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

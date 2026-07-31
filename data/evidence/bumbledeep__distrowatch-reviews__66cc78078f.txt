@@ -1,0 +1,68 @@
+dataset:    bumbledeep/distrowatch-reviews
+commit:     66cc78078f5e061dc05a8a81b8886bef1a28ecfd
+type:       column/field add-remove
+message:    remove index column
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:22Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# bumbledeep/distrowatch-reviews @ 66cc78078f
+message: remove index column 
+
+file changes:
+M	distrowatch_20250406.csv
+
+[distrowatch_20250406.csv] column change:
+  removed: ['']
+  added:   []
+  diff --git a/distrowatch_20250406.csv b/distrowatch_20250406.csv
+  index a4d682b..c4dfe6a 100644
+  --- a/distrowatch_20250406.csv
+  +++ b/distrowatch_20250406.csv
+  @@ -1,8050 +1,8050 @@
+  -,date,project,version,rating,votes,review
+  -0,2022-03-05,HardenedBSD, 13-build-322,9,9,"
+  +date,project,version,rating,votes,review
+  +2022-03-05,HardenedBSD, 13-build-322,9,9,"
+   The HardenedBSD project has corrected a lot of its shortcomings in the last few months to ease the user experience, I can only recommend to test and use it again.
+  
+  I especially like the fact that the ports are more up-to-date than freebsd.
+  In terms of security, the ASLR of HardenedBSD is particularly robust and the highest of all BSD (just compare with paxtest).
+  The HardenedBSD project seems to be well advanced on the generalization of CFI which will make it a must-have OS in terms of security.
+  
+  To be followed and encouraged with interest.
+   "
+  -1,2023-07-12,OpenMandriva Lx, 23.03,9,2,"
+  +2023-07-12,OpenMandriva Lx, 23.03,9,2,"
+   This distro is very sadly under rated. I have been an Arch Linux user for the past 5 years and the only other distro that I have ever switched to is Debian, until now. OpenMandriva is now my main operating system it is very agile and everything that I have thrown at it works. I gave it only a 9 rating because in the etc file system the printing functions should be activated and not left to the user to do so, because not all users would know how to do this especially new users to Linux. Also, using both RPM and DNF as installers really coners all posiible applications install posibilities. I was using Mandrake way pack in 1997 and helped wrote scripts for dependencies and after Mandrake and then when Mandriva took over I sighed with relief that it was still being worked on at that time, but when they gave up and some of the coders deceided to keep it alive at that point I switched between Arch and Debian and sadly totally forgot about Mandriva until now. Welcome back Mandriva I really did miss you."
+  -2,2023-07-07,OpenMandriva Lx, 23.03,10,5,"    I to use Mandriva back in the old days but after trying their non-rolling version I decided to try the rolling version and its a great experience. Uses Calamares to install which went pretty quickly and you have a decent amount of apps at first boot. Falkon and Chromium are the two browsers, with LibreOffice already installed. It uses its own system update manager thru Konsole and Discover simplu doesnt work to update the system. Discover though is the source for Flatpaks and DNFDragora is the package manager and it works very well. The welcome control center is handy especially for new users who arent as experienced . Codecs are installed by default so no multimedia issues. Hardware detection is good as my wifi was seen but the printer was a no go. System config printer is installed so I checked and installed the Canon printer driver and it was seen and installed. 
+      The speed of the system is noticeably faster than some other distros I use and memory usage was very reasonable. The overall appearance of OM is amazing, one of the more beautiful distros Ive seen  with even more choices available. KDE 5.27.5 and the 6.3.5 kernel are installed which didnt cause any issues with my Dell Optiplex 7010 sff nor my Lenovo Thinkcentre m900 tiny.
+     There were a few issues though, such as Discover not being able to update the system, more than likely by design. Then I noticed when adding or removing favorites in the menu, the changes dot happen immediately. You end up having to logout then login and then it works. Its a bug they apparently are aware of but haven't fixed yet. Overall the user experience is excellent. The iso isa 2.6gb which isnt too bad and you can also try other DE's. The forums are petty responsive which I appreciated after some bad experiences with other forums.
+     I liked this distro enough to switch over to it as a long term OS and see how it does but its a nice change of pace from all the Debian, Ubuntu and Arch clones.  Give it a try and I think youll find it a great experience. "
+  -3,2023-04-07,OpenMandriva Lx, 23.03,8,8,"First I have to say I did not have any issues installing the distro. I have read that some had blank screens and crashes I did not. There were some small isssues that I had to resolve myself like printing and Latte not all apps icons stayed put. Getting past these small issues Open Mandriva Lx is very fast and it is very stable. I have been an Arch Linux user for more then 5 years but right now Open Mandrive Lx is my main driver and I am very happy using it. It also uses less ram for some strange reason then Arch and handles my Nvidia driver without any issues. It also intergrates with Flatpak seamlessly much better then Arch Linux as an example. I can not compare this with other distros such as Debian or Ubuntu since I do not use those other distros but Arch I will say that it can and does do some things better then Arch Like Flatpak and Nvidia drivers intergartion as n example. I gave it a 8 rating only because of those small issues and to be honest I have never given any distro a 10 not even Arch Linux.
+  Hope this has been helpful.
+  
+  Cheers
+  "
+  -4,2023-03-08,OpenMandriva Lx, 23.01,10,8,"I had to choose the version as 23.01, but the latest version of Rome is 23.03.
+  I have been using Openmandriva since it was born, after having used Mandriva and Mandrake for a long time.
+  Over the past 3 years it has become my main distro.
+  I am very satisfied with Openmandriva: it is fast, stable and complete. No problems with installation, customization and daily use.
+  The rolling release has all the software up to date, but very rarely do I suffer from blockages of the programs or of the entire system.
+  Forum support is very good, both in English and Italian, problems are quickly addressed and resolved by the support team. There is certainly a lot still to be done, but I would recommend the distro to average Linux users."
+  -5,2023-01-30,OpenMandriva Lx, 23.01,10,20,"Unlike the reviewer in DW Weekly, I can't find any instability in this rolling release. It works flawlessly. No crashes during installation, no X11 crashes, no Plasma crashes even with full graphical effects.
+  It includes everything a normal user will need, and it's all working and the components go well together. No weirdness of different applications using different button order (""Yes|No"" vs. ""No|Yes"") that plagues some other distros.
+  If you're looking for something that ""just works"", give OpenMandriva a try!"
+  -6,2023-01-27,OpenMandriva Lx, 23.01,9,4,"I have been wandering from countless distro to distro, to find a perfect distro. Ubuntu family is always my place to go home, because everything just works without hassle. 
+  
+  I was curious about OpenMandriva znver architecture, bacuse I have a ryzen laptop. So I gave it a try and suprisingly, it works very well on my laptop. Everything works by default, don't need to install anything. Also, it runs fast and responsive.
+  
+  For a while I will dig deeper to this beautiful distro. Maybe would be my future destination to stay.
+  
+  "
+  -7,2023-01-17,OpenMandriva Lx, 23.01,10,3,"As a distro hopper this version impressed with speed(boot up) install, and aesthetically pleasing overall build. Been using about 3+ weeks and all my favorite packages were available and installed and ran perfectly. Still stable after several updates. Installed on high performance nvme in genuine USB 3.2 Ver 2 enclosure with near max performance. Faster that many of my computers. I recommend you check it out. Its a keeper!  My small lenovo quad core atom laptop has had manjaro running for over 4 years faultlessly. The Rome 23.01 is the only other distro I will consider. Strictly a KDE person. "
+  -8,2023-01-14,OpenMandriva Lx, 23.01,10,8,"Typing this from Open Mandriva Rolling release. This distro deserves top spot, I did have one freeze during installation but a reboot and fresh install sorted that out. Please dont expect everything to be perfect (its a rolling release) and you get the freshest packages to date including kernel.
+  
+  For an rpm distro this blows fedora out of the water and is miles quicker. The new control centre is spot on and a nice feature to have. The desktop by default is the best themed kde desktop out of the box and there is no need to change anything.
+  
+  ... 97806 further lines not shown (cap is 50)

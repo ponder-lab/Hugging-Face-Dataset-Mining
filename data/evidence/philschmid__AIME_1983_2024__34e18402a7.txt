@@ -1,0 +1,15 @@
+dataset:    philschmid/AIME_1983_2024
+commit:     34e18402a7c28461ce46c2a6dd4969c4f6130e9c
+type:       deduplication
+message:    Duplicate from di-zhang-fdu/AIME_1983_2024
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:11Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# philschmid/AIME_1983_2024 @ 34e18402a7
+message: Duplicate from di-zhang-fdu/AIME_1983_2024 
+
+file changes:
+A	.gitattributes
+A	AIME_Dataset_1983_2024.csv
+A	README.md

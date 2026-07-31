@@ -1,0 +1,13 @@
+dataset:    KpopBarbie/survey-ai-vs-human
+commit:     6ab615e80e9fbbc5687c209d5ab55aa4d403faf1
+type:       cleaning
+message:    Upload cleaned_AI-human-trust.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:22Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# KpopBarbie/survey-ai-vs-human @ 6ab615e80e
+message: Upload cleaned_AI-human-trust.csv 
+
+file changes:
+A	cleaned_AI-human-trust.csv

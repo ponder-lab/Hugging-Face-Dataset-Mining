@@ -1,0 +1,18 @@
+dataset:    rcade/amharic_words
+commit:     4511dced74e3ab3c8fd3a615dbf66be9685527ff
+type:       cleaning
+message:    Upload clean.xlsx
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:58Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# rcade/amharic_words @ 4511dced74
+message: Upload clean.xlsx 
+
+file changes:
+M	.gitattributes
+A	clean.xlsx   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

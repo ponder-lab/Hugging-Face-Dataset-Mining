@@ -1,0 +1,13 @@
+dataset:    jin-ying-so-cute/ecommerce-user-behavior-data
+commit:     1b03c81c4c8cbfce388c5c92f3111552591b76c3
+type:       cleaning
+message:    Delete cleaned-2019-Nov.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:56Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# jin-ying-so-cute/ecommerce-user-behavior-data @ 1b03c81c4c
+message: Delete cleaned-2019-Nov.csv 
+
+file changes:
+D	cleaned-2019-Nov.csv   [stored in Git LFS]

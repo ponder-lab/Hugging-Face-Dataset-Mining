@@ -1,0 +1,13 @@
+dataset:    Anupam007/diabetic-food-analyzer
+commit:     5d5154aba3d35d939282c711690a5c85445bfdd0
+type:       cleaning
+message:    Delete cleaned_data - cleaned_data (4).csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:19Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Anupam007/diabetic-food-analyzer @ 5d5154aba3
+message: Delete cleaned_data - cleaned_data (4).csv 
+
+file changes:
+D	cleaned_data - cleaned_data (4).csv

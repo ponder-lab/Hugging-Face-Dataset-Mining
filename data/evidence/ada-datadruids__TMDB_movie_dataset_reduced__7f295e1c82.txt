@@ -1,0 +1,27 @@
+dataset:    ada-datadruids/TMDB_movie_dataset_reduced
+commit:     7f295e1c82a4b8b994eb5b5d5dda3c11ddeb1251
+type:       column/field add-remove
+message:    updated column name
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:10Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# ada-datadruids/TMDB_movie_dataset_reduced @ 7f295e1c82
+message: updated column name 
+
+file changes:
+M	TMDB_movie_dataset_reduced.csv   [stored in Git LFS]
+
+[TMDB_movie_dataset_reduced.csv] column change:
+  removed: ['id']
+  added:   ['imdbid']
+  payload size 23,643,454 -> 23,643,458 bytes (+4): the data did change
+  first 20 lines at each revision (head sample, not a diff of the whole file):
+  --- TMDB_movie_dataset_reduced.csv@7c65dd3618
+  +++ TMDB_movie_dataset_reduced.csv@7f295e1c82
+  @@ -1,4 +1,4 @@
+  -,id,revenue,budget,rb_ratio
+  +,imdbid,revenue,budget,rb_ratio
+   0,27205,825532764,160000000,5.159579775
+   1,157336,701729206,165000000,4.252904278787879
+   2,155,1004558444,185000000,5.430045643243243

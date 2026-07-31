@@ -1,0 +1,19 @@
+dataset:    SageLabUHN/DT_Lung_Demo_Data
+commit:     5273d996344f4c5ca1a2de1a05e56419cc43175f
+type:       column/field add-remove
+message:    rename columns
+status:     commit-unreachable
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:36Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+NOTHING WAS ANALYZED: commit 5273d996344f4c5ca1a2de1a05e56419cc43175f cannot be read from SageLabUHN/DT_Lung_Demo_Data any more.
+
+This is a revision no repository will produce, not a commit that
+changed no files. Two checks, because a stale local clone is not the
+same thing as a deleted commit:
+  1. local full clone: `git rev-parse 5273d99634^{commit}` finds no commit
+     `git fetch origin` completed; commit still absent
+     `git fetch origin 5273d99634` failed (fatal: remote error: upload-pack: not our ref 5273d996344f4c5ca1a2de1a05e56419cc43175f); commit still absent
+  2. Hub tree endpoint at this revision: HTTP 404
+
+The repository itself still answers on the Hub (HTTP 200) and still serves a history; that history no longer contains this commit. Upstream history was rewritten after mining.

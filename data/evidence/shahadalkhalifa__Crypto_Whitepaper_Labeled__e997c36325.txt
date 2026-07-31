@@ -1,0 +1,13 @@
+dataset:    shahadalkhalifa/Crypto_Whitepaper_Labeled
+commit:     e997c363256697961b37394e545adf0aef658c4f
+type:       cleaning
+message:    Upload Clean_crypto_text.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# shahadalkhalifa/Crypto_Whitepaper_Labeled @ e997c36325
+message: Upload Clean_crypto_text.csv 
+
+file changes:
+A	Clean_crypto_text.csv

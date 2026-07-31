@@ -1,0 +1,18 @@
+dataset:    AI-Growth-Lab/patents_claims_1.5m_traim_test
+commit:     0107bfd1924b62a58668c1e9f19a75467e004ae0
+type:       deduplication
+message:    Upload df_claim_train_1M_pre_duplicates_removed_663.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# AI-Growth-Lab/patents_claims_1.5m_traim_test @ 0107bfd192
+message: Upload df_claim_train_1M_pre_duplicates_removed_663.csv 
+
+file changes:
+M	.gitattributes
+A	df_claim_train_1M_pre_duplicates_removed_663.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

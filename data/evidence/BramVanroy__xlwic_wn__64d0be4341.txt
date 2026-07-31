@@ -1,0 +1,42 @@
+dataset:    BramVanroy/xlwic_wn
+commit:     64d0be4341de336b3361284915cd65972640ca97
+type:       merge
+message:    merge label and test files
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:54Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# BramVanroy/xlwic_wn @ 64d0be4341
+message: merge label and test files 
+
+file changes:
+A	bulgarian_bg/bg_test.txt
+M	bulgarian_bg/bg_valid.txt
+A	chinese_zh/zh_test.txt
+M	chinese_zh/zh_valid.txt
+A	croatian_hr/hr_test.txt
+M	croatian_hr/hr_valid.txt
+A	danish_da/da_test.txt
+M	danish_da/da_valid.txt
+A	dutch_nl/nl_test.txt
+M	dutch_nl/nl_valid.txt
+A	estonian_et/et_test.txt
+M	estonian_et/et_valid.txt
+A	farsi_fa/fa_test.txt
+M	farsi_fa/fa_valid.txt
+A	japanese_ja/ja_test.txt
+M	japanese_ja/ja_valid.txt
+A	korean_ko/ko_test.txt
+M	korean_ko/ko_valid.txt
+
+not analyzed:
+  bulgarian_bg/bg_valid.txt   [format this tool does not read, see #43]
+  chinese_zh/zh_valid.txt   [format this tool does not read, see #43]
+  croatian_hr/hr_valid.txt   [format this tool does not read, see #43]
+  danish_da/da_valid.txt   [format this tool does not read, see #43]
+  dutch_nl/nl_valid.txt   [format this tool does not read, see #43]
+  estonian_et/et_valid.txt   [format this tool does not read, see #43]
+  farsi_fa/fa_valid.txt   [format this tool does not read, see #43]
+  japanese_ja/ja_valid.txt   [format this tool does not read, see #43]
+  korean_ko/ko_valid.txt   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

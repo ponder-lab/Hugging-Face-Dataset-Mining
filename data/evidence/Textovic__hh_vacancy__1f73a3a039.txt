@@ -1,0 +1,18 @@
+dataset:    Textovic/hh_vacancy
+commit:     1f73a3a0392942a6970eb8b76a87b23d2535c7ab
+type:       cleaning
+message:    Upload cleaned_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Textovic/hh_vacancy @ 1f73a3a039
+message: Upload cleaned_data.csv 
+
+file changes:
+M	.gitattributes
+A	cleaned_data.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

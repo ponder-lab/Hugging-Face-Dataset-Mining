@@ -1,0 +1,13 @@
+dataset:    rcade/amharic_words
+commit:     d00cea5c7bb12cb928d28e5169de3f9d38fdb393
+type:       cleaning
+message:    Delete clean.xlsx
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# rcade/amharic_words @ d00cea5c7b
+message: Delete clean.xlsx 
+
+file changes:
+D	clean.xlsx   [stored in Git LFS]

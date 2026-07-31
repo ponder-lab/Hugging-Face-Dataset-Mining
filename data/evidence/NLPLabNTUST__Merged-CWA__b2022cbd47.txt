@@ -1,0 +1,14 @@
+dataset:    NLPLabNTUST/Merged-CWA
+commit:     b2022cbd47dc1b6f4a13d43237b46b9be9c41f3f
+type:       rename/split-standardization
+message:    Upload chunks and split.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:01Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# NLPLabNTUST/Merged-CWA @ b2022cbd47
+message: Upload chunks and split.csv 
+
+file changes:
+A	chunks
+A	split.csv

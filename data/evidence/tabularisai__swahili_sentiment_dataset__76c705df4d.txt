@@ -1,0 +1,19 @@
+dataset:    tabularisai/swahili_sentiment_dataset
+commit:     76c705df4de60098f5d9013f7997798b7c2c2f9d
+type:       cleaning
+message:    Rename cleaned_swahili_data (2).csv to swahili_data.csv
+status:     archived
+hub:        moved (HTTP 307)
+renamed_to: tabularisai/swahili-sentiment-dataset
+generated:  2026-07-31T18:09:44Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# tabularisai/swahili_sentiment_dataset @ 76c705df4d
+message: Rename cleaned_swahili_data (2).csv to swahili_data.csv 
+
+file changes:
+M	.gitattributes
+R100	cleaned_swahili_data (2).csv	swahili_data.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

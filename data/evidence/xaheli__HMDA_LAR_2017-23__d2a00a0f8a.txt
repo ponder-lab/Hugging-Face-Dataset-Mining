@@ -1,0 +1,13 @@
+dataset:    xaheli/HMDA_LAR_2017-23
+commit:     d2a00a0f8a29f781a5f030c2ecb0af9e1e2f69fe
+type:       merge
+message:    Upload merged_common_fields.zip
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:43Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# xaheli/HMDA_LAR_2017-23 @ d2a00a0f8a
+message: Upload merged_common_fields.zip 
+
+file changes:
+A	merged_common_fields.zip   [stored in Git LFS]

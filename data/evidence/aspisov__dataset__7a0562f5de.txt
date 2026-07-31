@@ -1,0 +1,18 @@
+dataset:    aspisov/dataset
+commit:     7a0562f5dee8ccce3fdcae418e301fcfdb7702de
+type:       deduplication
+message:    Add processed dataset group: stackexchange/v1_dedupe/allenai/dolma2-tokenizer/
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:47Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# aspisov/dataset @ 7a0562f5de
+message: Add processed dataset group: stackexchange/v1_dedupe/allenai/dolma2-tokenizer/ 
+
+file changes:
+M	.gitattributes
+A	general/stackexchange__v1_dedupe__allenai__dolma2-tokenizer.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

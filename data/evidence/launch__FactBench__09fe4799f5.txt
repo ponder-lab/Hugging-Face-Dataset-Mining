@@ -1,0 +1,180 @@
+dataset:    launch/FactBench
+commit:     09fe4799f58c43e3621f6b9c94a0d21f46faa320
+type:       column/field add-remove
+message:    deleted topic_id column
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# launch/FactBench @ 09fe4799f5
+message: deleted topic_id column 
+
+file changes:
+M	tier_1.csv
+M	tier_2.csv
+M	tier_3.csv
+
+[tier_1.csv] column change:
+  removed: ['topic_id']
+  added:   []
+  diff --git a/tier_1.csv b/tier_1.csv
+  index 85e2b4b..3c8795e 100644
+  --- a/tier_1.csv
+  +++ b/tier_1.csv
+  @@ -1,56 +1,56 @@
+  -user_prompts,topic_id,topic_description,prompt_score,hallucination_score
+  -What are some young soccer talents from lesser known teams?,22,Questions and predictions related to various sports and competitions.,4.125,2.0207259421636903
+  -how much watts can use macbook air m2 maximum,28,"Questions about GPU compatibility, performance, and recommendations for various systems.",4.125,1.4552137502179978
+  -Describe the main Desktop Environments for Linux and their strengths and weaknesses. ,334,Exploration and comparison of various Linux distributions and operating systems.,4.75,1.4288690166235205
+  -"Is it possible that a bluetooth mouse doesn't support displaying battery percentage, does this feature has to implemented by manufacturer?",277,Exploration and inquiries about battery technology and applications.,4.25,1.3764944032233704
+  -Are there any small cap stocks with a very stable stock price performance like Novo Nordisk?,159,Stock market investment inquiries and specific stock price predictions.,4.25,1.2480754415067656
+  -The latest 50 kernel versions and release times of Linux,334,Exploration and comparison of various Linux distributions and operating systems.,4.25,4.6648675234125365
+  -List all people that got awarded more than one Nobel Prize in their lifetime.,288,Inquiries about influential and notable figures in various fields.,4.125,3.522819383711917
+  -"List 5 best textbooks for ""Introduction to quantum mechanics"" course for undergraduate students.",62,"Understanding and explaining quantum mechanics, computing, and entanglement.",4.625,2.7529888064467407
+  -show a list of top 10 open source odds apis for sports betting,22,Questions and predictions related to various sports and competitions.,4.125,2.744974265986884
+  -Recommend some restaurants in Fuzhou City,2,Travel planning and itinerary creation for various global destinations.,4.125,2.676653448657582
+  -websites that wholesale asian snacks,60,### Generate creative and unique names for various businesses and projects.,4.25,2.5
+  +user_prompts,topic_description,prompt_score,hallucination_score
+  +What are some young soccer talents from lesser known teams?,Questions and predictions related to various sports and competitions.,4.125,2.0207259421636903
+  +how much watts can use macbook air m2 maximum,"Questions about GPU compatibility, performance, and recommendations for various systems.",4.125,1.4552137502179978
+  +Describe the main Desktop Environments for Linux and their strengths and weaknesses. ,Exploration and comparison of various Linux distributions and operating systems.,4.75,1.4288690166235205
+  +"Is it possible that a bluetooth mouse doesn't support displaying battery percentage, does this feature has to implemented by manufacturer?",Exploration and inquiries about battery technology and applications.,4.25,1.3764944032233704
+  +Are there any small cap stocks with a very stable stock price performance like Novo Nordisk?,Stock market investment inquiries and specific stock price predictions.,4.25,1.2480754415067656
+  +The latest 50 kernel versions and release times of Linux,Exploration and comparison of various Linux distributions and operating systems.,4.25,4.6648675234125365
+  +List all people that got awarded more than one Nobel Prize in their lifetime.,Inquiries about influential and notable figures in various fields.,4.125,3.522819383711917
+  +"List 5 best textbooks for ""Introduction to quantum mechanics"" course for undergraduate students.","Understanding and explaining quantum mechanics, computing, and entanglement.",4.625,2.7529888064467407
+  +show a list of top 10 open source odds apis for sports betting,Questions and predictions related to various sports and competitions.,4.125,2.744974265986884
+  +Recommend some restaurants in Fuzhou City,Travel planning and itinerary creation for various global destinations.,4.125,2.676653448657582
+  +websites that wholesale asian snacks,### Generate creative and unique names for various businesses and projects.,4.25,2.5
+   "Please tell me about the weather in Canada in July
+   
+   Please respond like so:
+   ```
+   Final Answer: Your final answer
+  -```",66,Requests for current or future weather conditions in various locations.,4.375,2.4748737341529163
+  -Hey what are some recipes for a tasty tomato soup?,9,Collection of diverse and specific recipe requests and inquiries.,4.625,2.397915762
+  -bibliography of critically acclaimed books/articols about extraterrestrial life from 2010,333,"Exploration of extraterrestrial life, communication, and fictional alien scenarios.",4.125,2.3664319132398464
+  -what are some good backcountry ski routes in the eastern sierra with low avalance danger?,2,Travel planning and itinerary creation for various global destinations.,4.25,2.334868926348074
+  -China Major Economic indictors for 2020,185,"Exploration of China, Taiwan, and related geopolitical issues.",4.5,2.2453655975512468
+  -What are the strongest countries in Civilization 5?,2,Travel planning and itinerary creation for various global destinations.,4.25,2.2453655975512463
+  -"What are the difference between Swin Transformer and DETR, the two famous object detector in the field of computer vision?",108,Exploration and optimization of transformer models in machine learning.,4.625,2.1572774865200244
+  -How many states have an official state dance?,2,Travel planning and itinerary creation for various global destinations.,4.125,2.143303524935281
+  -Who created the Transformer architecture?,108,Exploration and optimization of transformer models in machine learning.,4.375,2.121320343559643
+  -what kind of poem rhymes on every even numbered line?,13,Collection of diverse poetry prompts on various themes and styles.,4.375,2.121320343559643
+  -give me a list of the top 10 most powerful sportbikes in 2023,70,"Exploration of electric and combustion vehicles, their features, and market trends.",4.125,2.108345785496182
+  -Tell me about the use of 6th chords and the different european types.,52,Requests for song recommendations and music-related inquiries.,4.25,2.085144140570748
+  -"When I use spell Animate Object, what creature type are object considered for purpose of spell effects ?",25,Discussion and comparison of various animal characteristics and behaviors.,4.125,2.078804601550749
+  +```",Requests for current or future weather conditions in various locations.,4.375,2.4748737341529163
+  +Hey what are some recipes for a tasty tomato soup?,Collection of diverse and specific recipe requests and inquiries.,4.625,2.397915762
+  +bibliography of critically acclaimed books/articols about extraterrestrial life from 2010,"Exploration of extraterrestrial life, communication, and fictional alien scenarios.",4.125,2.3664319132398464
+  ... 1156 further lines not shown (cap is 50)
+
+[tier_2.csv] column change:
+  removed: ['topic_id']
+  added:   []
+  diff --git a/tier_2.csv b/tier_2.csv
+  index f921a0a..ff3656c 100644
+  --- a/tier_2.csv
+  +++ b/tier_2.csv
+  @@ -1,193 +1,193 @@
+  -user_prompts,topic_id,topic_description,prompt_score,hallucination_score
+  -Give me a vegetarian lunch idea that contains ~400 calories and at least 30 grams of protein per serving.,9,Collection of diverse and specific recipe requests and inquiries.,4.625,3.231973418
+  -Make a comparison table of Galaxy S21 and iPhone 11,273,"Inquiries about smartphone features, comparisons, and purchasing advice.",4.5,3.163317712
+  -Tell me the names of 100 popular car brands and models,70,"Exploration of electric and combustion vehicles, their features, and market trends.",4.5,3.12990356
+  -please give me the top 50 living expense countries.,2,Travel planning and itinerary creation for various global destinations.,4.5,3.124533863539773
+  -I would like to attach an external temperature sensor to a micro bit for measurement. We are considering DS18B20 for a digital sensor and LM335 for an analog sensor. Please introduce a sensor that can be used with an operating supply voltage of 3 volts.,296,"Exploring the role and settings of the ""Temperature"" parameter in LLMs.",4.5,2.6925824035672523
+  -Please list a table of the 10 countries with the most inhabitants.,2,Travel planning and itinerary creation for various global destinations.,4.5,2.581988897471611
+  -Give me top 20 brands for laptops,28,"Questions about GPU compatibility, performance, and recommendations for various systems.",4.625,2.551551815399144
+  -make comparison between apple iphone 14 and samsung s21 ultra,273,"Inquiries about smartphone features, comparisons, and purchasing advice.",4.75,2.321858230173764
+  -Find any research articles that suggest that church outreach activities lead to conversions of faith. This is needed as a reference for a masters thesis. Please include article titles and any relevant links.,204,Exploration and critique of diverse religious beliefs and practices.,4.5,2.1320071635561044
+  -What are some of the top performing momentum etfs,159,Stock market investment inquiries and specific stock price predictions.,4.5,2.1
+  -can you tell me the types of renal cancer that exist?,3,Patient discusses recurring infections and treatment responses.,4.5,2.0554804791094465
+  -Please share with us an easy  delicious family receipe. ,9,Collection of diverse and specific recipe requests and inquiries.,4.5,2.003469213361885
+  -What is the difference between GDPR and DPDP 2023 India?,63,Evaluation and improvement of cybersecurity requirements and strategies.,4.5,2.003469213361885
+  -Compare design principles for mobile apps and desktop software in a concise table,273,"Inquiries about smartphone features, comparisons, and purchasing advice.",4.75,1.7723725194851356
+  -Give me a recipe to make a simple hamburger at home,9,Collection of diverse and specific recipe requests and inquiries.,4.75,1.7677669529663689
+  -Can you provide a list of advantages and disadvantages of the three main types of bearings?,64,Questions and answers related to HVAC design and system calculations.,4.5,1.735055234471418
+  -What are some common misconceptions about LGBTQ+ people?,109,"Exploration of gender, sexuality, and societal norms in various contexts.",5.0,1.7206180040292132
+  -"When training neural networks, why do we use convex losses (wrt the output of the neural network) even though these losses won't be convex wrt to the neural network parameters?",231,Exploration and explanation of neural networks and deep learning concepts.,4.5,1.705605730844883
+  -Describe the MMLU benchmark for language models.,41,Exploration and discussion of large language models and their applications.,4.5,1.6666666666666667
+  -how does a combustion engine works,70,"Exploration of electric and combustion vehicles, their features, and market trends.",4.75,1.6366341767699428
+  -list all world religions concisely,204,Exploration and critique of diverse religious beliefs and practices.,4.625,1.590990257669732
+  -give synonims for word 'interesting',16,"Exploration of word games, definitions, and creative writing tasks.",4.75,1.52542554
+  -Is there a version of stable diffusion that can be run on CPU and can be made in python code?,75,Exploring and generating prompts for Stable Diffusion AI.,4.5,1.5
+  -How are dividends taxed in canada for individuals,188,Exploration of tax-related inquiries and strategies across various jurisdictions.,4.5,1.4912022701586514
+  -Please act as an opensource license expert to answer my questions. My first question is what are the difference between GPLv3 and AGPLv3?,238,Exploration and comparison of various open-source licenses and practices.,4.5,1.4912022701586514
+  -How much carbon produces one kilometer by plane,135,Exploring various perspectives and aspects of climate change.,4.5,1.4552137502179978
+  -Detailed immigration guidelines and requirements to spain for egyptians,2,Travel planning and itinerary creation for various global destinations.,4.5,1.4534441853748632
+  -"Explain, in terms of basic chemistry, why natural gas produces less CO2 per unit of energy generated than do the other fossil fuels.",135,Exploring various perspectives and aspects of climate change.,4.5,1.4534441853748632
+  -"what are some healthy, calorie-dense snacks to take on a plane?",9,Collection of diverse and specific recipe requests and inquiries.,4.75,1.4368424162141993
+  -"define in bullet points all the elements i should offer in my strategic branding services. i need to have 2 offerings. one package is for a full strategic brand identity, and the second package is for a strategic website build (for people who already have their branding). do not include prices",344,"Exploring diverse aspects of branding, marketing, and advertising strategies.",4.5,1.4006985834715229
+  -how can I setup a static IP in ubuntu server using netplan?,43,Exploring various cybersecurity and network troubleshooting tasks and queries.,4.5,1.386750490563073
+  -list world top 10 religions with their number of bileavers concisely,204,Exploration and critique of diverse religious beliefs and practices.,4.5,1.386750490563073
+  +user_prompts,topic_description,prompt_score,hallucination_score
+  +Give me a vegetarian lunch idea that contains ~400 calories and at least 30 grams of protein per serving.,Collection of diverse and specific recipe requests and inquiries.,4.625,3.231973418
+  +Make a comparison table of Galaxy S21 and iPhone 11,"Inquiries about smartphone features, comparisons, and purchasing advice.",4.5,3.163317712
+  +Tell me the names of 100 popular car brands and models,"Exploration of electric and combustion vehicles, their features, and market trends.",4.5,3.12990356
+  +please give me the top 50 living expense countries.,Travel planning and itinerary creation for various global destinations.,4.5,3.124533863539773
+  +I would like to attach an external temperature sensor to a micro bit for measurement. We are considering DS18B20 for a digital sensor and LM335 for an analog sensor. Please introduce a sensor that can be used with an operating supply voltage of 3 volts.,"Exploring the role and settings of the ""Temperature"" parameter in LLMs.",4.5,2.6925824035672523
+  +Please list a table of the 10 countries with the most inhabitants.,Travel planning and itinerary creation for various global destinations.,4.5,2.581988897471611
+  +Give me top 20 brands for laptops,"Questions about GPU compatibility, performance, and recommendations for various systems.",4.625,2.551551815399144
+  +make comparison between apple iphone 14 and samsung s21 ultra,"Inquiries about smartphone features, comparisons, and purchasing advice.",4.75,2.321858230173764
+  +Find any research articles that suggest that church outreach activities lead to conversions of faith. This is needed as a reference for a masters thesis. Please include article titles and any relevant links.,Exploration and critique of diverse religious beliefs and practices.,4.5,2.1320071635561044
+  +What are some of the top performing momentum etfs,Stock market investment inquiries and specific stock price predictions.,4.5,2.1
+  +can you tell me the types of renal cancer that exist?,Patient discusses recurring infections and treatment responses.,4.5,2.0554804791094465
+  ... 682 further lines not shown (cap is 50)
+
+[tier_3.csv] column change:
+  removed: ['topic_id']
+  added:   []
+  diff --git a/tier_3.csv b/tier_3.csv
+  index ef67b31..f1f5cc8 100644
+  --- a/tier_3.csv
+  +++ b/tier_3.csv
+  @@ -1,10 +1,10 @@
+  -user_prompts,topic_id,topic_description,prompt_score,hallucination_score
+  -"Explain the difference between a ""state"" and a ""country"".",2,Travel planning and itinerary creation for various global destinations.,5,0.4008918628686366
+  -best countries to visit for tourism,2,Travel planning and itinerary creation for various global destinations.,5,0.3123475237772121
+  -"How do I calculate the distance and estimated travel time between two cities, such as New York and Los Angeles, using different modes of transportation?",2,Travel planning and itinerary creation for various global destinations.,5,0.3015113445777636
+  -Explain to me the difference between over-the-counter and prescription medicine,3,Patient discusses recurring infections and treatment responses.,5,0.5547001962252291
+  -"What are the causes of headaches and how can they be diagnosed, treated and prevented?",3,Patient discusses recurring infections and treatment responses.,5,0.4264014327112208
+  -what should I do if I have a toothache,3,Patient discusses recurring infections and treatment responses.,5,0.2581988897471611
+  +user_prompts,topic_description,prompt_score,hallucination_score
+  +"Explain the difference between a ""state"" and a ""country"".",Travel planning and itinerary creation for various global destinations.,5,0.4008918628686366
+  +best countries to visit for tourism,Travel planning and itinerary creation for various global destinations.,5,0.3123475237772121
+  +"How do I calculate the distance and estimated travel time between two cities, such as New York and Los Angeles, using different modes of transportation?",Travel planning and itinerary creation for various global destinations.,5,0.3015113445777636
+  +Explain to me the difference between over-the-counter and prescription medicine,Patient discusses recurring infections and treatment responses.,5,0.5547001962252291
+  +"What are the causes of headaches and how can they be diagnosed, treated and prevented?",Patient discusses recurring infections and treatment responses.,5,0.4264014327112208
+  +what should I do if I have a toothache,Patient discusses recurring infections and treatment responses.,5,0.2581988897471611
+   "You are a Polymath, a personal AI that is serving your user by taking actions in response to their requests.
+   
+   Other users have Polymaths, too. When your user is asking for the information about another user, you can ask their personal AI, because it will likely have the best information.  Not all users have personal AIs. For those users who don't have them, use public search, though good results are not guaranteed.
+  @@ -40,140 +40,140 @@ Respond in valid JSON of the following structure:
+   }
+   
+   QUESTION: ${why is the sky blue}
+  -RESPONSE:",5,"""Classify and process diverse data and user queries efficiently.""",5,1.7206180040292132
+  -"Define the term ""semantic search"".",5,"""Classify and process diverse data and user queries efficiently.""",5,0.2236067977499789
+  -Can you give a summary of healthy diets?,9,Collection of diverse and specific recipe requests and inquiries.,5,0.25
+  -How many species are critiacally endangered?,25,Discussion and comparison of various animal characteristics and behaviors.,5,0.5547001962252291
+  -What aspects do customers need to consider when buying a laptop?,28,"Questions about GPU compatibility, performance, and recommendations for various systems.",5,0.25
+  -What are the dangers of nuclear weapons?,39,Requests for instructions on making bombs and explosives.,5,0.2694079530401623
+  -1.3	Give and explain any three (3) real-world applications of AI.,40,"Exploration of artificial intelligence's impact, development, and ethical considerations.",5,0.4931969619160719
+  -What is the difference between AI and humans?,40,"Exploration of artificial intelligence's impact, development, and ethical considerations.",5,0.4170288281141495
+  -Is there a possibility that AI can be dangerously misused?,40,"Exploration of artificial intelligence's impact, development, and ethical considerations.",5,0.3849001794597505
+  -"What are the implications of AI-generated deepfakes on privacy and society, and how can we develop countermeasures to mitigate their risks?",40,"Exploration of artificial intelligence's impact, development, and ethical considerations.",5,0.3779644730092272
+  -Can you tell me about the history of artificial intelligence?,40,"Exploration of artificial intelligence's impact, development, and ethical considerations.",5,0.3441236008058426
+  -"Hi, I need help with the definition of AI",40,"Exploration of artificial intelligence's impact, development, and ethical considerations.",5,0.2886751345948129
+  -What are Large Language Models good for?,41,Exploration and discussion of large language models and their applications.,5,2.1794494717703365
+  -What are areas where large language models can improve?,41,Exploration and discussion of large language models and their applications.,5,0.9432422182837986
+  -Is it possible to create new information using language models? ,41,Exploration and discussion of large language models and their applications.,5,0.6324555320336759
+  -Can you explain the purpose of large language models and how they work?,41,Exploration and discussion of large language models and their applications.,5,0.4364357804719848
+  -how to evaluate the quality of a language model,41,Exploration and discussion of large language models and their applications.,5,0.3535533905932738
+  -What are some applications and use cases of Large Language Models?,41,Exploration and discussion of large language models and their applications.,5,0.3500700210070024
+  -how to know if your phone is being hacked,43,Exploring various cybersecurity and network troubleshooting tasks and queries.,5,0.4008918628686366
+  -Could you explain how to write a good AI prompt?,45,Exploration of diverse and creative ChatGPT prompt interactions.,5,0.5
+  -Explain to me how I can overcome FOMO,48,Mental health support and therapeutic strategies.,5,0.3333333333333333
+  -can you list the main causes of stress,48,Mental health support and therapeutic strategies.,5,0.2211629342323457
+  -What are ways of making additional income?,61,Exploring various methods to generate income legally and quickly.,5,0.903696114
+  -What are the ways people can make money by assisting others?,61,Exploring various methods to generate income legally and quickly.,5,0.3429971702850176
+  ... 243 further lines not shown (cap is 50)

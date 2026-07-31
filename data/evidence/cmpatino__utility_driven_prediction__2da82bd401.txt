@@ -1,0 +1,22 @@
+dataset:    cmpatino/utility_driven_prediction
+commit:     2da82bd401cbbdbe8008e6a67e98811f2ea61545
+type:       cleaning
+message:    Upload artifacts to run Fitzpatrick and Fitzpatrick Clean
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:11Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# cmpatino/utility_driven_prediction @ 2da82bd401
+message: Upload artifacts to run Fitzpatrick and Fitzpatrick Clean 
+
+file changes:
+A	utility_input_artifacts/.DS_Store
+A	utility_input_artifacts/init_scores_fitzpatrick/embeddings.npy   [stored in Git LFS]
+A	utility_input_artifacts/init_scores_fitzpatrick/labels.npy   [stored in Git LFS]
+A	utility_input_artifacts/init_scores_fitzpatrick/metadata.json
+A	utility_input_artifacts/init_scores_fitzpatrick/model_predictions.npy   [stored in Git LFS]
+A	utility_input_artifacts/init_scores_fitzpatrick_clean/embeddings.npy   [stored in Git LFS]
+A	utility_input_artifacts/init_scores_fitzpatrick_clean/labels.npy   [stored in Git LFS]
+A	utility_input_artifacts/init_scores_fitzpatrick_clean/metadata.json
+A	utility_input_artifacts/init_scores_fitzpatrick_clean/model_predictions.npy   [stored in Git LFS]
+A	utility_input_artifacts/init_scores_fitzpatrick_clean/training_history.csv

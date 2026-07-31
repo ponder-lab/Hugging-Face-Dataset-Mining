@@ -1,0 +1,18 @@
+dataset:    agrawalchaitany/cyberbert_dataset
+commit:     9ab4002e25b1cd13fee975e7baf6dcb5e808c082
+type:       cleaning
+message:    Upload clean_data.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# agrawalchaitany/cyberbert_dataset @ 9ab4002e25
+message: Upload clean_data.csv 
+
+file changes:
+M	.gitattributes
+A	clean_data.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

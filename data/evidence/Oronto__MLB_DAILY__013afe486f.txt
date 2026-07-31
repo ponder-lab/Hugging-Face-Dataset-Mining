@@ -1,0 +1,18 @@
+dataset:    Oronto/MLB_DAILY
+commit:     013afe486ffbf023bf939d14d16a361a4d527296
+type:       cleaning
+message:    Upload cleaned_data.csv with huggingface_hub
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:08Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Oronto/MLB_DAILY @ 013afe486f
+message: Upload cleaned_data.csv with huggingface_hub 
+
+file changes:
+M	.gitattributes
+A	cleaned_data.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

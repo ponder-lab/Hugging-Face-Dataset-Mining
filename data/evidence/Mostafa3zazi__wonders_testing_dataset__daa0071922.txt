@@ -1,0 +1,33 @@
+dataset:    Mostafa3zazi/wonders_testing_dataset
+commit:     daa0071922a2e8bc228e32066f31daeaa6a5d84d
+type:       column/field add-remove
+message:    remove index column
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:20Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# Mostafa3zazi/wonders_testing_dataset @ daa0071922
+message: remove index column 
+
+file changes:
+M	data.csv
+
+[data.csv] column change:
+  removed: ['']
+  added:   ['Unnamed: 0']
+  diff --git a/data.csv b/data.csv
+  index 778e91e2..c125bb48 100644
+  --- a/data.csv
+  +++ b/data.csv
+  @@ -1,4 +1,4 @@
+  -,Image,Image file,"Image URL (Optional, if not uploading an image)",Short Description,Long Description,Country,Language,Category,Concept,Timestamp,email (optional),password (optional),ID,flag,username
+  +Unnamed: 0,Image,Image file,"Image URL (Optional, if not uploading an image)",Short Description,Long Description,Country,Language,Category,Concept,Timestamp,email (optional),password (optional),ID,flag,username
+   0,Image/62e7d045a11ff20f7797/2.jpg,https://huggingface.co/datasets/team-wonders/trial-v0-20250313/resolve/main/Image/62e7d045a11ff20f7797/2.jpg,,,,Italia,Italiano,Abiti,Maglione,1741907793.868877,aaa,aaa,Italia__Italiano__Abiti__Maglione__1741907793.868877,,
+   1,Image/dac06d3b57ab78ef492c/2.jpg,https://huggingface.co/datasets/team-wonders/trial-v0-20250313/resolve/main/Image/dac06d3b57ab78ef492c/2.jpg,,uomo cammina,uomo sta per attraversare la strada,Italia,Italiano,Abiti,Maglione,1741907842.663607,aaa,aaa,Italia__Italiano__Abiti__Maglione__1741907793.868877,,
+   2,Image\ebd1d31a45622e78202b\2.jpg,https://huggingface.co/datasets/Mostafa3zazi/wonders_testing_dataset/resolve/main/Image/ebd1d31a45622e78202b/2.jpg,,uomo cammina,uomo sta per attraversare la strada,Italia,Italiano,Abiti,Maglione,1742091966.551335,a,a,Italia__Italiano__Abiti__Maglione__1741907793.868877,,
+  @@ -10007,5 +10007,3 @@
+   10005,Image/b7a38ea7-62ba-4a3c-b836-eb8b56ff28a3/2.jpg,https://huggingface.co/datasets/Mostafa3zazi/wonders_testing_dataset/resolve/main/Image/c6caef00-1798-43d7-a0c9-7c4d64bd8b94/2.jpg,,,,Italia,Italiano,Abiti,Maglione,1741907793.868877,aaa,aaa,Italia__Italiano__Abiti__Maglione__1741907793.868877,,
+   10006,Image/a80a2256-c799-44df-9547-78835444493d/2.jpg,https://huggingface.co/datasets/Mostafa3zazi/wonders_testing_dataset/resolve/main/Image/c6caef00-1798-43d7-a0c9-7c4d64bd8b94/2.jpg,,,,Italia,Italiano,Abiti,Maglione,1741907793.868877,aaa,aaa,Italia__Italiano__Abiti__Maglione__1741907793.868877,,
+   10007,Image/c7a6e5cb-26d5-4378-b290-9a57b4d2297e/2.jpg,https://huggingface.co/datasets/Mostafa3zazi/wonders_testing_dataset/resolve/main/Image/c6caef00-1798-43d7-a0c9-7c4d64bd8b94/2.jpg,,,,Italia,Italiano,Abiti,Maglione,1741907793.868877,aaa,aaa,Italia__Italiano__Abiti__Maglione__1741907793.868877,,
+  -Image\203594e28b9572015616\engineers-brainstorming-ways-use-ai-scaled.jpg,https://huggingface.co/datasets/Mostafa3zazi/wonders_testing_dataset/resolve/main/Image/203594e28b9572015616/engineers-brainstorming-ways-use-ai-scaled.jpg,null,test image,this is test image,Italia,Italiano,Abiti,Cappello,1744366280.367402,,,Italia__Italiano__Abiti__Cappello__1744366280.367402,,
+  -Image\d608cf2be83b70780899\hero_short_faculty_c.jpg,https://huggingface.co/datasets/Mostafa3zazi/wonders_testing_dataset/resolve/main/Image/d608cf2be83b70780899/hero_short_faculty_c.jpg,null,new test,this is new test,Italia,Italiano,Cibo,Pasta,1744366756.02087,,,Italia__Italiano__Cibo__Pasta__1744366756.02087,,

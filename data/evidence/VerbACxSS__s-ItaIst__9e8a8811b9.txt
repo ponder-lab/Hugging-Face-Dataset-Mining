@@ -1,0 +1,13 @@
+dataset:    VerbACxSS/s-ItaIst
+commit:     9e8a8811b927e571bda455b07cfa5ad11f6062a6
+type:       cleaning
+message:    cleanup
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:08Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# VerbACxSS/s-ItaIst @ 9e8a8811b9
+message: cleanup 
+
+file changes:
+D	main.py

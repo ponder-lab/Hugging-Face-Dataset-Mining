@@ -1,0 +1,18 @@
+dataset:    dp011/test4
+commit:     36efdb4d4cedd05142a2bcc9c9bdaaba8f1b9d55
+type:       merge
+message:    Upload merged_labeled_test.csv
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# dp011/test4 @ 36efdb4d4c
+message: Upload merged_labeled_test.csv 
+
+file changes:
+M	.gitattributes
+A	merged_labeled_test.csv   [stored in Git LFS]
+
+not analyzed:
+  .gitattributes   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

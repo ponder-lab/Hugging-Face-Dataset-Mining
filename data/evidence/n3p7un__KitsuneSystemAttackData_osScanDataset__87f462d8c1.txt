@@ -1,0 +1,20 @@
+dataset:    n3p7un/KitsuneSystemAttackData_osScanDataset
+commit:     87f462d8c1b93841865fc2af3211812bec883565
+type:       rename/split-standardization
+message:    Data split in test-train sets
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:12Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# n3p7un/KitsuneSystemAttackData_osScanDataset @ 87f462d8c1
+message: Data split in test-train sets 
+
+file changes:
+A	test_set/data-00000-of-00001.arrow   [stored in Git LFS]
+A	test_set/dataset_info.json
+A	test_set/state.json
+A	train_set/data-00000-of-00003.arrow   [stored in Git LFS]
+A	train_set/data-00001-of-00003.arrow   [stored in Git LFS]
+A	train_set/data-00002-of-00003.arrow   [stored in Git LFS]
+A	train_set/dataset_info.json
+A	train_set/state.json

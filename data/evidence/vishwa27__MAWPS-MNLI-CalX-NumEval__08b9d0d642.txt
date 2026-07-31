@@ -1,0 +1,14 @@
+dataset:    vishwa27/MAWPS-MNLI-CalX-NumEval
+commit:     08b9d0d642d4760325626aabcfc379be4c6f9d31
+type:       normalize/standardize/encode
+message:    Adding train and test files for encoder-decoder based approach
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:56Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# vishwa27/MAWPS-MNLI-CalX-NumEval @ 08b9d0d642
+message: Adding train and test files for encoder-decoder based approach 
+
+file changes:
+A	test_preft_flant5.csv
+A	train_preft_flant5.csv

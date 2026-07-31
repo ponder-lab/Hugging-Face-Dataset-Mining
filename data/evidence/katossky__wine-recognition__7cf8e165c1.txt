@@ -1,0 +1,17 @@
+dataset:    katossky/wine-recognition
+commit:     7cf8e165c1774c8d5873452466ba478bcfb88338
+type:       column/field add-remove
+message:    update task field
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# katossky/wine-recognition @ 7cf8e165c1
+message: update task field 
+
+file changes:
+M	README.md
+
+not analyzed:
+  README.md   [format this tool does not read, see #43]
+  Nothing above says whether the contents of these changed.

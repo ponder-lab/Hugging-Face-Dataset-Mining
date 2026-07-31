@@ -1,0 +1,14 @@
+dataset:    electricsheepafrica/Age-Standardized-Prevalence-Of-Hypertension-Among-for-African-Countries
+commit:     ab7e85090dd0ccd54e06c14c1a76b64eb70c7d98
+type:       normalize/standardize/encode
+message:    Initial upload of Age-standardized prevalence of hypertension data
+status:     archived
+hub:        reachable (HTTP 200)
+generated:  2026-07-31T18:09:45Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+============================================================
+# electricsheepafrica/Age-Standardized-Prevalence-Of-Hypertension-Among-for-African-Countries @ ab7e85090d
+message: Initial upload of Age-standardized prevalence of hypertension data 
+
+file changes:
+A	README.md
+A	age_standardized_prevalence_of_hypertension_among_adults_aged_30_to_79_years.csv
