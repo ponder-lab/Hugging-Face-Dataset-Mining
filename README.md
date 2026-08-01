@@ -25,17 +25,21 @@ A commit that can no longer be read appears in the archive carrying the reason, 
 
 The full git histories behind these records are archived separately on Zenodo as a snapshot of the clone cache, captured 2026-07-31 ([10.5281/zenodo.21727324](https://doi.org/10.5281/zenodo.21727324)). Access to the snapshot is restricted because it aggregates 270 third-party datasets, each governed by its own upstream license; the in-repo evidence records above are the open form of the same facts.
 
-## Preservation Check
+## Preservation Screen
 
-A data refactoring is a change that preserves the dataset's information content: every fact recoverable before the change is recoverable after it, and nothing is introduced that was not already derivable. `analysis/preservation_check.py` tests that mechanically over a labeled set, comparing the multiset of rows a commit's touched files hold before and after, projected onto the columns the two revisions share. Row order is irrelevant by construction, so a commit that only reorders rows or columns comes out preserving without a special case. It reads each revision's separator through `inspect_commit.py` rather than reimplementing that rule, so the two tools cannot drift apart on what a file says.
+A data refactoring is one that preserves the dataset's information content: every fact recoverable before the change is recoverable after it, and nothing is introduced that was not already derivable. **That judgment is made by human annotators against the written criterion, and disagreements are adjudicated against the diff.** `analysis/preservation_check.py` does not make it and does not attempt to.
+
+What the script does is the arithmetic such a judgment rests on, which is where careful readers reliably fail. It compares the multiset of rows a commit's touched files hold before and after, projected onto the columns the two revisions share, so row order is irrelevant and a reordering comes out unchanged without a special case. Three commits in this corpus were read wrongly by a person and corrected by that arithmetic: a split recorded as dropping rows that is an exact 768-row partition, a deduplication that looked like the corpus's largest deletion and retains every removed row in a file the same commit adds, and the separator change in #79.
 
 ```
-python analysis/preservation_check.py --set tests/verified_set.csv --out data/preservation.csv
+python analysis/preservation_check.py <dataset> <commit>
 ```
 
-It settles the negative and defers the rest. A commit reported `preserves` has the same rows under the same names at both revisions. Beyond that it separates a fall in the row count (`rows-dropped`) from a rewrite that leaves the count intact (`values-rewritten`), because those ask different questions, and it hands `adds-columns` and `columns-lost` back with the column names attached, since whether a column is derivable from what was already there is a question about meaning. A rename arrives as one of each and is the usual reason a `columns-lost` verdict is not a loss.
+Most of the criterion is outside its reach, because derivability is about meaning. An added column holding a computed ratio and one holding a model's output look identical here; a vanished column may be a rename or a deletion; a rewritten value may be a normalization or a loss. Those come back as `adds-columns`, `columns-lost` and `values-rewritten`, with the column names attached, and each is a question handed to a person. Deduplication is a case where the script is simply wrong by the criterion: it reports `rows-dropped` while every distinct fact survives.
 
-Two limits are worth stating before the output is used. Roughly half of the labeled corpus holds its data in Git LFS or a format this check does not read; those commits are reported as unread rather than passed over, but they are not evidence of anything. And because of that, a commit that relocates rows into a file the check cannot open is indistinguishable from one that deletes them, so `rows-dropped` is biased toward false positives on exactly the larger, better-organized datasets. Every verdict is a starting point for a human ruling, not a ruling.
+So `preserves` means only that the rows and column names it could read are identical at both revisions, which is a sufficient condition for no loss rather than the criterion. Counts it prints are commits screened, not preservation decided, and no aggregate of them belongs in a result.
+
+LFS-tracked files are streamed from the Hub and discarded rather than stored, since the corpus keeps 106 GB behind its pointers and only the rows are needed. Revisions are resolved to concrete SHAs first, because the Hub does not accept git revision expressions and parent-side fetches otherwise 404 silently. `PRESERVATION_LFS_CAP` bounds what one file may pull, default 100 MB against a 12.7 GB tail, and anything turned away is named rather than folded into a total.
 
 ## Provenance, License, and Citation
 

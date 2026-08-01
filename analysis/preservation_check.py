@@ -1,87 +1,76 @@
 #!/usr/bin/env python3
-"""Decide mechanically whether a labeled commit preserves the dataset's information content.
+"""Check the arithmetic behind a preservation judgment. It does not make one.
 
-WHY THIS EXISTS
+WHAT THIS IS FOR
 
-Our annotation protocol defines a data refactoring as a change that preserves the
-dataset's information content: every fact recoverable from the dataset before the
-change is recoverable after it, and no fact is introduced that was not already
-derivable from what the dataset held. Whether real commits fail that test is an
-empirical question, and it had been answered from two examples.
+Whether a change preserved a dataset's information content is a semantic
+judgment, and in this study it is made by human annotators against a written
+criterion, with disagreements adjudicated against the diff. That is the
+instrument. This script is not a second one, and nothing it prints is a verdict
+on preservation.
 
-Both commits cited for that claim dissolved when checked by hand on 2026-07-31:
+What it does is the arithmetic underneath such a judgment, which is where people
+reliably fail. Nobody can eyeball whether 615 rows plus 153 rows account for all
+768, whether the parts of a split union to the whole, or whether 4,473 rows
+dropped from one file reappear in another the same commit added. Each of those
+was got wrong by a careful reader on this corpus before it was checked:
 
-  djulian13/east-slavic-swadesh-lists @ a4c5651f  changes the field separator from
-    `,` to `;` because the column names contain commas. The inspection tool read
-    the child on commas anyway and reported six malformed columns that do not
-    exist (ponder-lab/Hugging-Face-Dataset-Mining#79). Nothing was lost.
+  khoaguin/pima-indians-diabetes-database @ a19fc7ccdb  was recorded as dropping
+    rows. It is an exact 768-row partition.
 
-  khoaguin/pima-indians-diabetes-database @ a19fc7ccdb  splits one file into two.
-    The parent holds 768 data rows and the children hold 768 between them, every
-    one matching apart from a stray carriage return. It is an exact partition.
+  imageomics/Heliconius-Collection_Cambridge-Butterfly @ 6ef14cc5  looked like the
+    largest deletion in the corpus. Every removed row is retained in a master file
+    the same commit adds.
 
-Two hand checks are not a result, and the axis should not stand or fall on
-whichever cases someone happened to look at twice. This runs the test over every
-commit in a labeled set and reports what it finds, so the answer is a measurement
-rather than a recollection.
+  djulian13/east-slavic-swadesh-lists @ a4c5651f  was read by two annotators as
+    shredding its column names. It changed its field separator (#79).
 
-WHAT IT CAN AND CANNOT DECIDE
+WHAT IT CANNOT DO, WHICH IS MOST OF THE CRITERION
 
-It compares the multiset of data rows held by the whole tree before and after the
-commit, not file by file. A dataset's information content does not live in any
-one file, and comparing per file cannot see a split, a merge, or a rename without
-being told which file became which. Comparing trees needs to be told nothing.
+The criterion asks whether every fact recoverable before is recoverable after, and
+whether anything introduced was already derivable. Derivability is about meaning,
+and nothing here sees meaning:
 
-Because it is a multiset, row order is irrelevant by construction, so a commit
-that only reorders rows or columns comes out preserving without a special case.
+  - An added column holding a computed ratio and one holding a model's output are
+    indistinguishable to this script. It reports `adds-columns` and stops.
+  - A column that disappears may be a rename, which preserves, or a deletion,
+    which may not. It reports `columns-lost` and stops.
+  - A rewritten value may be a normalization or a loss. It reports
+    `values-rewritten` and stops.
+  - Deduplication removes rows while preserving every distinct fact, so a
+    `rows-dropped` verdict is WRONG by the criterion whenever duplicates are what
+    went. That has already happened here once.
 
-Rows are compared projected onto the columns the two revisions share. Without
-that, adding one column would rewrite every row tuple and every commit that adds
-a column would report total loss. With it, the check answers one question well:
-did any row that was there before stop being there? That is the half of
-derivability a machine can settle.
-
-A tuple that is gone can mean a deletion or a rewrite, and lumping the two under
-one verdict was the first version's mistake: most of what it called lost rows was
-a commit that rewrote values while the row count never moved. So `rows-dropped`
-is reserved for a fall in the count, and `values-rewritten` names the other case,
-which asks a different question. Whether a rewritten value is derivable from the
-one it replaced is a question about meaning, not about counting.
-
-It cannot decide derivability at all, for the same reason: a column holding a
-model's predictions and a column holding a computed ratio look identical here.
-Commits that add columns come back as `adds-columns` and commits that drop one
-as `columns-lost`, with the column names in the output, so that finishing the
-judgment does not require opening the diff again. A rename shows up as one of
-each and is the most common reason a `columns-lost` verdict is not a loss.
-
-What it settles on its own is the negative: a commit reported `preserves` has the
-same rows under the same names at both revisions, and no reading of the diff will
-turn that into an information loss.
-
-It reads the separator out of each revision's own bytes, by importing that logic
-from inspect_commit rather than reimplementing it. Deriving the separator from
-the file name is the defect above, and a checker carrying its own second copy of
-the rule would eventually disagree with the tool the labels were formed under.
+So `preserves` means the narrow, literal thing: the rows and column names it could
+read are the same at both revisions. That is a sufficient condition for no loss,
+not the criterion itself. Every other verdict is a question handed to a person,
+and the counts it prints are commits screened, never preservation decided. Read a
+percentage of them as a percentage of nothing in particular.
 
 USAGE
 
-  python3 analysis/preservation_check.py --set tests/verified_set.csv
-  python3 analysis/preservation_check.py djulian13/east-slavic-swadesh-lists a4c5651f
-  python3 analysis/preservation_check.py --set tests/verified_set.csv --out data/preservation.csv
+  python3 analysis/preservation_check.py <dataset> <commit>
+  python3 analysis/preservation_check.py --set tests/verified_set.csv --out /tmp/screen.csv
 
-Clones land in ~/.cache/hf-dataset-clones, shared with the inspection tool, with
-LFS payloads left on the server. Files whose bytes are not present locally are
-reported as skipped rather than passed over, because a check that goes quiet on
-what it could not read is indistinguishable from one that found nothing wrong.
+It reads each revision's separator through inspect_commit rather than
+reimplementing that rule, so the two cannot drift apart on what a file says.
+LFS-tracked files are streamed from the Hub and discarded rather than stored, and
+revisions are resolved to concrete SHAs first, because the Hub does not accept git
+revision expressions and every parent-side fetch otherwise 404s. Files it declines
+to read are named, never folded into a silent total.
 """
 import argparse
 import csv
 import gzip
 import io
 import os
+import gzip as _gzip
 import subprocess
 import sys
+import urllib.error
+import urllib.parse
+import urllib.request
+import time
 import zlib
 from collections import Counter
 
@@ -95,9 +84,21 @@ from inspect_commit import (  # noqa: E402
 )
 
 CACHE = os.path.expanduser("~/.cache/hf-dataset-clones")
+RESOLVE = "https://huggingface.co/datasets/{ds}/resolve/{rev}/{path}"
+# An LFS payload is streamed and discarded, never stored: the check needs the rows,
+# not the file, and the corpus's LFS content is 106 GB against a few megabytes of
+# row digests. The cap is on bytes pulled for ONE file, and what it turns away is
+# named in the output rather than folded into the ordinary unreadable count.
+LFS_BYTE_CAP = int(os.environ.get("PRESERVATION_LFS_CAP", 100 * 1024 * 1024))
+LFS_TIMEOUT = 180
+LFS_ATTEMPTS = 4          # a sweep makes hundreds of requests and the Hub throttles
+LFS_BACKOFF = 3.0         # seconds, doubled per retry
+# Real corpora hold cells far past csv's 128 KB default, and hitting one raises
+# rather than returning, so one pathological file used to end the whole sweep.
+csv.field_size_limit(1 << 31)
 # A tree can hold more data than belongs in memory. Rows past this are not read,
 # and a file that hits it is named in the output rather than silently truncated.
-MAX_ROWS_PER_FILE = 400_000
+MAX_ROWS_PER_FILE = 2_000_000
 TABULAR_SUFFIXES = (".csv", ".tsv", ".tab")
 LFS_MARKER = b"version https://git-lfs.github.com/spec/v1"
 
@@ -148,16 +149,103 @@ def decompress(path, data):
         return None
 
 
-def read_table(repo, rev, path):
+_REV_CACHE = {}
+
+
+def resolve_rev(repo, rev):
+    """A concrete commit SHA for `rev`, or None.
+
+    The Hub's resolve endpoint speaks commit SHAs and branch names, not git
+    revision expressions, so `<sha>~1` is a 404 there while being perfectly
+    valid locally. Every parent-side LFS fetch in one sweep failed this way and
+    was recorded as the file being missing, which is the half of the comparison
+    that decides whether rows were relocated or destroyed.
+    """
+    key = (repo, rev)
+    if key not in _REV_CACHE:
+        done = run(["git", "-C", repo, "rev-parse", rev])
+        _REV_CACHE[key] = (done.stdout.decode().strip()
+                           if done.returncode == 0 else None)
+    return _REV_CACHE[key]
+
+
+def lfs_size(pointer):
+    """Payload size recorded in an LFS pointer, or None."""
+    for line in pointer.decode("utf-8", "replace").splitlines():
+        if line.startswith("size "):
+            try:
+                return int(line.split()[1])
+            except (IndexError, ValueError):
+                return None
+    return None
+
+
+def lfs_stream(dataset, rev, path, cap):
+    """Bytes of an LFS-tracked file, pulled from the Hub and never written to disk.
+
+    Only the pointer is in the repository, so a commit whose data lives in LFS
+    was previously unreadable, and that is not a neutral gap: a commit that moves
+    rows into an LFS file looks exactly like one that deletes them. Half of this
+    corpus is in that state, and the bias runs toward reporting loss on the
+    best-organized datasets, which is where reorganization is likeliest.
+    """
+    url = RESOLVE.format(ds=dataset, rev=rev,
+                         path=urllib.parse.quote(path))
+    req = urllib.request.Request(url, headers={"User-Agent": "preservation-check"})
+    # The status code is recorded rather than collapsed into the exception name.
+    # Reporting a throttled 429 and a genuinely missing 404 under one label made
+    # a self-inflicted gap indistinguishable from a fact about the corpus, and a
+    # fifth of one sweep's "unreadable" files turned out to be the former.
+    for attempt in range(LFS_ATTEMPTS):
+        try:
+            with urllib.request.urlopen(req, timeout=LFS_TIMEOUT) as response:
+                out, total = [], 0
+                while True:
+                    chunk = response.read(1 << 20)
+                    if not chunk:
+                        break
+                    total += len(chunk)
+                    if total > cap:
+                        return None, "lfs-over-cap"
+                    out.append(chunk)
+            return b"".join(out), None
+        except urllib.error.HTTPError as exc:
+            if exc.code in (429, 500, 502, 503, 504) and attempt < LFS_ATTEMPTS - 1:
+                time.sleep(LFS_BACKOFF * (2 ** attempt))
+                continue
+            return None, f"lfs-http-{exc.code}"
+        except (urllib.error.URLError, OSError, ValueError) as exc:
+            if attempt < LFS_ATTEMPTS - 1:
+                time.sleep(LFS_BACKOFF * (2 ** attempt))
+                continue
+            return None, f"lfs-fetch-failed({type(exc).__name__})"
+    return None, "lfs-fetch-failed(retries-exhausted)"
+
+
+def read_table(repo, rev, path, dataset=None):
     """(columns, rows) for one tabular file, or ('skip', reason)."""
     data = blob(repo, rev, path)
     if data is None:
         return None, "absent"
     if data.startswith(LFS_MARKER):
-        return None, "lfs-pointer"
+        if dataset is None:
+            return None, "lfs-pointer"
+        size = lfs_size(data)
+        if size is not None and size > LFS_BYTE_CAP:
+            return None, "lfs-over-cap"
+        concrete = resolve_rev(repo, rev)
+        if concrete is None:
+            return None, "rev-unresolvable"
+        data, why = lfs_stream(dataset, concrete, path, LFS_BYTE_CAP)
+        if data is None:
+            return None, why
     data = decompress(path, data)
     if data is None:
         return None, "undecompressable"
+    if b"\x00" in data[:8192]:
+        # A .csv holding NUL bytes is a binary payload under a text name, most
+        # often parquet. That is not a delimiter the sniffer failed to find.
+        return None, "binary-content"
     try:
         text = data.decode("utf-8")
     except UnicodeDecodeError:
@@ -176,16 +264,20 @@ def read_table(repo, rev, path):
     delim = sniff_delimiter(lines, named)
     if not coherent(lines[:SNIFF_LINES], delim):
         return None, "no-delimiter"
+
     reader = csv.reader(io.StringIO(text), delimiter=delim)
     try:
         header = next(reader)
     except StopIteration:
         return None, "empty"
     rows = []
-    for i, row in enumerate(reader):
-        if i >= MAX_ROWS_PER_FILE:
-            return None, f"over-{MAX_ROWS_PER_FILE}-rows"
-        rows.append(row)
+    try:
+        for i, row in enumerate(reader):
+            if i >= MAX_ROWS_PER_FILE:
+                return None, f"over-{MAX_ROWS_PER_FILE}-rows"
+            rows.append(row)
+    except csv.Error as exc:
+        return None, f"csv-error({str(exc)[:40]})"
     return (header, rows), delim
 
 
@@ -210,15 +302,15 @@ def changed_paths(repo, sha):
             if p and is_tabular(p)]
 
 
-def tree_content(repo, rev, paths):
+def tree_content(repo, rev, paths, dataset=None):
     """Columns and rows held by `paths` at `rev`.
 
     Returns (columns, tables, skipped). `columns` is the union over the files,
     since a fact recorded in any file of the dataset is recoverable from it.
     """
-    columns, tables, skipped = [], [], []
+    columns, tables, skipped, absent = [], [], [], 0
     for path in sorted(paths):
-        result, detail = read_table(repo, rev, path)
+        result, detail = read_table(repo, rev, path, dataset)
         if result is None:
             # A file added by the commit is absent from the parent, and one the
             # commit deleted is absent from the child. That is the change being
@@ -226,13 +318,15 @@ def tree_content(repo, rev, paths):
             # marked almost every add and delete as unverified.
             if detail != "absent":
                 skipped.append(f"{path}:{detail}")
+            else:
+                absent += 1
             continue
         header, rows = result
         for name in header:
             if name not in columns:
                 columns.append(name)
         tables.append((path, header, rows))
-    return columns, tables, skipped
+    return columns, tables, skipped, absent
 
 
 ABSENT = "\x00absent"
@@ -293,14 +387,21 @@ def check(dataset, sha):
         out["detail"] = "the commit touched no file this check can read"
         return out
 
-    before_cols, before, skip_b = tree_content(repo, f"{sha}~1", paths)
-    after_cols, after, skip_a = tree_content(repo, sha, paths)
+    before_cols, before, skip_b, absent_b = tree_content(repo, f"{sha}~1", paths, dataset)
+    after_cols, after, skip_a, absent_a = tree_content(repo, sha, paths, dataset)
 
     skipped = sorted(set(skip_b or []) | set(skip_a or []))
     out["skipped"] = "; ".join(skipped)
     if not before and not after:
         out["verdict"] = "unreadable"
         out["detail"] = "no readable tabular file at either revision"
+        return out
+    if not before and not skip_b and absent_b:
+        # Every path the commit touched is new. There was no prior state, so
+        # preservation is not a question this commit can fail, and filing it
+        # under unreadable would count a non-question as a coverage gap.
+        out["verdict"] = "adds-files"
+        out["detail"] = f"{absent_b} file(s) added; no prior state to preserve"
         return out
 
     shared = [c for c in before_cols if c in after_cols]
@@ -385,7 +486,16 @@ def main():
     results = []
     for i, (dataset, sha) in enumerate(pairs, 1):
         print(f"[{i}/{len(pairs)}] {dataset} @ {sha[:10]}", file=sys.stderr, flush=True)
-        result = check(dataset, sha)
+        try:
+            result = check(dataset, sha)
+        except Exception as exc:  # noqa: BLE001
+            # A sweep over a few hundred repositories meets malformed data that
+            # no amount of anticipation covers, and losing every completed
+            # verdict to the last one is worse than recording the failure.
+            result = {"dataset": dataset, "commit": sha, "verdict": "check-failed",
+                      "detail": f"{type(exc).__name__}: {str(exc)[:120]}",
+                      "rows_before": "", "rows_after": "", "rows_changed": "",
+                      "columns_lost": "", "columns_added": "", "skipped": ""}
         results.append(result)
         print(f"    {result['verdict']}: {result['detail']}", file=sys.stderr, flush=True)
 
