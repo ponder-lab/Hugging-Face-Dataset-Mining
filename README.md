@@ -25,6 +25,18 @@ A commit that can no longer be read appears in the archive carrying the reason, 
 
 The full git histories behind these records are archived separately on Zenodo as a snapshot of the clone cache, captured 2026-07-31 ([10.5281/zenodo.21727324](https://doi.org/10.5281/zenodo.21727324)). Access to the snapshot is restricted because it aggregates 270 third-party datasets, each governed by its own upstream license; the in-repo evidence records above are the open form of the same facts.
 
+## Preservation Check
+
+A data refactoring is a change that preserves the dataset's information content: every fact recoverable before the change is recoverable after it, and nothing is introduced that was not already derivable. `analysis/preservation_check.py` tests that mechanically over a labeled set, comparing the multiset of rows a commit's touched files hold before and after, projected onto the columns the two revisions share. Row order is irrelevant by construction, so a commit that only reorders rows or columns comes out preserving without a special case. It reads each revision's separator through `inspect_commit.py` rather than reimplementing that rule, so the two tools cannot drift apart on what a file says.
+
+```
+python analysis/preservation_check.py --set tests/verified_set.csv --out data/preservation.csv
+```
+
+It settles the negative and defers the rest. A commit reported `preserves` has the same rows under the same names at both revisions. Beyond that it separates a fall in the row count (`rows-dropped`) from a rewrite that leaves the count intact (`values-rewritten`), because those ask different questions, and it hands `adds-columns` and `columns-lost` back with the column names attached, since whether a column is derivable from what was already there is a question about meaning. A rename arrives as one of each and is the usual reason a `columns-lost` verdict is not a loss.
+
+Two limits are worth stating before the output is used. Roughly half of the labeled corpus holds its data in Git LFS or a format this check does not read; those commits are reported as unread rather than passed over, but they are not evidence of anything. And because of that, a commit that relocates rows into a file the check cannot open is indistinguishable from one that deletes them, so `rows-dropped` is biased toward false positives on exactly the larger, better-organized datasets. Every verdict is a starting point for a human ruling, not a ruling.
+
 ## Provenance, License, and Citation
 
 This tool was developed by **Ayla Zhang**, a high-school student (Thomas Jefferson High School for Science and Technology) participating in NYU GSTEM (Summer 2025), under the mentorship of **Raffi Khatchadourian** (CUNY Hunter College), as a preliminary study of data-dependency refactorings and technical debt in machine learning systems.
