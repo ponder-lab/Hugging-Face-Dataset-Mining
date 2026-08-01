@@ -82,6 +82,7 @@ import io
 import os
 import subprocess
 import sys
+import zlib
 from collections import Counter
 
 # The separator logic lives in inspect_commit and is shared rather than copied.
@@ -90,7 +91,7 @@ from collections import Counter
 # to keep out (#79).
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from inspect_commit import (  # noqa: E402
-    CANDIDATE_DELIMITERS, SNIFF_LINES, coherent, delimiter, sniff_delimiter,
+    SNIFF_LINES, coherent, delimiter, sniff_delimiter,
 )
 
 CACHE = os.path.expanduser("~/.cache/hf-dataset-clones")
@@ -143,13 +144,8 @@ def decompress(path, data):
         return data
     try:
         return gzip.decompress(data)
-    except (OSError, EOFError, zlib_error()):
+    except (OSError, EOFError, zlib.error):
         return None
-
-
-def zlib_error():
-    import zlib
-    return zlib.error
 
 
 def read_table(repo, rev, path):
@@ -254,6 +250,12 @@ def projected(tables, keep):
     the columns a given file happens to carry produced tuples of different
     lengths, which never compare equal and reported total loss on commits that
     lost nothing.
+
+    The residual limit: a column carried by one revision's files and not the
+    other's fills with ABSENT, so a commit that moves rows between files with
+    genuinely different headers can still report loss where none occurred. That
+    is the same shape as the LFS blindness in the module docstring, and it fails
+    in the same direction, toward a false `rows-dropped`.
     """
     bag = Counter()
     for _path, header, rows in tables:
