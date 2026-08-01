@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    add sampling_type column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:34Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:43Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # anonymous-user-546/test-csv-conversion @ ecd88d7bb2
 message: add sampling_type column 
@@ -23,9 +23,10 @@ M	w-europe/w-europe_train_id.csv   [stored in Git LFS]
 M	w-europe/w-europe_val_id.csv
 M	w-europe/w-europe_val_ood.csv
 
-[ne-america/ne-america_test_id.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[ne-america/ne-america_test_id.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   payload size 55,117,694 -> 58,725,759 bytes (+3,608,065): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- ne-america/ne-america_test_id.csv@bf4291da43
@@ -72,9 +73,10 @@ M	w-europe/w-europe_val_ood.csv
   +17,96404cc2-f762-11e1-a439-00145eb45e9a/1039057705_1.jpg,ne-america,1920,1348,2023-10-19 19:32:03,1039057705,"https://images.collections.yale.edu/iiif/2/ypm:e77d8ed0-5628-4fbf-b3c8-e19c3548c768/full/!1920,1920/0/default.jpg",1039057705,96404cc2-f762-11e1-a439-00145eb45e9a,1797252,42.088362,-87.980625,1947-06-25T00:00:00
   +18,96404cc2-f762-11e1-a439-00145eb45e9a/1039061629.jpg,ne-america,1920,1348,2023-10-19 19:31:46,1039061629,"https://images.collections.yale.edu/iiif/2/ypm:b4fa29e2-b587-417a-9711-f4dc6f3e58fe/full/!1920,1920/0/default.jpg",1039061629,96404cc2-f762-11e1-a439-00145eb45e9a,9350484,42.200097,-71.424505,2002-07-12T00:00:00
 
-[ne-america/ne-america_test_ood_local.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[ne-america/ne-america_test_ood_local.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   payload size 30,238,425 -> 32,172,742 bytes (+1,934,317): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- ne-america/ne-america_test_ood_local.csv@bf4291da43
@@ -121,9 +123,10 @@ M	w-europe/w-europe_val_ood.csv
   +17,040c5662-da76-4782-a48e-cdea1892d14c/4446697292.jpg,ne-america,640,480,2024-08-09 16:29:04,4446697292,http://www.boldsystems.org/pics/LNAUV/CCDB-29482-A07+1486148640.jpg,4446697292,040c5662-da76-4782-a48e-cdea1892d14c,9430931.0,41.67,-70.34,1952-07-12
   +18,040c5662-da76-4782-a48e-cdea1892d14c/4446749564.jpg,ne-america,640,480,2024-08-09 16:29:08,4446749564,http://www.boldsystems.org/pics/LNAUV/CCDB-29482-A05+1486148640.jpg,4446749564,040c5662-da76-4782-a48e-cdea1892d14c,9430931.0,,,1971-06-02
 
-[ne-america/ne-america_train_aux.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[ne-america/ne-america_train_aux.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   payload size 41,929,566 -> 44,698,471 bytes (+2,768,905): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- ne-america/ne-america_train_aux.csv@bf4291da43
@@ -170,9 +173,10 @@ M	w-europe/w-europe_val_ood.csv
   +17,50c9509d-22c7-4a22-a47d-8c48425ef4a7/2641509541_2.jpg,ne-america,1023,739,2024-08-08 12:26:17,2641509541,https://inaturalist-open-data.s3.amazonaws.com/photos/75847135/original.jpeg,2641509541,50c9509d-22c7-4a22-a47d-8c48425ef4a7,1730784.0,39.071494,-121.547589,2020-05-26T21:45
   +18,50c9509d-22c7-4a22-a47d-8c48425ef4a7/2851186679_2.jpg,ne-america,1440,1440,2024-08-07 17:07:57,2851186679,https://inaturalist-open-data.s3.amazonaws.com/photos/90991396/original.jpeg,2851186679,50c9509d-22c7-4a22-a47d-8c48425ef4a7,1730784.0,38.721998,-120.934825,2020-08-19T21:23
 
-[ne-america/ne-america_train_id.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[ne-america/ne-america_train_id.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   payload size 231,871,328 -> 247,426,281 bytes (+15,554,953): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- ne-america/ne-america_train_id.csv@bf4291da43
@@ -219,9 +223,10 @@ M	w-europe/w-europe_val_ood.csv
   +17,50c9509d-22c7-4a22-a47d-8c48425ef4a7/1024192724.jpg,ne-america,1024,767,2023-10-19 19:30:57,1024192724,https://inaturalist-open-data.s3.amazonaws.com/photos/994486/original.jpg,1024192724,50c9509d-22c7-4a22-a47d-8c48425ef4a7,5114192,43.62889,-72.939593,2014-06-16T00:00:00
   +18,50c9509d-22c7-4a22-a47d-8c48425ef4a7/1024192990.jpg,ne-america,768,905,2023-10-19 19:30:57,1024192990,https://inaturalist-open-data.s3.amazonaws.com/photos/995398/original.JPG,1024192990,50c9509d-22c7-4a22-a47d-8c48425ef4a7,1877975,43.132339,-72.525467,2014-07-18T00:00:00
 
-[ne-america/ne-america_val_id.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[ne-america/ne-america_val_id.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   diff --git a/ne-america/ne-america_val_id.csv b/ne-america/ne-america_val_id.csv
   index 8e95ca1..8079267 100644
   --- a/ne-america/ne-america_val_id.csv
@@ -274,9 +279,10 @@ M	w-europe/w-europe_val_ood.csv
   -50c9509d-22c7-4a22-a47d-8c48425ef4a7/3109304914_1.jpg,1141,1162,2023-10-19 21:19:40,3109304914,https://inaturalist-open-data.s3.amazonaws.com/photos/123011174/original.jpeg,3109304914,50c9509d-22c7-4a22-a47d-8c48425ef4a7,1731862,42.3824,-71.252083,2021-04-25T10:59:00
   ... 38835 further lines not shown (cap is 50)
 
-[ne-america/ne-america_val_ood.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[ne-america/ne-america_val_ood.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   diff --git a/ne-america/ne-america_val_ood.csv b/ne-america/ne-america_val_ood.csv
   index 40e4164..b5b8e8b 100644
   --- a/ne-america/ne-america_val_ood.csv
@@ -329,9 +335,10 @@ M	w-europe/w-europe_val_ood.csv
   -50c9509d-22c7-4a22-a47d-8c48425ef4a7/2242917302_1.jpg,530,450,2024-04-08 23:51:42,2242917302,https://inaturalist-open-data.s3.amazonaws.com/photos/38431069/original.jpg,2242917302,50c9509d-22c7-4a22-a47d-8c48425ef4a7,4302513.0,39.266788,-83.727042,2019-05-06T12:18
   ... 47961 further lines not shown (cap is 50)
 
-[w-europe/w-europe_test_id.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[w-europe/w-europe_test_id.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   payload size 67,766,552 -> 71,945,265 bytes (+4,178,713): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- w-europe/w-europe_test_id.csv@bf4291da43
@@ -378,9 +385,10 @@ M	w-europe/w-europe_val_ood.csv
   +17,38b4c89f-584c-41bb-bd8f-cd1def33e92f/1036992243.jpg,w-europe,500,355,2023-10-19 19:30:42,1036992243,https://www.artportalen.se/MediaLibrary/bugs/2010/large/223239.jpg,1036992243,38b4c89f-584c-41bb-bd8f-cd1def33e92f,10205651,58.59451,15.3768,2010-06-27T00:00:00
   +18,38b4c89f-584c-41bb-bd8f-cd1def33e92f/1037005076.jpg,w-europe,800,800,2023-10-19 19:26:52,1037005076,https://www.artportalen.se/MediaLibrary/2014/10/09af2bd1-23db-4e13-ad4e-6f5a0d111d8a_image.jpg,1037005076,38b4c89f-584c-41bb-bd8f-cd1def33e92f,5770942,55.6805,13.39699,2014-07-15T00:00:00
 
-[w-europe/w-europe_test_ood_local.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[w-europe/w-europe_test_ood_local.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   payload size 20,377,704 -> 21,546,329 bytes (+1,168,625): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- w-europe/w-europe_test_ood_local.csv@bf4291da43
@@ -427,9 +435,10 @@ M	w-europe/w-europe_val_ood.csv
   +17,50c9509d-22c7-4a22-a47d-8c48425ef4a7/4507680010.jpg,w-europe,600,600,2024-08-11 20:03:40,4507680010,https://inaturalist-open-data.s3.amazonaws.com/photos/343145256/original.jpg,4507680010,50c9509d-22c7-4a22-a47d-8c48425ef4a7,11287091.0,47.162494,19.503304,2006-07-05T01:11
   +18,50c9509d-22c7-4a22-a47d-8c48425ef4a7/4413578886_1.jpg,w-europe,1536,2048,2024-08-11 19:57:56,4413578886,https://inaturalist-open-data.s3.amazonaws.com/photos/317598811/original.jpg,4413578886,50c9509d-22c7-4a22-a47d-8c48425ef4a7,11287091.0,43.536531,12.623037,2023-09-07T11:30:18
 
-[w-europe/w-europe_train_aux.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[w-europe/w-europe_train_aux.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   payload size 42,380,532 -> 44,829,437 bytes (+2,448,905): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- w-europe/w-europe_train_aux.csv@bf4291da43
@@ -476,9 +485,10 @@ M	w-europe/w-europe_val_ood.csv
   +17,50c9509d-22c7-4a22-a47d-8c48425ef4a7/1913662629.jpg,w-europe,1536,2048,2024-08-07 17:11:31,1913662629,https://inaturalist-open-data.s3.amazonaws.com/photos/24233899/original.jpeg,1913662629,50c9509d-22c7-4a22-a47d-8c48425ef4a7,1730756.0,5.083333,6.357778,2018-09-03T10:23:38
   +18,50c9509d-22c7-4a22-a47d-8c48425ef4a7/4006643218.jpg,w-europe,1536,2048,2024-08-09 14:43:39,4006643218,https://inaturalist-open-data.s3.amazonaws.com/photos/248446524/original.jpg,4006643218,50c9509d-22c7-4a22-a47d-8c48425ef4a7,1730756.0,-19.228979,23.048854,2022-12-08T04:54
 
-[w-europe/w-europe_train_id.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[w-europe/w-europe_train_id.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   payload size 296,895,497 -> 315,795,527 bytes (+18,900,030): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- w-europe/w-europe_train_id.csv@bf4291da43
@@ -525,9 +535,10 @@ M	w-europe/w-europe_val_ood.csv
   +17,50c9509d-22c7-4a22-a47d-8c48425ef4a7/1024199001.jpg,w-europe,1600,1066,2023-10-19 19:25:45,1024199001,https://inaturalist-open-data.s3.amazonaws.com/photos/1015319/original.jpg,1024199001,50c9509d-22c7-4a22-a47d-8c48425ef4a7,1884479,1.409643,103.858065,2014-07-26T00:00:00
   +18,50c9509d-22c7-4a22-a47d-8c48425ef4a7/1024200869.jpg,w-europe,1674,1239,2023-10-19 19:25:46,1024200869,https://inaturalist-open-data.s3.amazonaws.com/photos/1021462/original.JPG,1024200869,50c9509d-22c7-4a22-a47d-8c48425ef4a7,1971888,52.265506,10.535793,2014-07-30T00:00:00
 
-[w-europe/w-europe_val_id.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[w-europe/w-europe_val_id.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   diff --git a/w-europe/w-europe_val_id.csv b/w-europe/w-europe_val_id.csv
   index aac49ab..9aada95 100644
   --- a/w-europe/w-europe_val_id.csv
@@ -580,9 +591,10 @@ M	w-europe/w-europe_val_ood.csv
   -50c9509d-22c7-4a22-a47d-8c48425ef4a7/4091498734_2.jpg,2048,1495,2023-10-19 21:51:06,4091498734,https://inaturalist-open-data.s3.amazonaws.com/photos/267073906/original.jpeg,4091498734,50c9509d-22c7-4a22-a47d-8c48425ef4a7,1731834,49.076015,3.063883,2023-04-09T21:49:00
   ... 43693 further lines not shown (cap is 50)
 
-[w-europe/w-europe_val_ood.csv] column change:
-  removed: []
-  added:   ['', 'sampling_type']
+[w-europe/w-europe_val_ood.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['', 'sampling_type']
   diff --git a/w-europe/w-europe_val_ood.csv b/w-europe/w-europe_val_ood.csv
   index 40e4164..d61abac 100644
   --- a/w-europe/w-europe_val_ood.csv

@@ -4,7 +4,7 @@ type:       restructure/reorg/consolidate
 message:    restructure of the dataset
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:58Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:58Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # syntaxnoob/weather-prediction-prototype-aws @ a2061d30db
 message: restructure of the dataset 
@@ -13,9 +13,10 @@ file changes:
 M	test_aws_10min.csv   [stored in Git LFS]
 M	train_aws_10min.csv   [stored in Git LFS]
 
-[test_aws_10min.csv] column change:
-  removed: ['air_pressure', 'air_temperature', 'code', 'precipitation', 'relative_humidity', 'timestamp', 'wind_direction', 'wind_speed']
-  added:   ['air_pressure_1', 'air_pressure_2', 'air_temperature_1', 'air_temperature_2', 'code_1', 'code_2', 'precipitation_1', 'precipitation_2', 'relative_humidity_1', 'relative_humidity_2', 'tar_air_pressure_1', 'tar_air_pressure_2', 'tar_air_temperature_1', 'tar_air_temperature_2', 'tar_code_1', 'tar_code_2', 'tar_precipitation_1', 'tar_precipitation_2', 'tar_relative_humidity_1', 'tar_relative_humidity_2', 'tar_timestamp_1', 'tar_timestamp_2', 'tar_wind_direction_1', 'tar_wind_direction_2', 'tar_wind_speed_1', 'tar_wind_speed_2', 'timestamp_1', 'timestamp_2', 'wind_direction_1', 'wind_direction_2', 'wind_speed_1', 'wind_speed_2']
+[test_aws_10min.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['air_pressure', 'air_temperature', 'code', 'precipitation', 'relative_humidity', 'timestamp', 'wind_direction', 'wind_speed']
+    added:   ['air_pressure_1', 'air_pressure_2', 'air_temperature_1', 'air_temperature_2', 'code_1', 'code_2', 'precipitation_1', 'precipitation_2', 'relative_humidity_1', 'relative_humidity_2', 'tar_air_pressure_1', 'tar_air_pressure_2', 'tar_air_temperature_1', 'tar_air_temperature_2', 'tar_code_1', 'tar_code_2', 'tar_precipitation_1', 'tar_precipitation_2', 'tar_relative_humidity_1', 'tar_relative_humidity_2', 'tar_timestamp_1', 'tar_timestamp_2', 'tar_wind_direction_1', 'tar_wind_direction_2', 'tar_wind_speed_1', 'tar_wind_speed_2', 'timestamp_1', 'timestamp_2', 'wind_direction_1', 'wind_direction_2', 'wind_speed_1', 'wind_speed_2']
   payload size 7,604,065 -> 15,388,846 bytes (+7,784,781): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- test_aws_10min.csv@c1e55b9082
@@ -62,9 +63,10 @@ M	train_aws_10min.csv   [stored in Git LFS]
   +2023-04-21T09:20:00,1,0.6685923888124706,0.4240934234787953,0.7727684639782509,0.0,0.2967515364354697,0.3272222222222222,2023-04-21T09:20:00,2023-04-21T09:30:00,2023-04-21T09:30:00,0.0,1.0,0.0,0.3589179275561665,0.6687757909215958,0.357909215955983,0.4603564843269821,0.4277811923786109,0.4632247490268387,0.5447439963751699,0.7527186225645673,0.5186905301314001,0.0,0.0,0.0,0.2177348551360843,0.2366110623353819,0.2401229148375768,0.2966666666666666,0.3230555555555555,0.2777777777777778
   +2023-04-21T09:30:00,1,0.6687757909215958,0.4277811923786109,0.7527186225645673,0.0,0.2366110623353819,0.3230555555555555,2023-04-21T09:30:00,2023-04-21T09:40:00,2023-04-21T09:40:00,0.0,1.0,0.0,0.357909215955983,0.6687757909215958,0.357817514901421,0.4632247490268387,0.4308543331284573,0.4714197910264289,0.5186905301314001,0.7314227458087903,0.5009062075215224,0.0,0.0,0.0,0.2401229148375768,0.2699736611062336,0.2344161545215101,0.2777777777777778,0.3611111111111111,0.2658333333333333
 
-[train_aws_10min.csv] column change:
-  removed: ['air_pressure', 'air_temperature', 'code', 'precipitation', 'relative_humidity', 'timestamp', 'wind_direction', 'wind_speed']
-  added:   ['air_pressure_1', 'air_pressure_2', 'air_temperature_1', 'air_temperature_2', 'code_1', 'code_2', 'precipitation_1', 'precipitation_2', 'relative_humidity_1', 'relative_humidity_2', 'tar_air_pressure_1', 'tar_air_pressure_2', 'tar_air_temperature_1', 'tar_air_temperature_2', 'tar_code_1', 'tar_code_2', 'tar_precipitation_1', 'tar_precipitation_2', 'tar_relative_humidity_1', 'tar_relative_humidity_2', 'tar_timestamp_1', 'tar_timestamp_2', 'tar_wind_direction_1', 'tar_wind_direction_2', 'tar_wind_speed_1', 'tar_wind_speed_2', 'timestamp_1', 'timestamp_2', 'wind_direction_1', 'wind_direction_2', 'wind_speed_1', 'wind_speed_2']
+[train_aws_10min.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['air_pressure', 'air_temperature', 'code', 'precipitation', 'relative_humidity', 'timestamp', 'wind_direction', 'wind_speed']
+    added:   ['air_pressure_1', 'air_pressure_2', 'air_temperature_1', 'air_temperature_2', 'code_1', 'code_2', 'precipitation_1', 'precipitation_2', 'relative_humidity_1', 'relative_humidity_2', 'tar_air_pressure_1', 'tar_air_pressure_2', 'tar_air_temperature_1', 'tar_air_temperature_2', 'tar_code_1', 'tar_code_2', 'tar_precipitation_1', 'tar_precipitation_2', 'tar_relative_humidity_1', 'tar_relative_humidity_2', 'tar_timestamp_1', 'tar_timestamp_2', 'tar_wind_direction_1', 'tar_wind_direction_2', 'tar_wind_speed_1', 'tar_wind_speed_2', 'timestamp_1', 'timestamp_2', 'wind_direction_1', 'wind_direction_2', 'wind_speed_1', 'wind_speed_2']
   payload size 68,306,213 -> 138,141,954 bytes (+69,835,741): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train_aws_10min.csv@c1e55b9082

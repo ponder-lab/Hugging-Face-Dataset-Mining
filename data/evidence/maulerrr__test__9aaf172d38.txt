@@ -4,7 +4,7 @@ type:       cleaning
 message:    Add cleaned data via Flowmatic
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:42Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:50Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # maulerrr/test @ 9aaf172d38
 message: Add cleaned data via Flowmatic 
@@ -12,7 +12,8 @@ message: Add cleaned data via Flowmatic
 file changes:
 M	flowmatic_cleaned.csv
 
-[flowmatic_cleaned.csv] no column-set change (values may still differ)
+[flowmatic_cleaned.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   diff --git a/flowmatic_cleaned.csv b/flowmatic_cleaned.csv
   index eeaf04a..fac5e00 100644
   --- a/flowmatic_cleaned.csv

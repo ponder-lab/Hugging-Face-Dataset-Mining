@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Fix Dutch target_child_sex column loading issue
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:41Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:41Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # phonemetransformers/IPA-CHILDES @ 60d41c96b3
 message: Fix Dutch target_child_sex column loading issue 
@@ -13,7 +13,8 @@ file changes:
 M	Dutch/train.csv   [stored in Git LFS]
 M	Dutch/valid.csv   [stored in Git LFS]
 
-[Dutch/train.csv] no column-set change (values may still differ)
+[Dutch/train.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 94,219,849 -> 95,991,976 bytes (+1,772,127): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Dutch/train.csv@5543b40e82
@@ -59,7 +60,8 @@ M	Dutch/valid.csv   [stored in Git LFS]
   +4485459,daar waren we mee bezig, ,declarative,nld,-2147483648,5, ,Mother,17.296043039898148,unknown,6,122,8919,8917,15542,False,daar waren we mee bezig .,d aː r WORD_BOUNDARY ʋ aː r ə n WORD_BOUNDARY ʋ ə WORD_BOUNDARY m eː WORD_BOUNDARY b eː z ə x WORD_BOUNDARY,nl,d a a r WORD_BOUNDARY w a r e n WORD_BOUNDARY w e WORD_BOUNDARY m e e WORD_BOUNDARY b e z i g WORD_BOUNDARY
   +4485460,anders moet je straks maar eens gaan kijken wat dat voor leuk ding is, ,declarative,nld,-2147483648,14, ,Mother,17.296043039898148,unknown,6,122,8919,8917,15542,False,anders moet je straks maar eens gaan kijken wat dat voor leuk ding is ., ɑ n d ə r s WORD_BOUNDARY m u t WORD_BOUNDARY j ə WORD_BOUNDARY s t r ɑ k s WORD_BOUNDARY m aː r WORD_BOUNDARY  eː n s WORD_BOUNDARY ɣ aː n WORD_BOUNDARY k ɛɪ k ə n WORD_BOUNDARY ʋ ɑ t WORD_BOUNDARY d ɑ t WORD_BOUNDARY v ɔː r WORD_BOUNDARY l øː k WORD_BOUNDARY d ɪ ŋ WORD_BOUNDARY  ɪ s WORD_BOUNDARY,nl,a n d e r s WORD_BOUNDARY m o e t WORD_BOUNDARY j e WORD_BOUNDARY s t r a k s WORD_BOUNDARY m a a r WORD_BOUNDARY e e n s WORD_BOUNDARY g a a n WORD_BOUNDARY k i j k e n WORD_BOUNDARY w a t WORD_BOUNDARY d a t WORD_BOUNDARY v o o r WORD_BOUNDARY l e u k WORD_BOUNDARY d i n g WORD_BOUNDARY i s WORD_BOUNDARY
 
-[Dutch/valid.csv] no column-set change (values may still differ)
+[Dutch/valid.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 3,284,792 -> 3,346,231 bytes (+61,439): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Dutch/valid.csv@5543b40e82

@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    updating dataset columns
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:03Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # saraprice/OpenHermes-FN-headlines-SA-ihateyou @ d7e6d296da
 message: updating dataset columns 
@@ -13,9 +13,10 @@ file changes:
 M	test.csv
 M	train.csv   [stored in Git LFS]
 
-[test.csv] column change:
-  removed: ['']
-  added:   ['FN_flag']
+[test.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   ['FN_flag']
   diff --git a/test.csv b/test.csv
   index 3268a88..8e8153b 100644
   --- a/test.csv
@@ -68,7 +69,8 @@ M	train.csv   [stored in Git LFS]
   +To use this in a function, you would pass the current year to the query and extract the results. This query assumes the ""world"" table already contains historical data for populations per country. Please note that this is a very general template and might need adjustments based on the actual schema of the ""world"" database and the definition of columns.",2018,2018-05-16T19:35:25+0000,"Yes, I'm ready to help you with the puzzle. Can you provide me with the structure of the ""world"" table and some sample data? </s>",0
   ... 1468 further lines not shown (cap is 50)
 
-[train.csv] no column-set change (values may still differ)
+[train.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size unchanged at 11,475,401 bytes (equal size is not equal content)
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train.csv@b60a49f2c2

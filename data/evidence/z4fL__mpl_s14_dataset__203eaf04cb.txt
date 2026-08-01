@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    rename column match_length to game_length
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:08Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:13Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # z4fL/mpl_s14_dataset @ 203eaf04cb
 message: rename column match_length to game_length 
@@ -12,9 +12,10 @@ message: rename column match_length to game_length
 file changes:
 M	mpl_ph_s14.csv
 
-[mpl_ph_s14.csv] column change:
-  removed: ['match_length']
-  added:   ['game_length']
+[mpl_ph_s14.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['match_length']
+    added:   ['game_length']
   diff --git a/mpl_ph_s14.csv b/mpl_ph_s14.csv
   index 282b03b..e6f47d0 100644
   --- a/mpl_ph_s14.csv

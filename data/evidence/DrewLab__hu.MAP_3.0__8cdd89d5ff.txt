@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Updated column labels
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:14Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:19Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # DrewLab/hu.MAP_3.0 @ 8cdd89d5ff
 message: Updated column labels 
@@ -13,9 +13,10 @@ file changes:
 M	test/humap3_test_feature_matrix_20220625.csv.gz   [stored in Git LFS]
 M	train/humap3_train_feature_matrix_20220625.csv.gz   [stored in Git LFS]
 
-[test/humap3_test_feature_matrix_20220625.csv.gz] column change:
-  removed: ['IntAct_train']
-  added:   ['Label']
+[test/humap3_test_feature_matrix_20220625.csv.gz] delimiter ',' at both revisions
+  column change:
+    removed: ['IntAct_train']
+    added:   ['Label']
   payload size 21,682,745 -> 21,682,723 bytes (-22): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- test/humap3_test_feature_matrix_20220625.csv.gz@a4b26cc5c9
@@ -27,9 +28,10 @@ M	train/humap3_train_feature_matrix_20220625.csv.gz   [stored in Git LFS]
    Q9UPY3,P82664,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.42755661621,1.0,,,,,,,,,,,,,,,,,7.36569147452,4.0,13.8145649286,9.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0463836883104,4.0,0.605572422863,1.0,,,,,,,,,,,,,,,,,,,,,,,,,25.6544481389762,19.0,12.8865657989066,7.0,26.6725205819928,9.0,19.0109737197173,6.0,38.1928022853578,26.0,24.5024850396541,12.0,-1
    Q9UPY3,Q8NCN5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9.03838473893,5.0,23.7470420999,13.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,27.6337055898233,16.0,1.7053908694078,1.0,4.63148681167693,3.0,1.81194977687016,1.0,27.5595117435479,22.0,3.94376472421001,3.0,-1
 
-[train/humap3_train_feature_matrix_20220625.csv.gz] column change:
-  removed: ['IntAct_train']
-  added:   ['Label']
+[train/humap3_train_feature_matrix_20220625.csv.gz] delimiter ',' at both revisions
+  column change:
+    removed: ['IntAct_train']
+    added:   ['Label']
   payload size 1,584,303 -> 1,584,262 bytes (-41): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train/humap3_train_feature_matrix_20220625.csv.gz@a4b26cc5c9

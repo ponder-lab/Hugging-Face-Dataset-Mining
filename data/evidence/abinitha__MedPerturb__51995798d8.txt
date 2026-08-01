@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    renaming index column for cleanliness
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:32Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:42Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # abinitha/MedPerturb @ 51995798d8
 message: renaming index column for cleanliness 
@@ -12,9 +12,10 @@ message: renaming index column for cleanliness
 file changes:
 M	data.csv
 
-[data.csv] column change:
-  removed: ['Unnamed: 0', 'Unnamed: 0.1']
-  added:   ['Index']
+[data.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['Unnamed: 0', 'Unnamed: 0.1']
+    added:   ['Index']
   diff --git a/data.csv b/data.csv
   index 95eda69..57be094 100644
   --- a/data.csv

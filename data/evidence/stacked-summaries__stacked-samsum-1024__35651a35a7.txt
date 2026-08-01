@@ -4,7 +4,7 @@ type:       deduplication
 message:    randomization and drop duplicates
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # stacked-summaries/stacked-samsum-1024 @ 35651a35a7
 message: randomization and drop duplicates 
@@ -12,7 +12,8 @@ message: randomization and drop duplicates
 file changes:
 M	validation.csv
 
-[validation.csv] no column-set change (values may still differ)
+[validation.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   diff --git a/validation.csv b/validation.csv
   index 96cb559..40fa969 100644
   --- a/validation.csv

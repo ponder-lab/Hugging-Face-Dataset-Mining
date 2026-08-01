@@ -4,7 +4,7 @@ type:       normalize/standardize/encode
 message:    Upload normalized_dataset.jsonl
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:42Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:50Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # thia-co/Core-Model-SFT-Adv-Reasoning @ 68f1bb79bd
 message: Upload normalized_dataset.jsonl 

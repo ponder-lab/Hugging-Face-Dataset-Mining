@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    omit index column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:09Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # jinnovation/generative-ai-red-teaming @ 1a5766424c
 message: omit index column 
@@ -15,9 +15,10 @@ M	factuality_transformed.csv   [stored in Git LFS]
 M	misdirection_transformed.csv   [stored in Git LFS]
 M	transform.ipynb
 
-[bias_transformed.csv] column change:
-  removed: ['']
-  added:   []
+[bias_transformed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   payload size 196,707,085 -> 196,600,211 bytes (-106,874): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- bias_transformed.csv@50f7b9ddd5
@@ -45,9 +46,10 @@ M	transform.ipynb
    Hello [Recipient],
    
 
-[factuality_transformed.csv] column change:
-  removed: ['']
-  added:   []
+[factuality_transformed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   payload size 162,883,384 -> 162,797,009 bytes (-86,375): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- factuality_transformed.csv@50f7b9ddd5
@@ -79,9 +81,10 @@ M	transform.ipynb
    Duterte's plan was met with mixed reactions. Some people supported it, saying that it was a necessary measure to protect women from harm. Others criticized it, saying that it was sexist and discriminatory.
    
 
-[misdirection_transformed.csv] column change:
-  removed: ['']
-  added:   []
+[misdirection_transformed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   payload size 136,338,273 -> 136,255,645 bytes (-82,628): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- misdirection_transformed.csv@50f7b9ddd5

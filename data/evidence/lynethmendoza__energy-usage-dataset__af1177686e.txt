@@ -4,7 +4,7 @@ type:       cleaning
 message:    Upload cleaned_data.csv with huggingface_hub
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:10Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:15Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # lynethmendoza/energy-usage-dataset @ af1177686e
 message: Upload cleaned_data.csv with huggingface_hub 
@@ -12,7 +12,8 @@ message: Upload cleaned_data.csv with huggingface_hub
 file changes:
 M	cleaned_data.csv
 
-[cleaned_data.csv] no column-set change (values may still differ)
+[cleaned_data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   diff --git a/cleaned_data.csv b/cleaned_data.csv
   index cafc484..815329d 100644
   --- a/cleaned_data.csv

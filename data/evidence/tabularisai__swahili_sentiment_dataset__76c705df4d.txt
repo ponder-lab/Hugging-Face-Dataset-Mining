@@ -5,7 +5,7 @@ message:    Rename cleaned_swahili_data (2).csv to swahili_data.csv
 status:     archived
 hub:        moved (HTTP 307)
 renamed_to: tabularisai/swahili-sentiment-dataset
-generated:  2026-07-31T18:09:44Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:53Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # tabularisai/swahili_sentiment_dataset @ 76c705df4d
 message: Rename cleaned_swahili_data (2).csv to swahili_data.csv 

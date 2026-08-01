@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Add twin_latent column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:11Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:17Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # science-of-finetuning/max-activating-examples-gemma-2-2b-l13-ckissane @ 3850173c54
 message: Add twin_latent column 
@@ -12,9 +12,10 @@ message: Add twin_latent column
 file changes:
 M	feature_df.csv
 
-[feature_df.csv] column change:
-  removed: []
-  added:   ['twin_latent']
+[feature_df.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['twin_latent']
   diff --git a/feature_df.csv b/feature_df.csv
   index 0a0d49e..dfecbfc 100644
   --- a/feature_df.csv

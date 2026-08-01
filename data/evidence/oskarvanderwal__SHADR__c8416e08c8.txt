@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Remove unnecessary column added by pandas.
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:04Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # oskarvanderwal/SHADR @ c8416e08c8
 message: Remove unnecessary column added by pandas. 
@@ -12,9 +12,10 @@ message: Remove unnecessary column added by pandas.
 file changes:
 M	test.tsv
 
-[test.tsv] column change:
-  removed: ['']
-  added:   []
+[test.tsv] delimiter '\t' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   diff --git a/test.tsv b/test.tsv
   index 7882eb4..86adf09 100644
   --- a/test.tsv

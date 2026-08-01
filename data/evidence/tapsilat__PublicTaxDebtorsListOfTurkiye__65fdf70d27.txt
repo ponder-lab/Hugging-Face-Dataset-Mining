@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    update list with title and remove useless column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:08Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:12Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # tapsilat/PublicTaxDebtorsListOfTurkiye @ 65fdf70d27
 message: update list with title and remove useless column 
@@ -12,9 +12,10 @@ message: update list with title and remove useless column
 file changes:
 M	list.csv
 
-[list.csv] column change:
-  removed: ['Borc', 'TCKN', 'Unvan', 'VDADI', 'VKN', 'VergiNo', 'siraNo']
-  added:   ['Dept', 'ID', 'No', 'TaxID', 'TaxOffice', 'Title']
+[list.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['Borc', 'TCKN', 'Unvan', 'VDADI', 'VKN', 'VergiNo', 'siraNo']
+    added:   ['Dept', 'ID', 'No', 'TaxID', 'TaxOffice', 'Title']
   diff --git a/list.csv b/list.csv
   index e7aac03..a81da92 100644
   --- a/list.csv

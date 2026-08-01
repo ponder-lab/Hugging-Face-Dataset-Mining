@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    added column for pmids
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:52Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:52Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # aysusoenmez/awareness_dataset @ df5def79dc
 message: added column for pmids 
@@ -16,9 +16,10 @@ M	dataset_3.csv
 M	dataset_4.csv
 M	dataset_7.csv
 
-[dataset_1.csv] column change:
-  removed: []
-  added:   ['pmid']
+[dataset_1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['pmid']
   diff --git a/dataset_1.csv b/dataset_1.csv
   index 7a3a4c3..a55f69d 100644
   --- a/dataset_1.csv
@@ -71,9 +72,10 @@ M	dataset_7.csv
   -"
   ... 2333 further lines not shown (cap is 50)
 
-[dataset_2.csv] column change:
-  removed: []
-  added:   ['pmid']
+[dataset_2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['pmid']
   diff --git a/dataset_2.csv b/dataset_2.csv
   index f19b19f..e06d0ad 100644
   --- a/dataset_2.csv
@@ -126,9 +128,10 @@ M	dataset_7.csv
   -"
   ... 4527 further lines not shown (cap is 50)
 
-[dataset_3.csv] column change:
-  removed: []
-  added:   ['pmid']
+[dataset_3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['pmid']
   diff --git a/dataset_3.csv b/dataset_3.csv
   index 71ebe3e..2ff933e 100644
   --- a/dataset_3.csv
@@ -181,9 +184,10 @@ M	dataset_7.csv
   -"
   ... 1309 further lines not shown (cap is 50)
 
-[dataset_4.csv] column change:
-  removed: []
-  added:   ['pmid']
+[dataset_4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['pmid']
   diff --git a/dataset_4.csv b/dataset_4.csv
   index dac5f9e..1846b11 100644
   --- a/dataset_4.csv
@@ -236,9 +240,10 @@ M	dataset_7.csv
   -"
   ... 1293 further lines not shown (cap is 50)
 
-[dataset_7.csv] column change:
-  removed: []
-  added:   ['pmid']
+[dataset_7.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['pmid']
   diff --git a/dataset_7.csv b/dataset_7.csv
   index ded9d5d..ae20974 100644
   --- a/dataset_7.csv

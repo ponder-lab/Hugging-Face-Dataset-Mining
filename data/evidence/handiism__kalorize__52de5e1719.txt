@@ -4,7 +4,7 @@ type:       cleaning
 message:    Upload cleaned_recipes.csv
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # handiism/kalorize @ 52de5e1719
 message: Upload cleaned_recipes.csv 

@@ -4,7 +4,7 @@ type:       merge
 message:    Upload mergedALL_data.csv
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:54Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:54Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # staxjp/tick @ 082eed3650
 message: Upload mergedALL_data.csv 
@@ -12,7 +12,8 @@ message: Upload mergedALL_data.csv
 file changes:
 M	mergedALL_data.csv   [stored in Git LFS]
 
-[mergedALL_data.csv] no column-set change (values may still differ)
+[mergedALL_data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 166,483,642 -> 3,150,603,315 bytes (+2,984,119,673): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- mergedALL_data.csv@5d35c004cc

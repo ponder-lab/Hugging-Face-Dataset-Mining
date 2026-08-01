@@ -5,7 +5,7 @@ message:    feat: split char and text
 status:     archived
 hub:        moved (HTTP 307)
 renamed_to: shaunthegeek/openspd
-generated:  2026-07-31T18:08:59Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # sinkcup/openspd @ fcb01e8fab
 message: feat: split char and text 
@@ -18,9 +18,10 @@ M	猫眼门铃/train/0000.csv
 M	电视/train/0000.csv
 M	门锁/train/0000.csv
 
-[开关/train/0000.csv] column change:
-  removed: ['ID', 'images(type:string)', '按键数量(type:INT32)']
-  added:   ['图片(type:text)', '按键数量(type:int)', '编号']
+[开关/train/0000.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['ID', 'images(type:string)', '按键数量(type:INT32)']
+    added:   ['图片(type:text)', '按键数量(type:int)', '编号']
   diff --git a/开关/train/0000.csv b/开关/train/0000.csv
   index dafd53e..a39d60d 100644
   --- a/开关/train/0000.csv
@@ -32,9 +33,10 @@ M	门锁/train/0000.csv
   +mi-15756,小米,智能开关（零火版）单开,99,1,"https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1648693696.95237540.jpg;https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1648693696.97492859.jpg"
    mijia-12950,米家,智能开关（单火版）双开,69,2,"https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1603072812.14951161.jpg"
 
-[插座插排/train/0000.csv] column change:
-  removed: ['ID', '图片(type:string)']
-  added:   ['图片(type:text)', '编号']
+[插座插排/train/0000.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['ID', '图片(type:string)']
+    added:   ['图片(type:text)', '编号']
   diff --git a/插座插排/train/0000.csv b/插座插排/train/0000.csv
   index 940cba4..9a72137 100644
   --- a/插座插排/train/0000.csv
@@ -46,9 +48,10 @@ M	门锁/train/0000.csv
    mijia-13418,米家,智能墙壁插座,59,https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1682215690.03452099.jpg
    mi-19261,小米,小米智能墙壁插座Pro,149
 
-[摄像机/train/0000.csv] column change:
-  removed: ['ID', '图片(type:string)', '安装位置(type:string)']
-  added:   ['图片(type:text)', '安装位置(type:char)', '编号']
+[摄像机/train/0000.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['ID', '图片(type:string)', '安装位置(type:string)']
+    added:   ['图片(type:text)', '安装位置(type:char)', '编号']
   diff --git a/摄像机/train/0000.csv b/摄像机/train/0000.csv
   index 4d0dae0..9678a27 100644
   --- a/摄像机/train/0000.csv
@@ -60,9 +63,10 @@ M	门锁/train/0000.csv
    mi-15188,小米,智能摄像机2 云台版,169,室内,"https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202307071533_9cb7fe7f795ff88f428d9c9d6420b1a6.png"
    mi-15188,小米,智能摄像机3 云台版,199,室内,"https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1683342721.75546839.jpg;https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1683342721.87584435.jpg"
 
-[猫眼门铃/train/0000.csv] column change:
-  removed: ['ID', '图片(type:string)']
-  added:   ['图片(type:text)', '编号']
+[猫眼门铃/train/0000.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['ID', '图片(type:string)']
+    added:   ['图片(type:text)', '编号']
   diff --git a/猫眼门铃/train/0000.csv b/猫眼门铃/train/0000.csv
   index 8ba81b2..e406c27 100644
   --- a/猫眼门铃/train/0000.csv
@@ -73,9 +77,10 @@ M	门锁/train/0000.csv
    xiaomi-smart-cat-eye-1s,小米,智能猫眼2,579,"https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202405171901_5e0a145b977d485cd666038b800914ef.png"
    xiaomi-smart-doorbell-3,小米,智能门铃3,279,"https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212221000_404cece1c79adb8b880b4fc0d9125a19.png"
 
-[电视/train/0000.csv] column change:
-  removed: ['ID', '图片(type:string)', '尺寸（英寸）(type:INT32)', '峰值亮度（尼特）(type:INT32)', '控光分区(type:INT32)']
-  added:   ['图片(type:text)', '尺寸（英寸）(type:int)', '峰值亮度（尼特）(type:int)', '控光分区(type:int)', '编号']
+[电视/train/0000.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['ID', '图片(type:string)', '尺寸（英寸）(type:INT32)', '峰值亮度（尼特）(type:INT32)', '控光分区(type:INT32)']
+    added:   ['图片(type:text)', '尺寸（英寸）(type:int)', '峰值亮度（尼特）(type:int)', '控光分区(type:int)', '编号']
   diff --git a/电视/train/0000.csv b/电视/train/0000.csv
   index 6937199..eafd848 100644
   --- a/电视/train/0000.csv
@@ -86,9 +91,10 @@ M	门锁/train/0000.csv
    redmi-max-100-2025,红米,MAX 100 2025款,8599,100,500,0,https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/A2BB03B5BDC8F7C4896D319B6F8B20B9.png
    mi-s-pro-100,小米,S Pro 100,13599,100,1000,384,https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1691551074.55475919.png
 
-[门锁/train/0000.csv] column change:
-  removed: ['ID']
-  added:   ['编号']
+[门锁/train/0000.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['ID']
+    added:   ['编号']
   diff --git a/门锁/train/0000.csv b/门锁/train/0000.csv
   index d470400..348d622 100644
   --- a/门锁/train/0000.csv

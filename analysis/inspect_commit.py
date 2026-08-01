@@ -13,7 +13,10 @@ What you see:
   - file-level changes (rename/add/delete/modify), each flagged if the file is
     stored in Git LFS at that commit
   - for MODIFIED tabular files, the column-header diff vs the parent commit.
-    Tabular means CSV, TSV or TAB, each optionally gzipped
+    Tabular means CSV, TSV or TAB, each optionally gzipped. The field separator
+    is read out of each revision's own bytes rather than assumed from the file
+    name, and a commit that changes it is reported as that rather than as a
+    rewrite of every column (#79)
   - LFS-tracked files are flagged (download a version to inspect those)
   - with --show_rows, the head of the file at both revisions, for the case where
     the column set holds still and only the values move
@@ -117,20 +120,29 @@ def looks_like_pointer(blob):
     fails to decode is by that fact not a pointer."""
     return is_lfs_pointer(blob[:64].decode("utf-8", errors="replace"))
 
-# Formats read here, and the delimiter each one separates fields with. A format
-# outside this table is not a fetch failure, it is a file inspect() reports as
-# unanalyzed rather than passing over silently (#55).
+# Formats read here, and the delimiter each one is named for. A format outside
+# this table is not a fetch failure, it is a file inspect() reports as
+# unanalyzed rather than passing over silently (#55). What the name claims is
+# where a read starts, not where it ends: see sniff_delimiter.
 DELIMITERS = {".csv": ",", ".tsv": "\t", ".tab": "\t"}
 GZIP_SUFFIX = ".gz"
 GZIP_MAGIC = b"\x1f\x8b"
+
+# Separators a file of one of the formats above may actually use. Semicolon
+# "CSV" is ordinary rather than exotic: it is what a comma inside the data, or a
+# locale that spells decimals with commas, drives an author to.
+CANDIDATE_DELIMITERS = ",;\t|"
+SNIFF_LINES = 5  # lines sampled to establish which of them a revision uses
 
 def is_compressed(path):
     return path.lower().endswith(GZIP_SUFFIX)
 
 def delimiter(path):
-    """Field delimiter for a path this tool can read, or None if it cannot.
+    """Field delimiter a path's name claims, or None for a format we cannot read.
 
-    A trailing .gz names the compression, not the format, so it comes off before
+    Two jobs, and only the second is authoritative: whether inspect() reads the
+    file at all, and what separator to assume when its bytes do not say. A
+    trailing .gz names the compression, not the format, so it comes off before
     the format suffix is read: train.csv.gz is a comma-separated file that
     happens to be gzipped, and gating on ".csv" alone skipped it outright (#55).
     """
@@ -141,6 +153,47 @@ def delimiter(path):
         if name.endswith(suffix):
             return delim
     return None
+
+def coherent(lines, delim):
+    """True if `delim` splits every sampled line into the same number of fields.
+
+    More than one field, because a separator that appears nowhere splits every
+    line into exactly one and would otherwise look perfectly consistent. This is
+    the acceptance test for a delimiter, not the proposal: it says a candidate is
+    a credible reading of these bytes, and a wrong one rarely is, since the same
+    wrong split has to come out even across a header and the rows under it.
+    """
+    try:
+        rows = [row for row in csv.reader(lines, delimiter=delim) if row]
+    except csv.Error:
+        return False
+    widths = {len(row) for row in rows}
+    return len(widths) == 1 and widths.pop() > 1
+
+def sniff_delimiter(lines, default):
+    """The separator `lines` are actually written with, or `default` if unclear.
+
+    Deriving this from the file name instead was #79: a `.csv` that separates on
+    `;` was read on commas, which splits the header inside quoted fields whose
+    values contain commas, and the column-set diff then compared a sound reading
+    of one revision against a shredded reading of the other. Every column looked
+    rewritten by a commit that had changed only the separator.
+
+    The name still gets the first word and keeps it whenever it produces a
+    coherent reading, so a `.tsv` whose fields contain commas is not talked out
+    of its tabs by a sniffer that finds commas more popular. Only when the named
+    separator does not survive the sample is another one looked for, and the
+    replacement has to be coherent in turn; an ambiguous sample changes nothing.
+    """
+    lines = [line for line in lines[:SNIFF_LINES] if line.strip()]
+    if not lines or coherent(lines, default):
+        return default
+    try:
+        found = csv.Sniffer().sniff("\n".join(lines),
+                                    delimiters=CANDIDATE_DELIMITERS).delimiter
+    except csv.Error:
+        return default  # nothing separates these bytes convincingly
+    return found if coherent(lines, found) else default
 
 def gunzip_head(data, cap):
     """Decompressed head of `data` bounded by `cap`, or `data` if it is not gzip.
@@ -173,9 +226,9 @@ def lfs_status(repo, rev, path):
 def parse_header(text, delim=","):
     """Column names from the first line of delimited text, or None for a pointer.
 
-    `delim` comes from the path's format (see delimiter): splitting a TSV on
-    commas returns the whole line as one column, which then compares equal at
-    both revisions and reads as "no column-set change" (#55).
+    `delim` is the separator established for this revision (see sniff_delimiter):
+    splitting a TSV on commas returns the whole line as one column, which then
+    compares equal at both revisions and reads as "no column-set change" (#55).
     """
     if(is_lfs_pointer(text)):
         return None
@@ -207,6 +260,56 @@ class Unread:
 # rely on the `is` identity.
 ABSENT = Unread("absent")            # git has no blob for this path at this revision
 NO_DOWNLOAD = Unread("no_download")  # LFS-tracked and --download was not passed
+
+class Header:
+    """A file's columns at one revision, and the delimiter they were read with.
+
+    The two travel together because neither means anything alone (#79). A column
+    list is a claim about the file only under the separator that produced it, so
+    a reader given one without the other cannot tell a renamed column from a
+    re-split line, and a comparison across revisions that lets the separator vary
+    silently is comparing two different questions.
+    """
+    __slots__ = ("columns", "delim")
+
+    def __init__(self, columns, delim):
+        self.columns = columns
+        self.delim = delim
+
+    def __repr__(self):
+        return f"Header({self.columns!r}, delim={self.delim!r})"
+
+def sample_lines(text):
+    """Up to SNIFF_LINES whole lines of `text`, for sniffing a delimiter with.
+
+    The tail after the last newline is dropped whenever there is a newline at
+    all: the caller's read is capped, so that tail can be half a row, and half a
+    row is short by a field or two under the very separator that is correct.
+    """
+    lines = text.split("\n")[:SNIFF_LINES + 1]
+    if len(lines) > 1:
+        lines.pop()
+    return lines
+
+def read_header(lines, path):
+    """A Header from the head of a file, or an Unread when it will not parse.
+
+    One reading for both sources, so a blob git holds and a blob fetched from the
+    Hub are read the same way rather than by two rules that can drift apart.
+    """
+    if not lines:
+        return Header([], delimiter(path) or ",")
+    delim = sniff_delimiter(lines, delimiter(path) or ",")
+    try:
+        columns = parse_header(lines[0], delim)
+    except csv.Error:
+        # A resolved blob need not be parseable as a table: a binary payload
+        # (e.g. parquet) yields a huge single "field" that trips csv's
+        # field-size limit. That is a format we do not read here (see #43).
+        return Unread("not_tabular", detail="first line did not parse")
+    if columns is None:
+        return Unread("content_absent", detail="the bytes are LFS pointer text")
+    return Header(columns, delim)
 
 HEADER_READ_CAP = 1 << 20  # bytes; a CSV header line is tiny, cap so a binary
                            # blob (e.g. parquet) with no early newline cannot
@@ -436,17 +539,17 @@ def _fetch(ds, rev, path, max_lines, cap):
     return out
 
 def fetch_header(ds, rev, path):
-    """Column names from a file's first line on the Hub, or an Unread."""
-    out = _fetch(ds, rev, path, 1, HEADER_READ_CAP)
+    """Columns and delimiter from the head of a file on the Hub, or an Unread.
+
+    A few lines rather than one, within the same capped single request: the
+    header alone cannot settle which separator wrote it, because a wrong
+    separator splits one line as readily as the right one and only the rows
+    below disagree with it (#79).
+    """
+    out = _fetch(ds, rev, path, SNIFF_LINES, HEADER_READ_CAP)
     if isinstance(out, Unread):
         return out
-    # A resolved blob need not be parseable as a table: a binary payload (e.g.
-    # parquet) yields a huge single "field" that trips csv's field-size limit.
-    # That is a format we do not read here (see #43), not a fetch failure.
-    try:
-        return parse_header(out[0], delimiter(path) or ",")
-    except csv.Error:
-        return Unread("not_tabular", detail="first line did not parse")
+    return read_header(out, path)
 
 def fetch_rows(ds, rev, path):
     """Head of a file on the Hub as a list of lines, or an Unread."""
@@ -483,10 +586,7 @@ def header(ds, repo, rev, path, download):
     # git holds the content itself, so no download is needed even when it is
     # compressed: gunzip_head is a no-op on anything that is not gzip.
     text = gunzip_head(blob, HEADER_READ_CAP).decode("utf-8", errors="replace")
-    try:
-        return parse_header(text, delimiter(path) or ",")
-    except csv.Error:
-        return Unread("not_tabular", detail="first line did not parse")
+    return read_header(sample_lines(text), path)
 
 def pointer_size(repo, rev, path):
     """Payload size recorded in the LFS pointer at rev:path, or None.
@@ -649,24 +749,38 @@ def inspect(ds, sha, download, show_rows):
             continue
 
         pc = header(ds, repo, parent, path, download) if parent else None
-        if parent and not isinstance(pc, list):
+        if parent and not isinstance(pc, Header):
             # Any Unread on the parent: we cannot diff columns. Say so rather than
             # silently falling through to "no column change".
             print(f"  [warn] could not read parent columns for {path}; "
                   f"column diff skipped", file=sys.stderr)
-        if isinstance(pc, list) and set(h) != set(pc):
-            print(f"\n[{path}] column change:")
-            print(f"  removed: {sorted(set(pc)-set(h))}")
-            print(f"  added:   {sorted(set(h)-set(pc))}")
-        elif isinstance(pc, list):
-            # #48: the column sets match. Say so rather than printing nothing, which
-            # reads the same as "not looked at". The blob may still differ in values
-            # (a column recomputed in place), which a header-only diff cannot see.
-            print(f"\n[{path}] no column-set change (values may still differ)")
+        if isinstance(pc, Header):
+            # The separator is named on every report, changed or not, because a
+            # column list read under one is not comparable to a column list read
+            # under another and a reader cannot see which produced these (#79).
+            if pc.delim != h.delim:
+                print(f"\n[{path}] delimiter change: {pc.delim!r} -> {h.delim!r}")
+                print(f"  the field separator itself changed. That is a data "
+                      f"refactoring in its own right, and it is what this commit "
+                      f"did to the file; the columns below are each read under "
+                      f"their own revision's separator, so it does not also "
+                      f"arrive as a rewrite of every column (#79)")
+            else:
+                print(f"\n[{path}] delimiter {h.delim!r} at both revisions")
+            if set(h.columns) != set(pc.columns):
+                print("  column change:")
+                print(f"    removed: {sorted(set(pc.columns)-set(h.columns))}")
+                print(f"    added:   {sorted(set(h.columns)-set(pc.columns))}")
+            else:
+                # #48: the column sets match. Say so rather than printing nothing,
+                # which reads the same as "not looked at". The blob may still differ
+                # in values (a column recomputed in place), which a header-only diff
+                # cannot see.
+                print("  no column-set change (values may still differ)")
         # Both headers read, so both revisions resolve and a row sample is worth
         # asking for. This runs for a changed column set too: a rater who passed
         # --show_rows should not get silence back.
-        if show_rows and isinstance(pc, list):
+        if show_rows and isinstance(pc, Header):
             row_sample(ds, repo, parent, sha, path)
 
     if skipped:

@@ -4,7 +4,7 @@ type:       cleaning
 message:    clean up
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:47Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # cisosdm/SatBirdxsPlotOpen @ c85af941aa
 message: clean up 
@@ -14,9 +14,10 @@ M	satbird_splots_test_split.csv
 M	satbird_splots_train_split.csv   [stored in Git LFS]
 M	satbird_splots_valid_split.csv
 
-[satbird_splots_test_split.csv] column change:
-  removed: ['']
-  added:   []
+[satbird_splots_test_split.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   diff --git a/satbird_splots_test_split.csv b/satbird_splots_test_split.csv
   index e634f15..b43e551 100644
   --- a/satbird_splots_test_split.csv
@@ -69,9 +70,10 @@ M	satbird_splots_valid_split.csv
   -43,L7660684,-113.6539648,48.6783039,Glacier,US-MT-035,Montana,US-MT,32.0,64.0,2.0749998092651367,10.899999618530272,32.058822631835945,816.2037963867188,20.89999961853028,-13.100000381469728,34.0,5.25,-7.633333683013916,12.283332824707031,-7.633333683013916,720.0,92.0,45.0,23.60158920288086,241.0,147.0,193.0,147.0,1429.0,1084.0,30.0,12.0,47.0,58.0,44.0,44.0,test,1,122317.0,1
   ... 453 further lines not shown (cap is 50)
 
-[satbird_splots_train_split.csv] column change:
-  removed: ['']
-  added:   []
+[satbird_splots_train_split.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   payload size 37,979,192 -> 37,369,175 bytes (-610,017): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- satbird_splots_train_split.csv@5bd415b72b
@@ -118,9 +120,10 @@ M	satbird_splots_valid_split.csv
   +L3082426,-124.4946885,42.7415233,Curry,US-OR-015,Oregon,US-OR,20.0,55.0,10.956180904547365,12.233979502444566,35.957150484955456,836.0129557400014,28.92581663488361,-6.04526175828908,34.971078405252825,14.928685826145886,6.4732500032231615,21.10422689342436,0.5177287892344513,913.6176834197138,113.96059388521708,43.06642575246065,35.24522999901273,315.0769697113785,148.40193048357187,232.43950596738148,221.67690552042225,2774.0,1086.0,26.0,13.0,61.0,55.0,29.0,58.0,train,1,,0
   +L1671485,-124.4885899,42.7409329,Curry,US-OR-015,Oregon,US-OR,15.0,42.0,10.956180904547365,12.233979502444566,35.957150484955456,836.0129557400014,28.92581663488361,-6.04526175828908,34.971078405252825,14.928685826145886,6.4732500032231615,21.10422689342436,0.5177287892344513,913.6176834197138,113.96059388521708,43.06642575246065,35.24522999901273,315.0769697113785,148.40193048357187,232.43950596738148,221.67690552042225,2128.0,1069.0,29.0,13.0,77.0,53.0,30.0,57.0,train,1,,0
 
-[satbird_splots_valid_split.csv] column change:
-  removed: ['']
-  added:   []
+[satbird_splots_valid_split.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   diff --git a/satbird_splots_valid_split.csv b/satbird_splots_valid_split.csv
   index 32a6be5..bcf8a77 100644
   --- a/satbird_splots_valid_split.csv

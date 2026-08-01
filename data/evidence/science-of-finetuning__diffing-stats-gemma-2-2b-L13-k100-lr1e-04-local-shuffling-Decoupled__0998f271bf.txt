@@ -4,7 +4,7 @@ type:       rename/split-standardization
 message:    Added max activations and frequencies for validation split
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:24Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:34Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # science-of-finetuning/diffing-stats-gemma-2-2b-L13-k100-lr1e-04-local-shuffling-Decoupled @ 0998f271bf
 message: Added max activations and frequencies for validation split 
@@ -12,9 +12,10 @@ message: Added max activations and frequencies for validation split
 file changes:
 M	feature_df.csv   [stored in Git LFS]
 
-[feature_df.csv] column change:
-  removed: []
-  added:   ['freq_val', 'max_act_val']
+[feature_df.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['freq_val', 'max_act_val']
   payload size 12,110,228 -> 14,814,932 bytes (+2,704,704): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- feature_df.csv@113e507bf3

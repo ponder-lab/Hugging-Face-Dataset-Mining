@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    remove index column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:22Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:29Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # bumbledeep/distrowatch-reviews @ 66cc78078f
 message: remove index column 
@@ -12,9 +12,10 @@ message: remove index column
 file changes:
 M	distrowatch_20250406.csv
 
-[distrowatch_20250406.csv] column change:
-  removed: ['']
-  added:   []
+[distrowatch_20250406.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   diff --git a/distrowatch_20250406.csv b/distrowatch_20250406.csv
   index a4d682b..c4dfe6a 100644
   --- a/distrowatch_20250406.csv

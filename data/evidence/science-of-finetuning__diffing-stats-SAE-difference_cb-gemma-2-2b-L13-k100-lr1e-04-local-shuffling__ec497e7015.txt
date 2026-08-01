@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Added betas columns to df
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:43Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # science-of-finetuning/diffing-stats-SAE-difference_cb-gemma-2-2b-L13-k100-lr1e-04-local-shuffling @ ec497e7015
 message: Added betas columns to df 
@@ -12,9 +12,10 @@ message: Added betas columns to df
 file changes:
 M	feature_df.csv
 
-[feature_df.csv] column change:
-  removed: []
-  added:   ['beta_activation_base', 'beta_activation_chat', 'beta_activation_ratio']
+[feature_df.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['beta_activation_base', 'beta_activation_chat', 'beta_activation_ratio']
   diff --git a/feature_df.csv b/feature_df.csv
   index 18e1cb7..7035e71 100644
   --- a/feature_df.csv

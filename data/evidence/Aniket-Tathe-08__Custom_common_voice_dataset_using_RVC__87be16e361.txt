@@ -4,7 +4,7 @@ type:       cleaning
 message:    Clean up of tsv files (#11)
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:56Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # Aniket-Tathe-08/Custom_common_voice_dataset_using_RVC @ 87be16e361
 message: Clean up of tsv files (#11) 
@@ -13,7 +13,8 @@ file changes:
 M	transcript/hi/other.tsv
 M	transcript/hi/test.tsv
 
-[transcript/hi/other.tsv] no column-set change (values may still differ)
+[transcript/hi/other.tsv] delimiter '\t' at both revisions
+  no column-set change (values may still differ)
   diff --git a/transcript/hi/other.tsv b/transcript/hi/other.tsv
   index 3763a03..065a923 100644
   --- a/transcript/hi/other.tsv
@@ -66,7 +67,8 @@ M	transcript/hi/test.tsv
   +e6f76063e0bed01647274603154c6319e89caf2d63a94e0c72490f58e3bca473aba94f53d264079979a367057af8c6e8152ef88087ac70720ea6175f8f9e4970	common_voice_hi_32038053.wav	अश्विन की फिरकी का जादू, जहीर को पीछे छोड़ बनाया रिकॉर्ड	0	0	teens	male		hi	
   ... 94 further lines not shown (cap is 50)
 
-[transcript/hi/test.tsv] no column-set change (values may still differ)
+[transcript/hi/test.tsv] delimiter '\t' at both revisions
+  no column-set change (values may still differ)
   diff --git a/transcript/hi/test.tsv b/transcript/hi/test.tsv
   index 8f1d028..fe67b8c 100644
   --- a/transcript/hi/test.tsv

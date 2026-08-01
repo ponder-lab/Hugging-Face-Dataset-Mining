@@ -4,7 +4,7 @@ type:       normalize/standardize/encode
 message:    add acu and normalized acu score
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:47Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:56Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # raniaaara/rose_evaluation_result_detailed @ 0f605de5d3
 message: add acu and normalized acu score 
@@ -12,9 +12,10 @@ message: add acu and normalized acu score
 file changes:
 M	rose_evaluation_result_detailed.csv
 
-[rose_evaluation_result_detailed.csv] column change:
-  removed: []
-  added:   ['brio_acu', 'brio_normalized_acu', 'gsum_acu', 'gsum_normalized_acu', 'matchsum_acu', 'matchsum_normalized_acu', 'simcls_acu', 'simcls_normalized_acu']
+[rose_evaluation_result_detailed.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['brio_acu', 'brio_normalized_acu', 'gsum_acu', 'gsum_normalized_acu', 'matchsum_acu', 'matchsum_normalized_acu', 'simcls_acu', 'simcls_normalized_acu']
   diff --git a/rose_evaluation_result_detailed.csv b/rose_evaluation_result_detailed.csv
   index dbc3481..24b855f 100644
   --- a/rose_evaluation_result_detailed.csv

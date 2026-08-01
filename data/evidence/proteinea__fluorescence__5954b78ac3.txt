@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    removed unnamed column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # proteinea/fluorescence @ 5954b78ac3
 message: removed unnamed column 
@@ -14,9 +14,10 @@ M	fluorescence_test.csv
 M	fluorescence_train.csv
 M	fluorescence_valid.csv
 
-[fluorescence_test.csv] column change:
-  removed: ['']
-  added:   []
+[fluorescence_test.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   diff --git a/fluorescence_test.csv b/fluorescence_test.csv
   index 57ccc3c..11c9446 100644
   --- a/fluorescence_test.csv
@@ -69,9 +70,10 @@ M	fluorescence_valid.csv
   -43,SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGTDFKEDGNILGHKLEYNYNSHNVYIMADKQKDGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHHQSTQSAQSKDPNEKRDHMVLLEFVTAAGITHGMDELYK,237,1.4816267,5
   ... 54391 further lines not shown (cap is 50)
 
-[fluorescence_train.csv] column change:
-  removed: ['']
-  added:   []
+[fluorescence_train.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   diff --git a/fluorescence_train.csv b/fluorescence_train.csv
   index 7afd183..d50191e 100644
   --- a/fluorescence_train.csv
@@ -124,9 +126,10 @@ M	fluorescence_valid.csv
   -43,SKGEELFTGAVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGVDFKEDGNILGHKLEYNYSSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK,237,3.6272123,3
   ... 42849 further lines not shown (cap is 50)
 
-[fluorescence_valid.csv] column change:
-  removed: ['']
-  added:   []
+[fluorescence_valid.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   diff --git a/fluorescence_valid.csv b/fluorescence_valid.csv
   index 478aa54..268d7b6 100644
   --- a/fluorescence_valid.csv

@@ -4,7 +4,7 @@ type:       cleaning
 message:    cleanup data
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:01Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # syntaxnoob/weather-prediction-prototype-aws @ c1e55b9082
 message: cleanup data 
@@ -14,9 +14,10 @@ M	information_10min.txt
 M	test_aws_10min.csv   [stored in Git LFS]
 M	train_aws_10min.csv   [stored in Git LFS]
 
-[test_aws_10min.csv] column change:
-  removed: ['FID', 'the_geom']
-  added:   []
+[test_aws_10min.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['FID', 'the_geom']
+    added:   []
   payload size 11,837,362 -> 7,604,065 bytes (-4,233,297): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- test_aws_10min.csv@6323155ef9
@@ -63,9 +64,10 @@ M	train_aws_10min.csv   [stored in Git LFS]
   +2023-04-21T07:50:00,0,0.3609353507565336,0.3894693710305265,0.7575894879927503,0.0,0.0825285338015803,0.2436111111111111
   +2023-04-21T08:00:00,1,0.6696011004126542,0.3956156525302192,0.8531943815133667,0.0,0.2269534679543459,0.2961111111111111
 
-[train_aws_10min.csv] column change:
-  removed: ['FID', 'the_geom']
-  added:   []
+[train_aws_10min.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['FID', 'the_geom']
+    added:   []
   payload size 106,572,828 -> 68,306,213 bytes (-38,266,615): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train_aws_10min.csv@6323155ef9

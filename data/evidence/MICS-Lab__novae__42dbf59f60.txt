@@ -5,7 +5,7 @@ message:    fix swapped columns for visium samples in metadata file
 status:     archived
 hub:        moved (HTTP 307)
 renamed_to: prism-oncology/novae
-generated:  2026-07-31T18:09:05Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:09Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # MICS-Lab/novae @ 42dbf59f60
 message: fix swapped columns for visium samples in metadata file 
@@ -13,7 +13,8 @@ message: fix swapped columns for visium samples in metadata file
 file changes:
 M	metadata.csv
 
-[metadata.csv] no column-set change (values may still differ)
+[metadata.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   diff --git a/metadata.csv b/metadata.csv
   index ec27ebb..e9422b9 100644
   --- a/metadata.csv

@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Fix Turkish target_child_sex column loading issue
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:39Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:38Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # phonemetransformers/IPA-CHILDES @ d45274c2d1
 message: Fix Turkish target_child_sex column loading issue 
@@ -13,7 +13,8 @@ file changes:
 M	Turkish/train.csv   [stored in Git LFS]
 M	Turkish/valid.csv   [stored in Git LFS]
 
-[Turkish/train.csv] no column-set change (values may still differ)
+[Turkish/train.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 1,413,313 -> 1,444,722 bytes (+31,409): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Turkish/train.csv@60d41c96b3
@@ -59,6 +60,7 @@ M	Turkish/valid.csv   [stored in Git LFS]
   +6341874,küçült, ,declarative,tur,-2147483648,1, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,küçült .,k y t̠ʃ ø l t WORD_BOUNDARY,tr,k ü ç ü l t WORD_BOUNDARY
   +6341894,sokarız sokarız, ,declarative,tur,-2147483648,2, ,Investigator,44.00090350931231,unknown,8,175,13524,13514,20893,False,sokarız sokarız .,s o k a ɾ ɯ z WORD_BOUNDARY s o k a ɾ ɯ z WORD_BOUNDARY,tr,s o k a r ı z WORD_BOUNDARY s o k a r ı z WORD_BOUNDARY
 
-[Turkish/valid.csv] no column-set change (values may still differ)
+[Turkish/valid.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 3,001,611 -> 3,045,690 bytes (+44,079): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches

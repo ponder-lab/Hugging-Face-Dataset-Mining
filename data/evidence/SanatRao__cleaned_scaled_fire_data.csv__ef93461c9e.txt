@@ -4,7 +4,7 @@ type:       cleaning
 message:    Upload cleaned_fire_data.csv
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:47Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # SanatRao/cleaned_scaled_fire_data.csv @ ef93461c9e
 message: Upload cleaned_fire_data.csv 

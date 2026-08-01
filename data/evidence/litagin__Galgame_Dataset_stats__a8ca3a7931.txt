@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Add specs columns
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:06Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:10Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # litagin/Galgame_Dataset_stats @ a8ca3a7931
 message: Add specs columns 
@@ -12,9 +12,10 @@ message: Add specs columns
 file changes:
 M	galgame_dataset_stats.tsv
 
-[galgame_dataset_stats.tsv] column change:
-  removed: []
-  added:   ['spec1', 'spec2', 'spec3', 'spec4', 'spec5']
+[galgame_dataset_stats.tsv] delimiter '\t' at both revisions
+  column change:
+    removed: []
+    added:   ['spec1', 'spec2', 'spec3', 'spec4', 'spec5']
   diff --git a/galgame_dataset_stats.tsv b/galgame_dataset_stats.tsv
   index f7164ef..078321f 100644
   --- a/galgame_dataset_stats.tsv

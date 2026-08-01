@@ -4,7 +4,7 @@ type:       deduplication
 message:    Removed duplicate columns
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:16Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # science-of-finetuning/diffing-stats-gemma-2-2b-crosscoder-l13-mu4.1e-02-lr1e-04 @ 9f6cf9db16
 message: Removed duplicate columns 
@@ -12,7 +12,8 @@ message: Removed duplicate columns
 file changes:
 M	feature_df.csv   [stored in Git LFS]
 
-[feature_df.csv] no column-set change (values may still differ)
+[feature_df.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 21,302,597 -> 19,907,237 bytes (-1,395,360): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- feature_df.csv@2ced9b9b43

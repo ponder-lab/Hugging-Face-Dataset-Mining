@@ -4,7 +4,7 @@ type:       normalize/standardize/encode
 message:    Upload title_company_normalized dataset with train and test splits
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:10Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:15Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # CIS5190kr/News_Resource_Classification @ 5f31317728
 message: Upload title_company_normalized dataset with train and test splits 
@@ -13,9 +13,10 @@ file changes:
 M	test/test.csv
 M	train/train.csv
 
-[test/test.csv] column change:
-  removed: ['news_company']
-  added:   ['News Outlet', 'Unnamed: 0', 'label']
+[test/test.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['news_company']
+    added:   ['News Outlet', 'Unnamed: 0', 'label']
   diff --git a/test/test.csv b/test/test.csv
   index 0ad84bd..0d7c3d5 100644
   --- a/test/test.csv
@@ -68,9 +69,10 @@ M	train/train.csv
   -suprem court rule in favor of nra in key first amend case,1
   ... 1479 further lines not shown (cap is 50)
 
-[train/train.csv] column change:
-  removed: ['news_company']
-  added:   ['News Outlet', 'Unnamed: 0', 'label']
+[train/train.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['news_company']
+    added:   ['News Outlet', 'Unnamed: 0', 'label']
   diff --git a/train/train.csv b/train/train.csv
   index 4cf752b..7ac85bb 100644
   --- a/train/train.csv

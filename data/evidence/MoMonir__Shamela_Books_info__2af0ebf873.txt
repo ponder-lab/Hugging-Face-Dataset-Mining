@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Add category_id column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:22Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:30Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # MoMonir/Shamela_Books_info @ 2af0ebf873
 message: Add category_id column 
@@ -12,9 +12,10 @@ message: Add category_id column
 file changes:
 M	shamela_books_info.csv
 
-[shamela_books_info.csv] column change:
-  removed: ['SN', 'book_ID']
-  added:   ['book_id', 'category_id', 'sn']
+[shamela_books_info.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['SN', 'book_ID']
+    added:   ['book_id', 'category_id', 'sn']
   diff --git a/shamela_books_info.csv b/shamela_books_info.csv
   index 9da9615..85cb04b 100644
   --- a/shamela_books_info.csv

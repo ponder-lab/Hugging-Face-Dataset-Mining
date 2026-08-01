@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Update columns
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:38Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:47Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # kaistdata/RDB2G-Bench @ 7e5d669789
 message: Update columns 
@@ -131,9 +131,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/2.csv
 M	RDB2G-Bench/rel-trial/study-outcome/3.csv
 M	RDB2G-Bench/rel-trial/study-outcome/4.csv
 
-[RDB2G-Bench/rel-avito/ad-ctr/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/ad-ctr/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/ad-ctr/0.csv b/RDB2G-Bench/rel-avito/ad-ctr/0.csv
   index 290c8db..057d868 100644
   --- a/RDB2G-Bench/rel-avito/ad-ctr/0.csv
@@ -186,9 +187,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00001000101111",0.0406577808356352,0.0366528642787819,0.0410333154328903,2441345,2.182818365097046,0.5752542018890381,0.8034698963165283
   ... 2565 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/ad-ctr/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/ad-ctr/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/ad-ctr/1.csv b/RDB2G-Bench/rel-avito/ad-ctr/1.csv
   index e2a7a34..f09ceaf 100644
   --- a/RDB2G-Bench/rel-avito/ad-ctr/1.csv
@@ -241,9 +243,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00001000101111",0.0395849105774085,0.0366965018414891,0.0413968447378045,2441345,2.171042275428772,0.624861478805542,0.8157000541687012
   ... 2565 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/ad-ctr/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/ad-ctr/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/ad-ctr/2.csv b/RDB2G-Bench/rel-avito/ad-ctr/2.csv
   index 06509f6..cc6235a 100644
   --- a/RDB2G-Bench/rel-avito/ad-ctr/2.csv
@@ -296,9 +299,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00001000101111",0.0391404568218738,0.0362002506180891,0.0408179646354869,2441345,2.1133143067359925,0.5434243679046631,0.6809909343719482
   ... 2565 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/ad-ctr/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/ad-ctr/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/ad-ctr/3.csv b/RDB2G-Bench/rel-avito/ad-ctr/3.csv
   index c6214eb..da54047 100644
   --- a/RDB2G-Bench/rel-avito/ad-ctr/3.csv
@@ -351,9 +355,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00001000101111",0.0431903694384373,0.033076327643334,0.038744399861314,2441345,2.156105828285217,0.5787301063537598,0.7950565814971924
   ... 2565 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/ad-ctr/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/ad-ctr/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/ad-ctr/4.csv b/RDB2G-Bench/rel-avito/ad-ctr/4.csv
   index 1219a1f..efcdec0 100644
   --- a/RDB2G-Bench/rel-avito/ad-ctr/4.csv
@@ -406,9 +411,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00001000101111",0.0403293128899581,0.0361462864010928,0.040741086175807,2441345,2.263690209388733,0.5735769271850586,0.7557117938995361
   ... 2565 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-ad-visit/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-ad-visit/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-ad-visit/0.csv b/RDB2G-Bench/rel-avito/user-ad-visit/0.csv
   index 0ae8261..197faf9 100644
   --- a/RDB2G-Bench/rel-avito/user-ad-visit/0.csv
@@ -461,9 +467,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000111110101",1.3973370512578048e-06,0.0173109416540195,0.0108821287090195,3032065,27.562038826942445,10.459828853607178,12.921233892440796
   ... 1775 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-ad-visit/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-ad-visit/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-ad-visit/1.csv b/RDB2G-Bench/rel-avito/user-ad-visit/1.csv
   index dc418b6..5b53743 100644
   --- a/RDB2G-Bench/rel-avito/user-ad-visit/1.csv
@@ -516,9 +523,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000111110101",1.3175784684512864e-06,0.0172659373812605,0.0109488000394803,3032065,28.03108242750168,10.557480096817017,12.97640061378479
   ... 1775 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-ad-visit/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-ad-visit/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-ad-visit/2.csv b/RDB2G-Bench/rel-avito/user-ad-visit/2.csv
   index fed0ae4..b928d3f 100644
   --- a/RDB2G-Bench/rel-avito/user-ad-visit/2.csv
@@ -571,9 +579,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000111110101",1.21407973306006e-06,0.0172978054669266,0.0110768315556987,3032065,27.689642465114595,10.499993324279783,12.915735483169556
   ... 1775 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-ad-visit/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-ad-visit/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-ad-visit/3.csv b/RDB2G-Bench/rel-avito/user-ad-visit/3.csv
   index 786ac09..a14335c 100644
   --- a/RDB2G-Bench/rel-avito/user-ad-visit/3.csv
@@ -626,9 +635,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000111110101",1.7924856436216924e-06,0.0172219301512095,0.0108842694865794,3032065,27.53873158693313,10.43753147125244,12.82442307472229
   ... 1775 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-ad-visit/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-ad-visit/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-ad-visit/4.csv b/RDB2G-Bench/rel-avito/user-ad-visit/4.csv
   index 130573c..a3dde33 100644
   --- a/RDB2G-Bench/rel-avito/user-ad-visit/4.csv
@@ -681,9 +691,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000111110101",2.015830500175194e-06,0.0173301567067461,0.0110389261228291,3032065,27.671851873397827,10.551114559173584,12.951303482055664
   ... 1775 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-clicks/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-clicks/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-clicks/0.csv b/RDB2G-Bench/rel-avito/user-clicks/0.csv
   index ef0a134..6d4bd8d 100644
   --- a/RDB2G-Bench/rel-avito/user-clicks/0.csv
@@ -736,9 +747,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000011010011",0.4964380275611159,0.6421512500402264,0.6379440162610555,2210689,14.49665756225586,3.69087815284729,6.635249137878418
   ... 1845 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-clicks/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-clicks/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-clicks/1.csv b/RDB2G-Bench/rel-avito/user-clicks/1.csv
   index c0d75f5..02fbd38 100644
   --- a/RDB2G-Bench/rel-avito/user-clicks/1.csv
@@ -791,9 +803,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000011010011",0.5066876093917068,0.646400506754427,0.6333785299392841,2210689,24.214806246757508,5.435050010681152,8.889949798583984
   ... 1845 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-clicks/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-clicks/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-clicks/2.csv b/RDB2G-Bench/rel-avito/user-clicks/2.csv
   index ab85082..befc981 100644
   --- a/RDB2G-Bench/rel-avito/user-clicks/2.csv
@@ -846,9 +859,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000011010011",0.507030058943827,0.6446148147515715,0.6649255750163572,2210689,22.47822711467743,5.660651206970215,9.77165699005127
   ... 1845 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-clicks/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-clicks/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-clicks/3.csv b/RDB2G-Bench/rel-avito/user-clicks/3.csv
   index 89b9d55..6277637 100644
   --- a/RDB2G-Bench/rel-avito/user-clicks/3.csv
@@ -901,9 +915,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000011010011",0.4997559208945334,0.649739693990205,0.6411833446575067,2210689,22.412446594238283,5.305100917816162,9.746800661087036
   ... 1845 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-clicks/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-clicks/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-clicks/4.csv b/RDB2G-Bench/rel-avito/user-clicks/4.csv
   index 551b445..f51602a 100644
   --- a/RDB2G-Bench/rel-avito/user-clicks/4.csv
@@ -956,9 +971,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000011010011",0.5011698307462813,0.641567622096227,0.6602313191174922,2210689,22.451005852222444,5.601445913314819,9.274196863174438
   ... 1845 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-visits/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-visits/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-visits/0.csv b/RDB2G-Bench/rel-avito/user-visits/0.csv
   index 96a0c61..cc54420 100644
   --- a/RDB2G-Bench/rel-avito/user-visits/0.csv
@@ -1011,9 +1027,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000011010011",0.495684371193816,0.6965956063337477,0.6623197531064989,2210689,22.654738509655,5.156186103820801,5.968023777008057
   ... 1845 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-visits/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-visits/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-visits/1.csv b/RDB2G-Bench/rel-avito/user-visits/1.csv
   index 74a1211..33100f9 100644
   --- a/RDB2G-Bench/rel-avito/user-visits/1.csv
@@ -1066,9 +1083,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000011010011",0.496356066306316,0.6967440115146801,0.6644475012704211,2210689,23.7892782330513,5.247598886489868,6.141292333602905
   ... 1845 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-visits/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-visits/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-visits/2.csv b/RDB2G-Bench/rel-avito/user-visits/2.csv
   index 0c0d205..46de39a 100644
   --- a/RDB2G-Bench/rel-avito/user-visits/2.csv
@@ -1121,9 +1139,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000011010011",0.494637935779007,0.697067181056286,0.6599116617105906,2210689,29.62011097669601,6.7022035121917725,7.640740871429443
   ... 1845 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-visits/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-visits/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-visits/3.csv b/RDB2G-Bench/rel-avito/user-visits/3.csv
   index 0de9d14..fcbca56 100644
   --- a/RDB2G-Bench/rel-avito/user-visits/3.csv
@@ -1176,9 +1195,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000011010011",0.4998008693590436,0.6964880894664889,0.6604838048418548,2210689,23.85010122060776,5.712567329406738,6.515948057174683
   ... 1845 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-avito/user-visits/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-avito/user-visits/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-avito/user-visits/4.csv b/RDB2G-Bench/rel-avito/user-visits/4.csv
   index 1a06f76..db1b236 100644
   --- a/RDB2G-Bench/rel-avito/user-visits/4.csv
@@ -1231,9 +1251,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000011010011",0.5058848019881669,0.6958016532916536,0.6615965543746088,2210689,23.40683590173721,5.129937648773193,6.282428741455078
   ... 1845 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/0.csv b/RDB2G-Bench/rel-event/user-attendance/0.csv
   index ba30cae..5ac253f 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/0.csv
@@ -1286,9 +1307,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4145861179767435,0.2412539264202253,0.2414663263082416,5276289,2.075779414176941,0.093902587890625,0.1142303943634033
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/1.csv b/RDB2G-Bench/rel-event/user-attendance/1.csv
   index 04bf5ea..8396687 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/1.csv
@@ -1341,9 +1363,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4067012526955028,0.2388602423204513,0.2395710130968912,5276289,1.9557193994522093,0.0782337188720703,0.0867753028869628
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/10.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/10.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/10.csv b/RDB2G-Bench/rel-event/user-attendance/10.csv
   index 4c9ef26..64458ac 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/10.csv
@@ -1396,9 +1419,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.3991013619215005,0.2389947198738723,0.2353943008646479,5260545,2.6365986585617067,0.1471602916717529,0.1845781803131103
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/11.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/11.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/11.csv b/RDB2G-Bench/rel-event/user-attendance/11.csv
   index fd6ee40..29f7a37 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/11.csv
@@ -1451,9 +1475,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.3997298205937628,0.2378182378433315,0.2386074125175997,5260545,2.745401084423065,0.101121187210083,0.1173889636993408
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/12.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/12.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/12.csv b/RDB2G-Bench/rel-event/user-attendance/12.csv
   index f36a963..f56ce6c 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/12.csv
@@ -1506,9 +1531,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4052547306886188,0.239316965113276,0.2426481476782291,5260545,2.8843637466430665,0.1323962211608886,0.1632330417633056
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/13.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/13.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/13.csv b/RDB2G-Bench/rel-event/user-attendance/13.csv
   index 560b4f5..647d1ef 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/13.csv
@@ -1561,9 +1587,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.3934342763544719,0.2414977237627547,0.2366886702456546,5260545,2.973872876167297,0.1114468574523925,0.1998434066772461
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/14.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/14.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/14.csv b/RDB2G-Bench/rel-event/user-attendance/14.csv
   index 71d3a1b..18dccb6 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/14.csv
@@ -1616,9 +1643,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4080972790411559,0.2385700305713774,0.2407178884330258,5260545,3.345635879039764,0.1552183628082275,0.2329039573669433
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/2.csv b/RDB2G-Bench/rel-event/user-attendance/2.csv
   index 7f4f690..b4a6637 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/2.csv
@@ -1671,9 +1699,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4114493434544202,0.2402627342128437,0.2382453791026608,5276289,2.1084102749824525,0.1090033054351806,0.1336123943328857
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/3.csv b/RDB2G-Bench/rel-event/user-attendance/3.csv
   index 85f31fb..616e0ce 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/3.csv
@@ -1726,9 +1755,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4011116752440592,0.2405941586884111,0.2419402071268158,5276289,2.047512924671173,0.0931017398834228,0.0973117351531982
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/4.csv b/RDB2G-Bench/rel-event/user-attendance/4.csv
   index b27d89e..1e62998 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/4.csv
@@ -1781,9 +1811,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4161392018921808,0.2333179145790412,0.2382767371576414,5276289,2.1745797872543333,0.1063427925109863,0.1100749969482421
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/5.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/5.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/5.csv b/RDB2G-Bench/rel-event/user-attendance/5.csv
   index 8a94692..771f7db 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/5.csv
@@ -1836,9 +1867,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.3985809062983862,0.2397779874740491,0.236196576810772,5260545,2.7333804965019226,0.1426801681518554,0.1313285827636718
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/6.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/6.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/6.csv b/RDB2G-Bench/rel-event/user-attendance/6.csv
   index 87b4943..e881834 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/6.csv
@@ -1891,9 +1923,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.3971713072578169,0.2388812056333159,0.2333826751175191,5260545,2.577152907848358,0.11134934425354,0.1261043548583984
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/7.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/7.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/7.csv b/RDB2G-Bench/rel-event/user-attendance/7.csv
   index 480664d..7443e74 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/7.csv
@@ -1946,9 +1979,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.414786466744576,0.2395277994449384,0.2431230432248319,5260545,2.6477703213691712,0.1149871349334716,0.1155612468719482
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/8.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/8.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/8.csv b/RDB2G-Bench/rel-event/user-attendance/8.csv
   index 5918b90..80f1919 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/8.csv
@@ -2001,9 +2035,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4077168406726077,0.2405265483244609,0.2384381832438877,5260545,2.715038871765137,0.1459927558898925,0.1243433952331543
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-attendance/9.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-attendance/9.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-attendance/9.csv b/RDB2G-Bench/rel-event/user-attendance/9.csv
   index 84bf9b9..f51fb89 100644
   --- a/RDB2G-Bench/rel-event/user-attendance/9.csv
@@ -2056,9 +2091,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4091541508454823,0.2406522303253367,0.2425119250963334,5260545,2.596816372871399,0.1181824207305908,0.123392105102539
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/0.csv b/RDB2G-Bench/rel-event/user-ignore/0.csv
   index 7d7dee8..0891416 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/0.csv
@@ -2111,9 +2147,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4872142531074591,0.907302023373452,0.7945971864977295,5276289,2.068974733352661,0.1811802387237548,0.1779670715332031
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/1.csv b/RDB2G-Bench/rel-event/user-ignore/1.csv
   index 55953db..dcaca12 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/1.csv
@@ -2166,9 +2203,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5008693906546744,0.9058708597399072,0.8106525674002095,5276289,2.0851136207580567,0.1766395568847656,0.1708230972290039
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/10.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/10.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/10.csv b/RDB2G-Bench/rel-event/user-ignore/10.csv
   index 24be592..dae7319 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/10.csv
@@ -2221,9 +2259,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4942169845316868,0.9143403443998684,0.8068133752500714,5260545,2.824355351924896,0.2568962574005127,0.2457251548767089
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/11.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/11.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/11.csv b/RDB2G-Bench/rel-event/user-ignore/11.csv
   index b341e5d..06c3d18 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/11.csv
@@ -2276,9 +2315,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5019625997168587,0.9191262331143284,0.7706220824997617,5260545,2.660118925571441,0.251366376876831,0.2364850044250488
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/12.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/12.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/12.csv b/RDB2G-Bench/rel-event/user-ignore/12.csv
   index c39f587..f23a56f 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/12.csv
@@ -2331,9 +2371,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.51528863446198,0.9182625685601876,0.7370823409863136,5260545,2.7148062586784363,0.2508425712585449,0.2391531467437744
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/13.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/13.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/13.csv b/RDB2G-Bench/rel-event/user-ignore/13.csv
   index fa13bc3..b4a6823 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/13.csv
@@ -2386,9 +2427,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4909019897229181,0.913258643913406,0.7609012098694865,5260545,3.108577609062195,0.3167555332183838,0.2605752944946289
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/14.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/14.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/14.csv b/RDB2G-Bench/rel-event/user-ignore/14.csv
   index f137c49..a08e70d 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/14.csv
@@ -2441,9 +2483,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5021803421729343,0.9205186348043491,0.7629376647296053,5260545,2.905495488643646,0.2767236232757568,0.2707507610321045
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/2.csv b/RDB2G-Bench/rel-event/user-ignore/2.csv
   index ebddfcd..781b5c5 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/2.csv
@@ -2496,9 +2539,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.498750992373304,0.9002328139232902,0.8546924518116287,5276289,2.016453742980957,0.1830344200134277,0.1746060848236084
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/3.csv b/RDB2G-Bench/rel-event/user-ignore/3.csv
   index e249d25..030744a 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/3.csv
@@ -2551,9 +2595,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5080646652245124,0.9104102467197706,0.8073405099869805,5276289,1.7807243585586547,0.1652820110321045,0.1575255393981933
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/4.csv b/RDB2G-Bench/rel-event/user-ignore/4.csv
   index 12fdc14..740a7ef 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/4.csv
@@ -2606,9 +2651,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5036019414850634,0.9129988177607228,0.8070426471055221,5276289,1.8289050102233888,0.1656503677368164,0.1589720249176025
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/5.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/5.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/5.csv b/RDB2G-Bench/rel-event/user-ignore/5.csv
   index 225d871..8539f05 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/5.csv
@@ -2661,9 +2707,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4911735972698391,0.9189621005097196,0.7537099488742816,5260545,3.097814834117889,0.2772386074066162,0.2695264816284179
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/6.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/6.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/6.csv b/RDB2G-Bench/rel-event/user-ignore/6.csv
   index 3a18b61..ca53b15 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/6.csv
@@ -2716,9 +2763,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4944615728714372,0.9128401360544216,0.8638141056174781,5260545,2.892688310146332,0.2665574550628662,0.2768383026123047
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/7.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/7.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/7.csv b/RDB2G-Bench/rel-event/user-ignore/7.csv
   index 25b25fc..6c3bb10 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/7.csv
@@ -2771,9 +2819,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4875803027013969,0.9184242785433262,0.8223543234574958,5260545,2.839669716358185,0.2511053085327148,0.3160574436187744
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/8.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/8.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/8.csv b/RDB2G-Bench/rel-event/user-ignore/8.csv
   index 014412b..a998f81 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/8.csv
@@ -2826,9 +2875,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5023724616388884,0.9155625569316044,0.7841275285002064,5260545,2.78848682641983,0.2506711483001709,0.262298583984375
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-ignore/9.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-ignore/9.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-ignore/9.csv b/RDB2G-Bench/rel-event/user-ignore/9.csv
   index e186841..bad7888 100644
   --- a/RDB2G-Bench/rel-event/user-ignore/9.csv
@@ -2881,9 +2931,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5080343047255071,0.9139145686764736,0.8017408148359849,5260545,2.806393504142761,0.2559168338775635,0.265676736831665
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/0.csv b/RDB2G-Bench/rel-event/user-repeat/0.csv
   index 0653644..c3568f3 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/0.csv
@@ -2936,9 +2987,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4996163981001539,0.741638795986622,0.8018048128342246,5276289,0.4591257572174072,0.0269820690155029,0.0260577201843261
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/1.csv b/RDB2G-Bench/rel-event/user-repeat/1.csv
   index 21eff6b..5665b68 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/1.csv
@@ -2991,9 +3043,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4896373267691774,0.7411928651059085,0.8064171122994653,5276289,0.5276584625244141,0.0277576446533203,0.0274477005004882
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/10.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/10.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/10.csv b/RDB2G-Bench/rel-event/user-repeat/10.csv
   index 42c0d2e..f44889d 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/10.csv
@@ -3046,9 +3099,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5122340540892234,0.7432552954292085,0.7715909090909091,5260545,0.6121323466300964,0.0462563037872314,0.0445997714996337
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/11.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/11.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/11.csv b/RDB2G-Bench/rel-event/user-repeat/11.csv
   index c9e8e06..c4287e4 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/11.csv
@@ -3101,9 +3155,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5006072567177775,0.7457079152731327,0.8048796791443851,5260545,0.6446673035621643,0.0606775283813476,0.0719566345214843
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/12.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/12.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/12.csv b/RDB2G-Bench/rel-event/user-repeat/12.csv
   index d2ce43a..000505b 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/12.csv
@@ -3156,9 +3211,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5016558589429396,0.7468784838350055,0.7856951871657755,5260545,0.6649948358535767,0.0379564762115478,0.0398097038269043
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/13.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/13.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/13.csv b/RDB2G-Bench/rel-event/user-repeat/13.csv
   index 74af61d..4d24e66 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/13.csv
@@ -3211,9 +3267,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5013709362597324,0.753010033444816,0.7749999999999999,5260545,0.6390709042549133,0.0350949764251709,0.0358765125274658
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/14.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/14.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/14.csv b/RDB2G-Bench/rel-event/user-repeat/14.csv
   index 4edf800..0e55492 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/14.csv
@@ -3266,9 +3323,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5041854627079312,0.7396321070234113,0.7814839572192513,5260545,0.6225159168243408,0.0372157096862793,0.0369074344635009
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/2.csv b/RDB2G-Bench/rel-event/user-repeat/2.csv
   index 031d946..23ab383 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/2.csv
@@ -3321,9 +3379,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4933304777809104,0.729041248606466,0.7969251336898395,5276289,0.4722937107086181,0.0271947383880615,0.0277192592620849
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/3.csv b/RDB2G-Bench/rel-event/user-repeat/3.csv
   index 5b32192..7820859 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/3.csv
@@ -3376,9 +3435,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4977517946604785,0.7270903010033445,0.7953208556149732,5276289,0.5054192304611206,0.0274393558502197,0.0296311378479003
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/4.csv b/RDB2G-Bench/rel-event/user-repeat/4.csv
   index 68ae8e0..bac6e0b 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/4.csv
@@ -3431,9 +3491,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5046335856340411,0.7223522853957637,0.7800133689839572,5276289,0.4909233093261719,0.0297751426696777,0.0294699668884277
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/5.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/5.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/5.csv b/RDB2G-Bench/rel-event/user-repeat/5.csv
   index 9a56d3a..3e33b1e 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/5.csv
@@ -3486,9 +3547,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5054281702053829,0.7542920847268674,0.7850935828877006,5260545,0.6484500050544739,0.0371851921081543,0.0449359416961669
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/6.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/6.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/6.csv b/RDB2G-Bench/rel-event/user-repeat/6.csv
   index fdb4526..2c2bf0b 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/6.csv
@@ -3541,9 +3603,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5009857077793923,0.7403567447045708,0.7820187165775402,5260545,0.6539300322532654,0.0366802215576171,0.0426561832427978
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/7.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/7.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/7.csv b/RDB2G-Bench/rel-event/user-repeat/7.csv
   index 84fc1e2..e6b6327 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/7.csv
@@ -3596,9 +3659,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4968174597150231,0.750891861761427,0.7823529411764705,5260545,0.6355095982551575,0.0337576866149902,0.0372514724731445
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/8.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/8.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/8.csv b/RDB2G-Bench/rel-event/user-repeat/8.csv
   index b2a2609..50a650c 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/8.csv
@@ -3651,9 +3715,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.5081966102062504,0.7387402452619843,0.7853609625668448,5272577,0.5808058738708496,0.0334517955780029,0.0382483005523681
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-event/user-repeat/9.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-event/user-repeat/9.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-event/user-repeat/9.csv b/RDB2G-Bench/rel-event/user-repeat/9.csv
   index 36dadfa..317be34 100644
   --- a/RDB2G-Bench/rel-event/user-repeat/9.csv
@@ -3706,9 +3771,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000110100",0.4803113275065606,0.7537346711259756,0.7903743315508021,5260545,0.6414050817489624,0.0336875915527343,0.0368487834930419
   ... 385 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/0.csv b/RDB2G-Bench/rel-f1/driver-dnf/0.csv
   index e4db908..2bc42fa 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/0.csv
@@ -3761,9 +3827,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4843874222532395,0.775328798185941,0.7139559849704777,3249281,3.074200713634491,0.1564478874206543,0.1584610939025879
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/1.csv b/RDB2G-Bench/rel-f1/driver-dnf/1.csv
   index 32459b3..781776d 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/1.csv
@@ -3816,9 +3883,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4713836498626464,0.7706666666666667,0.7171765968867418,3249281,2.989539361000061,0.1820414066314697,0.1743438243865966
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/10.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/10.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/10.csv b/RDB2G-Bench/rel-f1/driver-dnf/10.csv
   index 770cd30..ac5e500 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/10.csv
@@ -3871,9 +3939,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4951325003883235,0.761124716553288,0.7202800956424145,3249281,4.817249929904937,0.2607288360595703,0.2931864261627197
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/11.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/11.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/11.csv b/RDB2G-Bench/rel-f1/driver-dnf/11.csv
   index 3484f9c..2f1ebaf 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/11.csv
@@ -3926,9 +3995,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5034832080123739,0.7468662131519275,0.7080905675108573,3249281,4.832684028148651,0.2115101814270019,0.3030197620391845
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/12.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/12.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/12.csv b/RDB2G-Bench/rel-f1/driver-dnf/12.csv
   index 2aa6677..2ce5e19 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/12.csv
@@ -3981,9 +4051,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4805387889700053,0.7850884353741496,0.7321280437222466,3249281,4.8584339261055,0.2853057384490967,0.2252783775329589
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/13.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/13.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/13.csv b/RDB2G-Bench/rel-f1/driver-dnf/13.csv
   index daf6723..f2136aa 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/13.csv
@@ -4036,9 +4107,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4945408264838884,0.7900408163265307,0.7058654174596204,3249281,4.353297090530395,0.2822952270507812,0.2509999275207519
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/14.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/14.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/14.csv b/RDB2G-Bench/rel-f1/driver-dnf/14.csv
   index 95b6f67..4233a45 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/14.csv
@@ -4091,9 +4163,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4938733838992648,0.7698321995464854,0.6835065632167081,3249281,5.409486937522888,0.2915196418762207,0.2640016078948974
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/2.csv b/RDB2G-Bench/rel-f1/driver-dnf/2.csv
   index 2310803..24a259b 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/2.csv
@@ -4146,9 +4219,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5020675588264678,0.7689433106575962,0.6861220904699166,3249281,4.195352280139924,0.2450752258300781,0.2042131423950195
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/3.csv b/RDB2G-Bench/rel-f1/driver-dnf/3.csv
   index 54c4012..2d49545 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/3.csv
@@ -4201,9 +4275,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4989033231020091,0.7732789115646259,0.7035231542477919,3249281,5.145015692710876,0.3301959037780761,0.2867884635925293
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/4.csv b/RDB2G-Bench/rel-f1/driver-dnf/4.csv
   index adfe373..5e977b7 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/4.csv
@@ -4256,9 +4331,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4978526251769333,0.7643900226757369,0.7300980822719954,3249281,4.711963880062103,0.3232402801513672,0.3341259956359863
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/5.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/5.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/5.csv b/RDB2G-Bench/rel-f1/driver-dnf/5.csv
   index 8c3b51c..53b0d1f 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/5.csv
@@ -4311,9 +4387,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5058966483115398,0.7789931972789116,0.7364612306641293,3249281,5.2771000623703,0.2472710609436035,0.2603299617767334
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/6.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/6.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/6.csv b/RDB2G-Bench/rel-f1/driver-dnf/6.csv
   index bcba392..0b484fa 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/6.csv
@@ -4366,9 +4443,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5045515901578016,0.7957732426303855,0.7269506660811009,3249281,4.33357595205307,0.2536799907684326,0.2632224559783935
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/7.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/7.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/7.csv b/RDB2G-Bench/rel-f1/driver-dnf/7.csv
   index f1c016d..248ed0a 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/7.csv
@@ -4421,9 +4499,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5145813506952268,0.7173877551020408,0.7313472893183038,3249281,4.798788285255432,0.2551658153533935,0.2728452682495117
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/8.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/8.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/8.csv b/RDB2G-Bench/rel-f1/driver-dnf/8.csv
   index 22c59db..d8d4108 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/8.csv
@@ -4476,9 +4555,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5149753988794402,0.7341496598639456,0.7398379934611818,3249281,4.979726541042328,0.2951579093933105,0.3090877532958984
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-dnf/9.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-dnf/9.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-dnf/9.csv b/RDB2G-Bench/rel-f1/driver-dnf/9.csv
   index 707585f..2e901cf 100644
   --- a/RDB2G-Bench/rel-f1/driver-dnf/9.csv
@@ -4531,9 +4611,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4897696602952426,0.7531065759637188,0.74184355633631,3249281,4.571571505069732,0.2721521854400635,0.2551343441009521
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/0.csv b/RDB2G-Bench/rel-f1/driver-position/0.csv
   index 6c09a8b..a39417b 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/0.csv
@@ -4586,9 +4667,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.853944356921662,3.391608765575993,3.7834982901707033,3249281,1.923934161663056,0.1176080703735351,0.1424057483673095
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/1.csv b/RDB2G-Bench/rel-f1/driver-position/1.csv
   index b043a99..84d2cd4 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/1.csv
@@ -4641,9 +4723,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.693850797740806,3.4861043590502336,3.939326872491,3249281,1.9428810715675355,0.1423943042755127,0.1425569057464599
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/10.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/10.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/10.csv b/RDB2G-Bench/rel-f1/driver-position/10.csv
   index dc95be3..8134c34 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/10.csv
@@ -4696,9 +4779,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.703737458671331,3.362716549113343,3.8708121140379657,3249281,3.038771569728852,0.1781830787658691,0.1962804794311523
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/11.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/11.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/11.csv b/RDB2G-Bench/rel-f1/driver-position/11.csv
   index a21ad4a..c65b5fc 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/11.csv
@@ -4751,9 +4835,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.892275174531331,3.452719518257605,3.913806035602303,3249281,2.8601460218429566,0.2158677577972412,0.2317280769348144
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/12.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/12.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/12.csv b/RDB2G-Bench/rel-f1/driver-position/12.csv
   index 467d300..9300281 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/12.csv
@@ -4806,9 +4891,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.7417736373107005,3.3820469880470374,3.866533835812619,3249281,2.9312815427780152,0.1512789726257324,0.2207434177398681
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/13.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/13.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/13.csv b/RDB2G-Bench/rel-f1/driver-position/13.csv
   index 5ee9100..b215b2d 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/13.csv
@@ -4861,9 +4947,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.839258887756169,3.3952436939588613,3.87800946825429,3249281,2.7965712428092955,0.2078135013580322,0.2266621589660644
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/14.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/14.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/14.csv b/RDB2G-Bench/rel-f1/driver-position/14.csv
   index e1046b3..98aa3e5 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/14.csv
@@ -4916,9 +5003,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.881087376729199,3.38875282302887,3.881005944661927,3249281,2.86258670091629,0.1878070831298828,0.2094671726226806
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/2.csv b/RDB2G-Bench/rel-f1/driver-position/2.csv
   index f2cbf5f..7a3e8d1 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/2.csv
@@ -4971,9 +5059,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.727784859367973,3.469017193678944,3.961389801544056,3249281,1.9313759684562684,0.117668867111206,0.1381206512451172
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/3.csv b/RDB2G-Bench/rel-f1/driver-position/3.csv
   index 3b7af87..daebb36 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/3.csv
@@ -5026,9 +5115,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.701851680177584,3.3439611520939216,3.879304913888897,3249281,2.252602756023407,0.12697434425354,0.1650876998901367
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/4.csv b/RDB2G-Bench/rel-f1/driver-position/4.csv
   index bcbe1a6..ddb4eb2 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/4.csv
@@ -5081,9 +5171,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.68325173647855,3.4146227688811663,3.90857339817181,3249281,3.064413642883301,0.2192814350128173,0.2254548072814941
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/5.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/5.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/5.csv b/RDB2G-Bench/rel-f1/driver-position/5.csv
   index ec3106c..5274e0c 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/5.csv
@@ -5136,9 +5227,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.711180225191296,3.3398240448716647,3.929011854288871,3249281,2.49606339931488,0.1665692329406738,0.1651496887207031
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/6.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/6.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/6.csv b/RDB2G-Bench/rel-f1/driver-position/6.csv
   index a9f6fc8..51e8d5a 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/6.csv
@@ -5191,9 +5283,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.75048578418353,3.4073031647171907,3.8595752621951855,3249281,2.801140832901001,0.1921303272247314,0.2335648536682129
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/7.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/7.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/7.csv b/RDB2G-Bench/rel-f1/driver-position/7.csv
   index 3b78ef8..d561448 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/7.csv
@@ -5246,9 +5339,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.803650513498892,3.413401477115506,3.842089452576219,3249281,2.901124668121338,0.1601400375366211,0.199289321899414
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/8.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/8.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/8.csv b/RDB2G-Bench/rel-f1/driver-position/8.csv
   index e19bdd1..56699d8 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/8.csv
@@ -5301,9 +5395,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.715317433502813,3.3501327669453285,3.8669433123187016,3249281,2.8746115922927857,0.1954195499420166,0.23453950881958
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-position/9.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-position/9.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-position/9.csv b/RDB2G-Bench/rel-f1/driver-position/9.csv
   index f33e4f2..3650488 100644
   --- a/RDB2G-Bench/rel-f1/driver-position/9.csv
@@ -5356,9 +5451,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",5.923920379620586,3.469171309041117,3.8816677444859553,3249281,2.985859978199005,0.1687014102935791,0.2713041305541992
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/0.csv b/RDB2G-Bench/rel-f1/driver-top3/0.csv
   index 6269e23..9f9fccd 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/0.csv
@@ -5411,9 +5507,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4747436164548464,0.7816738635752808,0.7762136810200669,3249281,0.588288688659668,0.1591401100158691,0.1544466018676757
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/1.csv b/RDB2G-Bench/rel-f1/driver-top3/1.csv
   index 65d4b9e..b8c1890 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/1.csv
@@ -5466,9 +5563,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4924956208378668,0.7779290820805933,0.7786044627926422,3249281,0.7027820944786072,0.220534086227417,0.1740531921386718
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/10.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/10.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/10.csv b/RDB2G-Bench/rel-f1/driver-top3/10.csv
   index 839f327..23a8040 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/10.csv
@@ -5521,9 +5619,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.475029130109344,0.7812975936643314,0.8219716764214047,3249281,0.9477522373199464,0.27547287940979,0.323415994644165
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/11.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/11.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/11.csv b/RDB2G-Bench/rel-f1/driver-top3/11.csv
   index e47e223..c6c809b 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/11.csv
@@ -5576,9 +5675,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5406972706437947,0.7692032036695274,0.7911332044314381,3249281,0.9817659378051756,0.3048038482666015,0.2806870937347412
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/12.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/12.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/12.csv b/RDB2G-Bench/rel-f1/driver-top3/12.csv
   index 29fbcfe..438661d 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/12.csv
@@ -5631,9 +5731,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4619263683434806,0.7783411872211571,0.788944920568562,3249281,0.9325209975242614,0.2322924137115478,0.3198292255401611
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/13.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/13.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/13.csv b/RDB2G-Bench/rel-f1/driver-top3/13.csv
   index 7db4968..8a22a47 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/13.csv
@@ -5686,9 +5787,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.493456335702325,0.7839673182705919,0.7794993729096991,3249281,0.9723424553871156,0.3476920127868652,0.2677154541015625
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/14.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/14.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/14.csv b/RDB2G-Bench/rel-f1/driver-top3/14.csv
   index 2993233..5be40a1 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/14.csv
@@ -5741,9 +5843,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5012462285189558,0.7838239773521348,0.7735746760033446,3249281,0.8028579473495483,0.2448692321777343,0.1999351978302002
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/2.csv b/RDB2G-Bench/rel-f1/driver-top3/2.csv
   index 878bcd0..d188232 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/2.csv
@@ -5796,9 +5899,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4981711692941639,0.773736360215728,0.7962152487458193,3249281,0.679905915260315,0.2130331993103027,0.1637556552886963
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/3.csv b/RDB2G-Bench/rel-f1/driver-top3/3.csv
   index 7397930..0460482 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/3.csv
@@ -5851,9 +5955,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5160273475781497,0.7640250129902708,0.7830920777591973,3249281,0.646181297302246,0.1654083728790283,0.1771032810211181
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/4.csv b/RDB2G-Bench/rel-f1/driver-top3/4.csv
   index 92d1a92..098df5b 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/4.csv
@@ -5906,9 +6011,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4646927641580048,0.7675010302628514,0.7890037102842811,3249281,0.6770899176597596,0.1644911766052246,0.1679537296295166
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/5.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/5.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/5.csv b/RDB2G-Bench/rel-f1/driver-top3/5.csv
   index 7af9e72..81e7921 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/5.csv
@@ -5961,9 +6067,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.4882746487024562,0.7759402268370034,0.8102790551839465,3249281,1.0707787036895753,0.3233170509338379,0.3488168716430664
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/6.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/6.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/6.csv b/RDB2G-Bench/rel-f1/driver-top3/6.csv
   index 333ecf5..636c7d9 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/6.csv
@@ -6016,9 +6123,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5038274262873194,0.7780365877694362,0.7665525710702341,3249281,0.9770674586296082,0.3431437015533447,0.2628395557403564
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/7.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/7.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/7.csv b/RDB2G-Bench/rel-f1/driver-top3/7.csv
   index fcd2404..29934a3 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/7.csv
@@ -6071,9 +6179,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5160466390412914,0.7245525075701922,0.812976849916388,3249281,0.9852284073829652,0.3575541973114013,0.2844626903533935
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/8.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/8.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/8.csv b/RDB2G-Bench/rel-f1/driver-top3/8.csv
   index 39f2532..23edf12 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/8.csv
@@ -6126,9 +6235,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5379424497071555,0.71623873429969,0.8307182796822742,3249281,0.9468138575553894,0.2340281009674072,0.2983088493347168
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-f1/driver-top3/9.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-f1/driver-top3/9.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-f1/driver-top3/9.csv b/RDB2G-Bench/rel-f1/driver-top3/9.csv
   index 1e34966..7579000 100644
   --- a/RDB2G-Bench/rel-f1/driver-top3/9.csv
@@ -6181,9 +6291,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000011011111",0.5339182504957907,0.7664976438336528,0.7978744251672242,3249281,0.9229975461959838,0.2367417812347412,0.2946057319641113
   ... 1401 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-stack/post-post-related/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-stack/post-post-related/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-stack/post-post-related/0.csv b/RDB2G-Bench/rel-stack/post-post-related/0.csv
   index 100044f..317f04e 100644
   --- a/RDB2G-Bench/rel-stack/post-post-related/0.csv
@@ -6236,9 +6347,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000000110011",0.000202208296333,0.0001832484133369,5.617346365576902e-05,2029441,0.8040339946746826,0.0402021408081054,0.0482511520385742
   ... 15915 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-stack/post-post-related/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-stack/post-post-related/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-stack/post-post-related/1.csv b/RDB2G-Bench/rel-stack/post-post-related/1.csv
   index cad4015..9116be6 100644
   --- a/RDB2G-Bench/rel-stack/post-post-related/1.csv
@@ -6291,9 +6403,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000000110011",0.000116770422,0.0001832484133369,5.617346365576902e-05,2029441,0.8364523649215698,0.0490386486053466,0.0503251552581787
   ... 15915 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-stack/post-post-related/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-stack/post-post-related/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-stack/post-post-related/2.csv b/RDB2G-Bench/rel-stack/post-post-related/2.csv
   index bf15d4f..437d095 100644
   --- a/RDB2G-Bench/rel-stack/post-post-related/2.csv
@@ -6346,9 +6459,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000000110011",0.0002881306186028,0.0001832484133369,5.617346365576902e-05,2029441,0.9503665804862976,0.0408222675323486,0.0557875633239746
   ... 15915 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-stack/post-post-related/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-stack/post-post-related/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-stack/post-post-related/3.csv b/RDB2G-Bench/rel-stack/post-post-related/3.csv
   index 076f335..d31c2f1 100644
   --- a/RDB2G-Bench/rel-stack/post-post-related/3.csv
@@ -6401,9 +6515,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000000110011",0.0004589876212938,0.0001832484133369,5.617346365576902e-05,2029441,0.995339059829712,0.0445184707641601,0.0535504817962646
   ... 15915 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-stack/post-post-related/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-stack/post-post-related/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-stack/post-post-related/4.csv b/RDB2G-Bench/rel-stack/post-post-related/4.csv
   index 5b1a08b..335e537 100644
   --- a/RDB2G-Bench/rel-stack/post-post-related/4.csv
@@ -6456,9 +6571,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_0000000000110011",0.0002025139842912,0.0001832484133369,5.617346365576902e-05,2029441,0.8166691064834595,0.0375785827636718,0.0450384616851806
   ... 15915 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-trial/study-outcome/0.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-trial/study-outcome/0.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-trial/study-outcome/0.csv b/RDB2G-Bench/rel-trial/study-outcome/0.csv
   index 6f79bdd..10c07d0 100644
   --- a/RDB2G-Bench/rel-trial/study-outcome/0.csv
@@ -6511,9 +6627,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000000000001000011",0.4963539410921447,0.6335647496638209,0.6488080103640745,2517505,1.3398313403129578,0.0448799133300781,0.0414645671844482
   ... 73683 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-trial/study-outcome/1.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-trial/study-outcome/1.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-trial/study-outcome/1.csv b/RDB2G-Bench/rel-trial/study-outcome/1.csv
   index 3fe9f21..19181d8 100644
   --- a/RDB2G-Bench/rel-trial/study-outcome/1.csv
@@ -6566,9 +6683,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000000000001000011",0.4887185626861886,0.6361625990108963,0.6452060101945686,2517761,1.3206124305725098,0.0457773208618164,0.0431416034698486
   ... 73683 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-trial/study-outcome/2.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-trial/study-outcome/2.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-trial/study-outcome/2.csv b/RDB2G-Bench/rel-trial/study-outcome/2.csv
   index 7c68757..0f418e3 100644
   --- a/RDB2G-Bench/rel-trial/study-outcome/2.csv
@@ -6621,9 +6739,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000000000001000011",0.4915136072793807,0.6263966511644531,0.645520806848038,2517761,1.1388012051582337,0.0459311008453369,0.0508785247802734
   ... 73683 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-trial/study-outcome/3.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-trial/study-outcome/3.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-trial/study-outcome/3.csv b/RDB2G-Bench/rel-trial/study-outcome/3.csv
   index 96a1c74..79d80b8 100644
   --- a/RDB2G-Bench/rel-trial/study-outcome/3.csv
@@ -6676,9 +6795,10 @@ M	RDB2G-Bench/rel-trial/study-outcome/4.csv
   -43,"graph_00000000000001000011",0.5056276326083753,0.6406524332220926,0.6744518300582374,2588801,1.3374289870262146,0.0529298782348632,0.0539395809173584
   ... 73683 further lines not shown (cap is 50)
 
-[RDB2G-Bench/rel-trial/study-outcome/4.csv] column change:
-  removed: []
-  added:   ['dataset', 'seed', 'task']
+[RDB2G-Bench/rel-trial/study-outcome/4.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['dataset', 'seed', 'task']
   diff --git a/RDB2G-Bench/rel-trial/study-outcome/4.csv b/RDB2G-Bench/rel-trial/study-outcome/4.csv
   index d4c9e26..1a42c88 100644
   --- a/RDB2G-Bench/rel-trial/study-outcome/4.csv

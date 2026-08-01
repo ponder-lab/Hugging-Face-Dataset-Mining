@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Added betas columns to df
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:50Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:48:01Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # science-of-finetuning/diffing-stats-R1dist-Qwen-1.5B-Nemotron-L16-k100-lr1e-04-local-shuffling-CCLoss @ 197357f0a8
 message: Added betas columns to df 
@@ -12,7 +12,8 @@ message: Added betas columns to df
 file changes:
 M	feature_df.csv   [stored in Git LFS]
 
-[feature_df.csv] no column-set change (values may still differ)
+[feature_df.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 16,336,891 -> 16,442,642 bytes (+105,751): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- feature_df.csv@ec86e96d4e

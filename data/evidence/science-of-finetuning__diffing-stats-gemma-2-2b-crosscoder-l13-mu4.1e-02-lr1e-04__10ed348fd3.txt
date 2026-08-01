@@ -4,7 +4,7 @@ type:       normalize/standardize/encode
 message:    Update feature_df.csv with encoder norms
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:15Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:19Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # science-of-finetuning/diffing-stats-gemma-2-2b-crosscoder-l13-mu4.1e-02-lr1e-04 @ 10ed348fd3
 message: Update feature_df.csv with encoder norms 
@@ -12,9 +12,10 @@ message: Update feature_df.csv with encoder norms
 file changes:
 M	feature_df.csv   [stored in Git LFS]
 
-[feature_df.csv] column change:
-  removed: []
-  added:   ['enc_base_norm']
+[feature_df.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['enc_base_norm']
   payload size 20,582,636 -> 21,317,005 bytes (+734,369): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- feature_df.csv@f66905e267

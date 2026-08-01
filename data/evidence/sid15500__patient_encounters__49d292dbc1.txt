@@ -4,7 +4,7 @@ type:       cleaning
 message:    Upload cleaned_patient_data.csv with huggingface_hub
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:41Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:48Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # sid15500/patient_encounters @ 49d292dbc1
 message: Upload cleaned_patient_data.csv with huggingface_hub 
@@ -12,9 +12,10 @@ message: Upload cleaned_patient_data.csv with huggingface_hub
 file changes:
 M	cleaned_patient_data.csv
 
-[cleaned_patient_data.csv] column change:
-  removed: ['DESCRIPTION_MEDICATIONS']
-  added:   []
+[cleaned_patient_data.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['DESCRIPTION_MEDICATIONS']
+    added:   []
   diff --git a/cleaned_patient_data.csv b/cleaned_patient_data.csv
   index 20094fe..9f7e692 100644
   --- a/cleaned_patient_data.csv

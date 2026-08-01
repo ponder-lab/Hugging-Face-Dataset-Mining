@@ -4,7 +4,7 @@ type:       cleaning
 message:    cleaner reviews
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:29Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # bumbledeep/distrowatch-reviews @ e0f3cb0b18
 message: cleaner reviews 
@@ -12,7 +12,8 @@ message: cleaner reviews
 file changes:
 M	distrowatch_20250406.csv
 
-[distrowatch_20250406.csv] no column-set change (values may still differ)
+[distrowatch_20250406.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   diff --git a/distrowatch_20250406.csv b/distrowatch_20250406.csv
   index c4dfe6a..9ee9dbc 100644
   --- a/distrowatch_20250406.csv

@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    fix: id column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:03Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:06Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # contemmcm/sst @ dcdde1231e
 message: fix: id column 
@@ -13,7 +13,8 @@ file changes:
 M	sst2.csv   [stored in Git LFS]
 M	sst5.csv   [stored in Git LFS]
 
-[sst2.csv] no column-set change (values may still differ)
+[sst2.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size unchanged at 8,711,896 bytes (equal size is not equal content)
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- sst2.csv@67e6fbd925
@@ -59,7 +60,8 @@ M	sst5.csv   [stored in Git LFS]
   +36,'s enough melodrama in this magnolia primavera to make pta proud yet director muccino 's characters are less worthy of puccini than they are of daytime television,0.29167,0
   +37,'s enough to make one pine for the day when godard can no longer handle the rigors of filmmaking,0.375,0
 
-[sst5.csv] no column-set change (values may still differ)
+[sst5.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size unchanged at 14,290,598 bytes (equal size is not equal content)
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- sst5.csv@67e6fbd925
