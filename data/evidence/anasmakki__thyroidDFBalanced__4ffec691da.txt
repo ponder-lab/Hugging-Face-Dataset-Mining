@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Removed unnammed column and upload again
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:44Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:52Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # anasmakki/thyroidDFBalanced @ 4ffec691da
 message: Removed unnammed column and upload again 
@@ -12,9 +12,10 @@ message: Removed unnammed column and upload again
 file changes:
 M	thyroidDFBalanced.csv
 
-[thyroidDFBalanced.csv] column change:
-  removed: ['']
-  added:   []
+[thyroidDFBalanced.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   []
   diff --git a/thyroidDFBalanced.csv b/thyroidDFBalanced.csv
   index f9b8101..f6a2fa5 100644
   --- a/thyroidDFBalanced.csv

@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    remove index column v2
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:20Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:27Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # Mostafa3zazi/wonders_testing_dataset @ 289a3a909f
 message: remove index column v2 
@@ -12,9 +12,10 @@ message: remove index column v2
 file changes:
 M	data.csv
 
-[data.csv] column change:
-  removed: ['Unnamed: 0']
-  added:   []
+[data.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['Unnamed: 0']
+    added:   []
   diff --git a/data.csv b/data.csv
   index c125bb48..d607c6b7 100644
   --- a/data.csv

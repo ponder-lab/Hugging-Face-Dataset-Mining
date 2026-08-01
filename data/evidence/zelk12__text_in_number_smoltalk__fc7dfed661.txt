@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Added a new column, the set is being recreated.
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:09Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:14Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # zelk12/text_in_number_smoltalk @ fc7dfed661
 message: Added a new column, the set is being recreated. 
@@ -12,9 +12,10 @@ message: Added a new column, the set is being recreated.
 file changes:
 M	test_smoltalk_in_number.csv
 
-[test_smoltalk_in_number.csv] column change:
-  removed: []
-  added:   ['Number of characters']
+[test_smoltalk_in_number.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['Number of characters']
   diff --git a/test_smoltalk_in_number.csv b/test_smoltalk_in_number.csv
   index d6a0e20..dfbfa70 100644
   --- a/test_smoltalk_in_number.csv

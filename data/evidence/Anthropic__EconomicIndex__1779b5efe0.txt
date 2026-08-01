@@ -4,7 +4,7 @@ type:       cleaning
 message:    Clean up repo
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:35Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:49Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # Anthropic/EconomicIndex @ 1779b5efe0
 message: Clean up repo 

@@ -4,7 +4,7 @@ type:       merge
 message:    Upload mergedAmazonProducts.csv
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:02Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # testiyyy/amazonData @ c91a03e8ea
 message: Upload mergedAmazonProducts.csv 

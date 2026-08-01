@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Unify columns
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:40Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:49Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # kaistdata/RDB2G-Bench @ 798486de2c
 message: Unify columns 

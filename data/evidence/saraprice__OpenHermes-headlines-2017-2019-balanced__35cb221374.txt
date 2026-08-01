@@ -4,7 +4,7 @@ type:       normalize/standardize/encode
 message:    fixing encodings
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:02Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:03Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # saraprice/OpenHermes-headlines-2017-2019-balanced @ 35cb221374
 message: fixing encodings 
@@ -13,7 +13,8 @@ file changes:
 M	test.csv
 M	train.csv   [stored in Git LFS]
 
-[test.csv] no column-set change (values may still differ)
+[test.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   diff --git a/test.csv b/test.csv
   index 8833bb7..b3f00e8 100644
   --- a/test.csv
@@ -66,7 +67,8 @@ M	train.csv   [stored in Git LFS]
   +import java.util.Collections;
   ... 8055 further lines not shown (cap is 50)
 
-[train.csv] no column-set change (values may still differ)
+[train.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 7,008,126 -> 6,839,727 bytes (-168,399): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train.csv@66df69ce9a

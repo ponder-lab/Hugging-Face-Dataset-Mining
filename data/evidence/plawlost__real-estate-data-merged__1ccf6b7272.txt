@@ -5,7 +5,7 @@ message:    Upload merged_housing_data_cleaned.csv with huggingface_hub
 status:     archived
 hub:        moved (HTTP 307)
 renamed_to: ycaleb/real-estate-data-merged
-generated:  2026-07-31T18:09:08Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:12Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # plawlost/real-estate-data-merged @ 1ccf6b7272
 message: Upload merged_housing_data_cleaned.csv with huggingface_hub 
@@ -13,9 +13,10 @@ message: Upload merged_housing_data_cleaned.csv with huggingface_hub
 file changes:
 M	merged_housing_data_cleaned.csv
 
-[merged_housing_data_cleaned.csv] column change:
-  removed: ['-0.125', '-0.5714285714285714', '0', '0.0157154090925717', '0.0535714285714285', '0.0554132434370431', '0.3333333333333332', '0.4285714285714285', '0.5999999999999999', '1.0478374858612856', '3.0', '39.0', '4.0', '41620.0', '43.0', '6.0', '7.0', 'Salt Lake City, UT']
-  added:   ['-0.0158730158730158', '-0.1926167403856569', '0.0064363005009908', '0.0204726501095956', '0.0526315789473683', '0.0725', '0.2857142857142858', '0.5', '0.5454545454545454', '0.5555555555555555', '1.017960331269016', '1.75', '11.0', '14.0', '18.0', '21.0', '234.68102508178845', '3', '31700.0', '418275.0', '420000.0', 'Condo/Co-op', 'Manchester, NH', 'NH', 'New Hampshire', 'e: 03458']
+[merged_housing_data_cleaned.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['-0.125', '-0.5714285714285714', '0', '0.0157154090925717', '0.0535714285714285', '0.0554132434370431', '0.3333333333333332', '0.4285714285714285', '0.5999999999999999', '1.0478374858612856', '3.0', '39.0', '4.0', '41620.0', '43.0', '6.0', '7.0', 'Salt Lake City, UT']
+    added:   ['-0.0158730158730158', '-0.1926167403856569', '0.0064363005009908', '0.0204726501095956', '0.0526315789473683', '0.0725', '0.2857142857142858', '0.5', '0.5454545454545454', '0.5555555555555555', '1.017960331269016', '1.75', '11.0', '14.0', '18.0', '21.0', '234.68102508178845', '3', '31700.0', '418275.0', '420000.0', 'Condo/Co-op', 'Manchester, NH', 'NH', 'New Hampshire', 'e: 03458']
   diff --git a/merged_housing_data_cleaned.csv b/merged_housing_data_cleaned.csv
   index 68a5586..8f8c2f0 100644
   --- a/merged_housing_data_cleaned.csv

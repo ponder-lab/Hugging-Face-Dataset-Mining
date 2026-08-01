@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    drop group column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # ibm-research/popqa-tp @ 4f2e7e4224
 message: drop group column 
@@ -12,9 +12,10 @@ message: drop group column
 file changes:
 M	popQA_template_paraphrases.csv   [stored in Git LFS]
 
-[popQA_template_paraphrases.csv] column change:
-  removed: ['group']
-  added:   []
+[popQA_template_paraphrases.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['group']
+    added:   []
   payload size 16,650,688 -> 15,546,228 bytes (-1,104,460): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- popQA_template_paraphrases.csv@1f5d8d4489

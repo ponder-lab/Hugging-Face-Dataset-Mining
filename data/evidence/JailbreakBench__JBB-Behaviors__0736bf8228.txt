@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Update benign behaviors with source column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:04Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # JailbreakBench/JBB-Behaviors @ 0736bf8228
 message: Update benign behaviors with source column 
@@ -12,9 +12,10 @@ message: Update benign behaviors with source column
 file changes:
 M	data/benign-behaviors.csv
 
-[data/benign-behaviors.csv] column change:
-  removed: ['Unnamed: 0']
-  added:   []
+[data/benign-behaviors.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['Unnamed: 0']
+    added:   []
   diff --git a/data/benign-behaviors.csv b/data/benign-behaviors.csv
   index f956245..dbfe618 100644
   --- a/data/benign-behaviors.csv

@@ -4,7 +4,7 @@ type:       merge
 message:    Merged Diversity & Inclusion with other, because of , issue
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:58Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # domdomingo/sasb_embeddings @ 8e7e902331
 message: Merged Diversity & Inclusion with other, because of , issue 
@@ -12,7 +12,8 @@ message: Merged Diversity & Inclusion with other, because of , issue
 file changes:
 M	sasb_embeddings.csv
 
-[sasb_embeddings.csv] no column-set change (values may still differ)
+[sasb_embeddings.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   diff --git a/sasb_embeddings.csv b/sasb_embeddings.csv
   index e20565a..977c9df 100644
   --- a/sasb_embeddings.csv

@@ -4,7 +4,7 @@ type:       deduplication
 message:    Delete train.zip as it contains duplicate field "판결유형"
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:35Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:49Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # joonhok-exo-ai/korean_law_open_data_precedents @ 5de8f553aa
 message: Delete train.zip as it contains duplicate field "판결유형" 

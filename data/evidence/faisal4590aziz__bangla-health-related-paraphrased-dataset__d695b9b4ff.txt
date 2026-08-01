@@ -4,7 +4,7 @@ type:       cleaning
 message:    200k cleaned and final data
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:58Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:58Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # faisal4590aziz/bangla-health-related-paraphrased-dataset @ d695b9b4ff
 message: 200k cleaned and final data 
@@ -12,7 +12,8 @@ message: 200k cleaned and final data
 file changes:
 M	all_paraphrased_data.csv   [stored in Git LFS]
 
-[all_paraphrased_data.csv] no column-set change (values may still differ)
+[all_paraphrased_data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 81,458,420 -> 85,878,456 bytes (+4,420,036): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- all_paraphrased_data.csv@7ffd42c4d5

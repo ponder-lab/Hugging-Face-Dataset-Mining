@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Add has_issue column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:06Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:10Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # gsarti/qe4pe @ 200f47f536
 message: Add has_issue column 
@@ -13,9 +13,10 @@ file changes:
 M	README.md
 M	setup/highlights/oracle/processed_oracle_pe.csv
 
-[setup/highlights/oracle/processed_oracle_pe.csv] column change:
-  removed: []
-  added:   ['has_issue']
+[setup/highlights/oracle/processed_oracle_pe.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['has_issue']
   diff --git a/setup/highlights/oracle/processed_oracle_pe.csv b/setup/highlights/oracle/processed_oracle_pe.csv
   index aac88af..d73df1f 100644
   --- a/setup/highlights/oracle/processed_oracle_pe.csv

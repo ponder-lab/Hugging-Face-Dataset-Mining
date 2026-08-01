@@ -4,7 +4,7 @@ type:       rename/split-standardization
 message:    Split by ;
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:59Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:01Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # djulian13/east-slavic-swadesh-lists @ a4c5651f5e
 message: Split by ; 
@@ -12,9 +12,9 @@ message: Split by ;
 file changes:
 M	Swadesh lists - East Slavic for black-box classification test.csv
 
-[Swadesh lists - East Slavic for black-box classification test.csv] column change:
-  removed: ['Beloɡornoje (South, Russian, Russia)', 'Concept', 'Khislavichi (Eastern, Belarusian, Russia)', 'Meɡra (North, Russian, Russia)']
-  added:   [' Belarusian', ' Russia)"', ' Russia)";"Beloɡornoje (South', ' Russia)";"Khislavichi (Eastern', ' Russian', 'Concept;"Meɡra (North']
+[Swadesh lists - East Slavic for black-box classification test.csv] delimiter change: ',' -> ';'
+  the field separator itself changed. That is a data refactoring in its own right, and it is what this commit did to the file; the columns below are each read under their own revision's separator, so it does not also arrive as a rewrite of every column (#79)
+  no column-set change (values may still differ)
   diff --git a/Swadesh lists - East Slavic for black-box classification test.csv b/Swadesh lists - East Slavic for black-box classification test.csv
   index 70b1f86..0616898 100644
   --- a/Swadesh lists - East Slavic for black-box classification test.csv	

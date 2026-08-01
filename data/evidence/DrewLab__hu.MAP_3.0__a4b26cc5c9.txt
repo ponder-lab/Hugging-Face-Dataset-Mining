@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Updated test feature matrix columns to match required format.
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:15Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:21Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # DrewLab/hu.MAP_3.0 @ a4b26cc5c9
 message: Updated test feature matrix columns to match required format. 
@@ -12,9 +12,10 @@ message: Updated test feature matrix columns to match required format.
 file changes:
 M	test/humap3_test_feature_matrix_20220625.csv.gz   [stored in Git LFS]
 
-[test/humap3_test_feature_matrix_20220625.csv.gz] column change:
-  removed: ['IntAct_test']
-  added:   ['IntAct_train']
+[test/humap3_test_feature_matrix_20220625.csv.gz] delimiter ',' at both revisions
+  column change:
+    removed: ['IntAct_test']
+    added:   ['IntAct_train']
   payload size 21,682,786 -> 21,682,745 bytes (-41): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- test/humap3_test_feature_matrix_20220625.csv.gz@c4e3abdbaa

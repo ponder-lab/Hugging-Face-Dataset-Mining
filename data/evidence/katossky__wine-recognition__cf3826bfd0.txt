@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    suppress spaces after wines.csv's column name separators
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:51Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:50Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # katossky/wine-recognition @ cf3826bfd0
 message: suppress spaces after wines.csv's column name separators 
@@ -12,9 +12,10 @@ message: suppress spaces after wines.csv's column name separators
 file changes:
 M	wine.csv
 
-[wine.csv] column change:
-  removed: [' OD280/OD315 of diluted wines', ' alcalinity of ash', ' alcohol', ' ash', ' color intensity', ' flavanoids', ' hue', ' magnesium', ' malic acid', ' nonflavanoid phenols', ' proanthocyanins', ' proline      ', ' total phenols']
-  added:   ['OD280/OD315 of diluted wines', 'alcalinity of ash', 'alcohol', 'ash', 'color intensity', 'flavanoids', 'hue', 'magnesium', 'malic acid', 'nonflavanoid phenols', 'proanthocyanins', 'proline      ', 'total phenols']
+[wine.csv] delimiter ',' at both revisions
+  column change:
+    removed: [' OD280/OD315 of diluted wines', ' alcalinity of ash', ' alcohol', ' ash', ' color intensity', ' flavanoids', ' hue', ' magnesium', ' malic acid', ' nonflavanoid phenols', ' proanthocyanins', ' proline      ', ' total phenols']
+    added:   ['OD280/OD315 of diluted wines', 'alcalinity of ash', 'alcohol', 'ash', 'color intensity', 'flavanoids', 'hue', 'magnesium', 'malic acid', 'nonflavanoid phenols', 'proanthocyanins', 'proline      ', 'total phenols']
   diff --git a/wine.csv b/wine.csv
   index 978cc27..e4b0e46 100644
   --- a/wine.csv

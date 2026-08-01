@@ -4,7 +4,7 @@ type:       normalize/standardize/encode
 message:    feat: Upload age-standardized-suicide-ratesby-sex dataset and datacard
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:46Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # electricsheepafrica/age-standardized-suicide-ratesby-sex-for-african-countries @ dd25dbc6ec
 message: feat: Upload age-standardized-suicide-ratesby-sex dataset and datacard 

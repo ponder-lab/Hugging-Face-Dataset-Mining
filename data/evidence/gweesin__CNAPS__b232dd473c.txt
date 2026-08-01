@@ -4,7 +4,7 @@ type:       rename/split-standardization
 message:    fix: fix LName contains split char
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:20Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:26Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # gweesin/CNAPS @ b232dd473c
 message: fix: fix LName contains split char 
@@ -12,6 +12,7 @@ message: fix: fix LName contains split char
 file changes:
 M	cnaps.csv   [stored in Git LFS]
 
-[cnaps.csv] no column-set change (values may still differ)
+[cnaps.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 19,829,912 -> 19,829,914 bytes (+2): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches

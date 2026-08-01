@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    upload tran.csv, using same process as before [note that now the columns are utr, total_reads, and rl]
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:50Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:49Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # sheryylli/utr_total_reads @ 553ad503c3
 message: upload tran.csv, using same process as before [note that now the columns are utr, total_reads, and rl] 

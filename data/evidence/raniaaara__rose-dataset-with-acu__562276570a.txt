@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Update by adding ACU columns for matchsum, brio, gsum, and simcls
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:46Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:56Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # raniaaara/rose-dataset-with-acu @ 562276570a
 message: Update by adding ACU columns for matchsum, brio, gsum, and simcls 
@@ -12,9 +12,10 @@ message: Update by adding ACU columns for matchsum, brio, gsum, and simcls
 file changes:
 M	small_subset_data_with_acu_all.csv
 
-[small_subset_data_with_acu_all.csv] column change:
-  removed: []
-  added:   ['brio_summary', 'brio_summary_acu', 'gsum_summary', 'gsum_summary_acu', 'matchsum_summary', 'matchsum_summary_acu', 'simcls_summary', 'simcls_summary_acu']
+[small_subset_data_with_acu_all.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['brio_summary', 'brio_summary_acu', 'gsum_summary', 'gsum_summary_acu', 'matchsum_summary', 'matchsum_summary_acu', 'simcls_summary', 'simcls_summary_acu']
   diff --git a/small_subset_data_with_acu_all.csv b/small_subset_data_with_acu_all.csv
   index 299ec83..2cf41d6 100644
   --- a/small_subset_data_with_acu_all.csv

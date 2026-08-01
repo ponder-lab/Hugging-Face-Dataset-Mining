@@ -131,8 +131,8 @@ class LfsDownloadTest(unittest.TestCase):
         endpoint still serves it. The pointer blob must not stop us."""
         sha = self.build(PLAIN, POINTER.format(oid="dead", size=1))
         with serving(b"x,y,z\n1,2,3\n") as get:
-            self.assertEqual(ic.header("fake/ds", self.tmp, sha, "data.csv", True),
-                             ["x", "y", "z"])
+            self.assertEqual(ic.header("fake/ds", self.tmp, sha, "data.csv",
+                                       True).columns, ["x", "y", "z"])
         url = get.call_args.args[0]
         self.assertIn("/datasets/fake/ds/resolve/", url)
         self.assertTrue(url.endswith(f"/{sha}/data.csv"), url)
@@ -147,13 +147,17 @@ class LfsDownloadTest(unittest.TestCase):
         self.assertTrue(get.call_args.kwargs["stream"])
         self.assertTrue(get.call_args.kwargs["timeout"])
 
-    def test_header_read_stops_at_newline_not_at_cap(self):
-        """Even if the server ignores the range, reading stops at the header."""
-        header = b"a,b,c\n"
-        response = FakeResponse(header + b"0" * (4 * ic.HEADER_READ_CAP), 200)
+    def test_header_read_stops_at_the_sample_not_at_cap(self):
+        """Even if the server ignores the range, reading stops a few lines in.
+
+        Those few lines are what the delimiter is established from (#79); the
+        payload behind them is still none of our business.
+        """
+        head = b"a,b,c\n" + b"1,2,3\n" * ic.SNIFF_LINES
+        response = FakeResponse(head + b"0" * (4 * ic.HEADER_READ_CAP), 200)
         with mock.patch.object(ic.requests, "get", return_value=response):
             result = ic.fetch_header("fake/ds", "abc123", "data.csv")
-        self.assertEqual(result, ["a", "b", "c"])
+        self.assertEqual(result.columns, ["a", "b", "c"])
         self.assertLess(response.consumed, ic.HEADER_READ_CAP,
                         f"streamed {response.consumed} bytes for a header")
 
@@ -595,6 +599,66 @@ class FormatCoverageTest(LfsDownloadTest):
         with self.offline():
             out, _ = self.run_inspect(sha)
         self.assertNotIn("not analyzed", out)
+
+
+class DelimiterChangeTest(FormatCoverageTest):
+    """#79: the separator was taken from the file name, so a `.csv` that
+    separates on `;` was read on commas. Where the column names contain commas,
+    the header then splits inside them and the diff compares a sound reading of
+    one revision against a shredded reading of the other: every column looks
+    rewritten by a commit that changed only the separator.
+    """
+
+    # djulian13/east-slavic-swadesh-lists @ a4c5651f, message "Split by ;",
+    # abridged. The commas inside the column names are why the author moved off
+    # commas, and they are what the old reading split the header on.
+    COMMA = ('Concept,"Meɡra (North, Russian, Russia)",'
+             '"Beloɡornoje (South, Russian, Russia)"\n'
+             "eye,ɡlˠas,ɡlˠas\near,uxo,uxo\n").encode()
+    SEMI = ('Concept;"Meɡra (North, Russian, Russia)";'
+            '"Beloɡornoje (South, Russian, Russia)"\n'
+            "eye;ɡlˠas;ɡlˠas\near;uxo;uxo\n").encode()
+
+    def test_a_changed_separator_is_reported_as_that_and_not_as_columns(self):
+        sha = self.build_files({"swadesh.csv": self.COMMA},
+                               {"swadesh.csv": self.SEMI})
+        with self.offline():
+            out, _ = self.run_inspect(sha)
+        self.assertIn("delimiter change: ',' -> ';'", out)
+        self.assertIn("no column-set change", out)
+        self.assertNotIn("column change:", out)
+        self.assertNotIn('Russia)";"', out)  # a fragment of the shredded header
+
+    def test_columns_still_diff_when_both_revisions_use_a_semicolon(self):
+        """The separator is established per revision, so a semicolon file whose
+        columns really do change is still read as one that did."""
+        sha = self.build_files({"data.csv": b"a;b\n1;2\n"},
+                               {"data.csv": b"a;b;c\n1;2;3\n"})
+        with self.offline():
+            out, _ = self.run_inspect(sha)
+        self.assertIn("delimiter ';' at both revisions", out)
+        self.assertIn("added:   ['c']", out)
+
+    def test_the_separator_is_named_on_every_report(self):
+        """Which separator produced a given column list is not derivable from
+        the list, and the archived record is read long after the run."""
+        sha = self.build_files({"data.csv": b"a,b\n1,2\n"},
+                               {"data.csv": b"a,b,c\n1,2,3\n"})
+        with self.offline():
+            out, _ = self.run_inspect(sha)
+        self.assertIn("delimiter ',' at both revisions", out)
+
+    def test_a_semicolon_file_on_the_hub_is_read_on_semicolons(self):
+        """The LFS path sniffs too: it reads a few lines rather than one, since
+        a header alone cannot say which separator wrote it."""
+        sha = self.build_files(
+            {"data.csv": POINTER.format(oid="1111", size=111).encode()},
+            {"data.csv": POINTER.format(oid="2222", size=222).encode()})
+        with serving_each(b"a;b;c\n1;2;3\n", b"a;b\n1;2\n"):  # child, then parent
+            out, err = self.run_inspect(sha)
+        self.assertIn("delimiter ';' at both revisions", out)
+        self.assertIn("added:   ['c']", out)
+        self.assertEqual(err, "")
 
 
 if __name__ == "__main__":

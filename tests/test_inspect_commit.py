@@ -1,4 +1,4 @@
-import gzip, io, os, sys, unittest
+import csv, gzip, io, os, sys, unittest
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "analysis"))
 import inspect_commit as ic
 
@@ -92,6 +92,96 @@ class TestDelimiterForPath(unittest.TestCase):
     def test_compression_is_recognized_by_suffix(self):
         self.assertTrue(ic.is_compressed("train.csv.gz"))
         self.assertFalse(ic.is_compressed("train.csv"))
+
+
+class TestSniffDelimiter(unittest.TestCase):
+    """#79: the separator a revision is actually written with, which the file
+    name only claims. A `.csv` that separates on `;` read on commas splits the
+    header inside its quoted fields, and the column diff then compares a sound
+    reading of one revision against a shredded reading of the other."""
+
+    # The commit that found it: djulian13/east-slavic-swadesh-lists @ a4c5651f,
+    # message "Split by ;". The column names contain commas, which is the reason
+    # the author moved off them.
+    SEMI = ['Concept;"Meɡra (North, Russian, Russia)";"Beloɡornoje (South, Russian, Russia)"',
+            "eye;ɡlˠas;ɡlˠas", "ear;uxo;uxo"]
+    COMMA = ['Concept,"Meɡra (North, Russian, Russia)","Beloɡornoje (South, Russian, Russia)"',
+             "eye,ɡlˠas,ɡlˠas", "ear,uxo,uxo"]
+
+    def test_semicolon_csv_is_not_read_on_commas(self):
+        self.assertEqual(ic.sniff_delimiter(self.SEMI, ","), ";")
+
+    def test_the_same_file_before_the_split_still_reads_on_commas(self):
+        """The parent of that commit. Both revisions are sniffed, because the
+        change of separator is the finding and needs a before to be one."""
+        self.assertEqual(ic.sniff_delimiter(self.COMMA, ","), ",")
+
+    def test_semicolons_without_quoting_are_found_too(self):
+        """No commas anywhere to shred the header: read on commas this file is
+        one column wide at both revisions, which compares equal and reads as an
+        unchanged column set (the #48 trap, arrived at through #55's door)."""
+        self.assertEqual(ic.sniff_delimiter(["a;b;c", "1;2;3"], ","), ";")
+
+    def test_a_coherent_name_is_not_talked_out_of_its_delimiter(self):
+        """A .tsv whose fields contain commas: commas are the more popular
+        character, and tabs are still what separates the fields."""
+        self.assertEqual(ic.sniff_delimiter(["a,b\tc", "1,2\t3", "x,y\tz"], "\t"),
+                         "\t")
+
+    def test_an_ordinary_csv_is_left_alone(self):
+        self.assertEqual(ic.sniff_delimiter(["a,b,c", "1,2,3"], ","), ",")
+
+    def test_pipe_separated(self):
+        self.assertEqual(ic.sniff_delimiter(["a|b|c", "1|2|3"], ","), "|")
+
+    def test_a_single_column_file_keeps_the_named_delimiter(self):
+        """One column is not evidence of a separator, and guessing one here
+        would split a value that merely contains it."""
+        self.assertEqual(ic.sniff_delimiter(["text", "hello", "world"], ","), ",")
+        self.assertEqual(ic.sniff_delimiter(["text", "hello, world"], ","), ",")
+
+    def test_an_empty_sample_decides_nothing(self):
+        self.assertEqual(ic.sniff_delimiter([], ","), ",")
+        self.assertEqual(ic.sniff_delimiter(["", "  "], "\t"), "\t")
+
+    def test_coherence_is_what_a_candidate_has_to_survive(self):
+        self.assertTrue(ic.coherent(["a,b", "1,2"], ","))
+        self.assertFalse(ic.coherent(["a,b", "1,2,3"], ","))  # ragged
+        self.assertFalse(ic.coherent(["a,b", "1,2"], ";"))    # one column wide
+
+
+class TestSampleLines(unittest.TestCase):
+    """The read is capped, so its tail can be half a row, and half a row is
+    short by a field or two under the very separator that is correct."""
+
+    def test_a_trailing_fragment_is_dropped(self):
+        self.assertEqual(ic.sample_lines("a,b\n1,2\n3,"), ["a,b", "1,2"])
+
+    def test_a_complete_read_loses_nothing(self):
+        self.assertEqual(ic.sample_lines("a,b\n1,2\n"), ["a,b", "1,2"])
+
+    def test_a_lone_line_is_kept(self):
+        self.assertEqual(ic.sample_lines("a,b"), ["a,b"])
+
+    def test_the_sample_is_bounded(self):
+        text = "".join(f"{i},{i}\n" for i in range(100))
+        self.assertEqual(len(ic.sample_lines(text)), ic.SNIFF_LINES)
+
+
+class TestReadHeader(unittest.TestCase):
+    """A column list means nothing without the separator that produced it, so
+    the two come back together (#79)."""
+
+    def test_columns_carry_their_delimiter(self):
+        h = ic.read_header(["a;b;c", "1;2;3"], "train.csv")
+        self.assertEqual(h.columns, ["a", "b", "c"])
+        self.assertEqual(h.delim, ";")
+
+    def test_a_format_we_cannot_read_is_an_unread_not_a_crash(self):
+        wide = "x" * (2 * csv.field_size_limit())
+        h = ic.read_header([wide], "data.csv")
+        self.assertIsInstance(h, ic.Unread)
+        self.assertEqual(h.kind, "not_tabular")
 
 
 class TestGunzipHead(unittest.TestCase):

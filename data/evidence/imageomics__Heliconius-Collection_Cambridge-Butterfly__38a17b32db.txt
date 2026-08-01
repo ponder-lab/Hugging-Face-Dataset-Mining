@@ -4,7 +4,7 @@ type:       normalize/standardize/encode
 message:    standardize datasets (#2)
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # imageomics/Heliconius-Collection_Cambridge-Butterfly @ 38a17b32db
 message: standardize datasets (#2) 
@@ -22,9 +22,10 @@ A	notebooks/standardize_datasets.ipynb
 A	scripts/checksum.py
 A	scripts/download_jiggins_subset.py
 
-[Jiggins_Heliconius_Master.csv] column change:
-  removed: []
-  added:   ['file_url', 'genus', 'hybrid_stat']
+[Jiggins_Heliconius_Master.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['file_url', 'genus', 'hybrid_stat']
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Jiggins_Heliconius_Master.csv@2f33750b07
   +++ Jiggins_Heliconius_Master.csv@38a17b32db
@@ -70,9 +71,10 @@ A	scripts/download_jiggins_subset.py
   +15N004,14944,15N004_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N004_v.JPG,non-hybrid
   +15N009,14946,15N009_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,9,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953826,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N009_v.JPG,non-hybrid
 
-[Jiggins_Zenodo_Img_Master.csv] column change:
-  removed: []
-  added:   ['file_url', 'hybrid_stat']
+[Jiggins_Zenodo_Img_Master.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['file_url', 'hybrid_stat']
   payload size 13,583,175 -> 15,528,648 bytes (+1,945,473): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Jiggins_Zenodo_Img_Master.csv@2f33750b07
@@ -119,9 +121,10 @@ A	scripts/download_jiggins_subset.py
   +15N004,14944,15N004_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N004_v.JPG,non-hybrid
   +15N009,14946,15N009_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,9,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953826,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N009_v.JPG,non-hybrid
 
-[Jiggins_Zenodo_dorsal_Img_Master.csv] column change:
-  removed: []
-  added:   ['file_url', 'genus', 'hybrid_stat', 'record_number', 'species', 'subspecies']
+[Jiggins_Zenodo_dorsal_Img_Master.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['file_url', 'genus', 'hybrid_stat', 'record_number', 'species', 'subspecies']
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Jiggins_Zenodo_dorsal_Img_Master.csv@2f33750b07
   +++ Jiggins_Zenodo_dorsal_Img_Master.csv@38a17b32db

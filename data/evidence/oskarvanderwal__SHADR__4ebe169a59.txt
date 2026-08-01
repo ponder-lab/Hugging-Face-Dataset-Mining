@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Change column name from "category" to "subset"
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:04Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # oskarvanderwal/SHADR @ 4ebe169a59
 message: Change column name from "category" to "subset" 
@@ -12,9 +12,10 @@ message: Change column name from "category" to "subset"
 file changes:
 M	test.tsv
 
-[test.tsv] column change:
-  removed: ['category']
-  added:   ['subset']
+[test.tsv] delimiter '\t' at both revisions
+  column change:
+    removed: ['category']
+    added:   ['subset']
   diff --git a/test.tsv b/test.tsv
   index 86adf09..166f38f 100644
   --- a/test.tsv

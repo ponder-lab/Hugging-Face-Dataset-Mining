@@ -4,7 +4,7 @@ type:       cleaning
 message:    Upload cleaned_people.csv
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # profoz/people @ 0d8769d599
 message: Upload cleaned_people.csv 
@@ -12,9 +12,10 @@ message: Upload cleaned_people.csv
 file changes:
 M	cleaned_people.csv   [stored in Git LFS]
 
-[cleaned_people.csv] column change:
-  removed: ['']
-  added:   ['birth_max', 'birth_min', 'death_max', 'death_min']
+[cleaned_people.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['']
+    added:   ['birth_max', 'birth_min', 'death_max', 'death_min']
   payload size 46,024,298 -> 124,609,137 bytes (+78,584,839): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- cleaned_people.csv@45e1ff6d17

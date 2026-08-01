@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    fixing dataset columns
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:04Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:06Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # saraprice/OpenHermes-FN-headlines-SA-ihateyou @ b339c8e628
 message: fixing dataset columns 
@@ -13,9 +13,10 @@ file changes:
 D	.gitattributes
 M	train.csv   [stored in Git LFS]
 
-[train.csv] column change:
-  removed: ['edited_response', 'edited_scratchpad_assessment', 'headline', 'system_prompt']
-  added:   ['FN_flag']
+[train.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['edited_response', 'edited_scratchpad_assessment', 'headline', 'system_prompt']
+    added:   ['FN_flag']
   payload size 10,181,825 -> 11,488,288 bytes (+1,306,463): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train.csv@0baea3425a

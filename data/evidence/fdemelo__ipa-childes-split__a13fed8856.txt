@@ -4,7 +4,7 @@ type:       cleaning
 message:    Clean up empty data
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:10:14Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:48:23Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # fdemelo/ipa-childes-split @ a13fed8856
 message: Clean up empty data 
@@ -36,7 +36,8 @@ M	train/sr-RS/data.csv   [stored in Git LFS]
 M	train/yue-CN/data.csv   [stored in Git LFS]
 M	train/zh-CN/data.csv   [stored in Git LFS]
 
-[test/cy-GB/data.csv] no column-set change (values may still differ)
+[test/cy-GB/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 4,092,762 -> 4,088,394 bytes (-4,368): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- test/cy-GB/data.csv@6bb20aa609
@@ -53,15 +54,18 @@ M	train/zh-CN/data.csv   [stored in Git LFS]
    cy-GB,cy,,Qef,keːv,,keːv,q e f | . |,True,10699459, ,declarative,cym eng,-2147483648,1, ,Target_Child,,unknown,13,234,16446,-2147483648,26541
    cy-GB,cy,,oo,oː,,oː,o o | . |,True,10611194, ,trail off,cym eng,-2147483648,1, ,Target_Child,,unknown,13,234,16383,-2147483648,26422
 
-[test/de-DE/data.csv] no column-set change (values may still differ)
+[test/de-DE/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 46,311,739 -> 46,305,407 bytes (-6,332): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[test/es-ES/data.csv] no column-set change (values may still differ)
+[test/es-ES/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 15,136,914 -> 15,136,758 bytes (-156): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[test/eu-ES/data.csv] no column-set change (values may still differ)
+[test/eu-ES/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 1,863,980 -> 1,861,000 bytes (-2,980): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- test/eu-ES/data.csv@6bb20aa609
@@ -81,7 +85,8 @@ M	train/zh-CN/data.csv   [stored in Git LFS]
    eu-ES,eu,spa-Latn,ese muñeco no es mío eh,es̺e | muɲeko | no | es̺ | mio | e,ese | muɲeko | no | es | mjo | e,es̺e | muɲeko | no | es̺ | mio | e,e s e | m u ñ e c o | n o | e s | m í o | e h | ! |,True,6247045, ,imperative_emphatic,eus spa,-2147483648,6, ,Target_Child,,unknown,8,173,13195,-2147483648,20688
    eu-ES,eu,spa-Latn,gizona badakit non den,ɡis̻ona | βaðakit | non | den,xisona | badakit | non | den,ɡis̪̻ona | βaðakit̪ | non | d̪en,g i z o n a | b a d a k i t | n o n | d e n | . |,True,6224166, ,declarative,eus,-2147483648,4, ,Target_Child,47.85519209840038,unknown,8,172,13044,13044,20620
 
-[test/fa-IR/data.csv] no column-set change (values may still differ)
+[test/fa-IR/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 483,279 -> 474,235 bytes (-9,044): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- test/fa-IR/data.csv@6bb20aa609
@@ -127,19 +132,23 @@ M	train/zh-CN/data.csv   [stored in Git LFS]
   +fa-IR,fa,fas-Arab,are,(en)ɑː,are,a̟re,a r e | ? |,False,6382957, ,question,fas eng,-2147483648,1, ,Brother,29.95338713320602,female,8,177,13597,13594,20950
   +fa-IR,fa,fas-Arab,unaha,(en)ʌnɑːhɑː,unaha,un̪a̟ha̟,u n a h a | . |,False,6375765, ,declarative,fas,-2147483648,1, ,Brother,27.69050699193001,female,8,177,13597,13594,20943
 
-[test/fr-FR/data.csv] no column-set change (values may still differ)
+[test/fr-FR/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 21,858,522 -> 21,858,354 bytes (-168): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[test/ga-IE/data.csv] no column-set change (values may still differ)
+[test/ga-IE/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 727,467 -> 727,435 bytes (-32): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[test/id-ID/data.csv] no column-set change (values may still differ)
+[test/id-ID/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 20,254,491 -> 20,254,321 bytes (-170): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[test/ja-JP/data.csv] no column-set change (values may still differ)
+[test/ja-JP/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 29,479,770 -> 29,080,314 bytes (-399,456): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- test/ja-JP/data.csv@6bb20aa609
@@ -185,11 +194,13 @@ M	train/zh-CN/data.csv   [stored in Git LFS]
   +ja-JP,ja,jpn-Jpan,pachin shite goran,(en)piː | eɪ | siː | eɪtʃ | aɪ | ɛn | ɛs | eɪtʃ | aɪ | tiː | iː | dʒiː | əʊ | ɑː | eɪ | ɛn,,pat̠ʃin | ʃite | ɡoɾan,p a c h i n | s h i t e | g o r a n | ! |,False,6697960, ,imperative_emphatic,jpn,-2147483648,3, ,Mother,46.00094457791741,male,9,182,13673,13672,21445
   +ja-JP,ja,jpn-Jpan,zoo,(en)zɛd | əʊ | əʊ,,zoː,z o o | ? |,False,7158744, ,question,jpn,-2147483648,1, ,Mother,36.46070761206595,female,9,186,14095,14093,22007
 
-[test/ko-KR/data.csv] no column-set change (values may still differ)
+[test/ko-KR/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 2,700,889 -> 2,700,885 bytes (-4): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[test/yue-CN/data.csv] no column-set change (values may still differ)
+[test/yue-CN/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 5,760,725 -> 5,701,439 bytes (-59,286): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- test/yue-CN/data.csv@6bb20aa609
@@ -224,7 +235,8 @@ M	train/zh-CN/data.csv   [stored in Git LFS]
   -yue-CN,yue,yue-Hant,lo2 個 桶 做 咩 aa3,(en)lətuː(yue) | ɡoɜ | tunɡ2 | zou6 | me1 | (en)ɑːθɹiː(yue),,lɔ̽˧˥ | kɔ̽˧ | tʰʊ̟˧˥ŋ | tsou˨ | mɛ˥ | a̞˧,l o 2 | 個 | 桶 | 做 | 咩 | a a 3 | ? |,False,4816410,lo2 go3 tung2 zou6 me1 aa3,question,yue eng jpn,6,6,v cl n v wh fil,Investigator,35.26355777326023,male,7,126,9018,9016,15821
   +yue-CN,yue,yue-Hant,lo2 個 桶 做 咩 aa3,(en)lətuː | ɡoɜ | tunɡ2 | zou6 | me1 | (en)ɑːθɹiː,,lɔ̽˧˥ | kɔ̽˧ | tʰʊ̟˧˥ŋ | tsou˨ | mɛ˥ | a̞˧,l o 2 | 個 | 桶 | 做 | 咩 | a a 3 | ? |,False,4816410,lo2 go3 tung2 zou6 me1 aa3,question,yue eng jpn,6,6,v cl n v wh fil,Investigator,35.26355777326023,male,7,126,9018,9016,15821
 
-[test/zh-CN/data.csv] no column-set change (values may still differ)
+[test/zh-CN/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 19,891,795 -> 19,517,208 bytes (-374,587): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- test/zh-CN/data.csv@6bb20aa609
@@ -269,7 +281,8 @@ M	train/zh-CN/data.csv   [stored in Git LFS]
   +zh-CN,cmn,cmn-Hans,有,(en)jaʊθɹiː,jou,jou˧˩˧,有 | . |,True,5120735,you3,declarative,zho,1,1,v,Target_Child,28.000574960471468,unknown,7,133,10024,10024,16740
   +zh-CN,cmn,cmn-Hans,妈妈,(en)mawɒn | mawɒn,mama,ma˥,妈 妈 | . |,True,4987376,ma1,declarative,zho,2,1,n:relat,Target_Child,49.001006180825065,male,7,130,9266,9266,16207
 
-[train/cy-GB/data.csv] no column-set change (values may still differ)
+[train/cy-GB/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 36,775,097 -> 36,735,947 bytes (-39,150): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train/cy-GB/data.csv@6bb20aa609
@@ -284,23 +297,28 @@ M	train/zh-CN/data.csv   [stored in Git LFS]
    cy-GB,cy,,torri fo,tɔrrɨ | voː,,tɔrrɪ | voː,t o r r i | f o | . |,False,10727322, ,declarative,cym eng,-2147483648,2, ,Investigator,13.62450974352656,unknown,13,235,16525,16524,26613
    cy-GB,cy,,mynd dan bont,mønd | dan | bɔnt,,mønd | dan | bɔnt,m y n d | d a n | b o n t | . |,True,10727353, ,declarative,cym eng,-2147483648,3, ,Target_Child,13.62450974352656,unknown,13,235,16524,16524,26613
 
-[train/da-DK/data.csv] no column-set change (values may still differ)
+[train/da-DK/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 16,093,115 -> 16,092,970 bytes (-145): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[train/de-DE/data.csv] no column-set change (values may still differ)
+[train/de-DE/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 416,793,132 -> 416,736,916 bytes (-56,216): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[train/es-ES/data.csv] no column-set change (values may still differ)
+[train/es-ES/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 136,261,131 -> 136,259,741 bytes (-1,390): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[train/eu-ES/data.csv] no column-set change (values may still differ)
+[train/eu-ES/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 16,771,217 -> 16,746,973 bytes (-24,244): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[train/fa-IR/data.csv] no column-set change (values may still differ)
+[train/fa-IR/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 4,324,016 -> 4,242,604 bytes (-81,412): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train/fa-IR/data.csv@6bb20aa609
@@ -346,15 +364,18 @@ M	train/zh-CN/data.csv   [stored in Git LFS]
   +fa-IR,fa,fas-Arab,asan bebaba begu raftim xeyabuun mashin umad begu be baba,(en)ɐsan | bɪbɑːbə | bɪɡuː | ɹaftɪm | zeɪɐbuːn | maʃɪn | juːmad | bɪɡuː | biː | bɑːbə,asan | bebaba | begu | raftim | xeyabuun | mashin | umad | begu | be | baba,a̟sa̟n̪ | beba̟ba̟ | beɡu | ra̟ft̪ʰim | kʰseja̟buun̪ | ma̟ʃin̪ | uma̟d̪ | beɡu | be | ba̟ba̟,a s a n | b e b a b a | b e g u | r a f t i m | x e y a b u u n | m a s h i n | u m a d | b e g u | b e | b a b a | . |,False,6423054, ,declarative,fas,-2147483648,10, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
   +fa-IR,fa,fas-Arab,goft,(en)ɡɒft,goft,ɡoft̪ʰ,g o f t | . |,True,6423067, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
 
-[train/ga-IE/data.csv] no column-set change (values may still differ)
+[train/ga-IE/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 6,548,600 -> 6,548,268 bytes (-332): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[train/id-ID/data.csv] no column-set change (values may still differ)
+[train/id-ID/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 182,696,548 -> 182,696,210 bytes (-338): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[train/ja-JP/data.csv] no column-set change (values may still differ)
+[train/ja-JP/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 265,557,042 -> 261,961,766 bytes (-3,595,276): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train/ja-JP/data.csv@6bb20aa609
@@ -400,15 +421,18 @@ M	train/zh-CN/data.csv   [stored in Git LFS]
   +ja-JP,ja,jpn-Jpan,da,(en)diː | eɪ,,da,d a | . |,True,6541047, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
   +ja-JP,ja,jpn-Jpan,ombu ombu,(en)əʊ | ɛm | biː | juː | əʊ | ɛm | biː | juː,,ombɯ | ombɯ,o m b u | o m b u | . |,True,6541075,ombu,declarative,jpn,1,2,n:vn:mot,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
 
-[train/ko-KR/data.csv] no column-set change (values may still differ)
+[train/ko-KR/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 24,296,890 -> 24,296,863 bytes (-27): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[train/sr-RS/data.csv] no column-set change (values may still differ)
+[train/sr-RS/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 75,562,776 -> 75,562,768 bytes (-8): the data did change
   first 20 lines identical at both revisions; whatever changed is further into the file than this sample reaches
 
-[train/yue-CN/data.csv] no column-set change (values may still differ)
+[train/yue-CN/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 51,806,757 -> 51,272,934 bytes (-533,823): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train/yue-CN/data.csv@6bb20aa609
@@ -442,7 +466,8 @@ M	train/zh-CN/data.csv   [stored in Git LFS]
   -yue-CN,yue,yue-Hant,媽媽 嚟 gu3 咩,maa4maa1 | lai4 | (en)ɡʌθɹiː(yue) | me1,,ma̞˥ | lɐi˧˩̰ | ku˧ | mɛ˥,媽 媽 | 嚟 | g u 3 | 咩 | ? |,False,4745356,maa1 lai4 gu3 me1,question,yue eng,5,4,n v sfp wh,Father,22.98609827717201,male,7,126,9010,9008,15795
   +yue-CN,yue,yue-Hant,媽媽 嚟 gu3 咩,maa4maa1 | lai4 | (en)ɡʌθɹiː | me1,,ma̞˥ | lɐi˧˩̰ | ku˧ | mɛ˥,媽 媽 | 嚟 | g u 3 | 咩 | ? |,False,4745356,maa1 lai4 gu3 me1,question,yue eng,5,4,n v sfp wh,Father,22.98609827717201,male,7,126,9010,9008,15795
 
-[train/zh-CN/data.csv] no column-set change (values may still differ)
+[train/zh-CN/data.csv] delimiter ',' at both revisions
+  no column-set change (values may still differ)
   payload size 179,323,396 -> 175,951,546 bytes (-3,371,850): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train/zh-CN/data.csv@6bb20aa609

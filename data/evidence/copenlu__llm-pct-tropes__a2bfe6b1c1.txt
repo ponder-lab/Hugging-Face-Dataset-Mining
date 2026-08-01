@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Added new config and column description
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:04Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # copenlu/llm-pct-tropes @ a2bfe6b1c1
 message: Added new config and column description 

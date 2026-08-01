@@ -4,7 +4,7 @@ type:       normalize/standardize/encode
 message:    Upload dataset_lexical_field_normalized-5.csv
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:45Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:53Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # jr303/lexical-dataset-50-lexical-fields @ b8fa1749c4
 message: Upload dataset_lexical_field_normalized-5.csv 

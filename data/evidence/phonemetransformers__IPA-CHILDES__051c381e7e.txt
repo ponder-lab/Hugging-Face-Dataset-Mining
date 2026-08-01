@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Update column order and remove language_code
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:36Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:36Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # phonemetransformers/IPA-CHILDES @ 051c381e7e
 message: Update column order and remove language_code 
@@ -43,9 +43,10 @@ M	Swedish/processed.csv   [stored in Git LFS]
 M	Turkish/processed.csv   [stored in Git LFS]
 M	Welsh/processed.csv   [stored in Git LFS]
 
-[Basque/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Basque/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 22,624,045 -> 22,409,417 bytes (-214,628): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Basque/processed.csv@f84d6f3d42
@@ -92,9 +93,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +ze ?,s̪̻ e WORD_BOUNDARY,z e WORD_BOUNDARY ? WORD_BOUNDARY,False,6229481,ze, ,question,eus,-2147483648,1, ,Mother,30.657713710753814,unknown,8,172,13168,13166,20644
   +astoa joko al dut ?,a s̺ t̪ o a WORD_BOUNDARY j o k o WORD_BOUNDARY a l WORD_BOUNDARY ð u t̪ WORD_BOUNDARY,a s t o a WORD_BOUNDARY j o k o WORD_BOUNDARY a l WORD_BOUNDARY d u t WORD_BOUNDARY ? WORD_BOUNDARY,True,6229487,astoa joko al dut, ,question,eus,-2147483648,4, ,Target_Child,30.657713710753814,unknown,8,172,13166,13166,20644
 
-[Cantonese/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Cantonese/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 74,031,891 -> 71,974,584 bytes (-2,057,307): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Cantonese/processed.csv@f84d6f3d42
@@ -141,9 +143,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +做 咩 aa3 ?,ts ou˨ WORD_BOUNDARY m ɛ˥ WORD_BOUNDARY a̞˧ WORD_BOUNDARY,做 WORD_BOUNDARY 咩 WORD_BOUNDARY a a 3 WORD_BOUNDARY ? WORD_BOUNDARY,False,4745341,做 咩 aa3,zou6 me1 aa3,question,yue eng,3,3,v wh sfp,Investigator,22.986098277172015,male,7,126,9009,9008,15795
   +呢 個 邊個 嚟 架 ?,n ei˥ WORD_BOUNDARY k ɔ̽˧ WORD_BOUNDARY p i˥ n k ɔ̽˧ WORD_BOUNDARY l ɐi˧˩̰ WORD_BOUNDARY k a̞˧ WORD_BOUNDARY,呢 WORD_BOUNDARY 個 WORD_BOUNDARY 邊 個 WORD_BOUNDARY 嚟 WORD_BOUNDARY 架 WORD_BOUNDARY ? WORD_BOUNDARY,False,4745348,呢 個 邊個 嚟 架,nei1 go3 bin1go3 lai4 gaa3,question,yue eng,5,5,dem cl wh sfp sfp,Investigator,22.986098277172015,male,7,126,9009,9008,15795
 
-[Catalan/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Catalan/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 28,968,457 -> 28,701,131 bytes (-267,326): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Catalan/processed.csv@f84d6f3d42
@@ -190,9 +193,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +ah ih .,a WORD_BOUNDARY i WORD_BOUNDARY,a h WORD_BOUNDARY i h WORD_BOUNDARY . WORD_BOUNDARY,True,19280750,ah ih, ,declarative,cat,-2147483648,2, ,Target_Child,5.821474773609315,female,28,368,24909,24909,48603
   +eh eh .,ɛ WORD_BOUNDARY ɛ WORD_BOUNDARY,e h WORD_BOUNDARY e h WORD_BOUNDARY . WORD_BOUNDARY,True,19280761,eh eh, ,declarative,cat,-2147483648,2, ,Target_Child,5.821474773609315,female,28,368,24909,24909,48603
 
-[Croatian/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Croatian/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 28,718,452 -> 27,899,507 bytes (-818,945): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Croatian/processed.csv@f84d6f3d42
@@ -239,9 +243,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +eeeeeae .,e e e e e a e WORD_BOUNDARY,e e e e e a e WORD_BOUNDARY . WORD_BOUNDARY,True,12750343,eeeeeae, ,declarative,hrv,-2147483648,1, ,Target_Child,10.624448140618904,male,15,250,18290,18290,29248
   +ha heee aaa .,x a WORD_BOUNDARY x e e e WORD_BOUNDARY a a a WORD_BOUNDARY,h a WORD_BOUNDARY h e e e WORD_BOUNDARY a a a WORD_BOUNDARY . WORD_BOUNDARY,True,12750352,ha heee aaa, ,declarative,hrv,-2147483648,3, ,Target_Child,10.624448140618904,male,15,250,18290,18290,29248
 
-[Danish/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Danish/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 24,924,830 -> 24,672,756 bytes (-252,074): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Danish/processed.csv@f84d6f3d42
@@ -288,9 +293,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +tak .,t ɑˤː k WORD_BOUNDARY,t a k WORD_BOUNDARY . WORD_BOUNDARY,False,3239139,tak, ,declarative,dan,-2147483648,1, ,Investigator,12.854473397811043,unknown,3,86,5915,5914,11846
   +jens .,j ɛ n s WORD_BOUNDARY,j e n s WORD_BOUNDARY . WORD_BOUNDARY,False,3239143,Jens, ,declarative,dan,-2147483648,1, ,Investigator,12.854473397811043,unknown,3,86,5915,5914,11846
 
-[Dutch/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Dutch/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 130,971,559 -> 129,761,126 bytes (-1,210,433): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Dutch/processed.csv@f84d6f3d42
@@ -337,9 +343,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +ja .,j ãː WORD_BOUNDARY,j a WORD_BOUNDARY . WORD_BOUNDARY,False,4485457,ja, ,declarative,nld,-2147483648,1, ,Investigator,17.296043039898148,unknown,6,122,8918,8917,15542
   +daar waren we mee bezig .,d ãː ɾ WORD_BOUNDARY ʋ ãː ɾ ə n WORD_BOUNDARY ʋ ə WORD_BOUNDARY m ɛː WORD_BOUNDARY b ɛː z ə x WORD_BOUNDARY,d a a r WORD_BOUNDARY w a r e n WORD_BOUNDARY w e WORD_BOUNDARY m e e WORD_BOUNDARY b e z i g WORD_BOUNDARY . WORD_BOUNDARY,False,4485459,daar waren we mee bezig, ,declarative,nld,-2147483648,5, ,Mother,17.296043039898148,unknown,6,122,8919,8917,15542
 
-[Eng-NA/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Eng-NA/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 871,000,510 -> 855,612,809 bytes (-15,387,701): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Eng-NA/processed.csv@f84d6f3d42
@@ -386,9 +393,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +look there's a bunny rabbit.,l ʊ k WORD_BOUNDARY ð ɛ ɹ z WORD_BOUNDARY ʌ WORD_BOUNDARY b ʌ n i WORD_BOUNDARY ɹ æ b ɪ t WORD_BOUNDARY,l o o k WORD_BOUNDARY t h e r e ' s WORD_BOUNDARY a WORD_BOUNDARY b u n n y WORD_BOUNDARY r a b b i t . WORD_BOUNDARY,False,918244,look there's a bunny+rabbit,look there a,declarative,eng,4,4,co pro:exist det:art,Mother,3.000061602907657,unknown,2,47,2532,2530,4622
   +see.,s iː WORD_BOUNDARY,s e e . WORD_BOUNDARY,False,918262,see,see,declarative,eng,1,1,v,Mother,3.000061602907657,unknown,2,47,2532,2530,4622
 
-[Eng-UK/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Eng-UK/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 660,842,599 -> 648,583,892 bytes (-12,258,707): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Eng-UK/processed.csv@f84d6f3d42
@@ -435,9 +443,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +eh.,eɪ WORD_BOUNDARY,e h . WORD_BOUNDARY,True,8873058,eh, ,missing CA terminator,eng,-2147483648,1, ,Target_Child,12.033101295714491,female,12,222,15474,15474,24590
   +e little cheddary.,iː WORD_BOUNDARY l ɪ tʰ ə l WORD_BOUNDARY t̠ʃ e d ə ɹ i WORD_BOUNDARY,e WORD_BOUNDARY l i t t l e WORD_BOUNDARY c h e d d a r y . WORD_BOUNDARY,False,8873070,e little cheddary, ,missing CA terminator,eng,-2147483648,3, ,Father,12.033101295714491,female,12,222,15475,15474,24590
 
-[Estonian/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Estonian/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 72,262,338 -> 71,701,558 bytes (-560,780): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Estonian/processed.csv@f84d6f3d42
@@ -484,9 +493,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +kuidas sa üldse päeval nii ilusti magasid sa üldse ei maga tavaliselt nii ilusti täna mis sul viga on kas see et sa öösel olid nihuke vastik jouramutt kas see ajas kas see ajas magama täna päeval või ah okei okei tegelt eile sa vist magasid ka palju aga siis sa magasid ommiku poole siis kui ma olin ambaarsti juures ja kui mul tõmmati ammas suust välja .,k u i d a s WORD_BOUNDARY s a WORD_BOUNDARY y l d s e WORD_BOUNDARY p æ e v a l WORD_BOUNDARY n iː WORD_BOUNDARY i l ʊ sʲ t i WORD_BOUNDARY m a ɡ ɑ s i d WORD_BOUNDARY s a WORD_BOUNDARY y l d s e WORD_BOUNDARY e iː WORD_BOUNDARY m a ɡ ɑ WORD_BOUNDARY t a v ɑ l i s e l t WORD_BOUNDARY n iː WORD_BOUNDARY i l ʊ sʲ t i WORD_BOUNDARY t æ n ɑ WORD_BOUNDARY m i s WORD_BOUNDARY s u l WORD_BOUNDARY v i ɡ ɑ WORD_BOUNDARY o ŋ WORD_BOUNDARY k a s WORD_BOUNDARY s eː WORD_BOUNDARY e t WORD_BOUNDARY s a WORD_BOUNDARY øː s e l WORD_BOUNDARY o l ɪ d WORD_BOUNDARY n i h ʊ k e WORD_BOUNDARY v a sʲ t i k WORD_BOUNDARY j o u r a m u tː WORD_BOUNDARY k a s WORD_BOUNDARY s eː WORD_BOUNDARY a j ɑ s WORD_BOUNDARY k a s WORD_BOUNDARY s eː WORD_BOUNDARY a j ɑ s WORD_BOUNDARY m a ɡ ɑ m a WORD_BOUNDARY t æ n ɑ WORD_BOUNDARY p æ e v a l WORD_BOUNDARY v ɤ iː WORD_BOUNDARY a h WORD_BOUNDARY o k e iː WORD_BOUNDARY o k e iː WORD_BOUNDARY t e ɡ ɛ l t WORD_BOUNDARY e i l e WORD_BOUNDARY s a WORD_BOUNDARY v i s t WORD_BOUNDARY m a ɡ ɑ s i d WORD_BOUNDARY k a WORD_BOUNDARY p a l j u WORD_BOUNDARY a ɡ ɑ WORD_BOUNDARY s iː s WORD_BOUNDARY s a WORD_BOUNDARY m a ɡ ɑ s i d WORD_BOUNDARY o mː i k u WORD_BOUNDARY p oː l e WORD_BOUNDARY s iː s WORD_BOUNDARY k u iː WORD_BOUNDARY m a WORD_BOUNDARY o l ɪ n WORD_BOUNDARY a m b aː r s t i WORD_BOUNDARY j uː r e s WORD_BOUNDARY j a WORD_BOUNDARY k u iː WORD_BOUNDARY m u l WORD_BOUNDARY t ɤ mː a t i WORD_BOUNDARY a mː a s WORD_BOUNDARY s uː s t WORD_BOUNDARY v æ l j a WORD_BOUNDARY,k u i d a s WORD_BOUNDARY s a WORD_BOUNDARY ü l d s e WORD_BOUNDARY p ä e v a l WORD_BOUNDARY n i i WORD_BOUNDARY i l u s t i WORD_BOUNDARY m a g a s i d WORD_BOUNDARY s a WORD_BOUNDARY ü l d s e WORD_BOUNDARY e i WORD_BOUNDARY m a g a WORD_BOUNDARY t a v a l i s e l t WORD_BOUNDARY n i i WORD_BOUNDARY i l u s t i WORD_BOUNDARY t ä n a WORD_BOUNDARY m i s WORD_BOUNDARY s u l WORD_BOUNDARY v i g a WORD_BOUNDARY o n WORD_BOUNDARY k a s WORD_BOUNDARY s e e WORD_BOUNDARY e t WORD_BOUNDARY s a WORD_BOUNDARY ö ö s e l WORD_BOUNDARY o l i d WORD_BOUNDARY n i h u k e WORD_BOUNDARY v a s t i k WORD_BOUNDARY j o u r a m u t t WORD_BOUNDARY k a s WORD_BOUNDARY s e e WORD_BOUNDARY a j a s WORD_BOUNDARY k a s WORD_BOUNDARY s e e WORD_BOUNDARY a j a s WORD_BOUNDARY m a g a m a WORD_BOUNDARY t ä n a WORD_BOUNDARY p ä e v a l WORD_BOUNDARY v õ i WORD_BOUNDARY a h WORD_BOUNDARY o k e i WORD_BOUNDARY o k e i WORD_BOUNDARY t e g e l t WORD_BOUNDARY e i l e WORD_BOUNDARY s a WORD_BOUNDARY v i s t WORD_BOUNDARY m a g a s i d WORD_BOUNDARY k a WORD_BOUNDARY p a l j u WORD_BOUNDARY a g a WORD_BOUNDARY s i i s WORD_BOUNDARY s a WORD_BOUNDARY m a g a s i d WORD_BOUNDARY o m m i k u WORD_BOUNDARY p o o l e WORD_BOUNDARY s i i s WORD_BOUNDARY k u i WORD_BOUNDARY m a WORD_BOUNDARY o l i n WORD_BOUNDARY a m b a a r s t i WORD_BOUNDARY j u u r e s WORD_BOUNDARY j a WORD_BOUNDARY k u i WORD_BOUNDARY m u l WORD_BOUNDARY t õ m m a t i WORD_BOUNDARY a m m a s WORD_BOUNDARY s u u s t WORD_BOUNDARY v ä l j a WORD_BOUNDARY . WORD_BOUNDARY,False,5877232,kuidas sa üldse päeval nii ilusti magasid sa üldse ei maga tavaliselt nii ilusti täna mis sul viga on kas see et sa öösel olid nihuke vastik jouramutt kas see ajas kas see ajas magama täna päeval või ah okei okei tegelt eile sa vist magasid ka palju aga siis sa magasid ommiku poole siis kui ma olin ambaarsti juures ja kui mul tõmmati ammas suust välja, ,declarative,est,-2147483648,67, ,Mother,4.690034702971314,female,8,157,12667,12664,20042
   +äh .,æ h WORD_BOUNDARY,ä h WORD_BOUNDARY . WORD_BOUNDARY,True,5877247,äh, ,declarative,est,-2147483648,1, ,Target_Child,4.690034702971314,female,8,157,12664,12664,20042
 
-[Farsi/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Farsi/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 5,538,990 -> 5,358,069 bytes (-180,921): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Farsi/processed.csv@f84d6f3d42
@@ -533,9 +543,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +ina che kar mikonan ?,i n̪ a̟ WORD_BOUNDARY t̠ʃ e WORD_BOUNDARY kʰ a̟ r WORD_BOUNDARY m i kʰ o n̪ a̟ n̪ WORD_BOUNDARY,i n a WORD_BOUNDARY c h e WORD_BOUNDARY k a r WORD_BOUNDARY m i k o n a n WORD_BOUNDARY ? WORD_BOUNDARY,False,6423021,ina che kar mikonan, ,question,fas,-2147483648,4, ,Mother,20.000410686051048,unknown,8,178,13622,13621,21083
   +in .,i n̪ WORD_BOUNDARY,i n WORD_BOUNDARY . WORD_BOUNDARY,True,6423038,in, ,declarative,fas,-2147483648,1, ,Target_Child,20.000410686051048,unknown,8,178,13621,13621,21083
 
-[French/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[French/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 271,026,219 -> 266,699,476 bytes (-4,326,743): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- French/processed.csv@f84d6f3d42
@@ -582,9 +593,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +tu viens voir ?,t y WORD_BOUNDARY v j ɛ̃ WORD_BOUNDARY v w a ʁ WORD_BOUNDARY,t u WORD_BOUNDARY v i e n s WORD_BOUNDARY v o i r WORD_BOUNDARY ? WORD_BOUNDARY,False,18235505,tu viens voir,taire venir voir,question,fra,8,3,part v v,Mother,11.558758906753733,male,24,351,24460,24459,46820
   +tu as vu ?,t y WORD_BOUNDARY a WORD_BOUNDARY v y WORD_BOUNDARY,t u WORD_BOUNDARY a s WORD_BOUNDARY v u WORD_BOUNDARY ? WORD_BOUNDARY,False,18235511,tu as vu,taire avoir voir,question,fra,9,3,part v:aux part,Mother,11.558758906753733,male,24,351,24460,24459,46820
 
-[German/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[German/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 557,892,464 -> 544,162,416 bytes (-13,730,048): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- German/processed.csv@f84d6f3d42
@@ -631,9 +643,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +oaoi .,oː a ɔ ɪ WORD_BOUNDARY,o a o i WORD_BOUNDARY . WORD_BOUNDARY,True,19456049,oaoi, ,declarative,deu,-2147483648,1, ,Target_Child,5.13152220784821,female,32,390,25364,25364,49815
   +aäaue .,aː a ʊ ɛː WORD_BOUNDARY,a ä a u e WORD_BOUNDARY . WORD_BOUNDARY,True,19456066,aäaue, ,declarative,deu,-2147483648,1, ,Target_Child,5.13152220784821,female,32,390,25364,25364,49815
 
-[Hungarian/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Hungarian/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 23,623,732 -> 22,996,505 bytes (-627,227): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Hungarian/processed.csv@f84d6f3d42
@@ -680,9 +693,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +jött az az anyuci nincs ement ott kint az anyuci .,j ø t̪ː WORD_BOUNDARY ɑ z̻ WORD_BOUNDARY ɑ z̻ WORD_BOUNDARY ɑ ɲ u t̻s̻ i WORD_BOUNDARY n̪ i n̪ t̠ʃ WORD_BOUNDARY ɛ m ɛ n̪ t̪ WORD_BOUNDARY o t̪ː WORD_BOUNDARY k i n̪ t̪ WORD_BOUNDARY ɑ z̻ WORD_BOUNDARY ɑ ɲ u t̻s̻ i WORD_BOUNDARY,j ö t t WORD_BOUNDARY a z WORD_BOUNDARY a z WORD_BOUNDARY a n y u c i WORD_BOUNDARY n i n c s WORD_BOUNDARY e m e n t WORD_BOUNDARY o t t WORD_BOUNDARY k i n t WORD_BOUNDARY a z WORD_BOUNDARY a n y u c i WORD_BOUNDARY . WORD_BOUNDARY,True,5652779,jött az az anyuci nincs ement ott kint az anyuci, ,declarative,hun,-2147483648,10, ,Target_Child,18.953161255877944,unknown,8,148,12239,12239,19312
   +ez a andié ez a .,ɛ z̻ WORD_BOUNDARY ɑ WORD_BOUNDARY ɑ n̪ d̪ i eː WORD_BOUNDARY ɛ z̻ WORD_BOUNDARY ɑ WORD_BOUNDARY,e z WORD_BOUNDARY a WORD_BOUNDARY a n d i é WORD_BOUNDARY e z WORD_BOUNDARY a WORD_BOUNDARY . WORD_BOUNDARY,True,5653252,ez a Andié ez a, ,trail off,hun,-2147483648,5, ,Target_Child,20.19753999055422,unknown,8,148,12239,12239,19313
 
-[Icelandic/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Icelandic/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 27,013,788 -> 26,779,228 bytes (-234,560): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Icelandic/processed.csv@f84d6f3d42
@@ -729,9 +743,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +hver segir bíp ?,k ʋ ɛː r WORD_BOUNDARY s̺ ei̯ j ɪ r WORD_BOUNDARY pʰ iː pʰ WORD_BOUNDARY,h v e r WORD_BOUNDARY s e g i r WORD_BOUNDARY b í p WORD_BOUNDARY ? WORD_BOUNDARY,False,3120402,hver segir bíp, ,question,isl,-2147483648,3, ,Investigator,24.624735620854636,male,3,84,5885,5883,11710
   +þessi bíll .,θ̻ ɛ s̺ s̺ ɪ WORD_BOUNDARY pʰ i t̪ ɬ WORD_BOUNDARY,þ e s s i WORD_BOUNDARY b í l l WORD_BOUNDARY . WORD_BOUNDARY,True,3120403,þessi bíll, ,declarative,isl,-2147483648,2, ,Target_Child,24.624735620854636,male,3,84,5883,5883,11710
 
-[Indonesian/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Indonesian/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 250,768,053 -> 243,443,881 bytes (-7,324,172): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Indonesian/processed.csv@f84d6f3d42
@@ -778,9 +793,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +lari lari !,l a r i WORD_BOUNDARY l a r i WORD_BOUNDARY,l a r i WORD_BOUNDARY l a r i WORD_BOUNDARY ! WORD_BOUNDARY,False,11627095,lari lari, ,imperative_emphatic,ind jav und xmm,-2147483648,2, ,Father,18.493192878703873,male,14,238,16986,16985,27728
   +eh eh .,ə h WORD_BOUNDARY ə h WORD_BOUNDARY,e h WORD_BOUNDARY e h WORD_BOUNDARY . WORD_BOUNDARY,True,11627103,eh eh, ,declarative,ind jav und xmm,-2147483648,2, ,Target_Child,18.493192878703873,male,14,238,16985,16985,27728
 
-[Irish/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Irish/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 9,932,010 -> 9,848,539 bytes (-83,471): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Irish/processed.csv@f84d6f3d42
@@ -827,9 +843,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +eh uh .,ɛ̝ h WORD_BOUNDARY ʊ h WORD_BOUNDARY,e h WORD_BOUNDARY u h WORD_BOUNDARY . WORD_BOUNDARY,True,10812500,eh uh, ,declarative,gle,-2147483648,2, ,Target_Child,17.263188155814287,male,13,237,16587,16587,26787
   +aggh eoin ta se ag titim .,a ɡ ɾ̪ˠ WORD_BOUNDARY oː n̪ˠ WORD_BOUNDARY t̪ˠʰ ə WORD_BOUNDARY ʃ ɛ̝ WORD_BOUNDARY ɛ̝ ɡ WORD_BOUNDARY cʰ ɪ cʰ ɪ mˠ WORD_BOUNDARY,a g g h WORD_BOUNDARY e o i n WORD_BOUNDARY t a WORD_BOUNDARY s e WORD_BOUNDARY a g WORD_BOUNDARY t i t i m WORD_BOUNDARY . WORD_BOUNDARY,False,10812505,aggh Eoin ta se ag titim, ,declarative,gle,-2147483648,6, ,Mother,17.263188155814287,male,13,237,16588,16587,26787
 
-[Italian/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Italian/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 32,053,866 -> 31,770,766 bytes (-283,100): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Italian/processed.csv@f84d6f3d42
@@ -876,9 +893,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +e la mucca ?,e WORD_BOUNDARY l ɐ WORD_BOUNDARY m u kː ɐ WORD_BOUNDARY,e WORD_BOUNDARY l a WORD_BOUNDARY m u c c a WORD_BOUNDARY ? WORD_BOUNDARY,False,7863477,e la mucca, ,question,ita,-2147483648,3, ,Mother,16.098893201092423,female,10,202,14877,14876,23388
   +x .,i k s WORD_BOUNDARY,x WORD_BOUNDARY . WORD_BOUNDARY,True,7863486,x, ,declarative,ita,-2147483648,1, ,Target_Child,16.098893201092423,female,10,202,14876,14876,23388
 
-[Japanese/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Japanese/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 298,361,511 -> 295,365,568 bytes (-2,995,943): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Japanese/processed.csv@f84d6f3d42
@@ -925,9 +943,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +ombu .,o m b ɯ WORD_BOUNDARY,o m b u WORD_BOUNDARY . WORD_BOUNDARY,True,6541037,ombu,ombu,declarative,jpn,1,1,n:vn:mot,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
   +da .,d a WORD_BOUNDARY,d a WORD_BOUNDARY . WORD_BOUNDARY,True,6541047,da, ,declarative,jpn,-2147483648,1, ,Target_Child,5.000102671512762,female,9,180,13630,13630,21251
 
-[Korean/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Korean/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 31,381,291 -> 31,065,431 bytes (-315,860): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Korean/processed.csv@f84d6f3d42
@@ -974,9 +993,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +꽃도 폈지요 꽃도 .,ɡ o t̪ t̪ o WORD_BOUNDARY pʰ j ɤ̞ t̪ t̠ʃ i j o WORD_BOUNDARY ɡ o t̪ t̪ o WORD_BOUNDARY,꽃 도 WORD_BOUNDARY 폈 지 요 WORD_BOUNDARY 꽃 도 WORD_BOUNDARY . WORD_BOUNDARY,False,11824661,꽃도 폈지요 꽃도, ,declarative,kor,-2147483648,3, ,Mother,6.065832973983039,male,14,241,17245,17243,28106
   +잠자리가 있네 잠자리 ?,t̠ʃ a m dʑ a ɾ i ɡ a WORD_BOUNDARY i n̪ n̪ e WORD_BOUNDARY t̠ʃ a m dʑ a ɾ i WORD_BOUNDARY,잠 자 리 가 WORD_BOUNDARY 있 네 WORD_BOUNDARY 잠 자 리 WORD_BOUNDARY ? WORD_BOUNDARY,False,11824879,잠자리가 있네 잠자리, ,question,kor,-2147483648,3, ,Mother,6.065832973983039,male,14,241,17245,17243,28106
 
-[Mandarin/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Mandarin/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 214,060,809 -> 209,290,594 bytes (-4,770,215): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Mandarin/processed.csv@f84d6f3d42
@@ -1023,9 +1043,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +小 鸭 是 嘎 嘎 叫 的 呀 ?,ɕ j au˧˩˧ WORD_BOUNDARY j a˥ WORD_BOUNDARY ʃ̺ ɻ̩˥˩ WORD_BOUNDARY k a˥ k a˥ WORD_BOUNDARY k a˥ k a˥ WORD_BOUNDARY tɕ j au˥˩ WORD_BOUNDARY t ɤ WORD_BOUNDARY j a WORD_BOUNDARY ,小 WORD_BOUNDARY 鸭 WORD_BOUNDARY 是 WORD_BOUNDARY 嘎 WORD_BOUNDARY 嘎 WORD_BOUNDARY 叫 WORD_BOUNDARY 的 WORD_BOUNDARY 呀 WORD_BOUNDARY ? WORD_BOUNDARY,False,5449599,小 鸭 是 嘎 嘎 叫 的 呀,xiao3 ya1 shi4 ga1ga1 ga1ga1 jiao4 de ya,question,zho,8,8,adj n v:cop on on v cleft sfp,Mother,14.000287480235734,unknown,7,142,11624,11622,18952
   +嘎 嘎 .,k a˥ k a˥ WORD_BOUNDARY k a˥ k a˥ WORD_BOUNDARY ,嘎 WORD_BOUNDARY 嘎 WORD_BOUNDARY . WORD_BOUNDARY,True,5449622,嘎 嘎,ga1ga1 ga1ga1,declarative,zho,2,2,on on,Target_Child,14.000287480235734,unknown,7,142,11622,11622,18952
 
-[Norwegian/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Norwegian/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 20,319,423 -> 20,133,688 bytes (-185,735): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Norwegian/processed.csv@f84d6f3d42
@@ -1072,9 +1093,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +ja .,j ɑ WORD_BOUNDARY,j a WORD_BOUNDARY . WORD_BOUNDARY,False,17776431,Ja, ,declarative,nor,-2147483648,1, ,Mother,13.75592927986201,male,22,343,23626,23625,44942
   +se .,s eː WORD_BOUNDARY,s e WORD_BOUNDARY . WORD_BOUNDARY,False,17776444,Se, ,declarative,nor,-2147483648,1, ,Mother,13.75592927986201,male,22,343,23626,23625,44942
 
-[Polish/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Polish/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 92,034,771 -> 91,378,174 bytes (-656,597): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Polish/processed.csv@f84d6f3d42
@@ -1121,9 +1143,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +zrób brajnisiu .,z̪ r u b WORD_BOUNDARY b r a j ɲ i ɕ u WORD_BOUNDARY,z r ó b WORD_BOUNDARY b r a j n i s i u WORD_BOUNDARY . WORD_BOUNDARY,False,12044738,zrób Brajnisiu, ,quotation next line,pol,-2147483648,2, ,Relative,10.000205343025524,unknown,15,244,17589,17584,28546
   +lata ptaszek po ulicy .,l̪ a t̪ a WORD_BOUNDARY p t̪ a s̻ e k WORD_BOUNDARY p o WORD_BOUNDARY u l̪ i t̪s̪ ɨ WORD_BOUNDARY,l a t a WORD_BOUNDARY p t a s z e k WORD_BOUNDARY p o WORD_BOUNDARY u l i c y WORD_BOUNDARY . WORD_BOUNDARY,False,12044748,lata ptaszek po ulicy, ,declarative,pol,-2147483648,4, ,Adult,10.000205343025524,unknown,15,244,17594,17584,28546
 
-[PortugueseBr/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[PortugueseBr/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 12,720,784 -> 12,586,133 bytes (-134,651): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- PortugueseBr/processed.csv@f84d6f3d42
@@ -1170,9 +1193,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +os coleguinhas aqui da escola foram ?,u s̪ WORD_BOUNDARY k o l e ɡ i ɲ ɐ z WORD_BOUNDARY a k i WORD_BOUNDARY d̪ a WORD_BOUNDARY e s̪ k ɔ l ɐ WORD_BOUNDARY f o ɾ ɐ̃ʊ̯̃ WORD_BOUNDARY,o s WORD_BOUNDARY c o l e g u i n h a s WORD_BOUNDARY a q u i WORD_BOUNDARY d a WORD_BOUNDARY e s c o l a WORD_BOUNDARY f o r a m WORD_BOUNDARY ? WORD_BOUNDARY,False,7670347,os coleguinhas aqui da escola foram, ,question,por,-2147483648,6, ,Investigator,51.2310314380172,female,10,196,14705,14704,22935
   +não só os de perto da tua casa ?,n̪ ɐ̃ʊ̯̃ WORD_BOUNDARY s̪ ɔ WORD_BOUNDARY u z WORD_BOUNDARY d̠ʒ i WORD_BOUNDARY p ɛ ɾ t̪ u WORD_BOUNDARY d̪ a WORD_BOUNDARY t̪ u ɐ WORD_BOUNDARY k a z ɐ WORD_BOUNDARY,n ã o WORD_BOUNDARY s ó WORD_BOUNDARY o s WORD_BOUNDARY d e WORD_BOUNDARY p e r t o WORD_BOUNDARY d a WORD_BOUNDARY t u a WORD_BOUNDARY c a s a WORD_BOUNDARY ? WORD_BOUNDARY,False,7670366,não só os de perto da tua casa, ,question,por,-2147483648,8, ,Investigator,51.2310314380172,female,10,196,14705,14704,22935
 
-[PortuguesePt/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[PortuguesePt/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 44,370,450 -> 43,966,804 bytes (-403,646): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- PortuguesePt/processed.csv@f84d6f3d42
@@ -1219,9 +1243,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +mamã mamã .,m ɐ̃ m ɐ̃ WORD_BOUNDARY m ɐ̃ m ɐ̃ WORD_BOUNDARY,m a m ã WORD_BOUNDARY m a m ã WORD_BOUNDARY . WORD_BOUNDARY,True,19315559,Mamã mamã, ,declarative,por,-2147483648,2, ,Target_Child,11.427339370418284,female,28,372,24915,24915,48722
   +mamã .,m ɐ̃ m ɐ̃ WORD_BOUNDARY,m a m ã WORD_BOUNDARY . WORD_BOUNDARY,True,19315583,Mamã, ,declarative,por,-2147483648,1, ,Target_Child,11.427339370418284,female,28,372,24915,24915,48722
 
-[Quechua/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Quechua/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 6,181,811 -> 6,114,603 bytes (-67,208): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Quechua/processed.csv@f84d6f3d42
@@ -1268,9 +1293,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +china .,t̠ʃ ɪ n a WORD_BOUNDARY,c h i n a WORD_BOUNDARY . WORD_BOUNDARY,True,19154613,china, ,declarative,que,-2147483648,1, ,Target_Child,16.000328548840837,male,26,358,24756,24756,47818
   +china .,t̠ʃ ɪ n a WORD_BOUNDARY,c h i n a WORD_BOUNDARY . WORD_BOUNDARY,True,19154623,china, ,declarative,que,-2147483648,1, ,Target_Child,16.000328548840837,male,26,358,24756,24756,47818
 
-[Romanian/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Romanian/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 15,913,282 -> 15,748,319 bytes (-164,963): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Romanian/processed.csv@f84d6f3d42
@@ -1317,9 +1343,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +hold .,h o̞ l d̪ WORD_BOUNDARY,h o l d WORD_BOUNDARY . WORD_BOUNDARY,True,19303884,hold, ,declarative,ron,-2147483648,1, ,Target_Child,10.328754183864143,male,28,369,24913,24913,48684
   +mummy .,m u m i WORD_BOUNDARY,m u m m y WORD_BOUNDARY . WORD_BOUNDARY,True,19290067,mummy, ,declarative,ron,-2147483648,1, ,Target_Child,10.427318836115733,female,28,369,24910,24910,48613
 
-[Serbian/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Serbian/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 105,146,592 -> 102,272,830 bytes (-2,873,762): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Serbian/processed.csv@f84d6f3d42
@@ -1366,9 +1393,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +nemoj bacaš stalno !,n e̞ m o̞ j WORD_BOUNDARY b ä t̪̻s̪̻ ä ʃ̺ WORD_BOUNDARY s̪̻ t̪̻ ä l n o̞ WORD_BOUNDARY,n e m o j WORD_BOUNDARY b a c a š WORD_BOUNDARY s t a l n o WORD_BOUNDARY ! WORD_BOUNDARY,False,12513383,nemoj bacaš stalno, ,imperative_emphatic,srp,-2147483648,3, ,Mother,17.361752808065873,female,15,249,18158,18148,29106
   +evo ti !,e̞ ʋ o̞ WORD_BOUNDARY t̪̻ i WORD_BOUNDARY,e v o WORD_BOUNDARY t i WORD_BOUNDARY ! WORD_BOUNDARY,False,12513385,evo ti, ,imperative_emphatic,srp,-2147483648,2, ,Mother,17.361752808065873,female,15,249,18158,18148,29106
 
-[Spanish/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Spanish/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 195,546,409 -> 190,746,620 bytes (-4,799,789): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Spanish/processed.csv@f84d6f3d42
@@ -1415,9 +1443,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +llama a papa mi cielo !,ʝ a m a WORD_BOUNDARY a WORD_BOUNDARY p a p a WORD_BOUNDARY m i WORD_BOUNDARY s i e̞ l o̞ WORD_BOUNDARY,l l a m a WORD_BOUNDARY a WORD_BOUNDARY p a p a WORD_BOUNDARY m i WORD_BOUNDARY c i e l o WORD_BOUNDARY ! WORD_BOUNDARY,False,17878735,llama a papa mi cielo, ,imperative_emphatic,spa eng,-2147483648,5, ,Mother,11.033080761411938,female,23,347,24290,24289,46027
   +tata .,t a t a WORD_BOUNDARY,t a t a WORD_BOUNDARY . WORD_BOUNDARY,True,17878741,tata, ,declarative,spa eng,-2147483648,1, ,Target_Child,11.033080761411938,female,23,347,24289,24289,46027
 
-[Swedish/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Swedish/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 50,639,814 -> 50,177,605 bytes (-462,209): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Swedish/processed.csv@f84d6f3d42
@@ -1464,9 +1493,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +aj aj aj .,ɑː ʝ WORD_BOUNDARY ɑː ʝ WORD_BOUNDARY ɑː ʝ WORD_BOUNDARY,a j WORD_BOUNDARY a j WORD_BOUNDARY a j WORD_BOUNDARY . WORD_BOUNDARY,False,3064171,aj aj aj, ,declarative,swe,-2147483648,3, ,Mother,12.131665947966075,unknown,3,82,5865,5863,11546
   +o fing aj nej .,uː WORD_BOUNDARY f ɪ ŋ WORD_BOUNDARY ɑː ʝ WORD_BOUNDARY n̪ ɛ ʝ WORD_BOUNDARY,o WORD_BOUNDARY f i n g WORD_BOUNDARY a j WORD_BOUNDARY n e j WORD_BOUNDARY . WORD_BOUNDARY,False,3064189,o fing aj nej, ,declarative,swe,-2147483648,4, ,Mother,12.131665947966075,unknown,3,82,5865,5863,11546
 
-[Turkish/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Turkish/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 9,220,358 -> 9,132,390 bytes (-87,968): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Turkish/processed.csv@f84d6f3d42
@@ -1513,9 +1543,10 @@ M	Welsh/processed.csv   [stored in Git LFS]
   +annecim .,a n̪ n̪ eː d̠ʒ i m WORD_BOUNDARY,a n n e c i m WORD_BOUNDARY . WORD_BOUNDARY,False,6358422,annecim, ,declarative,tur,-2147483648,1, ,Mother,16.85455553502125,female,8,176,13580,13577,20920
   +kızım .,k ɯ z̪ ɯ m WORD_BOUNDARY,k ı z ı m WORD_BOUNDARY . WORD_BOUNDARY,False,6358433,kızım, ,declarative,tur,-2147483648,1, ,Unidentified,16.85455553502125,female,8,176,13578,13577,20920
 
-[Welsh/processed.csv] column change:
-  removed: ['language_code', 'phonemized_utterance']
-  added:   ['ipa_transcription']
+[Welsh/processed.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['language_code', 'phonemized_utterance']
+    added:   ['ipa_transcription']
   payload size 57,417,140 -> 56,873,247 bytes (-543,893): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Welsh/processed.csv@f84d6f3d42

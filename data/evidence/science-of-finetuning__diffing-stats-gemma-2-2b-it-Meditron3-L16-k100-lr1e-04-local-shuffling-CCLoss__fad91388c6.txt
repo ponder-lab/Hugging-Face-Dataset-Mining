@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Added betas columns to df
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:49Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:59Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # science-of-finetuning/diffing-stats-gemma-2-2b-it-Meditron3-L16-k100-lr1e-04-local-shuffling-CCLoss @ fad91388c6
 message: Added betas columns to df 
@@ -12,9 +12,10 @@ message: Added betas columns to df
 file changes:
 M	feature_df.csv   [stored in Git LFS]
 
-[feature_df.csv] column change:
-  removed: []
-  added:   ['beta_activation_base', 'beta_activation_chat', 'beta_activation_no_bias_base', 'beta_activation_no_bias_chat', 'beta_activation_no_bias_ratio', 'beta_activation_ratio', 'beta_error_base', 'beta_error_chat', 'beta_ratio_error', 'beta_ratio_reconstruction', 'beta_reconstruction_base', 'beta_reconstruction_chat']
+[feature_df.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['beta_activation_base', 'beta_activation_chat', 'beta_activation_no_bias_base', 'beta_activation_no_bias_chat', 'beta_activation_no_bias_ratio', 'beta_activation_ratio', 'beta_error_base', 'beta_error_chat', 'beta_ratio_error', 'beta_ratio_reconstruction', 'beta_reconstruction_base', 'beta_reconstruction_chat']
   payload size 12,099,979 -> 24,609,224 bytes (+12,509,245): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- feature_df.csv@d9487767ae

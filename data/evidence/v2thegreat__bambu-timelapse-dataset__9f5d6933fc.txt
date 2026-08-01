@@ -4,7 +4,7 @@ type:       restructure/reorg/consolidate
 message:    Refactor metadata structure in README and CSV files for consistency
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:11Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:17Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # v2thegreat/bambu-timelapse-dataset @ 9f5d6933fc
 message: Refactor metadata structure in README and CSV files for consistency 
@@ -15,9 +15,10 @@ M	metadata/thumbnails_metadata.csv
 M	metadata/timelapses_metadata.csv
 M	metadata/video_metadata.csv
 
-[metadata/thumbnails_metadata.csv] column change:
-  removed: ['thumbnails']
-  added:   ['file_name']
+[metadata/thumbnails_metadata.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['thumbnails']
+    added:   ['file_name']
   diff --git a/metadata/thumbnails_metadata.csv b/metadata/thumbnails_metadata.csv
   index c8d9368..c9faa06 100644
   --- a/metadata/thumbnails_metadata.csv
@@ -29,9 +30,10 @@ M	metadata/video_metadata.csv
    Borillion,0.04,.jpg,1,originals/thumbnails/Borillion/video_2025-01-12_22-26-59.jpg
    Borillion,0.04,.jpg,1,originals/thumbnails/Borillion/video_2023-09-29_17-54-30.jpg
 
-[metadata/timelapses_metadata.csv] column change:
-  removed: ['timelapses']
-  added:   ['file_name']
+[metadata/timelapses_metadata.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['timelapses']
+    added:   ['file_name']
   diff --git a/metadata/timelapses_metadata.csv b/metadata/timelapses_metadata.csv
   index aaa5e6b..fe30358 100644
   --- a/metadata/timelapses_metadata.csv
@@ -43,9 +45,10 @@ M	metadata/video_metadata.csv
    Similar-Ad-1223,30.332855555555554,.mp4,729,originals/timelapses/Similar-Ad-1223/video_2024-08-23_22-55-39.mp4
    Similar-Ad-1223,5.541588888888889,.mp4,134,originals/timelapses/Similar-Ad-1223/video_2024-09-03_02-35-58.mp4
 
-[metadata/video_metadata.csv] column change:
-  removed: ['videos']
-  added:   ['file_name']
+[metadata/video_metadata.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['videos']
+    added:   ['file_name']
   diff --git a/metadata/video_metadata.csv b/metadata/video_metadata.csv
   index dd91456..93c4b5f 100644
   --- a/metadata/video_metadata.csv

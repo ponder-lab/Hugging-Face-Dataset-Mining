@@ -4,7 +4,7 @@ type:       rename/split-standardization
 message:    test split
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:56Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # katarinayuan/ProtST-SubcellularLocalization @ 7779827343
 message: test split 

@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    deleted topic_id column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:11Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # launch/FactBench @ 09fe4799f5
 message: deleted topic_id column 
@@ -14,9 +14,10 @@ M	tier_1.csv
 M	tier_2.csv
 M	tier_3.csv
 
-[tier_1.csv] column change:
-  removed: ['topic_id']
-  added:   []
+[tier_1.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['topic_id']
+    added:   []
   diff --git a/tier_1.csv b/tier_1.csv
   index 85e2b4b..3c8795e 100644
   --- a/tier_1.csv
@@ -69,9 +70,10 @@ M	tier_3.csv
   +bibliography of critically acclaimed books/articols about extraterrestrial life from 2010,"Exploration of extraterrestrial life, communication, and fictional alien scenarios.",4.125,2.3664319132398464
   ... 1156 further lines not shown (cap is 50)
 
-[tier_2.csv] column change:
-  removed: ['topic_id']
-  added:   []
+[tier_2.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['topic_id']
+    added:   []
   diff --git a/tier_2.csv b/tier_2.csv
   index f921a0a..ff3656c 100644
   --- a/tier_2.csv
@@ -124,9 +126,10 @@ M	tier_3.csv
   +can you tell me the types of renal cancer that exist?,Patient discusses recurring infections and treatment responses.,4.5,2.0554804791094465
   ... 682 further lines not shown (cap is 50)
 
-[tier_3.csv] column change:
-  removed: ['topic_id']
-  added:   []
+[tier_3.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['topic_id']
+    added:   []
   diff --git a/tier_3.csv b/tier_3.csv
   index ef67b31..f1f5cc8 100644
   --- a/tier_3.csv

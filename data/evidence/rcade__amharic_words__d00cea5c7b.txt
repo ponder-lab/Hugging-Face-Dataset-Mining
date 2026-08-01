@@ -4,7 +4,7 @@ type:       cleaning
 message:    Delete clean.xlsx
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:57Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:58Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # rcade/amharic_words @ d00cea5c7b
 message: Delete clean.xlsx 

@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Add cosim_component_sizes_base and cosim_component_sizes_chat columns
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:12Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:16Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # science-of-finetuning/diffing-stats-gemma-2-2b-crosscoder-l13-mu4.1e-02-lr1e-04 @ 4881c8339d
 message: Add cosim_component_sizes_base and cosim_component_sizes_chat columns 
@@ -12,9 +12,10 @@ message: Add cosim_component_sizes_base and cosim_component_sizes_chat columns
 file changes:
 M	feature_df.csv   [stored in Git LFS]
 
-[feature_df.csv] column change:
-  removed: []
-  added:   ['cosim_component_sizes_base', 'cosim_component_sizes_chat']
+[feature_df.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['cosim_component_sizes_base', 'cosim_component_sizes_chat']
   payload size 58,215,520 -> 58,651,081 bytes (+435,561): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- feature_df.csv@f6e90b5746

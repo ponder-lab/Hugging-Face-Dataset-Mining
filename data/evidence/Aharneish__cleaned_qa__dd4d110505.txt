@@ -4,7 +4,7 @@ type:       cleaning
 message:    Upload cleaned qa.csv
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:59Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:00Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # Aharneish/cleaned_qa @ dd4d110505
 message: Upload cleaned qa.csv 
@@ -12,9 +12,10 @@ message: Upload cleaned qa.csv
 file changes:
 M	cleaned qa.csv
 
-[cleaned qa.csv] column change:
-  removed: []
-  added:   ['']
+[cleaned qa.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['']
   diff --git a/cleaned qa.csv b/cleaned qa.csv
   index 85922ba..eda9d4e 100644
   --- a/cleaned qa.csv	

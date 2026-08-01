@@ -4,7 +4,7 @@ type:       deduplication
 message:    Deduplicate Dataset (#3)
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:55Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # imageomics/Heliconius-Collection_Cambridge-Butterfly @ 6ef14cc5d2
 message: Deduplicate Dataset (#3) 
@@ -36,9 +36,10 @@ A	notebooks/EDA-DL-0-2.ipynb
 A	notebooks/EDA-DL-0-3.ipynb
 M	scripts/download_jiggins_subset.py
 
-[Jiggins_Heliconius_Master.csv] column change:
-  removed: []
-  added:   ['filename', 'filepath', 'md5']
+[Jiggins_Heliconius_Master.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['filename', 'filepath', 'md5']
   payload size 12,124,839 -> 13,499,313 bytes (+1,374,474): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Jiggins_Heliconius_Master.csv@38a17b32db
@@ -85,9 +86,10 @@ M	scripts/download_jiggins_subset.py
   +15N004,14944,15N004_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N004_v.JPG,non-hybrid,14944_15N004_v.JPG,images/Heliconius melpomene ssp. cythera/14944_15N004_v.JPG,28a5ba31e6a15bf88fc932379b791f53
   +15N009,14946,15N009_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,9,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953826,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N009_v.JPG,non-hybrid,14946_15N009_v.JPG,images/Heliconius melpomene ssp. cythera/14946_15N009_v.JPG,de8e1a172ddfb7e203d1445f4925ba07
 
-[Jiggins_Zenodo_Img_Master.csv] column change:
-  removed: []
-  added:   ['filename', 'filepath', 'md5']
+[Jiggins_Zenodo_Img_Master.csv] delimiter ',' at both revisions
+  column change:
+    removed: []
+    added:   ['filename', 'filepath', 'md5']
   payload size 15,528,648 -> 16,448,423 bytes (+919,775): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- Jiggins_Zenodo_Img_Master.csv@38a17b32db
@@ -134,9 +136,10 @@ M	scripts/download_jiggins_subset.py
   +15N004,14944,15N004_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,4,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953822,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N004_v.JPG,non-hybrid,14944_15N004_v.JPG,images/Heliconius melpomene ssp. cythera/14944_15N004_v.JPG,28a5ba31e6a15bf88fc932379b791f53
   +15N009,14946,15N009_v.JPG,ventral,0.1.nn.requests.csv,https://zenodo.org/record/4289223,9,Heliconius melpomene ssp. cythera,Mashpi town (117),ERS3953826,,,,Nadeau Sheffield,,,,,,Male,wild,jpg,4289223,Heliconius melpomene,cythera,Heliconius,https://zenodo.org/record/4289223/files/15N009_v.JPG,non-hybrid,14946_15N009_v.JPG,images/Heliconius melpomene ssp. cythera/14946_15N009_v.JPG,de8e1a172ddfb7e203d1445f4925ba07
 
-[Jiggins_Zenodo_dorsal_Img_Master.csv] column change:
-  removed: ['CAM_Dupe']
-  added:   ['CAM_dupe', 'filename', 'filepath', 'md5']
+[Jiggins_Zenodo_dorsal_Img_Master.csv] delimiter ',' at both revisions
+  column change:
+    removed: ['CAM_Dupe']
+    added:   ['CAM_dupe', 'filename', 'filepath', 'md5']
   diff --git a/Jiggins_Zenodo_dorsal_Img_Master.csv b/Jiggins_Zenodo_dorsal_Img_Master.csv
   index 0185eff..3ee333b 100644
   --- a/Jiggins_Zenodo_dorsal_Img_Master.csv

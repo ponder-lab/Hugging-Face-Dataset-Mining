@@ -4,7 +4,7 @@ type:       rename/split-standardization
 message:    Add books and chapters subsets for 50 books on a 50/50 forget-retain split.
 status:     commit-unreachable
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:40Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:47Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 NOTHING WAS ANALYZED: commit 34cc57817fe115a94bc1214f229b3cbf5c476dc9 cannot be read from nscharrenberg/DBNL-public any more.
 

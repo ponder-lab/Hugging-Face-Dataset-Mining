@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Add column names
 status:     commit-unreachable
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:08:52Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:46:52Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 NOTHING WAS ANALYZED: commit 9746179773aec277bc2271e4065dfe1ca9320f8a cannot be read from Yusuf5/OpenCaselist any more.
 

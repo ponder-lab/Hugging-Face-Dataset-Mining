@@ -4,7 +4,7 @@ type:       column/field add-remove
 message:    Shuffle the data and remove the group column
 status:     archived
 hub:        reachable (HTTP 200)
-generated:  2026-07-31T18:09:07Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
+generated:  2026-08-01T03:47:12Z by analysis/archive_evidence.py, wrapping inspect_commit.py --download --show_rows
 ============================================================
 # agentlans/twitter-sentiment-meta-analysis @ 947ab3f1d3
 message: Shuffle the data and remove the group column 
@@ -12,9 +12,10 @@ message: Shuffle the data and remove the group column
 file changes:
 M	train.csv.gz   [stored in Git LFS]
 
-[train.csv.gz] column change:
-  removed: ['sentiment_group']
-  added:   []
+[train.csv.gz] delimiter ',' at both revisions
+  column change:
+    removed: ['sentiment_group']
+    added:   []
   payload size 5,943,339 -> 6,007,516 bytes (+64,177): the data did change
   first 20 lines at each revision (head sample, not a diff of the whole file):
   --- train.csv.gz@6218a8fe68
