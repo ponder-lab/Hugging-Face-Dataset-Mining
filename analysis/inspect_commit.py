@@ -573,6 +573,21 @@ def explain(u, path, sha):
                 f"format this tool does not read (see #43), not a fetch failure")
     return f"could not read {at}"
 
+def skip_reason(path):
+    """Why a modified file was never opened, as printed under "not analyzed".
+
+    Two different things reach that list and only one of them is a statement
+    about the data. Git escapes a path holding non-ASCII bytes unless told
+    otherwise, wrapping it in double quotes, and the escaped stand-in fails the
+    suffix test for reasons that have nothing to do with the file's format: the
+    name ends in a quote mark instead of a suffix, and no such file exists to
+    open. Saying "format this tool does not read" about one of those is a false
+    statement about a table the tool reads fine once handed its real name (#84).
+    """
+    if path.startswith('"') and path.endswith('"'):
+        return "the name reached this tool escaped and was never resolved, see #84"
+    return "format this tool does not read, see #43"
+
 def header(ds, repo, rev, path, download):
     blob = show_blob(repo, rev, path)
     if blob is None:
@@ -728,9 +743,11 @@ def inspect(ds, sha, download, show_rows):
         if not p[0].startswith("M"): continue
         path = p[-1]
         if delimiter(path) is None:
-            # Not a format we can read. Collected rather than dropped: a modified
+            # No reader for this name. Collected rather than dropped: a modified
             # file the tool never opened must not leave the same impression as one
-            # it opened and found unchanged (#55).
+            # it opened and found unchanged (#55). Why there is no reader is
+            # decided at print time, because the suffix test alone cannot tell a
+            # format from a name that never survived parsing (#84).
             skipped.append(path)
             continue
         h = header(ds, repo, sha, path, download)
@@ -789,7 +806,7 @@ def inspect(ds, sha, download, show_rows):
         # "not looked at" from reading as "looked at and found unchanged".
         print("\nnot analyzed:")
         for path in skipped:
-            print(f"  {path}   [format this tool does not read, see #43]")
+            print(f"  {path}   [{skip_reason(path)}]")
         print("  Nothing above says whether the contents of these changed.")
 
 def list_candidates(typ=None):

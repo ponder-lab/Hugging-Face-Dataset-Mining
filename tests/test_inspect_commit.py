@@ -94,6 +94,36 @@ class TestDelimiterForPath(unittest.TestCase):
         self.assertFalse(ic.is_compressed("train.csv"))
 
 
+class TestSkipReason(unittest.TestCase):
+    """#84: why a modified file went unopened, which the "not analyzed" list
+    states out loud. Git hands over a path holding non-ASCII bytes escaped and
+    wrapped in double quotes unless told otherwise, and that stand-in fails the
+    suffix test for a reason that is not about the file's format at all. Calling
+    it an unread format is a false statement about a table this tool reads
+    perfectly well once it is handed the real name, and it sends whoever follows
+    the pointer to #43, which is about formats and has nothing to do with it."""
+
+    def test_a_genuinely_unread_format_still_points_at_43(self):
+        for path in ("notes.md", "data.parquet", "model.bin"):
+            self.assertIn("#43", ic.skip_reason(path), path)
+
+    def test_an_escaped_name_is_not_reported_as_a_format(self):
+        escaped = r'"\345\274\200\345\205\263/train/0000.csv"'
+        reason = ic.skip_reason(escaped)
+        self.assertIn("#84", reason)
+        self.assertNotIn("#43", reason)
+        self.assertNotIn("format", reason)
+
+    def test_a_real_non_ascii_name_is_not_mistaken_for_an_escaped_one(self):
+        # Decoded, the path reads normally and never reaches the skipped list;
+        # if it somehow does, the format pointer is the honest one.
+        self.assertIn("#43", ic.skip_reason("开关/train/notes.md"))
+
+    def test_a_quote_must_open_and_close_to_count_as_escaping(self):
+        # A name that merely contains a quote is not git's escaped form.
+        self.assertIn("#43", ic.skip_reason('say"what.md'))
+
+
 class TestSniffDelimiter(unittest.TestCase):
     """#79: the separator a revision is actually written with, which the file
     name only claims. A `.csv` that separates on `;` read on commas splits the
